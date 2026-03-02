@@ -1,0 +1,37 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro'
+import PageVisual from '../../components/PageVisual.astro'
+import {pageVisuals} from '../../lib/pageVisuals'
+import {getGuides} from '../../lib/sanity'
+
+const guides = await getGuides()
+---
+
+<SiteLayout
+  title="ERP Guides for Growing Businesses | ERP Navigator"
+  description="Step-by-step ERP guides for small and medium businesses covering selection, migration, implementation, and optimisation."
+  canonicalPath="/guides/"
+  ogImage={pageVisuals.guides.src}
+>
+  <div class="page-kicker">
+    <p class="eyebrow">Guides</p>
+    <p class="editorial-toolbar">{guides.length} published guide{guides.length === 1 ? '' : 's'}</p>
+  </div>
+  <h1 class="page-title">ERP Guides</h1>
+  <p class="section-subtle">Buyer checklists, migration planning, partner selection, and implementation benchmarks.</p>
+  <PageVisual
+    src={pageVisuals.guides.src}
+    alt={pageVisuals.guides.alt}
+    caption="Practical implementation guidance for growing teams."
+  />
+  <div class="editorial-list section">
+    {guides.map((guide) => (
+      <article class="editorial-item">
+        <p class="eyebrow">{guide.intent || 'Guide'}</p>
+        <h2><a href={`/guides/${guide.slug}/`}>{guide.title}</a></h2>
+        <p class="meta">Updated {new Date(guide.updatedAt || guide.publishedAt).toLocaleDateString()}</p>
+        <p>{guide.excerpt}</p>
+      </article>
+    ))}
+  </div>
+</SiteLayout>

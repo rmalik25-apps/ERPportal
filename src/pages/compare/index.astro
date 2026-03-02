@@ -1,0 +1,45 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro'
+import PageVisual from '../../components/PageVisual.astro'
+import {pageVisuals} from '../../lib/pageVisuals'
+import {getComparisons} from '../../lib/sanity'
+
+const items = await getComparisons()
+---
+
+<SiteLayout
+  title="ERP Software Comparisons | ERP Navigator"
+  description="Compare ERP options for small and medium businesses across fit, complexity, and implementation tradeoffs."
+  canonicalPath="/compare/"
+  ogImage={pageVisuals.comparisons.src}
+>
+  <div class="page-kicker">
+    <p class="eyebrow">Comparisons</p>
+    <p class="editorial-toolbar">{items.length} published comparison{items.length === 1 ? '' : 's'}</p>
+  </div>
+  <h1 class="page-title">ERP Comparison Hub</h1>
+  <p class="section-subtle">Compare platforms by fit, complexity, and implementation tradeoffs for small and medium business buyers.</p>
+  <PageVisual
+    src={pageVisuals.comparisons.src}
+    alt={pageVisuals.comparisons.alt}
+    caption="Compare platforms by operational fit, timeline risk, and total ownership model."
+  />
+  <div class="editorial-list section">
+    {items.map((item) => (
+      <article class="editorial-item">
+        <h2><a href={`/compare/${item.slug}/`}>{item.title}</a></h2>
+        <p class="meta">
+          {item.leftProduct} vs {item.rightProduct} • Updated {new Date(item.updatedAt || item.publishedAt).toLocaleDateString()}
+        </p>
+        <p>{item.excerpt}</p>
+        {item.bestFor && item.bestFor.length > 0 && (
+          <ul>
+            {item.bestFor.map((bullet) => (
+              <li>{bullet}</li>
+            ))}
+          </ul>
+        )}
+      </article>
+    ))}
+  </div>
+</SiteLayout>

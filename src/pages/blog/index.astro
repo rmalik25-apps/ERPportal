@@ -1,0 +1,33 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro'
+import PageVisual from '../../components/PageVisual.astro'
+import {pageVisuals} from '../../lib/pageVisuals'
+import {getPosts} from '../../lib/sanity'
+
+const posts = await getPosts()
+---
+
+<SiteLayout
+  title="ERP Blog and Insights | ERP Navigator"
+  description="Independent ERP insights, practical commentary, and decision support for small and medium business teams."
+  canonicalPath="/blog/"
+  ogImage={pageVisuals.blog.src}
+>
+  <div class="page-kicker">
+    <p class="eyebrow">Blog</p>
+    <p class="editorial-toolbar">{posts.length} published post{posts.length === 1 ? '' : 's'}</p>
+  </div>
+  <h1 class="page-title">Editorial Posts</h1>
+  <p class="section-subtle">News, commentary, and practical ERP operating insights that support your lead-gen funnel.</p>
+  <PageVisual src={pageVisuals.blog.src} alt={pageVisuals.blog.alt} caption="Market context and execution patterns that matter during ERP projects." />
+  <div class="editorial-list section">
+    {posts.map((post) => (
+      <article class="editorial-item">
+        <p class="eyebrow">{post.category}</p>
+        <h2><a href={`/blog/${post.slug}/`}>{post.title}</a></h2>
+        <p class="meta">Updated {new Date(post.updatedAt || post.publishedAt).toLocaleDateString()}</p>
+        <p>{post.excerpt}</p>
+      </article>
+    ))}
+  </div>
+</SiteLayout>

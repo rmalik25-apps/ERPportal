@@ -1,0 +1,93 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro'
+import PageVisual from '../../components/PageVisual.astro'
+import {pageVisuals} from '../../lib/pageVisuals'
+import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {getGuideBySlug, getGuides} from '../../lib/sanity'
+
+export async function getStaticPaths() {
+  const guides = await getGuides()
+  return guides.map((guide) => ({
+    params: {slug: guide.slug},
+  }))
+}
+
+const {slug} = Astro.params
+const guide = slug ? await getGuideBySlug(slug) : undefined
+
+if (!guide) {
+  return Astro.redirect('/guides/')
+}
+
+const paragraphs = blocksToPlainParagraphs(guide.body)
+const canonicalPath = `/guides/${guide.slug}/`
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: guide.seo?.metaTitle || guide.title,
+  description: guide.seo?.metaDescription || guide.excerpt,
+  datePublished: guide.publishedAt,
+  dateModified: guide.updatedAt || guide.publishedAt,
+  image: [pageVisuals.guides.src],
+  articleSection: guide.intent || 'Guide',
+  mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
+}
+---
+
+<SiteLayout
+  title={`${guide.seo?.metaTitle || guide.title} | ERP Navigator`}
+  description={guide.seo?.metaDescription || guide.excerpt}
+  canonicalPath={canonicalPath}
+  ogImage={pageVisuals.guides.src}
+  ogType="article"
+  noIndex={Boolean(guide.seo?.noIndex)}
+  jsonLd={articleSchema}
+>
+  <div class="doc-layout">
+    <article class="doc-main">
+      <p class="eyebrow">{guide.intent || 'Guide'}</p>
+      <h1>{guide.title}</h1>
+      <p class="meta">Published {new Date(guide.publishedAt).toLocaleDateString()}</p>
+      <PageVisual
+        src={pageVisuals.guides.src}
+        alt={pageVisuals.guides.alt}
+        caption="Use this guide to plan your ERP scope before demos and proposals."
+      />
+      <section class="summary-box" aria-label="Guide summary">
+        <h2>At a glance</h2>
+        <dl>
+          <dt>Type</dt>
+          <dd>{guide.intent || 'Guide'}</dd>
+          <dt>Use case</dt>
+          <dd>Growing business ERP decision support</dd>
+          <dt>Recommended action</dt>
+          <dd>Use before vendor demos or partner final selection</dd>
+        </dl>
+      </section>
+      <p class="lead">{guide.excerpt}</p>
+      {paragraphs.length ? (
+        paragraphs.map((paragraph) => <p>{paragraph}</p>)
+      ) : (
+        <p class="empty">No body content yet. Add blocks in Sanity Studio.</p>
+      )}
+    </article>
+    <aside class="doc-side">
+      <section class="card">
+        <h2>Recommended next step</h2>
+        <p>Pair this guide with a comparison page and a partner-selection checklist before requesting proposals.</p>
+        <p><a class="link-arrow" href="/compare/">Open comparison hub →</a></p>
+      </section>
+      <section class="card">
+        <h2>Page signals</h2>
+        <div class="badge-list">
+          <span class="badge">title</span>
+          <span class="badge">slug</span>
+          <span class="badge">excerpt</span>
+          <span class="badge">body</span>
+          <span class="badge">SEO</span>
+          <span class="badge">updatedAt</span>
+        </div>
+      </section>
+    </aside>
+  </div>
+</SiteLayout>

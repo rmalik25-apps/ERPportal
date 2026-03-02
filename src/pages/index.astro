@@ -1,0 +1,494 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro'
+import {getComparisons, getGuides, getPosts, sanityConfigured} from '../lib/sanity'
+
+const [guides, comparisons, posts] = await Promise.all([getGuides(), getComparisons(), getPosts()])
+const featuredGuides = guides.slice(0, 2)
+const featuredPosts = posts.slice(0, 4)
+const featuredComparison = comparisons[0]
+const navGuide = guides.find((guide) => guide.slug.includes('nav'))
+const partnerGuide = guides.find((guide) => guide.slug.includes('partner'))
+const assessmentEndpoint = import.meta.env.PUBLIC_ASSESSMENT_ENDPOINT || '/api/assessment'
+const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/newsletter'
+---
+
+<SiteLayout
+  title="ERP Navigator | ERP Guidance, Comparisons & Partner Matching for SMBs"
+  description="Independent ERP guidance for small and medium businesses: selection, migration, implementation best practices, and partner-fit recommendations."
+  canonicalPath="/"
+  ogImage="/hero-erp-brief.svg"
+>
+  <section class="hero">
+    <div class="hero-shell">
+      <div>
+        <p class="eyebrow">Independent ERP Buyer Education + Lead Generation</p>
+        <h1>Your one-stop hub for ERP decisions in growing businesses</h1>
+        <p>
+          Help finance, ops, and IT leaders choose, implement, upgrade, and optimise ERP systems with clear guidance.
+          Capture high-intent demand and connect qualified buyers with consulting partners.
+        </p>
+        <div class="home-actions">
+          <a class="btn btn-primary" href="#get-guidance">Get ERP Recommendations</a>
+          <a class="btn btn-secondary" href="/compare/">Browse Comparisons</a>
+        </div>
+        <ul class="chip-row" aria-label="Covered ERP ecosystems">
+          <li>Dynamics 365 Business Central</li>
+          <li>NAV / Navision migration</li>
+          <li>Dynamics 365 Finance &amp; SCM</li>
+          <li>NetSuite</li>
+          <li>Acumatica</li>
+          <li>Sage Intacct</li>
+        </ul>
+        <p class="banner">
+          {sanityConfigured
+            ? 'Independent buyer guidance with transparent disclosure. Use this site to shortlist options before vendor demos.'
+            : 'Independent buyer guidance with transparent partner-introduction disclosure. Content is being expanded and refreshed regularly.'}
+        </p>
+      </div>
+      <aside class="hero-panel">
+        <figure class="hero-visual">
+          <div class="hero-collage" aria-hidden="true">
+            <img
+              class="hero-collage-main"
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80"
+              alt=""
+            />
+            <img
+              class="hero-collage-inset"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <div class="hero-collage-label hero-collage-label-a">Operations reality</div>
+            <div class="hero-collage-label hero-collage-label-b">Executive planning</div>
+          </div>
+          <figcaption>
+            Operational context plus planning context: ERP decisions should connect warehouse workflows with finance and leadership priorities.
+          </figcaption>
+        </figure>
+        <h2>Find your ERP shortlist in 3 minutes</h2>
+        <p>Use your company profile to narrow options before talking to vendors.</p>
+        <ul class="metric-list">
+          <li><strong>Company size</strong><span>50-2,500 employees</span></li>
+          <li><strong>Industries</strong><span>Distribution, Manufacturing, Services, Retail</span></li>
+          <li><strong>Primary intent</strong><span>New ERP / Upgrade / Rescue / Optimisation</span></li>
+          <li><strong>Output</strong><span>Shortlist + budget range + partner intro</span></li>
+        </ul>
+        <p><a class="link-arrow" href="#get-guidance">Start assessment →</a></p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-frame" id="coverage">
+    <div class="section-head">
+      <p class="eyebrow">Decision Framework</p>
+      <h2>What small and medium business teams should evaluate before choosing an ERP</h2>
+      <p class="section-subtle">
+        Use these decision tracks to compare options, validate implementation risk, and avoid avoidable project
+        mistakes before signing.
+      </p>
+    </div>
+    <div class="split-grid">
+      <div class="path-list">
+        <article class="path-card">
+          <h3>
+            <a class="title-with-icon" href="/guides/">
+              <span class="tile-icon tile-icon-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M7 5h10v14H7z" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 9.5h5M9.5 12.5h5M9.5 15.5h3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              ERP selection guides & checklists
+            </a>
+          </h3>
+          <p>Selection, implementation, upgrade, support, and optimisation playbooks for growing business teams.</p>
+          <ul class="mini-list">
+            <li>ERP selection framework</li>
+            <li>RFP templates and scorecards</li>
+            <li>Budget and timeline benchmarks</li>
+          </ul>
+        </article>
+        <article class="path-card">
+          <h3>
+            <a class="title-with-icon" href="/compare/">
+              <span class="tile-icon tile-icon-copper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 7h6v10H5zM13 7h6v10h-6z" stroke="currentColor" stroke-width="1.8"/><path d="M8 5v2M16 5v2M8 17v2M16 17v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              Compare ERP software (fit-first)
+            </a>
+          </h3>
+          <p>Objective pages for major platforms and migration paths, including legacy NAV situations.</p>
+          <ul class="mini-list">
+            <li>Who it fits / does not fit</li>
+            <li>Implementation complexity</li>
+            <li>Total cost considerations</li>
+          </ul>
+        </article>
+        <article class="path-card">
+          <h3>
+            <a class="title-with-icon" href="/blog/">
+              <span class="tile-icon tile-icon-slate" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6 6h12v12H6z" stroke="currentColor" stroke-width="1.8"/><path d="M9 10h6M9 13h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="17" r="1" fill="currentColor"/><circle cx="12" cy="17" r="1" fill="currentColor"/><circle cx="16" cy="17" r="1" fill="currentColor"/></svg>
+              </span>
+              Implementation tips, updates & best practices
+            </a>
+          </h3>
+          <p>News, release notes summaries, risk alerts, and best practices for finance/ops/IT stakeholders.</p>
+          <ul class="mini-list">
+            <li>Version/release updates</li>
+            <li>Post-go-live lessons</li>
+            <li>Data migration pitfalls</li>
+          </ul>
+        </article>
+      </div>
+      <aside class="note-card">
+        <h3>Find your best starting point</h3>
+        <ul>
+          <li><a href="/guides/">I’m selecting a new ERP</a></li>
+          <li><a href={navGuide ? `/guides/${navGuide.slug}/` : '/guides/'}>I’m upgrading NAV / legacy ERP</a></li>
+          <li><a href="/compare/">I need to compare platforms</a></li>
+          <li><a href="/blog/">I want ongoing ERP updates</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-frame">
+    <div class="section-head">
+      <p class="eyebrow">Buyer Support</p>
+      <h2>Get clearer ERP decisions with less risk and fewer delays</h2>
+      <p class="section-subtle">
+        Most projects run over budget because teams choose software before validating fit, scope, and implementation
+        approach. These checkpoints are designed to help you make a better decision before contracts are signed.
+      </p>
+    </div>
+    <div class="split-grid">
+      <article class="card">
+        <h3 class="title-with-icon">
+          <span class="tile-icon tile-icon-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4.5 12l4.2 4.2L19.5 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          What’s included in your ERP shortlist guidance
+        </h3>
+        <ul class="value-list">
+          <li>Shortlist guidance based on industry, complexity, and timeline</li>
+          <li>Platform fit vs misfit framing before vendor demos</li>
+          <li>Implementation partner-fit recommendations (on request)</li>
+          <li>Practical planning inputs for budget, timeline, and delivery risk</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3 class="title-with-icon">
+          <span class="tile-icon tile-icon-copper" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 4h12v16H6z" stroke="currentColor" stroke-width="1.8"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          Tell us about your ERP project (what we assess)
+        </h3>
+        <ol class="value-list ordered">
+          <li>Company size / revenue band</li>
+          <li>Industry and operating model</li>
+          <li>Current ERP / legacy system</li>
+          <li>Project type (new, upgrade, rescue)</li>
+          <li>Target timeline</li>
+          <li>Budget range</li>
+          <li>Regions / legal entities</li>
+          <li>Integration / manufacturing requirements</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-frame">
+    <div class="section-head">
+      <p class="eyebrow">Comparison Hub</p>
+      <h2>Compare ERP software before vendor demos</h2>
+      <p class="section-subtle">Use comparison previews and filters to build a confident shortlist before vendor demos.</p>
+    </div>
+    <div class="home-filterbar">
+      <div class="filter-pill">Industry: Distribution / Manufacturing / Services</div>
+      <div class="filter-pill">Priority: Finance controls / Ops / Multi-entity</div>
+      <a class="btn btn-secondary btn-small" href="/compare/">Open full compare hub</a>
+    </div>
+    <div class="grid cols-3">
+      <article class="card collection-card">
+        <p class="eyebrow">Comparison</p>
+        <h3>
+          <a class="title-with-icon" href={featuredComparison ? `/compare/${featuredComparison.slug}/` : '/compare/'}>
+            <span class="tile-icon tile-icon-copper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h7v8H4zM13 8h7v8h-7z" stroke="currentColor" stroke-width="1.8"/><path d="M12 6v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            {featuredComparison?.title || 'Business Central vs NetSuite for SMBs'}
+          </a>
+        </h3>
+        <p>{featuredComparison?.excerpt || 'Practical fit, complexity, and implementation tradeoff comparison for small and medium business buyers.'}</p>
+      </article>
+      <article class="card collection-card">
+        <p class="eyebrow">Migration Path</p>
+        <h3>
+          <a class="title-with-icon" href={navGuide ? `/guides/${navGuide.slug}/` : '/guides/'}>
+            <span class="tile-icon tile-icon-green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M13 8l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="6" width="4" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            NAV / Navision to Business Central migration
+          </a>
+        </h3>
+        <p>Assessment, upgrade vs reimplementation, data strategy, testing, and cutover planning.</p>
+      </article>
+      <article class="card collection-card">
+        <p class="eyebrow">Partner Fit</p>
+        <h3>
+          <a class="title-with-icon" href={partnerGuide ? `/guides/${partnerGuide.slug}/` : '/guides/'}>
+            <span class="tile-icon tile-icon-slate" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 17c.8-2.2 4.2-2.2 5 0M13.5 17c.8-2.2 4.2-2.2 5 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            How to choose an ERP implementation partner
+          </a>
+        </h3>
+        <p>Evaluate delivery quality, scope assumptions, references, and delivery risk.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-frame" id="blog">
+    <div class="section-head">
+      <p class="eyebrow">Editorial Engine</p>
+      <h2>ERP news, comparisons, and practical buying guidance</h2>
+      <p class="section-subtle">Get practical guidance, release analysis, and implementation lessons relevant to growing business teams.</p>
+    </div>
+    <div class="home-tabs" role="tablist" aria-label="Blog categories">
+      <span class="tab-pill is-active">All</span>
+      <span class="tab-pill">Selection</span>
+      <span class="tab-pill">Implementation</span>
+      <span class="tab-pill">News &amp; Releases</span>
+    </div>
+    <div class="grid cols-3 home-post-grid">
+      {(featuredPosts.length ? featuredPosts : [
+        {
+          _id: 'placeholder-1',
+          category: 'Selection',
+          slug: 'erp-selection-checklist-mid-market',
+          title: 'ERP selection checklist for small and medium businesses',
+          excerpt: 'Practical checklist for scope, stakeholders, scenario demos, and final decision controls.',
+        },
+      ]).map((post) => (
+        <article class="card collection-card">
+          <p class="eyebrow">{'category' in post ? post.category : 'Post'}</p>
+          <h3><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+          <p>{post.excerpt}</p>
+        </article>
+      ))}
+      {featuredGuides.map((guide) => (
+        <article class="card collection-card">
+          <p class="eyebrow">{guide.intent || 'Guide'}</p>
+          <h3><a href={`/guides/${guide.slug}/`}>{guide.title}</a></h3>
+          <p>{guide.excerpt}</p>
+        </article>
+      ))}
+    </div>
+    <p class="section-cta"><a class="link-arrow" href="/blog/">See the full editorial hub →</a></p>
+  </section>
+
+  <section class="section section-frame" id="get-guidance">
+    <div class="section-head">
+      <p class="eyebrow">Get Guidance</p>
+      <h2>Get a tailored ERP recommendation and partner shortlist</h2>
+      <p class="section-subtle">Share your business profile and project goals to receive practical next steps and a shortlist approach.</p>
+    </div>
+    <div class="split-grid">
+      <article class="card">
+        <h3 class="title-with-icon">
+          <span class="tile-icon tile-icon-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h4l2-5 3 10 2-5h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          How it works
+        </h3>
+        <ul class="value-list">
+          <li>We review company profile, current system, and project intent</li>
+          <li>You receive a suggested evaluation path and shortlist guidance</li>
+          <li>If requested, we suggest partner types that match your project profile</li>
+        </ul>
+      </article>
+      <form class="home-form js-lead-form" data-endpoint={assessmentEndpoint} novalidate>
+        <h3 class="title-with-icon">
+          <span class="tile-icon tile-icon-copper" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 5h12v14H6z" stroke="currentColor" stroke-width="1.8"/><path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          Get your ERP shortlist
+        </h3>
+        <label>
+          Work email
+          <input type="email" name="email" autocomplete="email" placeholder="name@company.com" required />
+        </label>
+        <label>
+          Company size
+          <select name="companySize" required>
+            <option value="">Select company size</option>
+            <option>50-100 employees</option>
+            <option>101-500 employees</option>
+            <option>501-2,500 employees</option>
+            <option>2,500+ employees</option>
+          </select>
+        </label>
+        <label>
+          Project type
+          <select name="projectType" required>
+            <option>New ERP selection</option>
+            <option>Legacy upgrade / migration</option>
+            <option>Implementation rescue</option>
+            <option>Optimization / managed support</option>
+          </select>
+        </label>
+        <label>
+          What matters most?
+          <textarea
+            rows="4"
+            name="priorities"
+            placeholder="e.g. consolidation, inventory accuracy, manufacturing planning, reporting..."
+            required
+          ></textarea>
+        </label>
+        <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn btn-primary" type="submit">Request guidance</button>
+        <p class="editorial-toolbar">Use a work email so we can send your tailored guidance summary.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section-frame" id="newsletter">
+    <div class="split-grid">
+      <div>
+        <p class="eyebrow">Retention Loop</p>
+        <h2 class="page-title">Weekly ERP brief for growing businesses</h2>
+        <p class="section-subtle">
+          Use email to convert anonymous traffic into repeat audiences. Share release highlights, implementation
+          lessons, and practical checklists.
+        </p>
+      </div>
+      <form class="newsletter-box js-newsletter-form" data-endpoint={newsletterEndpoint} novalidate>
+        <h3 class="title-with-icon">
+          <span class="tile-icon tile-icon-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="1.8"/><path d="M5 8l7 6 7-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Weekly ERP brief
+        </h3>
+        <label>
+          Work email
+          <input type="email" name="email" autocomplete="email" placeholder="Work email" required />
+        </label>
+        <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn btn-primary" type="submit">Get the weekly brief</button>
+        <p class="editorial-toolbar">Weekly brief covers releases, buyer questions, and implementation lessons.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</SiteLayout>
+
+<script is:inline define:vars={{assessmentEndpoint, newsletterEndpoint}}>
+  const asText = (value) => (typeof value === 'string' ? value.trim() : '');
+
+  async function postPayload(endpoint, payload) {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) throw new Error(`Request failed (${response.status})`);
+    return response;
+  }
+
+  function setStatus(form, text, isError = false) {
+    const node = form.querySelector('.form-status');
+    if (!node) return;
+    node.textContent = text;
+    node.dataset.state = isError ? 'error' : 'success';
+  }
+
+  function setBusy(form, busy) {
+    const submit = form.querySelector('button[type="submit"]');
+    if (!submit) return;
+    if (!submit.dataset.label) submit.dataset.label = submit.textContent || 'Submit';
+    submit.disabled = busy;
+    submit.textContent = busy ? 'Submitting...' : submit.dataset.label;
+  }
+
+  function setupAssessment() {
+    const form = document.querySelector('.js-lead-form');
+    if (!form) return;
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const endpoint = form.dataset.endpoint || assessmentEndpoint;
+      if (!endpoint) {
+        setStatus(form, 'Submission endpoint is not configured yet.', true);
+        return;
+      }
+      const data = new FormData(form);
+      if (asText(data.get('website'))) return;
+
+      const payload = {
+        type: 'assessment',
+        email: asText(data.get('email')),
+        companySize: asText(data.get('companySize')),
+        projectType: asText(data.get('projectType')),
+        priorities: asText(data.get('priorities')),
+        page: window.location.href,
+        submittedAt: new Date().toISOString(),
+      };
+
+      if (!payload.email || !payload.companySize || !payload.projectType || !payload.priorities) {
+        setStatus(form, 'Please complete all fields before submitting.', true);
+        return;
+      }
+
+      try {
+        setBusy(form, true);
+        await postPayload(endpoint, payload);
+        form.reset();
+        setStatus(form, 'Thanks. We received your request and will respond shortly.');
+      } catch (error) {
+        setStatus(form, 'Submission failed. Please try again in a moment.', true);
+      } finally {
+        setBusy(form, false);
+      }
+    });
+  }
+
+  function setupNewsletter() {
+    const form = document.querySelector('.js-newsletter-form');
+    if (!form) return;
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const endpoint = form.dataset.endpoint || newsletterEndpoint;
+      if (!endpoint) {
+        setStatus(form, 'Newsletter endpoint is not configured yet.', true);
+        return;
+      }
+      const data = new FormData(form);
+      if (asText(data.get('website'))) return;
+
+      const payload = {
+        type: 'newsletter',
+        email: asText(data.get('email')),
+        page: window.location.href,
+        submittedAt: new Date().toISOString(),
+      };
+
+      if (!payload.email) {
+        setStatus(form, 'Please enter your work email.', true);
+        return;
+      }
+
+      try {
+        setBusy(form, true);
+        await postPayload(endpoint, payload);
+        form.reset();
+        setStatus(form, 'Subscribed. You will receive the next ERP brief.');
+      } catch (error) {
+        setStatus(form, 'Subscription failed. Please try again.', true);
+      } finally {
+        setBusy(form, false);
+      }
+    });
+  }
+
+  setupAssessment();
+  setupNewsletter();
+</script>

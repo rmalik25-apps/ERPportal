@@ -1,0 +1,102 @@
+<svg width="960" height="640" viewBox="0 0 960 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ERP Navigator editorial hero illustration</title>
+  <desc id="desc">A warm editorial-style illustration of comparison cards, guide notes, and a partner matching flow for mid-market ERP decisions.</desc>
+  <rect width="960" height="640" rx="28" fill="#FBFAF7"/>
+  <rect x="1" y="1" width="958" height="638" rx="27" stroke="#D8D1C6" stroke-width="2"/>
+
+  <defs>
+    <linearGradient id="bgGlowA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E7F1EE"/>
+      <stop offset="1" stop-color="#FBFAF7"/>
+    </linearGradient>
+    <linearGradient id="bgGlowB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6EBDF"/>
+      <stop offset="1" stop-color="#FBFAF7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1A1E1D" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <circle cx="140" cy="100" r="120" fill="url(#bgGlowA)"/>
+  <circle cx="830" cy="120" r="110" fill="url(#bgGlowB)"/>
+  <circle cx="840" cy="540" r="90" fill="#EEF5F3"/>
+
+  <!-- Header strip -->
+  <rect x="48" y="38" width="864" height="52" rx="14" fill="#FFFFFF" stroke="#D8D1C6"/>
+  <rect x="64" y="52" width="30" height="24" rx="8" fill="#0E5A4F"/>
+  <text x="109" y="70" fill="#182022" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18" font-weight="600">ERP Navigator</text>
+  <text x="248" y="70" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="14">Mid-market ERP intelligence</text>
+  <rect x="640" y="49" width="118" height="30" rx="15" fill="#F4F1EA" stroke="#D8D1C6"/>
+  <text x="665" y="69" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="13">Guides</text>
+  <rect x="768" y="49" width="128" height="30" rx="15" fill="#0E5A4F"/>
+  <text x="793" y="69" fill="#FFFFFF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="13" font-weight="600">Get matched</text>
+
+  <!-- Center editorial canvas -->
+  <g filter="url(#shadow)">
+    <rect x="58" y="114" width="844" height="468" rx="22" fill="#FFFFFF" stroke="#D8D1C6"/>
+  </g>
+
+  <!-- Left: Guide panel -->
+  <rect x="84" y="146" width="365" height="248" rx="18" fill="#FBFAF7" stroke="#D8D1C6"/>
+  <text x="106" y="173" fill="#0E5A4F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">GUIDE</text>
+  <text x="106" y="208" fill="#182022" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700">ERP selection checklist</text>
+  <text x="106" y="238" fill="#182022" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700">for mid-market teams</text>
+  <rect x="106" y="258" width="320" height="2" fill="#E4DDD1"/>
+  <rect x="106" y="277" width="302" height="10" rx="5" fill="#EDE9E1"/>
+  <rect x="106" y="295" width="286" height="10" rx="5" fill="#EDE9E1"/>
+  <rect x="106" y="313" width="242" height="10" rx="5" fill="#EDE9E1"/>
+  <rect x="106" y="340" width="152" height="30" rx="15" fill="#E7F1EE" stroke="#C6D8D3"/>
+  <text x="127" y="360" fill="#12463D" font-family="IBM Plex Sans, Arial, sans-serif" font-size="13" font-weight="600">Selection guide</text>
+
+  <!-- Right top: Comparison panel -->
+  <rect x="473" y="146" width="403" height="164" rx="18" fill="#FFFFFF" stroke="#D8D1C6"/>
+  <text x="495" y="173" fill="#C9792B" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">COMPARISON</text>
+  <text x="495" y="205" fill="#182022" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700">Business Central vs NetSuite</text>
+  <rect x="495" y="222" width="161" height="24" rx="12" fill="#F4F1EA" stroke="#D8D1C6"/>
+  <text x="518" y="238" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12">Mid-market fit</text>
+  <rect x="666" y="222" width="140" height="24" rx="12" fill="#E7F1EE" stroke="#C6D8D3"/>
+  <text x="694" y="238" fill="#12463D" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12">Best-fit notes</text>
+
+  <rect x="495" y="262" width="360" height="30" rx="8" fill="#F8F7F4"/>
+  <rect x="507" y="272" width="86" height="10" rx="5" fill="#0E5A4F"/>
+  <rect x="614" y="272" width="106" height="10" rx="5" fill="#E4DDD1"/>
+  <rect x="739" y="272" width="96" height="10" rx="5" fill="#E4DDD1"/>
+
+  <!-- Right bottom: Partner match / workflow panel -->
+  <rect x="473" y="326" width="403" height="230" rx="18" fill="#FBFAF7" stroke="#D8D1C6"/>
+  <text x="495" y="353" fill="#0E5A4F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PARTNER MATCHING</text>
+  <text x="495" y="384" fill="#182022" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700">Qualify demand before routing leads</text>
+
+  <rect x="495" y="405" width="168" height="54" rx="12" fill="#FFFFFF" stroke="#D8D1C6"/>
+  <text x="510" y="427" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="11">Company profile</text>
+  <text x="510" y="446" fill="#182022" font-family="IBM Plex Sans, Arial, sans-serif" font-size="14" font-weight="600">Size • Industry • Current ERP</text>
+
+  <rect x="693" y="405" width="168" height="54" rx="12" fill="#FFFFFF" stroke="#D8D1C6"/>
+  <text x="708" y="427" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="11">Project intent</text>
+  <text x="708" y="446" fill="#182022" font-family="IBM Plex Sans, Arial, sans-serif" font-size="14" font-weight="600">Selection • Upgrade • Rescue</text>
+
+  <path d="M579 470 C579 486,579 486,579 498 C579 510,658 510,658 522" stroke="#0E5A4F" stroke-width="2.5" stroke-dasharray="5 6" fill="none"/>
+  <path d="M777 470 C777 486,777 486,777 498 C777 510,698 510,698 522" stroke="#C9792B" stroke-width="2.5" stroke-dasharray="5 6" fill="none"/>
+
+  <rect x="615" y="514" width="120" height="30" rx="15" fill="#0E5A4F"/>
+  <text x="637" y="534" fill="#FFFFFF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="13" font-weight="600">Partner-fit shortlist</text>
+
+  <!-- Bottom left small KPI strip -->
+  <rect x="84" y="412" width="365" height="144" rx="18" fill="#FFFFFF" stroke="#D8D1C6"/>
+  <text x="106" y="438" fill="#C9792B" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">EDITORIAL ENGINE</text>
+  <rect x="106" y="456" width="98" height="78" rx="12" fill="#F4F1EA" stroke="#D8D1C6"/>
+  <text x="120" y="482" fill="#182022" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">2</text>
+  <text x="120" y="503" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12">Published</text>
+  <text x="120" y="519" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12">guides</text>
+
+  <rect x="218" y="456" width="98" height="78" rx="12" fill="#EEF5F3" stroke="#C6D8D3"/>
+  <text x="232" y="482" fill="#0E5A4F" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">1</text>
+  <text x="232" y="503" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12">CMS workflow</text>
+  <text x="232" y="519" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12">active</text>
+
+  <rect x="330" y="456" width="98" height="78" rx="12" fill="#F6EBDF" stroke="#E7D3B8"/>
+  <text x="344" y="482" fill="#9A5A22" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">+</text>
+  <text x="344" y="503" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12">Compare + blog</text>
+  <text x="344" y="519" fill="#56605F" font-family="IBM Plex Sans, Arial, sans-serif" font-size="12">expansion</text>
+</svg>

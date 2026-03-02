@@ -1,0 +1,142 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title: string
+  description?: string
+  canonicalPath?: string
+  ogImage?: string
+  ogType?: 'website' | 'article'
+  noIndex?: boolean
+  jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>
+}
+
+const {
+  title,
+  description = 'ERP Navigator: independent ERP guidance, comparisons, and implementation insights for small and medium businesses',
+  canonicalPath,
+  ogImage,
+  ogType = 'website',
+  noIndex = false,
+  jsonLd,
+} = Astro.props
+
+const configuredSiteUrl = import.meta.env.PUBLIC_SITE_URL || Astro.site?.toString() || 'http://localhost:4321'
+const siteOrigin = configuredSiteUrl.endsWith('/') ? configuredSiteUrl.slice(0, -1) : configuredSiteUrl
+const canonicalUrl = new URL(canonicalPath || Astro.url.pathname, `${siteOrigin}/`).toString()
+const ogImageUrl = ogImage ? new URL(ogImage, `${siteOrigin}/`).toString() : new URL('/hero-erp-brief.svg', `${siteOrigin}/`).toString()
+const robotsContent = noIndex ? 'noindex,nofollow' : 'index,follow,max-image-preview:large'
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'ERP Navigator',
+  url: `${siteOrigin}/`,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteOrigin}/guides/`,
+    'query-input': 'required name=query',
+  },
+}
+const jsonLdPayload = Array.isArray(jsonLd) ? [websiteSchema, ...jsonLd] : jsonLd ? [websiteSchema, jsonLd] : [websiteSchema]
+const ga4Id = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID
+const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robotsContent} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content="ERP Navigator" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="theme-color" content="#0e5a4f" />
+    <link rel="icon" type="image/svg+xml" href="/logo-navigator-mark.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdPayload)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    {ga4Id && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
+        <script is:inline define:vars={{ga4Id}}>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', ga4Id, { anonymize_ip: true });
+          `}
+        </script>
+      </>
+    )}
+    {clarityId && (
+      <script is:inline define:vars={{clarityId}}>
+        {`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", clarityId);
+        `}
+      </script>
+    )}
+  </head>
+  <body>
+    <div class="compliance-strip" role="note" aria-label="Privacy and disclosure notice">
+      <div class="container compliance-row">
+        <p>
+          We use analytics (Google Analytics and Microsoft Clarity) to improve content and user experience. Partner
+          introductions may be compensated.
+        </p>
+        <p><a href="/privacy/">Privacy</a> · <a href="/disclosure/">Disclosure</a></p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="/">
+          <img class="mark" src="/logo-navigator-mark.svg" alt="ERP Navigator" />
+          <span>
+            <strong>ERP Navigator</strong>
+            <small>ERP intelligence for growing businesses</small>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/guides/">Guides</a>
+          <a href="/compare/">Compare</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container page">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <p class="footer-title">ERP Navigator</p>
+          <p>Independent ERP buyer education and partner-fit guidance for small and medium businesses.</p>
+        </div>
+        <p>
+          <a href="/guides/">Guides</a> · <a href="/compare/">Compare</a> · <a href="/blog/">Blog</a> ·
+          <a href="/privacy/">Privacy</a> · <a href="/disclosure/">Disclosure</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

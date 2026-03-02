@@ -1,0 +1,76 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro'
+import PageVisual from '../../components/PageVisual.astro'
+import {pageVisuals} from '../../lib/pageVisuals'
+import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {getPostBySlug, getPosts} from '../../lib/sanity'
+
+export async function getStaticPaths() {
+  const posts = await getPosts()
+  return posts.map((post) => ({params: {slug: post.slug}}))
+}
+
+const {slug} = Astro.params
+const post = slug ? await getPostBySlug(slug) : undefined
+
+if (!post) {
+  return Astro.redirect('/blog/')
+}
+
+const paragraphs = blocksToPlainParagraphs(post.body)
+const canonicalPath = `/blog/${post.slug}/`
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.seo?.metaTitle || post.title,
+  description: post.seo?.metaDescription || post.excerpt,
+  datePublished: post.publishedAt,
+  dateModified: post.updatedAt || post.publishedAt,
+  image: [pageVisuals.blog.src],
+  articleSection: post.category || 'ERP insights',
+  mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
+}
+---
+
+<SiteLayout
+  title={`${post.seo?.metaTitle || post.title} | ERP Navigator`}
+  description={post.seo?.metaDescription || post.excerpt}
+  canonicalPath={canonicalPath}
+  ogImage={pageVisuals.blog.src}
+  ogType="article"
+  noIndex={Boolean(post.seo?.noIndex)}
+  jsonLd={articleSchema}
+>
+  <div class="doc-layout">
+    <article class="doc-main">
+      <p class="eyebrow">{post.category}</p>
+      <h1>{post.title}</h1>
+      <p class="meta">Published {new Date(post.publishedAt).toLocaleDateString()}</p>
+      <PageVisual
+        src={pageVisuals.blog.src}
+        alt={pageVisuals.blog.alt}
+        caption="Actionable perspective to help buyers move from research to a realistic ERP plan."
+      />
+      <section class="summary-box" aria-label="Post summary">
+        <h2>Editorial context</h2>
+        <dl>
+          <dt>Category</dt>
+          <dd>{post.category}</dd>
+          <dt>Role</dt>
+          <dd>Top-of-funnel trust + newsletter content</dd>
+          <dt>Next step</dt>
+          <dd>Link to related guide or comparison page</dd>
+        </dl>
+      </section>
+      <p class="lead">{post.excerpt}</p>
+      {paragraphs.length ? paragraphs.map((paragraph) => <p>{paragraph}</p>) : <p class="empty">No content body yet.</p>}
+    </article>
+    <aside class="doc-side">
+      <section class="card">
+        <h2>Content type</h2>
+        <p>Use blog posts for news, commentary, and promotion of long-form guides/comparisons.</p>
+        <p><a class="link-arrow" href="/guides/">Link readers into guides →</a></p>
+      </section>
+    </aside>
+  </div>
+</SiteLayout>

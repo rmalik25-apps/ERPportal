@@ -1,0 +1,86 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro'
+import PageVisual from '../../components/PageVisual.astro'
+import {pageVisuals} from '../../lib/pageVisuals'
+import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {getComparisonBySlug, getComparisons} from '../../lib/sanity'
+
+export async function getStaticPaths() {
+  const items = await getComparisons()
+  return items.map((item) => ({params: {slug: item.slug}}))
+}
+
+const {slug} = Astro.params
+const item = slug ? await getComparisonBySlug(slug) : undefined
+
+if (!item) {
+  return Astro.redirect('/compare/')
+}
+
+const paragraphs = blocksToPlainParagraphs(item.body)
+const canonicalPath = `/compare/${item.slug}/`
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: item.seo?.metaTitle || item.title,
+  description: item.seo?.metaDescription || item.excerpt,
+  datePublished: item.publishedAt,
+  dateModified: item.updatedAt || item.publishedAt,
+  image: [pageVisuals.comparisons.src],
+  articleSection: 'ERP comparison',
+  mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
+}
+---
+
+<SiteLayout
+  title={`${item.seo?.metaTitle || item.title} | ERP Navigator`}
+  description={item.seo?.metaDescription || item.excerpt}
+  canonicalPath={canonicalPath}
+  ogImage={pageVisuals.comparisons.src}
+  ogType="article"
+  noIndex={Boolean(item.seo?.noIndex)}
+  jsonLd={articleSchema}
+>
+  <div class="doc-layout">
+    <article class="doc-main">
+      <p class="eyebrow">Comparison</p>
+      <h1>{item.title}</h1>
+      <p class="meta">
+        {item.leftProduct} vs {item.rightProduct} • Published {new Date(item.publishedAt).toLocaleDateString()}
+      </p>
+      <PageVisual
+        src={pageVisuals.comparisons.src}
+        alt={pageVisuals.comparisons.alt}
+        caption="Use this comparison to pressure-test product fit before starting partner discovery."
+      />
+      <section class="summary-box" aria-label="Comparison summary">
+        <h2>At a glance</h2>
+        <dl>
+          <dt>Left</dt>
+          <dd>{item.leftProduct}</dd>
+          <dt>Right</dt>
+          <dd>{item.rightProduct}</dd>
+          <dt>Intent</dt>
+          <dd>Shortlist and fit analysis</dd>
+        </dl>
+      </section>
+      <p class="lead">{item.excerpt}</p>
+      {paragraphs.length ? paragraphs.map((paragraph) => <p>{paragraph}</p>) : <p class="empty">No content body yet.</p>}
+    </article>
+    <aside class="doc-side">
+      <section class="card">
+        <h2>Best for summary</h2>
+        {item.bestFor?.length ? (
+          <ul>
+            {item.bestFor.map((bullet) => (
+              <li>{bullet}</li>
+            ))}
+          </ul>
+        ) : (
+          <p class="empty">Add `bestFor` bullets in Sanity.</p>
+        )}
+        <p><a class="link-arrow" href="/guides/">See related guides →</a></p>
+      </section>
+    </aside>
+  </div>
+</SiteLayout>

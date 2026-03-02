@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 140" role="img" aria-labelledby="title desc">
+  <title id="title">ERP Navigator logo</title>
+  <desc id="desc">ERP Navigator wordmark with module icon</desc>
+  <defs>
+    <linearGradient id="bg" x1="10%" y1="8%" x2="92%" y2="95%">
+      <stop offset="0%" stop-color="#0f6b5d"/>
+      <stop offset="100%" stop-color="#0b4b42"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0b772"/>
+      <stop offset="100%" stop-color="#c9792b"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="120" height="120" rx="30" fill="url(#bg)"/>
+  <rect x="29" y="29" width="82" height="82" rx="20" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="3"/>
+  <path d="M50 88V62h20v26z" fill="rgba(255,255,255,0.15)" stroke="#d9efe9" stroke-width="3"/>
+  <path d="M70 62h20v26H70z" fill="rgba(255,255,255,0.1)" stroke="#d9efe9" stroke-width="3"/>
+  <path d="M50 45h40v17H50z" fill="rgba(255,255,255,0.2)" stroke="#d9efe9" stroke-width="3"/>
+  <path d="M73 88h25" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M92 80l11 8-11 8" fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="50" cy="45" r="4" fill="#ecf7f4"/>
+  <circle cx="90" cy="45" r="4" fill="#ecf7f4"/>
+  <circle cx="50" cy="88" r="4" fill="#ecf7f4"/>
+  <circle cx="90" cy="88" r="4" fill="#ecf7f4"/>
+  <text x="160" y="68" font-size="50" font-weight="700" fill="#182022" font-family="Fraunces, Georgia, serif">ERP Navigator</text>
+  <text x="162" y="98" font-size="20" font-weight="500" fill="#56605f" font-family="IBM Plex Sans, Arial, sans-serif">ERP intelligence for growing businesses</text>
+</svg>
+

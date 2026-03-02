@@ -1,0 +1,57 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro'
+import PageVisual from '../components/PageVisual.astro'
+import {pageVisuals} from '../lib/pageVisuals'
+---
+
+<SiteLayout
+  title="Disclosure | ERP Navigator"
+  description="Editorial and compensation disclosure for ERP Navigator partner introductions and sponsored placements."
+  canonicalPath="/disclosure/"
+  ogImage={pageVisuals.disclosure.src}
+>
+  <div class="doc-layout">
+    <article class="doc-main">
+      <p class="eyebrow">Disclosure</p>
+      <h1>Editorial and compensation disclosure</h1>
+      <PageVisual
+        src={pageVisuals.disclosure.src}
+        alt={pageVisuals.disclosure.alt}
+        caption="How editorial standards and commercial relationships are separated."
+      />
+      <p class="lead">
+        ERP Navigator is an independent buyer guidance resource for ERP decisions in small and medium businesses. Some partner introductions
+        or sponsored placements may be compensated.
+      </p>
+
+      <p>
+        Editorial content is intended to help buyers understand platform fit, implementation risk, migration pathways,
+        and partner selection factors. We aim to provide practical guidance, including “best fit” and “not a fit”
+        framing where relevant.
+      </p>
+      <p>
+        If a buyer requests introductions to implementation partners, we may receive compensation from participating
+        consultancies. Compensation should not determine editorial conclusions or comparison outcomes.
+      </p>
+      <p>
+        Sponsored listings, sponsored research, or paid placements should be clearly labeled and distinguished from
+        editorial content.
+      </p>
+      <p>
+        Before launch, update this page with your exact disclosure language, partner programme criteria, and sponsorship
+        formats.
+      </p>
+    </article>
+    <aside class="doc-side">
+      <section class="card">
+        <h2>Recommended labels</h2>
+        <ul>
+          <li>Sponsored</li>
+          <li>Partner listing</li>
+          <li>Paid placement</li>
+          <li>Editorial (independent)</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+</SiteLayout>
