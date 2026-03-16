@@ -121,6 +121,18 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
           <a href="/compare/">Compare</a>
           <a href="/blog/">Blog</a>
         </nav>
+        <div class="site-search" data-site-search>
+          <label class="site-search-label" for="site-search-input">Search content</label>
+          <input
+            id="site-search-input"
+            class="site-search-input"
+            type="search"
+            placeholder="Search guides, comparisons, blogs..."
+            autocomplete="off"
+            data-search-input
+          />
+          <div class="site-search-results" data-search-results hidden></div>
+        </div>
       </div>
     </header>
     <main class="container page">
@@ -138,5 +150,125 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
         </p>
       </div>
     </footer>
+    <script is:inline>
+      {`
+        (() => {
+          const root = document.querySelector('[data-site-search]');
+          if (!root) return;
+
+          const input = root.querySelector('[data-search-input]');
+          const results = root.querySelector('[data-search-results]');
+          if (!input || !results) return;
+
+          let index = [];
+          let loaded = false;
+          let loading = false;
+
+          const formatDate = (value) => {
+            try {
+              return new Date(value).toLocaleDateString('en-AU', {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric',
+              });
+            } catch {
+              return '';
+            }
+          };
+
+          const escapeHtml = (value) =>
+            String(value || '')
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#39;');
+
+          const scoreItem = (item, query) => {
+            const title = item.title.toLowerCase();
+            const text = item.searchableText.toLowerCase();
+            let score = 0;
+            if (title.includes(query)) score += 8;
+            if (text.includes(query)) score += 4;
+            for (const term of query.split(/\\s+/)) {
+              if (!term) continue;
+              if (title.includes(term)) score += 3;
+              if (text.includes(term)) score += 1;
+            }
+            return score;
+          };
+
+          const renderResults = (items, query) => {
+            if (!query.trim()) {
+              results.hidden = true;
+              results.innerHTML = '';
+              return;
+            }
+
+            if (!items.length) {
+              results.hidden = false;
+              results.innerHTML = '<p class="site-search-empty">No matching content yet.</p>';
+              return;
+            }
+
+            results.hidden = false;
+            results.innerHTML = items
+              .map((item) => {
+                const meta = [item.section, item.kind, item.readTime + ' min read', formatDate(item.publishedAt)].filter(Boolean).join(' · ');
+                return \`
+                  <a class="site-search-hit" href="\${item.href}">
+                    <span class="site-search-hit-section">\${escapeHtml(item.section)}</span>
+                    <strong>\${escapeHtml(item.title)}</strong>
+                    <span class="site-search-hit-meta">\${escapeHtml(meta)}</span>
+                    <span class="site-search-hit-excerpt">\${escapeHtml(item.excerpt)}</span>
+                  </a>
+                \`;
+              })
+              .join('');
+          };
+
+          const loadIndex = async () => {
+            if (loaded || loading) return;
+            loading = true;
+            try {
+              const response = await fetch('/search-index.json');
+              if (!response.ok) return;
+              index = await response.json();
+              loaded = true;
+            } catch {}
+            loading = false;
+          };
+
+          input.addEventListener('focus', () => {
+            loadIndex();
+          });
+
+          input.addEventListener('input', async (event) => {
+            const query = event.target.value.trim().toLowerCase();
+            await loadIndex();
+            const matches = index
+              .map((item) => ({item, score: scoreItem(item, query)}))
+              .filter((entry) => entry.score > 0)
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 8)
+              .map((entry) => entry.item);
+            renderResults(matches, query);
+          });
+
+          document.addEventListener('click', (event) => {
+            if (!root.contains(event.target)) {
+              results.hidden = true;
+            }
+          });
+
+          input.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+              results.hidden = true;
+              input.blur();
+            }
+          });
+        })();
+      `}
+    </script>
   </body>
 </html>
