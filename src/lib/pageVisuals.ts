@@ -127,6 +127,31 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Professional comparing dashboards and spreadsheet workflows side by side',
     caption: 'Not every spreadsheet should be replaced, but every important workflow should have an owner and a decision rationale.',
   },
+  'how-to-run-erp-rfp': {
+    src: pexels('3182773'),
+    alt: 'Team reviewing proposal documents and selection criteria around a meeting table',
+    caption: 'A good ERP RFP should create comparable answers and expose real delivery assumptions.',
+  },
+  'is-erp-rfp-really-required': {
+    src: pexels('1181533'),
+    alt: 'Business leaders deciding between formal procurement options in a planning meeting',
+    caption: 'The right selection process depends on decision maturity, not procurement theatre.',
+  },
+  'industry-specific-erp-challenges-and-recommendations': {
+    src: pexels('3183153'),
+    alt: 'Cross-functional business team reviewing different operating models and industry needs',
+    caption: 'Industry fit is really about operating pressure, controls, and process realities.',
+  },
+  'erp-customisations-governance-guide': {
+    src: pexels('577585'),
+    alt: 'Technical and business team reviewing system extensions and architecture decisions',
+    caption: 'Customisation decisions need governance, ownership, and a clear support model after go-live.',
+  },
+  'managing-organisational-change-for-erp': {
+    src: pexels('3184339'),
+    alt: 'Team workshop focused on adoption planning, process change, and training',
+    caption: 'ERP change lands better when leaders, managers, and users all know what changes for them.',
+  },
 }
 
 const comparisonVisualsBySlug: Record<string, Visual> = {
@@ -254,4 +279,3 @@ export function getBlogVisual(slug?: string) {
   if (!slug) return fallbackBlogVisual
   return blogVisualsBySlug[slug] || fallbackBlogVisual
 }
-

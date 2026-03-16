@@ -459,6 +459,203 @@ const pillarGuideBlocks = (slug: string) => {
   return skimmableBlocks(...(content[slug] || []))
 }
 
+const topicalGuideBlocks = (slug: string) => {
+  const content: Record<string, string[][]> = {
+    'how-to-run-erp-rfp': [
+      ['An ERP RFP can be useful, but only when the business already understands what it needs, what it can realistically deliver, and how it will evaluate responses. Without that groundwork, the RFP becomes a polished document that creates false confidence and a lot of low-value reading.', 'The goal of a good ERP RFP is not to produce the longest response pack. It is to make vendor and partner assumptions visible, force scope clarity, and let the buying team compare like with like.', 'For most small and medium businesses, the best RFP is focused, scenario-led, and commercial enough to expose delivery risk rather than just software marketing.'],
+      ['## What to prepare before you write the RFP'],
+      [
+        '• A clear statement of business outcomes, phase-one scope, and what success should look like 12 months after go-live.',
+        '• A list of in-scope processes, sites, legal entities, reporting needs, integrations, and known pain points.',
+        '• A shortlist scorecard so the RFP asks for the evidence you actually need to compare vendors.',
+        '• Internal agreement on timeline, budget range, decision owners, and the expected role of implementation partners.',
+      ],
+      ['## What a practical ERP RFP should contain'],
+      [
+        '• Business overview: industry, size, operating model, growth plans, and current systems landscape.',
+        '• Scope and priorities: what is in phase one, what is out, and which processes are most critical.',
+        '• Scenarios and use cases: the real process journeys vendors must address in their response and demo.',
+        '• Delivery expectations: required governance, migration approach, testing expectations, training expectations, and post-go-live support.',
+        '• Commercial response format: software, implementation, support, assumptions, exclusions, and change-control model.',
+      ],
+      ['## Questions every RFP should force vendors to answer'],
+      [
+        '• What part of the proposed solution is standard, configured, custom-built, or dependent on third-party tools?',
+        '• Which assumptions have the biggest effect on timeline, cost, and project risk?',
+        '• What data, reporting, or integration issues typically cause delays in similar projects?',
+        '• Which roles from the client team are required, and how much time will they realistically need to contribute?',
+      ],
+      ['## Common RFP mistakes'],
+      [
+        '• Asking for hundreds of feature-box responses without weighting what actually matters.',
+        '• Issuing the RFP before the business agrees its phase-one scope and decision criteria.',
+        '• Using generic requirements language that allows every vendor to answer “yes”.',
+        '• Failing to standardise the commercial response structure, which makes proposals impossible to compare cleanly.',
+      ],
+      ['## FAQ'],
+      [
+        '• Should an RFP come before demos? Usually after a lighter discovery and shortlist step, not before.',
+        '• How long should it be? Shorter than most businesses think. Clarity matters more than volume.',
+        '• Who should own it? A programme lead supported by finance, operations, and the eventual business sponsors.',
+      ],
+    ],
+    'is-erp-rfp-really-required': [
+      ['Not every ERP selection needs a formal RFP. In many cases, smaller businesses create one because procurement expects it or because the team wants structure, not because it is the best way to reach a decision.', 'An RFP is most useful when requirements are mature, the shortlist is already narrow, and the business needs a formal way to compare delivery and commercial assumptions. It is much less useful when the buying team is still discovering what it actually needs.', 'A weak RFP can create the illusion of rigour while slowing the process, overwhelming stakeholders, and rewarding vendors who are best at writing responses rather than solving the problem.'],
+      ['## When an RFP is genuinely useful'],
+      [
+        '• The business has already completed discovery and can describe its target scope, process priorities, and non-negotiable requirements clearly.',
+        '• The shortlist is down to two or three credible options and the team needs structured commercial and delivery comparison.',
+        '• Governance or procurement policy requires a documented evaluation trail.',
+        '• The project is large enough that assumptions, exclusions, and change-control mechanics need to be surfaced formally.',
+      ],
+      ['## When you can skip or reduce the RFP'],
+      [
+        '• The team is still unclear on core requirements and needs workshops, demos, or advisory help first.',
+        '• The shortlist is already obvious and the real decision is which partner can deliver well.',
+        '• The business would get more value from scenario-led demos, reference calls, and scope workshops than from long written submissions.',
+        '• Internal bandwidth is low and a formal RFP would delay the project without improving decision quality.',
+      ],
+      ['## Good alternatives to a full RFP'],
+      [
+        '• A structured requirements brief plus scenario-led demos.',
+        '• A focused commercial template that standardises pricing, assumptions, and exclusions.',
+        '• Partner interviews and reference calls using a consistent scorecard.',
+        '• A “mini-RFP” that covers only critical process, delivery, and commercial questions.',
+      ],
+      ['## Decision rule'],
+      [
+        '• If the RFP will create clearer comparison and expose risk, use it.',
+        '• If it is mainly filling a confidence gap because the business has not done enough discovery, pause and fix discovery first.',
+        '• If procurement needs a document trail, keep it focused and aligned to actual selection criteria.',
+      ],
+      ['## FAQ'],
+      [
+        '• Does skipping an RFP make the process less rigorous? Not if you replace it with structured scenarios, scorecards, and commercial discipline.',
+        '• Can small businesses use a light RFP? Yes, and they usually should.',
+        '• What is the biggest mistake? Treating the RFP as the discovery process instead of the output of discovery.',
+      ],
+    ],
+    'industry-specific-erp-challenges-and-recommendations': [
+      ['ERP buyers often talk about “fit by industry”, but the useful lens is not industry labels alone. It is the operating challenges, control requirements, and process realities that show up inside each industry.', 'A useful industry guide helps teams ask better questions. It should point out where projects normally stumble, what design choices matter most, and what a sensible implementation emphasis looks like by industry.', 'The recommendations below are designed to help small and medium businesses focus their ERP evaluation on the issues that create the most operational and commercial value.'],
+      ['## Distribution'],
+      [
+        '• Common challenge: inaccurate stock, weak replenishment settings, and warehouse processes that rely on tribal knowledge.',
+        '• Recommendation: prioritise item master governance, warehouse flow design, and service-level KPI visibility before broader optimisation work.',
+      ],
+      ['## Manufacturing'],
+      [
+        '• Common challenge: unreliable planning signals, weak BOM or routing discipline, and poor visibility of WIP or scrap.',
+        '• Recommendation: stabilise master data and planning cadence early, then roll out process change with production leaders heavily involved.',
+      ],
+      ['## Retail'],
+      [
+        '• Common challenge: stock visibility across channels, markdown leakage, and poor margin control during promotions.',
+        '• Recommendation: focus on inventory accuracy, channel governance, and pricing controls before chasing advanced analytics.',
+      ],
+      ['## Professional services'],
+      [
+        '• Common challenge: disconnected view of pipeline, resourcing, project delivery, billing, and profitability.',
+        '• Recommendation: design around project economics first and test the full lifecycle from sold work to billed work.',
+      ],
+      ['## Wholesale and trade services'],
+      [
+        '• Common challenge: customer-specific pricing, service delivery variation, and inconsistent field-to-office handovers.',
+        '• Recommendation: test quote, order, scheduling, billing, and support flows as one joined-up process rather than separate modules.',
+      ],
+      ['## Multi-entity groups'],
+      [
+        '• Common challenge: inconsistent controls, difficult intercompany processes, and fragmented reporting.',
+        '• Recommendation: decide early what must be standardised across entities and what should remain locally flexible.',
+      ],
+      ['## How to use industry fit properly'],
+      [
+        '• Use industry context to sharpen scenarios and scorecards, not to let vendors wave through generic “industry expertise” claims.',
+        '• Ask partners for examples that match your actual operating pressure, not just your broad sector label.',
+        '• Prioritise the industry risks that would damage service, cash, margin, or control if handled poorly.',
+      ],
+    ],
+    'erp-customisations-governance-guide': [
+      ['Customisation is one of the most misunderstood areas in ERP programmes. Teams often swing between two poor extremes: either “never customise” or “the system must match exactly how we do everything today”.', 'The right answer is governance. Some custom work is justified and valuable. Too much custom work creates upgrade drag, support complexity, and a platform that only a few people truly understand.', 'A practical customisation strategy helps the business choose deliberately which gaps should be solved through process change, configuration, extensions, third-party tools, or controlled spreadsheets.'],
+      ['## A simple hierarchy for solution decisions'],
+      [
+        '• First: can the business adopt a standard process without harming service, control, or commercial performance?',
+        '• Second: can configuration solve the need without creating brittle design?',
+        '• Third: is a targeted extension justified by durable business value and stable process needs?',
+        '• Fourth: if the need is temporary or low-value, should it remain outside the core ERP under controlled ownership?',
+      ],
+      ['## When customisation is usually justified'],
+      [
+        '• The process creates significant commercial or control value and is unlikely to change frequently.',
+        '• The standard system would force unacceptable workarounds or manual risk.',
+        '• The extension is small, well-bounded, and can be supported cleanly through upgrades and releases.',
+        '• The business can name an owner for the process and for the ongoing support of the change.',
+      ],
+      ['## Governance practices that keep customisation under control'],
+      [
+        '• Run a design authority or architecture review for all requested extensions.',
+        '• Assess each request against value, process stability, support load, security, and upgrade impact.',
+        '• Keep an extension register with owner, purpose, release history, and retirement criteria.',
+        '• Review the extension portfolio quarterly so low-value bespoke logic does not become permanent clutter.',
+      ],
+      ['## Pros and cons'],
+      [
+        '• Pros: better fit for critical processes, reduced manual work, stronger controls in justified areas, and clearer user adoption where standard behaviour is genuinely weak.',
+        '• Cons: higher support cost, more complex testing, upgrade friction, dependency on specialist knowledge, and risk of preserving poor legacy habits.',
+      ],
+      ['## Support model'],
+      [
+        '• Define who owns break-fix support, regression testing, documentation, and release approval for each custom component.',
+        '• Do not rely on “the partner will know” as the support model. Capture enough design detail that the business is not trapped.',
+      ],
+      ['## FAQ'],
+      [
+        '• Are spreadsheets always bad? No. Uncontrolled spreadsheets are bad.',
+        '• Is third-party software better than customisation? Sometimes, but it still needs governance and ownership.',
+        '• What is the biggest mistake? Approving custom work without thinking about its life after go-live.',
+      ],
+    ],
+    'managing-organisational-change-for-erp': [
+      ['ERP projects fail less often because the software is wrong than because the organisation was not ready to work differently. Change management is not a communications side task; it is how the business reduces adoption risk and protects value.', 'For small and medium businesses, the challenge is often not apathy but overload. Teams are already busy, informal workarounds are deeply embedded, and leaders underestimate how much support people need once the new process is live.', 'Good change management turns the ERP programme from a system rollout into an operating change the business can absorb.'],
+      ['## What good change management includes'],
+      [
+        '• Clear sponsor messaging about why the change matters, what will improve, and what behaviours need to change.',
+        '• Role-based impact analysis so each team understands what is changing in their day-to-day work.',
+        '• Manager-led reinforcement before and after go-live, not just project-team communication.',
+        '• Training built around real tasks, real exceptions, and real decisions by role.',
+      ],
+      ['## Best practices for lean organisations'],
+      [
+        '• Start change work early, even if the project team is small.',
+        '• Equip frontline leaders to answer questions and coach new behaviours after consultants step away.',
+        '• Use a simple change network of respected team members instead of building a heavy formal structure.',
+        '• Measure adoption through transaction quality, exception volume, rework, and support dependency, not just attendance sheets.',
+      ],
+      ['## Common failure patterns'],
+      [
+        '• Senior leaders announce the project once, then disappear from visible sponsorship.',
+        '• Training is screen-based but not role-based, so people know where buttons are without understanding how to operate differently.',
+        '• Hypercare focuses on system defects while ignoring the human causes of repeated errors.',
+        '• Teams keep old spreadsheets and shadow processes alive because nobody has explicitly retired them.',
+      ],
+      ['## What to do in the 30 days before go-live'],
+      [
+        '• Confirm role-level readiness, not just project milestone completion.',
+        '• Rehearse the key daily and weekly operating routines with actual end users.',
+        '• Make support channels visible and name who is helping each function.',
+        '• Brief managers on the most likely points of confusion and the behaviours they need to reinforce.',
+      ],
+      ['## FAQ'],
+      [
+        '• Do smaller businesses really need change management? Yes. They often need a lighter model, but not no model.',
+        '• Who owns it? The project lead coordinates it, but managers and sponsors must actively carry it.',
+        '• What is the clearest sign it is working? Users adopt the new process consistently without recreating the old one in shadow tools.',
+      ],
+    ],
+  }
+
+  return skimmableBlocks(...(content[slug] || []))
+}
+
 const pillarComparisonBlocks = (slug: string) => {
   const content: Record<string, string[][]> = {
     'netsuite-vs-sage-intacct-finance-first-teams': [
@@ -844,6 +1041,61 @@ export const mockGuides: GuideDoc[] = [
       'Customise only when the process is stable, high-value, and unlikely to change materially.',
       'Assess upgrade impact before approving any extension backlog item.',
     ]),
+  },
+  {
+    _id: 'guide-erp-rfp-setup',
+    _type: 'guide',
+    title: 'How to set up an ERP RFP that vendors can answer properly',
+    slug: 'how-to-run-erp-rfp',
+    excerpt: 'Build an ERP RFP that creates comparable responses, exposes risk, and helps your team shortlist with more confidence.',
+    intent: 'Selection',
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalGuideBlocks('how-to-run-erp-rfp'),
+  },
+  {
+    _id: 'guide-is-rfp-required',
+    _type: 'guide',
+    title: 'Is an ERP RFP really required?',
+    slug: 'is-erp-rfp-really-required',
+    excerpt: 'A practical decision guide on when to use a full ERP RFP, when to simplify it, and when to skip it altogether.',
+    intent: 'Selection',
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalGuideBlocks('is-erp-rfp-really-required'),
+  },
+  {
+    _id: 'guide-industry-specific-challenges',
+    _type: 'guide',
+    title: 'Industry-specific ERP challenges and recommendations',
+    slug: 'industry-specific-erp-challenges-and-recommendations',
+    excerpt: 'A practical view of ERP priorities by industry, including distribution, manufacturing, retail, services, and multi-entity businesses.',
+    intent: 'Industry Fit',
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalGuideBlocks('industry-specific-erp-challenges-and-recommendations'),
+  },
+  {
+    _id: 'guide-customisation-governance',
+    _type: 'guide',
+    title: 'ERP customisations: how to manage, control, support, and decide',
+    slug: 'erp-customisations-governance-guide',
+    excerpt: 'A practical governance guide to ERP customisations, including decision criteria, support implications, and pros and cons.',
+    intent: 'Architecture',
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalGuideBlocks('erp-customisations-governance-guide'),
+  },
+  {
+    _id: 'guide-org-change-erp',
+    _type: 'guide',
+    title: 'Managing organisational change for ERP: best practices',
+    slug: 'managing-organisational-change-for-erp',
+    excerpt: 'How to manage ERP-driven change with practical sponsorship, training, adoption, and go-live support routines.',
+    intent: 'Change Management',
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalGuideBlocks('managing-organisational-change-for-erp'),
   },
 ]
 
