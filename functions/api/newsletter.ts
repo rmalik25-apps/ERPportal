@@ -68,10 +68,21 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       headers: {'Content-Type': 'text/plain;charset=utf-8'},
       body: JSON.stringify(relayPayload),
     })
-    if (!response.ok) return json({ok: false, error: 'Upstream webhook failed'}, 502)
+
+    let upstreamBody: Record<string, unknown> | null = null
+    try {
+      upstreamBody = await response.json()
+    } catch {
+      upstreamBody = null
+    }
+
+    if (!response.ok) return json({ok: false, error: String(upstreamBody?.error || 'Upstream webhook failed')}, 502)
+    if (upstreamBody && upstreamBody.ok === false) {
+      return json({ok: false, error: String(upstreamBody.error || 'Upstream webhook failed')}, 502)
+    }
+
     return json({ok: true})
   } catch {
     return json({ok: false, error: 'Webhook request failed'}, 502)
   }
 }
-
