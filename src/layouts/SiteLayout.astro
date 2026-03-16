@@ -163,6 +163,23 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
           let index = [];
           let loaded = false;
           let loading = false;
+          let activeIndex = -1;
+
+          const getHits = () => Array.from(results.querySelectorAll('.site-search-hit'));
+
+          const updateActiveHit = () => {
+            const hits = getHits();
+            hits.forEach((hit, index) => {
+              const isActive = index === activeIndex;
+              hit.classList.toggle('is-active', isActive);
+              hit.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+          };
+
+          const resetActiveHit = () => {
+            activeIndex = -1;
+            updateActiveHit();
+          };
 
           const formatDate = (value) => {
             try {
@@ -202,12 +219,14 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
             if (!query.trim()) {
               results.hidden = true;
               results.innerHTML = '';
+              resetActiveHit();
               return;
             }
 
             if (!items.length) {
               results.hidden = false;
               results.innerHTML = '<p class="site-search-empty">No matching content yet.</p>';
+              resetActiveHit();
               return;
             }
 
@@ -216,7 +235,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
               .map((item) => {
                 const meta = [item.section, item.kind, item.readTime + ' min read', formatDate(item.publishedAt)].filter(Boolean).join(' · ');
                 return \`
-                  <a class="site-search-hit" href="\${item.href}">
+                  <a class="site-search-hit" href="\${item.href}" aria-selected="false">
                     <span class="site-search-hit-section">\${escapeHtml(item.section)}</span>
                     <strong>\${escapeHtml(item.title)}</strong>
                     <span class="site-search-hit-meta">\${escapeHtml(meta)}</span>
@@ -225,6 +244,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
                 \`;
               })
               .join('');
+            resetActiveHit();
           };
 
           const loadIndex = async () => {
@@ -258,12 +278,38 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
           document.addEventListener('click', (event) => {
             if (!root.contains(event.target)) {
               results.hidden = true;
+              resetActiveHit();
             }
           });
 
           input.addEventListener('keydown', (event) => {
+            const hits = getHits();
+
+            if (event.key === 'ArrowDown' && hits.length) {
+              event.preventDefault();
+              activeIndex = activeIndex < hits.length - 1 ? activeIndex + 1 : 0;
+              updateActiveHit();
+              hits[activeIndex].scrollIntoView({block: 'nearest'});
+              return;
+            }
+
+            if (event.key === 'ArrowUp' && hits.length) {
+              event.preventDefault();
+              activeIndex = activeIndex > 0 ? activeIndex - 1 : hits.length - 1;
+              updateActiveHit();
+              hits[activeIndex].scrollIntoView({block: 'nearest'});
+              return;
+            }
+
+            if (event.key === 'Enter' && activeIndex >= 0 && hits[activeIndex]) {
+              event.preventDefault();
+              window.location.href = hits[activeIndex].getAttribute('href');
+              return;
+            }
+
             if (event.key === 'Escape') {
               results.hidden = true;
+              resetActiveHit();
               input.blur();
             }
           });
