@@ -111,6 +111,50 @@ const detailedGuideBlocks = (intent: string, leadParagraphs: string[]) => {
   return introBlocks([...leadParagraphs, ...(byIntent[intent] || []), ...common])
 }
 
+const detailedComparisonBlocks = (
+  comparisonType: string,
+  leadParagraphs: string[],
+  leftProduct: string,
+  rightProduct: string,
+) => {
+  const common = [
+    `A strong shortlist decision should test ${leftProduct} and ${rightProduct} against the same operating scenarios, governance expectations, and implementation constraints.`,
+    'The product that looks better in a demo can still be the worse choice once partner capability, data migration effort, and operating discipline are considered.',
+    'Before final selection, ask each vendor or partner to walk through your target state processes, key reporting requirements, and the top three reasons the implementation could go off track.',
+  ]
+
+  const byType: Record<string, string[]> = {
+    erpPlatform: [
+      `Start by clarifying whether the business needs a finance-led platform choice, an operations-led platform choice, or a balanced design. ${leftProduct} and ${rightProduct} may both be viable, but they usually win for different reasons.`,
+      `Assess functional fit in the areas that drive daily control: month-end close, purchasing, inventory, fulfilment, project tracking, intercompany handling, and reporting. Avoid turning the decision into a giant features matrix with no weighting.`,
+      'Evaluate the likely implementation shape for each option. One platform may appear cheaper in software terms while carrying more delivery risk because of process redesign, partner scarcity, or custom integration work.',
+      'Model the first 18 months, not just software subscription. Include implementation, change management, support, training, reporting build, and the likely cost of enhancements that are postponed from phase one.',
+      'The final decision should include three explicit outputs: which processes fit cleanly, which compromises are acceptable, and which operating constraints will remain after go-live.',
+    ],
+    financeFirst: [
+      'Finance-first teams should anchor the comparison around period-end close, multi-entity visibility, approval controls, consolidation, budgeting, and reporting flexibility. Those areas usually matter more than broad module count in the early selection phase.',
+      `With ${leftProduct}, the question is often whether the broader ERP footprint is needed now or whether it creates complexity before the business is ready to absorb it. With ${rightProduct}, the question is often whether a finance-led deployment will later need too many adjacent systems to cover operations.`,
+      'Probe practical close-day questions: how journals are controlled, where reconciliations live, how approval workflows behave, and how management packs are produced without spreadsheet sprawl.',
+      'Ask implementation partners to show a realistic finance operating model, including chart design, dimensions, intercompany treatment, and reporting ownership. That matters more than polished generic finance demos.',
+      'If the business expects to expand entities, geographies, or revenue models within the next two years, factor that trajectory into the decision now rather than assuming a later re-platform will be easy.',
+    ],
+    stackStrategy: [
+      'This decision is usually less about feature quality and more about operating simplicity versus flexibility. A unified stack can reduce governance overhead, while a best-of-breed model can preserve specialist process depth at the cost of more integration and control work.',
+      'Assess who will own the cross-system design. If no clear business and technical owners exist, a fragmented stack can quickly become a service and reporting problem.',
+      'Map the customer, quote, order, invoice, and support journey end to end. Any design that leaves ownership ambiguous between systems will create operational leakage.',
+      'The right answer depends on how much process variation the business really needs, and whether the internal team can support a more distributed application landscape.',
+    ],
+    migrationStrategy: [
+      'This comparison should start with business intent, not technical preference. If the business wants a cleaner process model, master data reset, or control redesign, a full reimplementation may be the more honest path even if the technical team prefers an upgrade.',
+      'Run an inventory of customisations, reports, integrations, and manual workarounds. That inventory determines whether the legacy estate is still manageable or whether it is carrying too much hidden complexity.',
+      'Evaluate the cost of preserving old design decisions. A technical upgrade can appear safer but may preserve poor process, obsolete controls, and hard-to-support extension logic.',
+      'Ask what the business will gain after go-live in each path. If the answer is only “same process on newer technology”, that may not justify the delivery effort.',
+    ],
+  }
+
+  return introBlocks([...leadParagraphs, ...(byType[comparisonType] || []), ...common])
+}
+
 const publishedAt = '2026-03-01T00:00:00Z'
 
 export const mockGuides: GuideDoc[] = [
@@ -364,11 +408,11 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedComparisonBlocks('erpPlatform', [
       'Compare the operating model first, then compare functionality.',
       'Assess partner capability and local support depth in Australia before final selection.',
       'Use scenario-based demos grounded in your process constraints.',
-    ]),
+    ], 'Dynamics 365 Business Central', 'NetSuite'),
   },
   {
     _id: 'comparison-bc-vs-acumatica',
@@ -384,11 +428,11 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedComparisonBlocks('erpPlatform', [
       'Both platforms can serve growing businesses well when the implementation scope is disciplined.',
       'Partner methodology and vertical experience often outweigh minor feature differences.',
       'Evaluate reporting, inventory control depth, and extension governance early.',
-    ]),
+    ], 'Dynamics 365 Business Central', 'Acumatica'),
   },
   {
     _id: 'comparison-bc-vs-sap-b1',
@@ -404,11 +448,11 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedComparisonBlocks('erpPlatform', [
       'The right choice depends on internal capability and partner support quality as much as product design.',
       'Validate local support and upgrade path assumptions before committing.',
       'Run cost models over three years, including support and enhancement effort.',
-    ]),
+    ], 'Dynamics 365 Business Central', 'SAP Business One'),
   },
   {
     _id: 'comparison-netsuite-vs-intacct',
@@ -424,11 +468,11 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedComparisonBlocks('financeFirst', [
       'Finance teams should map period-end pain points and reporting priorities before software evaluation.',
       'Be explicit about which operational domains must live in the core platform.',
       'The implementation partner’s finance design capability is a key risk reducer.',
-    ]),
+    ], 'NetSuite', 'Sage Intacct'),
   },
   {
     _id: 'comparison-erp-crm-strategy',
@@ -444,11 +488,11 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedComparisonBlocks('stackStrategy', [
       'Integration complexity is often underestimated in best-of-breed strategies.',
       'Unified stacks reduce moving parts but can limit specialist process depth.',
       'Choose based on team capability and change management bandwidth.',
-    ]),
+    ], 'Integrated ERP + CRM', 'Best-of-breed ERP + CRM'),
   },
   {
     _id: 'comparison-nav-upgrade-vs-reimplement',
@@ -464,11 +508,11 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedComparisonBlocks('migrationStrategy', [
       'Assess business process change requirements before deciding technical strategy.',
       'Hidden legacy complexity can make reimplementation the lower-risk option in practice.',
       'Pilot data migration and extension conversion on a representative subset first.',
-    ]),
+    ], 'Technical Upgrade', 'Reimplementation'),
   },
 ]
 
