@@ -291,6 +291,344 @@ const detailedPostBlocks = (category: string, leadParagraphs: string[]) => {
   )
 }
 
+const pillarGuideBlocks = (slug: string) => {
+  const content: Record<string, string[][]> = {
+    'erp-selection-checklist-smb': [
+      ['Most ERP shortlists go wrong long before contract signature. The problem is rarely that teams did not work hard enough; it is that they evaluated products before agreeing how success would be judged.', 'For a small or medium business, the cost of a weak shortlist is high. You lose months in demos, absorb avoidable consulting spend, and often end up choosing the partner who sounded safest rather than the platform that fits your operating model.', 'A strong checklist should help the team slow down in the right places: scope, commercial assumptions, data quality, operational constraints, and ownership of decisions.'],
+      ['## The questions to answer before you talk to vendors'],
+      [
+        '• What are the top business outcomes the programme is meant to deliver in the next 12 to 24 months: better stock control, faster close, cleaner project billing, lower manual rework, or better reporting confidence?',
+        '• Which processes are truly in scope for phase one, and which are being left out on purpose so the project remains executable?',
+        '• Which current pain points are process problems rather than system problems, and therefore should not be solved by software alone?',
+        '• Which constraints are non-negotiable: existing Microsoft stack, Australian reporting requirements, group structure, warehouse complexity, CRM dependency, or project accounting needs?',
+      ],
+      ['## What a useful vendor scorecard should include'],
+      [
+        '• Operational fit: order-to-cash, procure-to-pay, warehouse flow, production, project delivery, or service coverage based on your real scenarios.',
+        '• Finance and reporting fit: management packs, approvals, audit trail, close effort, dimension model, and group visibility.',
+        '• Delivery risk: data migration difficulty, integration count, change management load, testing effort, and internal team readiness.',
+        '• Partner confidence: relevant industry experience, realistic scope assumptions, governance method, local support strength, and reference quality.',
+        '• Commercial clarity: software, implementation, support, enhancement, and hidden future costs rather than headline licence price alone.',
+      ],
+      ['## Common small-business selection mistakes'],
+      [
+        '• Letting a polished demo outweigh the evidence from real operating scenarios.',
+        '• Treating implementation partner choice as a later commercial step instead of part of the product decision itself.',
+        '• Trying to include every process pain point in phase one because leadership wants “one big reset”.',
+        '• Ignoring master data quality and assuming the new system will solve it automatically.',
+        '• Failing to document why the losing vendors lost, which weakens internal alignment when commercial pressure starts.',
+      ],
+      ['## A practical selection rhythm'],
+      [
+        '• Week 1 to 2: agree business outcomes, shortlist criteria, and phase-one scope boundaries.',
+        '• Week 3 to 4: run targeted demos using your own scenarios and edge cases.',
+        '• Week 5: compare delivery assumptions, partner quality, and commercial model side by side.',
+        '• Week 6: run reference checks and a final decision workshop with named sign-off owners.',
+      ],
+      ['## FAQ'],
+      [
+        '• How many vendors should we shortlist? Usually two or three. More than that creates noise and slows decision quality.',
+        '• Should we run an RFP? Only if the business already understands its real requirements. Otherwise, a lighter scenario-led process is usually more useful.',
+        '• How early should we involve finance? Immediately. Finance structure, control needs, and reporting expectations shape the whole selection outcome.',
+      ],
+    ],
+    'navision-to-business-central-migration': [
+      ['NAV to Business Central decisions often get framed as a technical exercise. In practice, they are business design decisions disguised as an upgrade conversation.', 'If the legacy NAV estate carries years of customisations, reporting workarounds, and manual controls, the wrong migration path can leave the business paying modern software costs for yesterday’s operating model.', 'The useful question is not only whether you can upgrade. It is whether you should preserve the current design, reshape it, or reset parts of it while moving to Business Central.'],
+      ['## What to assess before choosing upgrade or reimplementation'],
+      [
+        '• Extension footprint: how many custom objects, reports, and integrations are genuinely still needed?',
+        '• Process drift: how far has the live system moved from the original intended process design?',
+        '• Reporting debt: are close, stock, margin, or project reports being held together outside the ERP?',
+        '• Data quality: would a direct migration simply carry broken structures and duplicate records into the new platform?',
+        '• Business change appetite: is leadership expecting process redesign or only technical currency?',
+      ],
+      ['## Signals that a reimplementation may be the better path'],
+      [
+        '• Teams cannot explain why several customisations exist or who still owns them.',
+        '• Critical processes such as approvals, inventory control, or customer pricing are partly outside the system.',
+        '• The business wants a new reporting model, stronger controls, or a cleaner CRM and warehouse integration approach.',
+        '• Data structures are inconsistent enough that migration and testing would be painful either way.',
+      ],
+      ['## What a good migration plan looks like'],
+      [
+        '• Run discovery with business leads and technical leads together so the future design is not biased by only one lens.',
+        '• Build a conversion register covering extensions, reports, interfaces, user groups, and manual controls.',
+        '• Prove the cutover sequence in rehearsals with real timings, business sign-offs, and rollback decisions.',
+        '• Protect the first month-end close and first full operating week as hard go-live criteria rather than afterthoughts.',
+      ],
+      ['## FAQ'],
+      [
+        '• Can we phase the migration? Yes, but only if the business can tolerate temporary process splits and clear ownership exists across legacy and new environments.',
+        '• Is a technical upgrade always cheaper? Not necessarily. Preserving poor design can create more cost later in support, reporting, and improvement work.',
+        '• Should we clean data before or during migration? Before and during. Early ownership matters, but real issues only fully emerge during rehearsal cycles.',
+      ],
+    ],
+    'business-central-implementation-wholesale-distribution': [
+      ['Distribution implementations live or die in the detail of inventory policy, warehouse flow, and item data. This is why apparently “simple” distributor rollouts often become expensive when the operational design has not been settled up front.', 'Business Central can support a strong distribution model, but only when the team is honest about replenishment logic, landed cost handling, location rules, barcode process, and exception management.', 'The aim is not just to get transactions into the system. It is to help the warehouse, purchasing, customer service, and finance teams all trust the same picture of stock and margin.'],
+      ['## The process areas that deserve the most design time'],
+      [
+        '• Item master policy: units of measure, variants, substitutions, serial or lot controls, and how new items are approved.',
+        '• Replenishment and purchasing: reorder logic, supplier lead times, demand spikes, and backorder handling.',
+        '• Warehouse execution: receiving, put-away, bin discipline, wave picking, dispatch confirmation, and stock adjustments.',
+        '• Customer service: order promises, partial fulfilment rules, credit hold handling, and return process design.',
+        '• Finance alignment: margin visibility, landed cost treatment, and inventory valuation confidence.',
+      ],
+      ['## What to challenge in partner proposals'],
+      [
+        '• Generic assumptions that “standard warehousing” is enough without walking the floor process in detail.',
+        '• Weak thinking about data governance, especially item records, supplier catalogues, and customer pricing conditions.',
+        '• No clear plan for barcode or mobility design even though warehouse accuracy is a major project objective.',
+        '• Training that focuses on screens rather than role-based operating routines.',
+      ],
+      ['## What good readiness looks like before go-live'],
+      [
+        '• Supervisors can explain the receiving, picking, and adjustment process without relying on the implementation team.',
+        '• Replenishment settings have been tested against recent demand reality rather than accepted as configuration defaults.',
+        '• Finance understands how inventory movement and landed cost decisions will affect reporting and close.',
+        '• Stock accuracy checkpoints, service-level KPIs, and hypercare triage priorities are agreed before launch week.',
+      ],
+      ['## FAQ'],
+      [
+        '• Should scanning be phase one? If warehouse accuracy and speed are core value drivers, usually yes.',
+        '• How much time should item data clean-up take? More than most teams expect. It is worth front-loading.',
+        '• Can we fix warehouse process after go-live? Some tuning is normal, but core flow issues should be addressed before launch or they will dominate hypercare.',
+      ],
+    ],
+    'd365-sales-business-central-integration-guide': [
+      ['The value of connecting D365 Sales with Business Central is not simply that data moves between two Microsoft products. The value comes from designing a commercial operating model that sales, operations, and finance all trust.', 'Most handover failures occur at the exact moments where ownership is fuzzy: quote approval, pricing, customer master quality, order conversion, delivery expectations, and exception recovery.', 'A good integration approach keeps the hand-off narrow, explicit, and visible. A bad one synchronises too much data and leaves nobody clearly accountable when records fail.'],
+      ['## The decisions to make early'],
+      [
+        '• Which system owns each stage of the customer journey: prospect, quote, order, invoice, and account service?',
+        '• Which fields are truly shared and which should remain native to one platform?',
+        '• What approvals are required before a quote becomes an order or a customer becomes active in ERP?',
+        '• How will failed synchronisations be surfaced, triaged, and corrected by business users?',
+      ],
+      ['## Design principles that keep the integration healthy'],
+      [
+        '• Keep the integration boundary small enough that ownership remains obvious.',
+        '• Prioritise data quality and commercial governance before adding convenience syncs.',
+        '• Build business-readable exception queues and named support paths.',
+        '• Test quote, order, pricing, and credit scenarios with real edge cases, not just clean happy-path flows.',
+      ],
+      ['## What to watch after launch'],
+      [
+        '• Duplicate customer or contact creation.',
+        '• Quote-to-order failures due to incomplete mandatory data or pricing mismatches.',
+        '• Sales teams bypassing the intended process because turnaround times are too slow.',
+        '• Finance and operations manually correcting records outside agreed controls.',
+      ],
+      ['## FAQ'],
+      [
+        '• Should all CRM data sync to ERP? No. Only the fields needed to run the downstream process cleanly.',
+        '• Who should own the integration? Jointly owned, but with explicit business and technical leads.',
+        '• Is this mainly a technical project? No. The hard work is commercial process design and ownership.',
+      ],
+    ],
+    'how-to-choose-erp-implementation-partner': [
+      ['Many ERP buyers spend far more time comparing software than comparing delivery partners. That is backwards. For most small and medium businesses, the implementation partner has as much influence on project success as the platform itself.', 'A strong partner brings structured governance, industry judgement, honest scope boundaries, and a team that can translate software into workable business design. A weak partner creates confidence in sales and ambiguity in delivery.', 'The right partner choice should reduce project risk, not just offer an acceptable day rate.'],
+      ['## What to test beyond the sales presentation'],
+      [
+        '• Who will actually lead the programme, configure the system, manage testing, and support cutover?',
+        '• What assumptions are built into the fixed price or estimate, and what happens when those assumptions prove wrong?',
+        '• How does the partner handle governance, scope control, risk escalation, and change requests?',
+        '• Can they show evidence from businesses with similar industry pressures, complexity, and leadership style?',
+      ],
+      ['## Good signs in a partner process'],
+      [
+        '• They ask difficult business questions early instead of jumping straight to software configuration.',
+        '• Their delivery method includes decision logs, RAID management, role-based training, and realistic testing effort.',
+        '• References speak about communication discipline and issue resolution, not only likeability.',
+        '• The proposed team feels coherent rather than stitched together for the bid.',
+      ],
+      ['## Red flags to watch for'],
+      [
+        '• The senior people sell the project but cannot explain who will stay involved after signature.',
+        '• Key assumptions about migration, integrations, reporting, or change management are vague.',
+        '• The partner agrees to every request quickly without explaining trade-offs or delivery consequences.',
+        '• Commercial language is soft around out-of-scope work, making later disputes likely.',
+      ],
+      ['## FAQ'],
+      [
+        '• Should we pick the cheapest partner? Usually no. Low pricing often hides weak assumptions or limited delivery depth.',
+        '• How many references should we check? At least two strong fit references and one more probing conversation if possible.',
+        '• Is industry experience mandatory? Not always, but it matters a lot when your operational model is specialised.',
+      ],
+    ],
+  }
+
+  return skimmableBlocks(...(content[slug] || []))
+}
+
+const pillarComparisonBlocks = (slug: string) => {
+  const content: Record<string, string[][]> = {
+    'netsuite-vs-sage-intacct-finance-first-teams': [
+      ['Finance-led ERP choices usually get framed too narrowly as “best accounting system wins”. In reality, finance-first teams still need to decide how much operational depth they want in the core platform, how future growth will change reporting needs, and how much integration overhead they are willing to own.', 'NetSuite and Sage Intacct can both be good choices, but they tend to serve different operating futures. The useful comparison is not which one has the nicer finance demo. It is which one fits the likely shape of the business over the next two years.', 'If the business expects multi-entity complexity, stronger operational control, or wider platform standardisation, the answer may differ from a business that mainly wants cleaner close, better approvals, and stronger management reporting.'],
+      ['## Where NetSuite usually makes the stronger case'],
+      [
+        '• The business wants broader ERP coverage in the core platform rather than a finance core with several adjacent systems.',
+        '• Multi-entity growth, international expansion, or operational standardisation is likely within the planning horizon.',
+        '• Leadership is prepared to invest in a larger implementation to get to a more unified model.',
+        '• The organisation wants one platform conversation rather than several system boundary conversations.',
+      ],
+      ['## Where Sage Intacct often wins'],
+      [
+        '• The immediate pain is finance visibility, close control, approvals, and reporting rather than broad operational redesign.',
+        '• The business is comfortable keeping some specialist operational tools in place for now.',
+        '• Leadership wants a more focused finance transformation with lower platform complexity in the near term.',
+        '• The team values implementation simplicity and faster finance-led adoption more than broader ERP breadth.',
+      ],
+      ['## Questions finance teams should push hard on'],
+      [
+        '• How will each option handle entity structure, consolidations, intercompany, and management pack production in your real reporting model?',
+        '• What happens to budgeting, approvals, audit trail, and close ownership under pressure at month-end?',
+        '• If operations remain partly outside the finance platform, who owns the integration quality and reporting consistency?',
+        '• Which implementation partner has the stronger track record in finance design, not just software deployment?',
+      ],
+      ['## What this choice looks like in practice'],
+      [
+        '• Choose NetSuite when finance transformation is part of a wider operating model change and the business wants the platform to carry more of that future state.',
+        '• Choose Sage Intacct when finance depth is the urgent priority and the business is not yet ready to widen the scope into a more comprehensive ERP redesign.',
+        '• In both cases, test the answer against your next phase of growth, not only today’s pain points.',
+      ],
+      ['## FAQ'],
+      [
+        '• Is NetSuite always better for scaling businesses? No. It depends on whether the business really needs broader ERP scope soon.',
+        '• Is Intacct too limited for growth? Not necessarily. It can be the right finance-first move when the operating model stays relatively focused.',
+        '• What causes bad decisions here? Overweighting generic finance demos and underweighting future operating complexity and partner quality.',
+      ],
+    ],
+    'business-central-vs-netsuite-growing-businesses': [
+      ['This is one of the most common shortlist decisions for growing Australian businesses because both platforms can support a meaningful step up from legacy systems or spreadsheet-heavy operations. The mistake is assuming they solve the same growth problem in the same way.', 'Business Central often appeals where Microsoft alignment, staged maturity, and practical operational control matter. NetSuite often appeals where cloud-first standardisation, broader native footprint, and multi-entity ambition are stronger drivers.', 'The choice becomes clearer when the business defines where complexity will sit: inside one broader platform, or within a more staged ecosystem anchored around Microsoft tooling.'],
+      ['## When Business Central tends to fit better'],
+      [
+        '• The business already relies heavily on Microsoft tools and wants a pragmatic extension of that ecosystem.',
+        '• Growth is real, but the team still wants a staged implementation approach rather than a broad transformation all at once.',
+        '• Operational areas like warehousing, purchasing, projects, or reporting need to improve without over-engineering the solution.',
+        '• Internal change capacity is limited and the business values familiarity and incremental maturity.',
+      ],
+      ['## When NetSuite tends to fit better'],
+      [
+        '• Leadership wants a stronger cloud-standard operating model and is prepared to change ways of working to get there.',
+        '• Multi-entity design and governance matter early rather than later.',
+        '• The business wants to reduce architectural fragmentation by consolidating more process in the core platform.',
+        '• The implementation team and sponsors are prepared for a more substantial design and adoption effort.',
+      ],
+      ['## What to pressure-test before deciding'],
+      [
+        '• Reporting model and finance structure: which option better supports the management questions leaders actually ask?',
+        '• Delivery model: which partner team feels more likely to govern the programme well in your environment?',
+        '• Operational edge cases: warehouse exceptions, pricing conditions, approvals, intercompany, or project complexity.',
+        '• Improvement path: which platform will leave the business with a cleaner next 18-month roadmap rather than a new backlog of workarounds?',
+      ],
+      ['## FAQ'],
+      [
+        '• Is Business Central only for simpler businesses? No. The better question is whether the operating model and delivery path fit how the business wants to mature.',
+        '• Is NetSuite always more future-proof? Not by default. Future value depends on whether the organisation can absorb the design and governance model well.',
+        '• What usually breaks the tie? Partner quality, change capacity, and clarity on future operating scope.',
+      ],
+    ],
+  }
+
+  return skimmableBlocks(...(content[slug] || []))
+}
+
+const pillarPostBlocks = (slug: string) => {
+  const content: Record<string, string[][]> = {
+    'erp-priorities-professional-services-project-firms': [
+      ['Professional services and project-based businesses often outgrow their tools in a very specific way: sales, delivery, time capture, billing, and finance all work individually, but the hand-offs between them are where margin disappears.', 'That is why ERP selection for services firms should start with project economics rather than software module lists. The core question is whether leaders can see resource demand, WIP, billing position, and project profitability clearly enough to make timely decisions.', 'If the answer is no, the system landscape is usually creating friction between CRM, PSA, finance, and reporting rather than supporting a clean commercial operating rhythm.'],
+      ['## The capabilities that matter most'],
+      [
+        '• Project margin visibility by client, project, work type, and delivery stage.',
+        '• Timesheet and expense capture that is easy enough for the business to trust and hard enough to preserve control.',
+        '• Billing flexibility for milestones, retainers, T&M, and mixed commercial models.',
+        '• Revenue recognition rules that align with the firm’s finance policy and audit expectations.',
+        '• Resource planning visibility so pipeline, committed work, and delivery capacity can be read together.',
+      ],
+      ['## Where services firms commonly lose money'],
+      [
+        '• Delayed or inaccurate timesheets that make project margin reporting unreliable.',
+        '• CRM and finance systems disagreeing on sold scope, rate cards, or change requests.',
+        '• WIP and milestone billing handled manually in spreadsheets with weak approval discipline.',
+        '• Project managers making delivery calls without a live view of commercial impact.',
+      ],
+      ['## What to demand in vendor demos'],
+      [
+        '• A realistic journey from opportunity to statement of work to active project to billing and close.',
+        '• Margin reporting during project delivery, not just after invoicing.',
+        '• Approval flows for write-offs, rate changes, discounts, and billing exceptions.',
+        '• Resource and project leaders using the same truth rather than stitched-together reports.',
+      ],
+      ['## FAQ'],
+      [
+        '• Can we keep separate PSA and finance tools? Yes, but only if ownership of the hand-offs is disciplined.',
+        '• What matters more: utilisation or margin? Both, but margin is usually the cleaner board-level outcome measure.',
+        '• What is the biggest selection mistake? Choosing based on generic accounting strength without testing the project lifecycle deeply enough.',
+      ],
+    ],
+    'vendor-demo-script-erp-buyers-what-to-ask': [
+      ['Most ERP demos feel productive in the moment and useless afterwards. Buyers leave with notes, impressions, and a vague sense of preference, but not with decision-grade evidence.', 'A proper demo script changes that. It forces vendors to show how the system behaves in your reality: messy approvals, exception handling, reporting pressure, master data issues, and hand-offs between departments.', 'The point is not to catch vendors out. The point is to create comparable evidence so the team can separate presentation quality from true business fit.'],
+      ['## What a strong demo script should contain'],
+      [
+        '• One or two end-to-end scenarios for each critical business flow.',
+        '• Edge cases that regularly create pain today, such as backorders, project changes, returns, intercompany movement, or approval exceptions.',
+        '• Required outputs: reports, approvals, alerts, dashboards, or audit trail evidence the business needs to see.',
+        '• A structured scorecard completed live by business owners, not recollected days later.',
+      ],
+      ['## Questions to ask during the demo'],
+      [
+        '• What part of this flow is standard versus configured versus custom-built?',
+        '• Where would our team need to change process to make this work cleanly?',
+        '• What assumptions are you making about data quality, role discipline, or governance?',
+        '• What would normally go wrong in this scenario during implementation, and how would your team reduce that risk?',
+      ],
+      ['## What to avoid'],
+      [
+        '• Letting the vendor set the agenda entirely.',
+        '• Accepting screenshots or future promises instead of seeing the live workflow.',
+        '• Blending product demo and partner sales pitch so it becomes hard to separate software fit from delivery confidence.',
+        '• Waiting until the end of the process to compare notes rather than scoring each scenario live.',
+      ],
+      ['## FAQ'],
+      [
+        '• How long should a demo be? Long enough to test the key scenarios properly, usually shorter and sharper than a generic half-day tour.',
+        '• Should we give vendors the script in advance? Yes, if the goal is fair comparison rather than surprise.',
+        '• Who should score the demo? Process owners, finance, and a programme lead with a common scoring model.',
+      ],
+    ],
+    'month-end-close-new-erp-first-three-cycles-playbook': [
+      ['The first three month-end closes after go-live are where finance credibility is won or lost. Leaders usually tolerate small operating friction in the opening weeks, but they are far less forgiving when the new ERP makes close slower, more manual, or less reliable.', 'That is why the close should be run as a structured stabilisation workstream, not as an assumption that finance will simply “work it out” after go-live.', 'A good close playbook gives the business a visible rhythm: ownership by domain, daily checkpoints, and fast classification of issues by business impact.'],
+      ['## What to lock down before the first close starts'],
+      [
+        '• Named owners for journals, reconciliations, allocations, intercompany, reporting pack production, and approvals.',
+        '• A close calendar with due times, dependencies, and escalation points.',
+        '• A short list of critical reports and reconciliations that must be accurate for leadership confidence.',
+        '• A triage path for defects: accounting impact, operational impact, root cause, workaround, and permanent fix owner.',
+      ],
+      ['## How the first three cycles should differ'],
+      [
+        '• Cycle 1: focus on control, visibility, and survival. Document every friction point and keep issue ownership explicit.',
+        '• Cycle 2: reduce manual interventions and tighten turnaround times for recurring issues.',
+        '• Cycle 3: confirm whether the close rhythm is becoming stable enough to move out of intensive support mode.',
+      ],
+      ['## Watch-outs that usually create avoidable pain'],
+      [
+        '• Journals and reconciliations living in personal workarounds rather than agreed team routines.',
+        '• Poor hand-offs between operations and finance on stock, billing, or project updates.',
+        '• Reporting packs requiring too many manual fixes because the master data and transaction discipline are not yet stable.',
+        '• Hypercare teams treating finance issues as lower priority than operational tickets.',
+      ],
+      ['## FAQ'],
+      [
+        '• Should finance be in hypercare leadership? Yes. Close risk is a business risk, not a back-office detail.',
+        '• How long should we run close command-centre style support? Usually until at least two cycles are stable.',
+        '• What is the best success measure? Faster close matters, but confidence in numbers matters more.',
+      ],
+    ],
+  }
+
+  return skimmableBlocks(...(content[slug] || []))
+}
+
 const publishedAt = '2026-03-01T00:00:00Z'
 
 export const mockGuides: GuideDoc[] = [
@@ -307,11 +645,7 @@ export const mockGuides: GuideDoc[] = [
       metaTitle: 'ERP Selection Checklist for Small and Medium Businesses',
       metaDescription: 'Use this ERP selection checklist to avoid expensive rework and compare vendors with consistent scoring criteria.',
     },
-    body: detailedGuideBlocks('Selection', [
-      'Most ERP projects go sideways because teams rush to demos before defining scope, success measures, and non-negotiable requirements.',
-      'Build a weighted scorecard that includes operational fit, reporting, integration complexity, and implementation risk.',
-      'Keep an audit trail of decisions so procurement and executive stakeholders can approve with confidence.',
-    ]),
+    body: pillarGuideBlocks('erp-selection-checklist-smb'),
   },
   {
     _id: 'guide-navision-to-bc-migration',
@@ -326,11 +660,7 @@ export const mockGuides: GuideDoc[] = [
       metaTitle: 'NAV to Business Central Migration Guide',
       metaDescription: 'Step-by-step NAV to Business Central migration guide covering data, extensions, testing, and go-live controls.',
     },
-    body: detailedGuideBlocks('Migration', [
-      'Start with a factual inventory of custom objects, integrations, reports, and manual workarounds that have accumulated over time.',
-      'Choose upgrade or reimplementation based on business process change needs, not only technical convenience.',
-      'Use a phased testing approach with finance close, order-to-cash, and procure-to-pay as hard release gates.',
-    ]),
+    body: pillarGuideBlocks('navision-to-business-central-migration'),
   },
   {
     _id: 'guide-bc-distribution',
@@ -341,11 +671,7 @@ export const mockGuides: GuideDoc[] = [
     intent: 'Implementation',
     publishedAt,
     updatedAt: publishedAt,
-    body: detailedGuideBlocks('Implementation', [
-      'Distribution projects fail when inventory policy and system settings are misaligned, especially around lead times and reorder logic.',
-      'Define item master standards early, including UOM, lot/serial rules, and substitute item strategy.',
-      'Map warehouse workflows before configuration so scanning, picking, and put-away reflect actual floor operations.',
-    ]),
+    body: pillarGuideBlocks('business-central-implementation-wholesale-distribution'),
   },
   {
     _id: 'guide-bc-manufacturing',
@@ -371,11 +697,7 @@ export const mockGuides: GuideDoc[] = [
     intent: 'CRM + ERP',
     publishedAt,
     updatedAt: publishedAt,
-    body: detailedGuideBlocks('CRM + ERP', [
-      'Set clear ownership: CRM for pipeline and relationship activity, ERP for commercial transactions and fulfilment.',
-      'Synchronise only what is needed to run the process end-to-end, not every field in both systems.',
-      'Design exception handling so integration failures are visible and recoverable by operations teams.',
-    ]),
+    body: pillarGuideBlocks('d365-sales-business-central-integration-guide'),
   },
   {
     _id: 'guide-partner-selection',
@@ -386,11 +708,7 @@ export const mockGuides: GuideDoc[] = [
     intent: 'Partner Selection',
     publishedAt,
     updatedAt: publishedAt,
-    body: detailedGuideBlocks('Partner Selection', [
-      'Implementation outcomes are heavily influenced by partner quality, not just product fit.',
-      'Review proposed delivery team CVs, governance cadence, and escalation model before signing.',
-      'Use weighted criteria and reference calls in similar Australian business contexts.',
-    ]),
+    body: pillarGuideBlocks('how-to-choose-erp-implementation-partner'),
   },
   {
     _id: 'guide-finance-dimensions',
@@ -544,11 +862,7 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
-    body: detailedComparisonBlocks('erpPlatform', [
-      'Compare the operating model first, then compare functionality.',
-      'Assess partner capability and local support depth in Australia before final selection.',
-      'Use scenario-based demos grounded in your process constraints.',
-    ], 'Dynamics 365 Business Central', 'NetSuite'),
+    body: pillarComparisonBlocks('business-central-vs-netsuite-growing-businesses'),
   },
   {
     _id: 'comparison-bc-vs-acumatica',
@@ -604,11 +918,7 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
-    body: detailedComparisonBlocks('financeFirst', [
-      'Finance teams should map period-end pain points and reporting priorities before software evaluation.',
-      'Be explicit about which operational domains must live in the core platform.',
-      'The implementation partner’s finance design capability is a key risk reducer.',
-    ], 'NetSuite', 'Sage Intacct'),
+    body: pillarComparisonBlocks('netsuite-vs-sage-intacct-finance-first-teams'),
   },
   {
     _id: 'comparison-erp-crm-strategy',
@@ -692,11 +1002,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Professional Services',
     publishedAt,
     updatedAt: publishedAt,
-    body: detailedPostBlocks('Professional Services', [
-      'Services firms should anchor selection around project margin visibility and billing control.',
-      'Define how timesheets, expenses, milestone billing, and revenue recognition interact.',
-      'Keep hand-offs between CRM, PSA, and ERP clear to reduce leakage.',
-    ]),
+    body: pillarPostBlocks('erp-priorities-professional-services-project-firms'),
   },
   {
     _id: 'post-retail-omnichannel',
@@ -782,11 +1088,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Finance',
     publishedAt,
     updatedAt: publishedAt,
-    body: detailedPostBlocks('Finance', [
-      'Close quality in the first three cycles sets confidence for the whole programme.',
-      'Run daily reconciliation checkpoints during close week.',
-      'Classify issues by accounting impact and process root cause.',
-    ]),
+    body: pillarPostBlocks('month-end-close-new-erp-first-three-cycles-playbook'),
   },
   {
     _id: 'post-integration-architecture',
@@ -812,11 +1114,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Selection',
     publishedAt,
     updatedAt: publishedAt,
-    body: detailedPostBlocks('Selection', [
-      'Without a script, demos turn into marketing theatre rather than fit validation.',
-      'Base scenarios on real operational edge cases from your organisation.',
-      'Score live and capture assumptions immediately after each session.',
-    ]),
+    body: pillarPostBlocks('vendor-demo-script-erp-buyers-what-to-ask'),
   },
   {
     _id: 'post-partner-due-diligence',

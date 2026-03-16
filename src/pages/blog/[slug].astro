@@ -4,6 +4,7 @@ import PageVisual from '../../components/PageVisual.astro'
 import {getBlogVisual} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
+import {getRelatedBlogLinks} from '../../lib/relatedContent'
 import {getPostBySlug, getPosts} from '../../lib/sanity'
 
 export async function getStaticPaths() {
@@ -23,6 +24,7 @@ const content = blocksToRichContent(post.body)
 const readTime = estimateReadTimeMinutes(post)
 const canonicalPath = `/blog/${post.slug}/`
 const visual = getBlogVisual(post.slug)
+const relatedLinks = getRelatedBlogLinks(post.slug)
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -95,6 +97,16 @@ const articleSchema = {
         <p>Use blog posts for news, commentary, and promotion of long-form guides/comparisons.</p>
         <p><a class="link-arrow" href="/guides/">Link readers into guides →</a></p>
       </section>
+      {relatedLinks.length ? (
+        <section class="card">
+          <h2>Related reading</h2>
+          <ul>
+            {relatedLinks.map((link) => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
     </aside>
   </div>
 </SiteLayout>
