@@ -320,7 +320,7 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
           <label>
             Country code
             <select name="phoneCountryCode" required>
-              <option value="+61">Australia (+61)</option>
+              <option value="+61" selected>Australia (+61)</option>
               <option value="+64">New Zealand (+64)</option>
               <option value="+44">United Kingdom (+44)</option>
               <option value="+1">United States/Canada (+1)</option>
@@ -335,11 +335,12 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
               name="phoneNumber"
               autocomplete="tel-national"
               inputmode="tel"
-              placeholder="412 345 678"
+              placeholder="0412 345 678"
               required
             />
           </label>
         </div>
+        <p class="editorial-toolbar">Australian mobile example: `0412 345 678`. Leave spaces if helpful.</p>
         <label>
           Company size
           <select name="companySize" required>
@@ -451,7 +452,7 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
         type: 'assessment',
         email: asText(data.get('email')),
         phoneCountryCode: asText(data.get('phoneCountryCode')),
-        phoneNumber: asText(data.get('phoneNumber')),
+        phoneNumber: asText(data.get('phoneNumber')).replace(/[^\d()+\-\s]/g, ''),
         companySize: asText(data.get('companySize')),
         projectType: asText(data.get('projectType')),
         priorities: asText(data.get('priorities')),
