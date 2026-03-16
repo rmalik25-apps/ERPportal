@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro'
+import {estimateReadTimeMinutes, formatPublishDate} from '../lib/contentMeta'
 import {getComparisons, getGuides, getPosts, sanityConfigured} from '../lib/sanity'
 
 const [guides, comparisons, posts] = await Promise.all([getGuides(), getComparisons(), getPosts()])
@@ -182,6 +183,14 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
         </article>
       </div>
       <aside class="note-card">
+        <figure class="note-visual">
+          <img
+            src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Team planning implementation priorities on a whiteboard"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
         <h3>Find your best starting point</h3>
         <ul>
           <li><a href="/guides/">I’m selecting a new ERP</a></li>
@@ -314,6 +323,10 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
         <article class="card collection-card">
           <p class="eyebrow">{'category' in post ? post.category : 'Post'}</p>
           <h3><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+          <div class="meta-row">
+            <p class="meta">Published {'publishedAt' in post && post.publishedAt ? formatPublishDate(post.publishedAt) : 'Recent'}</p>
+            <span class="meta-pill">{'body' in post ? estimateReadTimeMinutes(post) : 5} min read</span>
+          </div>
           <p>{post.excerpt}</p>
         </article>
       ))}
@@ -321,6 +334,10 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
         <article class="card collection-card">
           <p class="eyebrow">{guide.intent || 'Guide'}</p>
           <h3><a href={`/guides/${guide.slug}/`}>{guide.title}</a></h3>
+          <div class="meta-row">
+            <p class="meta">Published {formatPublishDate(guide.publishedAt)}</p>
+            <span class="meta-pill">{estimateReadTimeMinutes(guide)} min read</span>
+          </div>
           <p>{guide.excerpt}</p>
         </article>
       ))}

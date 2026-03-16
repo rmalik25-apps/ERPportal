@@ -486,6 +486,19 @@ a {
   padding: 0.95rem;
 }
 
+.note-visual {
+  margin: 0 0 0.75rem;
+}
+
+.note-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(231, 211, 184, 0.95);
+}
+
 .note-card h3 {
   margin: 0 0 0.35rem;
   font-family: "Fraunces", Georgia, serif;
@@ -689,6 +702,29 @@ a {
   color: var(--muted);
   font-size: 0.9rem;
   margin: 0 0 0.8rem;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.8rem;
+}
+
+.meta-row .meta {
+  margin: 0;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+  font-size: 0.78rem;
+  color: var(--muted);
 }
 
 .page-kicker {

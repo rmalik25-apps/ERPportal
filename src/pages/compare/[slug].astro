@@ -3,6 +3,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getComparisonBySlug, getComparisons} from '../../lib/sanity'
 
 export async function getStaticPaths() {
@@ -18,6 +19,7 @@ if (!item) {
 }
 
 const paragraphs = blocksToPlainParagraphs(item.body)
+const readTime = estimateReadTimeMinutes(item)
 const canonicalPath = `/compare/${item.slug}/`
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -45,9 +47,11 @@ const articleSchema = {
     <article class="doc-main">
       <p class="eyebrow">Comparison</p>
       <h1>{item.title}</h1>
-      <p class="meta">
-        {item.leftProduct} vs {item.rightProduct} • Published {new Date(item.publishedAt).toLocaleDateString()}
-      </p>
+      <div class="meta-row">
+        <p class="meta">{item.leftProduct} vs {item.rightProduct} • Published {formatPublishDate(item.publishedAt)}</p>
+        <span class="meta-pill">{readTime} min read</span>
+        {item.updatedAt && <span class="meta-pill">Updated {formatPublishDate(item.updatedAt)}</span>}
+      </div>
       <PageVisual
         src={pageVisuals.comparisons.src}
         alt={pageVisuals.comparisons.alt}

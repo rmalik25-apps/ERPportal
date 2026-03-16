@@ -2,6 +2,7 @@
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
+import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getPosts} from '../../lib/sanity'
 
 const posts = await getPosts()
@@ -25,7 +26,10 @@ const posts = await getPosts()
       <article class="editorial-item">
         <p class="eyebrow">{post.category}</p>
         <h2><a href={`/blog/${post.slug}/`}>{post.title}</a></h2>
-        <p class="meta">Updated {new Date(post.updatedAt || post.publishedAt).toLocaleDateString()}</p>
+        <div class="meta-row">
+          <p class="meta">Published {formatPublishDate(post.publishedAt)}</p>
+          <span class="meta-pill">{estimateReadTimeMinutes(post)} min read</span>
+        </div>
         <p>{post.excerpt}</p>
       </article>
     ))}

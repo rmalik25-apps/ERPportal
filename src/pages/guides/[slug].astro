@@ -3,6 +3,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getGuideBySlug, getGuides} from '../../lib/sanity'
 
 export async function getStaticPaths() {
@@ -20,6 +21,7 @@ if (!guide) {
 }
 
 const paragraphs = blocksToPlainParagraphs(guide.body)
+const readTime = estimateReadTimeMinutes(guide)
 const canonicalPath = `/guides/${guide.slug}/`
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -47,7 +49,11 @@ const articleSchema = {
     <article class="doc-main">
       <p class="eyebrow">{guide.intent || 'Guide'}</p>
       <h1>{guide.title}</h1>
-      <p class="meta">Published {new Date(guide.publishedAt).toLocaleDateString()}</p>
+      <div class="meta-row">
+        <p class="meta">Published {formatPublishDate(guide.publishedAt)}</p>
+        <span class="meta-pill">{readTime} min read</span>
+        {guide.updatedAt && <span class="meta-pill">Updated {formatPublishDate(guide.updatedAt)}</span>}
+      </div>
       <PageVisual
         src={pageVisuals.guides.src}
         alt={pageVisuals.guides.alt}

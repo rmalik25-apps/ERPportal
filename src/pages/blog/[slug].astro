@@ -3,6 +3,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getPostBySlug, getPosts} from '../../lib/sanity'
 
 export async function getStaticPaths() {
@@ -18,6 +19,7 @@ if (!post) {
 }
 
 const paragraphs = blocksToPlainParagraphs(post.body)
+const readTime = estimateReadTimeMinutes(post)
 const canonicalPath = `/blog/${post.slug}/`
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -45,7 +47,11 @@ const articleSchema = {
     <article class="doc-main">
       <p class="eyebrow">{post.category}</p>
       <h1>{post.title}</h1>
-      <p class="meta">Published {new Date(post.publishedAt).toLocaleDateString()}</p>
+      <div class="meta-row">
+        <p class="meta">Published {formatPublishDate(post.publishedAt)}</p>
+        <span class="meta-pill">{readTime} min read</span>
+        {post.updatedAt && <span class="meta-pill">Updated {formatPublishDate(post.updatedAt)}</span>}
+      </div>
       <PageVisual
         src={pageVisuals.blog.src}
         alt={pageVisuals.blog.alt}
