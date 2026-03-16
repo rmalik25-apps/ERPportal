@@ -301,9 +301,13 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
               return;
             }
 
-            if (event.key === 'Enter' && activeIndex >= 0 && hits[activeIndex]) {
+            if (event.key === 'Enter' && hits.length) {
               event.preventDefault();
-              window.location.href = hits[activeIndex].getAttribute('href');
+              const targetIndex = activeIndex >= 0 ? activeIndex : 0;
+              const href = hits[targetIndex].getAttribute('href');
+              if (href) {
+                window.location.href = href;
+              }
               return;
             }
 
