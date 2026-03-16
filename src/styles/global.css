@@ -203,6 +203,18 @@ a {
   margin: 0 0 0.75rem;
 }
 
+.hero-form {
+  margin-top: 0.85rem;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.hero-form .btn {
+  width: 100%;
+}
+
 .hero-visual {
   margin: 0 0 0.9rem;
   border: 1px solid var(--line);

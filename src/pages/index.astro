@@ -65,15 +65,58 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
             Operational context plus planning context: ERP decisions should connect warehouse workflows with finance and leadership priorities.
           </figcaption>
         </figure>
-        <h2>Find your ERP shortlist in 3 minutes</h2>
-        <p>Use your company profile to narrow options before talking to vendors.</p>
-        <ul class="metric-list">
-          <li><strong>Company size</strong><span>50-2,500 employees</span></li>
-          <li><strong>Industries</strong><span>Distribution, Manufacturing, Services, Retail</span></li>
-          <li><strong>Primary intent</strong><span>New ERP / Upgrade / Rescue / Optimisation</span></li>
-          <li><strong>Output</strong><span>Shortlist + budget range + partner intro</span></li>
-        </ul>
-        <p><a class="link-arrow" href="#get-guidance">Start assessment →</a></p>
+        <h2>Start your ERP shortlist here</h2>
+        <p>Tell us a little about your project and we can follow up with a practical shortlist direction.</p>
+        <form class="home-form hero-form js-lead-form" data-endpoint={assessmentEndpoint} novalidate>
+          <label>
+            Work email
+            <input type="email" name="email" autocomplete="email" placeholder="name@company.com" required />
+          </label>
+          <div class="phone-row">
+            <label>
+              Country code
+              <select name="phoneCountryCode" required>
+                <option value="+61" selected>Australia (+61)</option>
+                <option value="+64">New Zealand (+64)</option>
+                <option value="+44">United Kingdom (+44)</option>
+                <option value="+1">United States/Canada (+1)</option>
+                <option value="+65">Singapore (+65)</option>
+                <option value="+91">India (+91)</option>
+              </select>
+            </label>
+            <label>
+              Phone number
+              <input type="tel" name="phoneNumber" autocomplete="tel-national" inputmode="tel" placeholder="0412 345 678" required />
+            </label>
+          </div>
+          <label>
+            Company size
+            <select name="companySize" required>
+              <option value="">Select company size</option>
+              <option>50-100 employees</option>
+              <option>101-500 employees</option>
+              <option>501-2,500 employees</option>
+              <option>2,500+ employees</option>
+            </select>
+          </label>
+          <label>
+            Project type
+            <select name="projectType" required>
+              <option>New ERP selection</option>
+              <option>Legacy upgrade / migration</option>
+              <option>Implementation rescue</option>
+              <option>Optimisation / managed support</option>
+            </select>
+          </label>
+          <label>
+            Main priority
+            <textarea rows="3" name="priorities" placeholder="e.g. reporting, warehouse control, manufacturing planning, multi-entity finance..." required></textarea>
+          </label>
+          <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn-primary" type="submit">Get my shortlist</button>
+          <p class="editorial-toolbar">We will email practical next steps and can arrange partner recommendations if useful.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </aside>
     </div>
   </section>
@@ -357,7 +400,7 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
             <option>New ERP selection</option>
             <option>Legacy upgrade / migration</option>
             <option>Implementation rescue</option>
-            <option>Optimization / managed support</option>
+            <option>Optimisation / managed support</option>
           </select>
         </label>
         <label>
@@ -436,45 +479,49 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
   }
 
   function setupAssessment() {
-    const form = document.querySelector('.js-lead-form');
-    if (!form) return;
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const endpoint = form.dataset.endpoint || assessmentEndpoint;
-      if (!endpoint) {
-        setStatus(form, 'Submission endpoint is not configured yet.', true);
-        return;
-      }
-      const data = new FormData(form);
-      if (asText(data.get('website'))) return;
+    const forms = document.querySelectorAll('.js-lead-form');
+    if (!forms.length) return;
+    forms.forEach((form) => {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const endpoint = form.dataset.endpoint || assessmentEndpoint;
+        if (!endpoint) {
+          setStatus(form, 'Submission endpoint is not configured yet.', true);
+          return;
+        }
+        const data = new FormData(form);
+        if (asText(data.get('website'))) return;
 
-      const payload = {
-        type: 'assessment',
-        email: asText(data.get('email')),
-        phoneCountryCode: asText(data.get('phoneCountryCode')),
-        phoneNumber: asText(data.get('phoneNumber')).replace(/[^\d()+\-\s]/g, ''),
-        companySize: asText(data.get('companySize')),
-        projectType: asText(data.get('projectType')),
-        priorities: asText(data.get('priorities')),
-        page: window.location.href,
-        submittedAt: new Date().toISOString(),
-      };
+        const payload = {
+          type: 'assessment',
+          email: asText(data.get('email')),
+          phoneCountryCode: asText(data.get('phoneCountryCode')),
+          phoneNumber: asText(data.get('phoneNumber')).replace(/[^\d()+\-\s]/g, ''),
+          companySize: asText(data.get('companySize')),
+          projectType: asText(data.get('projectType')),
+          priorities: asText(data.get('priorities')),
+          page: window.location.href,
+          submittedAt: new Date().toISOString(),
+        };
 
-      if (!payload.email || !payload.phoneCountryCode || !payload.phoneNumber || !payload.companySize || !payload.projectType || !payload.priorities) {
-        setStatus(form, 'Please complete all fields before submitting.', true);
-        return;
-      }
+        if (!payload.email || !payload.phoneCountryCode || !payload.phoneNumber || !payload.companySize || !payload.projectType || !payload.priorities) {
+          setStatus(form, 'Please complete all fields before submitting.', true);
+          return;
+        }
 
-      try {
-        setBusy(form, true);
-        await postPayload(endpoint, payload);
-        form.reset();
-        setStatus(form, 'Thanks. We received your request and will respond shortly.');
-      } catch (error) {
-        setStatus(form, 'Submission failed. Please try again in a moment.', true);
-      } finally {
-        setBusy(form, false);
-      }
+        try {
+          setBusy(form, true);
+          await postPayload(endpoint, payload);
+          form.reset();
+          const countrySelect = form.querySelector('select[name="phoneCountryCode"]');
+          if (countrySelect) countrySelect.value = '+61';
+          setStatus(form, 'Thanks. We received your request and will respond shortly.');
+        } catch (error) {
+          setStatus(form, 'Submission failed. Please try again in a moment.', true);
+        } finally {
+          setBusy(form, false);
+        }
+      });
     });
   }
 
