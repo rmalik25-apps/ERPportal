@@ -999,6 +999,12 @@ a {
   resize: vertical;
 }
 
+.phone-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
 .form-honeypot {
   position: absolute;
   left: -9999px;
@@ -1033,6 +1039,10 @@ a {
 
   .doc-side .card {
     position: static;
+  }
+
+  .phone-row {
+    grid-template-columns: 1fr;
   }
 
   .page-kicker {

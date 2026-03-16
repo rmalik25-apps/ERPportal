@@ -22,7 +22,7 @@ Headers:
 
 `AssessmentLeads`:
 
-`submittedAt | email | companySize | projectType | priorities | page | relayAt | relayPath`
+`submittedAt | email | phoneCountryCode | phoneNumber | companySize | projectType | priorities | page | relayAt | relayPath`
 
 `NewsletterLeads`:
 
@@ -53,6 +53,8 @@ function doPost(e) {
       tab.appendRow([
         payload.submittedAt || new Date().toISOString(),
         payload.email || '',
+        payload.phoneCountryCode || '',
+        payload.phoneNumber || '',
         payload.companySize || '',
         payload.projectType || '',
         payload.priorities || '',
@@ -136,4 +138,3 @@ You generally do not need to change these.
 
 For local UI testing, forms will show an error unless you set temporary public endpoints.
 In production on Cloudflare Pages, `/api/assessment` and `/api/newsletter` will work.
-

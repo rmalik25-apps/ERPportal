@@ -7,6 +7,8 @@ interface Env {
 type AssessmentPayload = {
   type: 'assessment'
   email?: string
+  phoneCountryCode?: string
+  phoneNumber?: string
   companySize?: string
   projectType?: string
   priorities?: string
@@ -44,6 +46,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   if (website) return json({ok: true}) // honeypot
 
   const email = asText(payload.email, 320).toLowerCase()
+  const phoneCountryCode = asText(payload.phoneCountryCode, 12)
+  const phoneNumber = asText(payload.phoneNumber, 40)
   const companySize = asText(payload.companySize, 120)
   const projectType = asText(payload.projectType, 160)
   const priorities = asText(payload.priorities, 4000)
@@ -51,7 +55,9 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const submittedAt = asText(payload.submittedAt, 50) || new Date().toISOString()
 
   if (!EMAIL_RE.test(email)) return json({ok: false, error: 'Invalid email'}, 400)
-  if (!companySize || !projectType || !priorities) return json({ok: false, error: 'Missing required fields'}, 400)
+  if (!phoneCountryCode || !phoneNumber || !companySize || !projectType || !priorities) {
+    return json({ok: false, error: 'Missing required fields'}, 400)
+  }
 
   const upstream = context.env.ASSESSMENT_WEBHOOK_URL || context.env.GOOGLE_APPS_SCRIPT_URL
   if (!upstream) return json({ok: false, error: 'Webhook not configured'}, 500)
@@ -59,6 +65,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const relayPayload: Record<string, string> = {
     type: 'assessment',
     email,
+    phoneCountryCode,
+    phoneNumber,
     companySize,
     projectType,
     priorities,
@@ -85,4 +93,3 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     return json({ok: false, error: 'Webhook request failed'}, 502)
   }
 }
-

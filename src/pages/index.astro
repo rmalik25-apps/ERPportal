@@ -316,6 +316,30 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
           Work email
           <input type="email" name="email" autocomplete="email" placeholder="name@company.com" required />
         </label>
+        <div class="phone-row">
+          <label>
+            Country code
+            <select name="phoneCountryCode" required>
+              <option value="+61">Australia (+61)</option>
+              <option value="+64">New Zealand (+64)</option>
+              <option value="+44">United Kingdom (+44)</option>
+              <option value="+1">United States/Canada (+1)</option>
+              <option value="+65">Singapore (+65)</option>
+              <option value="+91">India (+91)</option>
+            </select>
+          </label>
+          <label>
+            Phone number
+            <input
+              type="tel"
+              name="phoneNumber"
+              autocomplete="tel-national"
+              inputmode="tel"
+              placeholder="412 345 678"
+              required
+            />
+          </label>
+        </div>
         <label>
           Company size
           <select name="companySize" required>
@@ -426,6 +450,8 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
       const payload = {
         type: 'assessment',
         email: asText(data.get('email')),
+        phoneCountryCode: asText(data.get('phoneCountryCode')),
+        phoneNumber: asText(data.get('phoneNumber')),
         companySize: asText(data.get('companySize')),
         projectType: asText(data.get('projectType')),
         priorities: asText(data.get('priorities')),
@@ -433,7 +459,7 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
         submittedAt: new Date().toISOString(),
       };
 
-      if (!payload.email || !payload.companySize || !payload.projectType || !payload.priorities) {
+      if (!payload.email || !payload.phoneCountryCode || !payload.phoneNumber || !payload.companySize || !payload.projectType || !payload.priorities) {
         setStatus(form, 'Please complete all fields before submitting.', true);
         return;
       }
