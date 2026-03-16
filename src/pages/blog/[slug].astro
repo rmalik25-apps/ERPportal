@@ -2,7 +2,7 @@
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {getBlogVisual} from '../../lib/pageVisuals'
-import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getPostBySlug, getPosts} from '../../lib/sanity'
 
@@ -19,6 +19,7 @@ if (!post) {
 }
 
 const paragraphs = blocksToPlainParagraphs(post.body)
+const content = blocksToRichContent(post.body)
 const readTime = estimateReadTimeMinutes(post)
 const canonicalPath = `/blog/${post.slug}/`
 const visual = getBlogVisual(post.slug)
@@ -70,7 +71,23 @@ const articleSchema = {
         </dl>
       </section>
       <p class="lead">{post.excerpt}</p>
-      {paragraphs.length ? paragraphs.map((paragraph) => <p>{paragraph}</p>) : <p class="empty">No content body yet.</p>}
+      {content.length ? (
+        content.map((block) =>
+          block.type === 'heading' ? (
+            <h2>{block.text}</h2>
+          ) : block.type === 'list' ? (
+            <ul>
+              {block.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{block.text}</p>
+          ),
+        )
+      ) : (
+        <p class="empty">No content body yet.</p>
+      )}
     </article>
     <aside class="doc-side">
       <section class="card">

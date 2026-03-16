@@ -2,7 +2,7 @@
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {getGuideVisual} from '../../lib/pageVisuals'
-import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getGuideBySlug, getGuides} from '../../lib/sanity'
 
@@ -21,6 +21,7 @@ if (!guide) {
 }
 
 const paragraphs = blocksToPlainParagraphs(guide.body)
+const content = blocksToRichContent(guide.body)
 const readTime = estimateReadTimeMinutes(guide)
 const canonicalPath = `/guides/${guide.slug}/`
 const visual = getGuideVisual(guide.slug)
@@ -72,8 +73,20 @@ const articleSchema = {
         </dl>
       </section>
       <p class="lead">{guide.excerpt}</p>
-      {paragraphs.length ? (
-        paragraphs.map((paragraph) => <p>{paragraph}</p>)
+      {content.length ? (
+        content.map((block) =>
+          block.type === 'heading' ? (
+            <h2>{block.text}</h2>
+          ) : block.type === 'list' ? (
+            <ul>
+              {block.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{block.text}</p>
+          ),
+        )
       ) : (
         <p class="empty">No body content yet. Add blocks in Sanity Studio.</p>
       )}

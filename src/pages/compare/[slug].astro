@@ -2,7 +2,7 @@
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {getComparisonVisual} from '../../lib/pageVisuals'
-import {blocksToPlainParagraphs} from '../../lib/portableText'
+import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getComparisonBySlug, getComparisons} from '../../lib/sanity'
 
@@ -19,6 +19,7 @@ if (!item) {
 }
 
 const paragraphs = blocksToPlainParagraphs(item.body)
+const content = blocksToRichContent(item.body)
 const readTime = estimateReadTimeMinutes(item)
 const canonicalPath = `/compare/${item.slug}/`
 const visual = getComparisonVisual(item.slug)
@@ -70,7 +71,23 @@ const articleSchema = {
         </dl>
       </section>
       <p class="lead">{item.excerpt}</p>
-      {paragraphs.length ? paragraphs.map((paragraph) => <p>{paragraph}</p>) : <p class="empty">No content body yet.</p>}
+      {content.length ? (
+        content.map((block) =>
+          block.type === 'heading' ? (
+            <h2>{block.text}</h2>
+          ) : block.type === 'list' ? (
+            <ul>
+              {block.items.map((entry) => (
+                <li>{entry}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{block.text}</p>
+          ),
+        )
+      ) : (
+        <p class="empty">No content body yet.</p>
+      )}
     </article>
     <aside class="doc-side">
       <section class="card">

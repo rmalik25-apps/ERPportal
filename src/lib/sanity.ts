@@ -63,6 +63,50 @@ function mergeBySlug<T extends {slug: string}>(primary: T[], secondary: T[]) {
   return merged
 }
 
+function shouldUseFallbackBody(body: any) {
+  return !Array.isArray(body) || body.length < 8
+}
+
+function enrichGuide(doc: GuideDoc | undefined) {
+  if (!doc) return doc
+  const fallback = mockGuides.find((item) => item.slug === doc.slug)
+  if (!fallback) return doc
+  return {
+    ...fallback,
+    ...doc,
+    body: shouldUseFallbackBody(doc.body) ? fallback.body : doc.body,
+    excerpt: doc.excerpt || fallback.excerpt,
+    seo: doc.seo || fallback.seo,
+  }
+}
+
+function enrichComparison(doc: ComparisonDoc | undefined) {
+  if (!doc) return doc
+  const fallback = mockComparisons.find((item) => item.slug === doc.slug)
+  if (!fallback) return doc
+  return {
+    ...fallback,
+    ...doc,
+    body: shouldUseFallbackBody(doc.body) ? fallback.body : doc.body,
+    excerpt: doc.excerpt || fallback.excerpt,
+    bestFor: doc.bestFor?.length ? doc.bestFor : fallback.bestFor,
+    seo: doc.seo || fallback.seo,
+  }
+}
+
+function enrichPost(doc: PostDoc | undefined) {
+  if (!doc) return doc
+  const fallback = mockPosts.find((item) => item.slug === doc.slug)
+  if (!fallback) return doc
+  return {
+    ...fallback,
+    ...doc,
+    body: shouldUseFallbackBody(doc.body) ? fallback.body : doc.body,
+    excerpt: doc.excerpt || fallback.excerpt,
+    seo: doc.seo || fallback.seo,
+  }
+}
+
 async function fetchOrFallback<T>(
   query: string,
   fallback: T,
@@ -99,16 +143,17 @@ export async function getGuides() {
     mockGuides,
     mapGuide,
   )
-  return mergeBySlug(fetched, mockGuides)
+  return mergeBySlug(fetched.map(enrichGuide).filter(Boolean) as GuideDoc[], mockGuides)
 }
 
 export async function getGuideBySlug(slug: string) {
-  return fetchOrFallback<GuideDoc | undefined>(
+  const doc = await fetchOrFallback<GuideDoc | undefined>(
     groq`*[_type == "guide" && slug.current == $slug][0] ${guideProjection}`,
     mockGuides.find((item) => item.slug === slug),
     mapGuide,
     {slug},
   )
+  return enrichGuide(doc)
 }
 
 export async function getComparisons() {
@@ -117,16 +162,17 @@ export async function getComparisons() {
     mockComparisons,
     mapComparison,
   )
-  return mergeBySlug(fetched, mockComparisons)
+  return mergeBySlug(fetched.map(enrichComparison).filter(Boolean) as ComparisonDoc[], mockComparisons)
 }
 
 export async function getComparisonBySlug(slug: string) {
-  return fetchOrFallback<ComparisonDoc | undefined>(
+  const doc = await fetchOrFallback<ComparisonDoc | undefined>(
     groq`*[_type == "comparison" && slug.current == $slug][0] ${comparisonProjection}`,
     mockComparisons.find((item) => item.slug === slug),
     mapComparison,
     {slug},
   )
+  return enrichComparison(doc)
 }
 
 export async function getPosts() {
@@ -135,14 +181,15 @@ export async function getPosts() {
     mockPosts,
     mapPost,
   )
-  return mergeBySlug(fetched, mockPosts)
+  return mergeBySlug(fetched.map(enrichPost).filter(Boolean) as PostDoc[], mockPosts)
 }
 
 export async function getPostBySlug(slug: string) {
-  return fetchOrFallback<PostDoc | undefined>(
+  const doc = await fetchOrFallback<PostDoc | undefined>(
     groq`*[_type == "post" && slug.current == $slug][0] ${postProjection}`,
     mockPosts.find((item) => item.slug === slug),
     mapPost,
     {slug},
   )
+  return enrichPost(doc)
 }

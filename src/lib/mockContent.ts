@@ -8,34 +8,42 @@ const introBlocks = (paragraphs: string[]) =>
     children: [{_type: 'span' as const, text}],
   }))
 
+const skimmableBlocks = (...sections: string[][]) => introBlocks(sections.flat())
+
 const detailedGuideBlocks = (intent: string, leadParagraphs: string[]) => {
-  const common = [
-    'Before committing budget, document success metrics, owner accountabilities, and a realistic sequencing plan across finance, operations, and technology teams.',
-    'Use a weekly risk review with named owners, due dates, and mitigation actions. Track decisions in writing so scope discussions do not restart every fortnight.',
-    'Treat this guide as a working playbook. Adapt sections to your operating model, then use them in steering meetings, partner workshops, and stage-gate reviews.',
+  const commonBullets = [
+    'Document success metrics, owner accountabilities, and a realistic sequencing plan across finance, operations, and technology teams before committing budget.',
+    'Use a weekly risk review with named owners, due dates, and mitigation actions so scope discussions do not restart every fortnight.',
+    'Treat the guide as a working playbook and use it in steering meetings, partner workshops, and stage-gate reviews rather than leaving it as background reading.',
+  ]
+
+  const commonPitfalls = [
+    'Selecting software before agreeing the future operating model and decision criteria.',
+    'Allowing one department to dominate the design while finance, operations, and IT assumptions remain untested.',
+    'Using generic demos and partner promises instead of evidence from real scenarios, real data, and real reporting needs.',
   ]
 
   const byIntent: Record<string, string[]> = {
     Selection: [
-      'Define your top five business outcomes first, then test whether each vendor can support those outcomes with standard functionality or acceptable configuration.',
-      'Run scenario-led demos with your own transactions and edge cases. Score each scenario against usability, control, reporting quality, and process fit.',
-      'Split commercial evaluation into three lines: software cost, implementation cost, and ongoing support model. This prevents low entry pricing from hiding delivery risk.',
-      'Set a final decision gate that includes business sponsor sign-off, architecture sign-off, and procurement sign-off. Avoid selecting based on one stakeholder view only.',
+      'Define the top five business outcomes first, then test whether each vendor can support those outcomes with standard functionality or acceptable configuration.',
+      'Run scenario-led demos with your own transactions and edge cases, then score each scenario against usability, control quality, reporting quality, and process fit.',
+      'Split commercial evaluation into software cost, implementation cost, and support model so low entry pricing does not hide delivery risk.',
+      'Set a final decision gate that includes business sponsor sign-off, architecture sign-off, and procurement sign-off.',
     ],
     Migration: [
-      'Start with a technical and business discovery phase that identifies extensions, reports, integrations, and manual controls currently carried by the legacy system.',
-      'Build migration waves around business risk, not module labels. Prioritise finance close, order fulfilment, and purchasing controls as non-negotiable release criteria.',
-      'Use at least two end-to-end cutover rehearsals with timed runbooks. Include rollback criteria and decision owners for each critical checkpoint.',
+      'Start with a technical and business discovery phase that identifies extensions, reports, integrations, and manual controls carried by the legacy system.',
+      'Build migration waves around business risk, not module labels, with finance close, order fulfilment, and purchasing controls as non-negotiable release criteria.',
+      'Use at least two end-to-end cutover rehearsals with timed runbooks, rollback criteria, and named decision owners.',
       'Post-migration, schedule a stabilisation period with daily triage and explicit defect classification so business continuity remains protected.',
     ],
     Implementation: [
-      'Treat process design workshops as decision workshops, not discovery sessions. Each workshop should end with approved process choices and unresolved items logged.',
-      'Confirm master data standards early, including ownership, validation rules, and maintenance cadence. Poor data discipline is a major cause of rework.',
-      'Build training around real roles and real transactions. Generic system walkthroughs rarely produce strong adoption at go-live.',
-      'Track readiness by process area and site, not by overall percentage complete. This gives leadership clearer visibility on practical launch risk.',
+      'Treat process design workshops as decision workshops, not discovery sessions, and close each workshop with approved process choices and logged gaps.',
+      'Confirm master data standards early, including ownership, validation rules, and maintenance cadence.',
+      'Build training around real roles and real transactions because generic walkthroughs rarely produce strong adoption at go-live.',
+      'Track readiness by process area and site, not by overall percentage complete, so leadership can see practical launch risk.',
     ],
     Manufacturing: [
-      'Validate planning assumptions using recent production history. Unrealistic lead times or routing standards will generate unusable planning outputs.',
+      'Validate planning assumptions using recent production history because unrealistic lead times or routing standards will generate unusable planning outputs.',
       'Align procurement, planning, and production supervision around one weekly planning cadence to avoid contradictory execution signals.',
       'Set control points for BOM governance, engineering change management, and scrap reporting before introducing advanced automation.',
       'Pilot with one value stream and review service, WIP, and schedule adherence before scaling to additional plants or lines.',
@@ -104,11 +112,25 @@ const detailedGuideBlocks = (intent: string, leadParagraphs: string[]) => {
       'Assess each customisation request against value, process stability, upgrade impact, and support overhead.',
       'Keep a formal design authority to approve extensions and retire low-value bespoke logic over time.',
       'Where spreadsheets remain, define ownership, control checks, and reconciliation points clearly.',
-      'Review extension portfolio every quarter to maintain system simplicity and upgrade readiness.',
+      'Review the extension portfolio every quarter to maintain system simplicity and upgrade readiness.',
     ],
   }
 
-  return introBlocks([...leadParagraphs, ...(byIntent[intent] || []), ...common])
+  return skimmableBlocks(
+    leadParagraphs,
+    ['## Why this guide matters'],
+    [
+      `• ${leadParagraphs[0] || 'ERP decisions carry operational and commercial consequences well beyond software fit.'}`,
+      `• ${leadParagraphs[1] || 'Teams need a shared decision framework before they commit budget or partner time.'}`,
+      `• ${leadParagraphs[2] || 'A stronger upfront process reduces rework, design churn, and avoidable programme risk.'}`,
+    ],
+    ['## What a good approach looks like'],
+    (byIntent[intent] || []).map((item) => `• ${item}`),
+    ['## Common mistakes to avoid'],
+    commonPitfalls.map((item) => `• ${item}`),
+    ['## Practical next steps'],
+    commonBullets.map((item) => `• ${item}`),
+  )
 }
 
 const detailedComparisonBlocks = (
@@ -152,7 +174,121 @@ const detailedComparisonBlocks = (
     ],
   }
 
-  return introBlocks([...leadParagraphs, ...(byType[comparisonType] || []), ...common])
+  return skimmableBlocks(
+    leadParagraphs,
+    ['## What to compare first'],
+    (byType[comparisonType] || []).map((item) => `• ${item}`),
+    ['## Questions to ask before shortlisting'],
+    common.map((item) => `• ${item}`),
+  )
+}
+
+const detailedPostBlocks = (category: string, leadParagraphs: string[]) => {
+  const byCategory: Record<string, string[]> = {
+    Distribution: [
+      'Look closely at warehouse-directed processes such as receiving, put-away, replenishment, picking, and dispatch because they expose whether the proposed design fits real floor behaviour.',
+      'Ask how item substitutions, backorders, landed cost, lot control, and customer-specific pricing will be handled in day-to-day operations.',
+      'Challenge any implementation plan that leaves barcode, warehouse layout, or master data policy until late in the project.',
+    ],
+    Manufacturing: [
+      'Focus on whether the ERP design will improve planning discipline, production visibility, and inventory integrity rather than simply digitising existing bad habits.',
+      'Make planners, production supervisors, and finance leads jointly responsible for the KPI pack so operational improvement is measured from several angles.',
+      'Use the KPI baseline to decide which plants, product families, or work centres need additional support during rollout.',
+    ],
+    'Professional Services': [
+      'Project-based firms usually need one joined-up view of pipeline, resourcing, delivery, billing, and margin. If those hand-offs sit in too many disconnected tools, leakage appears quickly.',
+      'Timesheet capture, approval speed, work-in-progress visibility, milestone billing, and revenue recognition rules should be treated as core selection criteria rather than back-office details.',
+      'Partner demos should show how project managers, finance, and client-facing leaders each use the system during a live project lifecycle.',
+    ],
+    Retail: [
+      'Retail buyers should test how the system behaves when stock is wrong, promotions overlap, returns spike, or stores and online channels compete for the same inventory.',
+      'Margin control depends on discipline around pricing rules, markdown governance, and exception reporting as much as it depends on software capability.',
+      'A practical retail ERP rollout prioritises clean item data, strong stocktake routines, and dependable fulfilment before advanced analytics.',
+    ],
+    'Business Central': [
+      'Release reviews should be tied to risk and value, not novelty. Many updates are worth observing first before committing time to adoption.',
+      'Create a repeatable filter that sorts new features into immediate value, monitor only, partner validation required, or defer.',
+      'Business process owners should be involved in the review so technical impact and operating impact are considered together.',
+    ],
+    'CRM + ERP': [
+      'Most problems sit at the boundaries: quote approval, customer master quality, pricing integrity, order conversion, and exception handling.',
+      'Design handovers around named owners and agreed checkpoints instead of hoping synchronisation alone will keep both systems aligned.',
+      'The best operating model is the one that makes breakpoints visible early and gives teams a practical way to recover.',
+    ],
+    'Delivery Strategy': [
+      'The rollout shape should reflect business resilience, leadership bandwidth, and integration complexity rather than internal preference for “speed” or “safety”.',
+      'A phased model needs stronger interim controls, clear scope boundaries, and discipline about what stays in legacy during transition.',
+      'A big-bang model requires deeper rehearsal, firmer cutover governance, and less tolerance for unresolved process ambiguity.',
+    ],
+    'Change Management': [
+      'Smaller organisations often believe communication can stay informal. In practice, ERP change still needs structure so people know what is changing, when, and what support exists.',
+      'Manager-led reinforcement after go-live matters more than polished training decks because teams revert to old habits under pressure.',
+      'Useful adoption tracking looks at transaction quality, exception rates, rework, and help needed by role, not just attendance sheets.',
+    ],
+    Finance: [
+      'The first three close cycles should be treated as a controlled operating programme with daily rhythm, visible issue triage, and close ownership by domain.',
+      'Reconciliations, journals, allocations, and approvals should each have named owners and time targets so the business can spot where the new process is breaking down.',
+      'A calm first close builds credibility with leadership far faster than a long list of future-state improvements.',
+    ],
+    Architecture: [
+      'Integration quality is measured by recoverability, observability, and ownership, not just by whether messages move between systems.',
+      'Every integration should have an owner, a support path, and a clear definition of source-of-truth objects.',
+      'If the business cannot tell when an integration fails or who fixes it, the design is not production-ready.',
+    ],
+    Selection: [
+      'ERP demos are most valuable when vendors are forced to walk through your messy, real-world exceptions instead of their clean scripted flows.',
+      'A good demo script creates comparable evidence across vendors and prevents teams being swayed by presentation style alone.',
+      'Capture assumptions live during the session so each claimed capability can be verified later in scope and commercials.',
+    ],
+    'Partner Selection': [
+      'Partner due diligence should test delivery reality: who will lead, who will configure, who will govern, and what happens when scope assumptions fail.',
+      'Reference calls are useful only when they match your complexity, industry pressures, and leadership style.',
+      'Commercial discipline matters as much as technical skill because unclear change control is one of the fastest ways to lose trust mid-project.',
+    ],
+    Data: [
+      'Data quality improves when ownership is attached to business outcomes such as credit accuracy, inventory trust, supplier readiness, and reporting confidence.',
+      'A data operating model should define who approves standards, who fixes defects, and how exceptions are escalated.',
+      'Migration defects are often symptoms of weak source process discipline, so the goal is not just cleansing but prevention.',
+    ],
+    Commercial: [
+      'Licence and support spend usually grows in the gaps between role design, environment sprawl, and unclear service boundaries.',
+      'Review commercial controls alongside access controls and release planning so cost decisions are part of governance rather than an annual surprise.',
+      'The aim is not only to cut spend but to spend clearly on the capabilities that actually create value.',
+    ],
+    Optimisation: [
+      'Once the initial project ends, ERP teams need a visible way to prioritise improvements so the platform keeps getting better instead of becoming a dumping ground for requests.',
+      'A BAU roadmap should balance small operational fixes, control improvements, reporting gains, and strategic platform enhancements.',
+      'Leadership support tends to hold when each release is tied back to measured value, reduced risk, or reduced manual work.',
+    ],
+  }
+
+  const universalMistakes = [
+    'Confusing software functionality with business readiness.',
+    'Assuming a partner or vendor will solve unclear process ownership for you.',
+    'Treating post-selection execution risks as someone else’s problem.',
+  ]
+
+  const nextSteps = [
+    'Translate the key points into a shortlist scorecard, project risk log, or operating checklist the team can use immediately.',
+    'Use the article to shape the next vendor demo, partner workshop, or internal decision forum rather than leaving it as passive research.',
+    'Pair this article with a relevant guide or comparison page before final decisions are made.',
+  ]
+
+  return skimmableBlocks(
+    leadParagraphs,
+    ['## Why this matters'],
+    (byCategory[category] || []).map((item) => `• ${item}`),
+    ['## What to check in practice'],
+    [
+      `• ${leadParagraphs[0] || 'Start with the operating issue the business is really trying to solve.'}`,
+      `• ${leadParagraphs[1] || 'Turn that issue into visible checkpoints, ownership, and decision criteria.'}`,
+      `• ${leadParagraphs[2] || 'Use evidence from real workflows so the team can separate attractive demos from workable design.'}`,
+    ],
+    ['## Mistakes that create avoidable project pain'],
+    universalMistakes.map((item) => `• ${item}`),
+    ['## What to do next'],
+    nextSteps.map((item) => `• ${item}`),
+  )
 }
 
 const publishedAt = '2026-03-01T00:00:00Z'
@@ -526,7 +662,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Distribution',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Distribution', [
       'Distribution projects often fail at master data design rather than software capability.',
       'Look for vague language around warehouse processes, barcode strategy, and replenishment logic.',
       'Insist on scenario-based fit validation before contract execution.',
@@ -541,7 +677,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Manufacturing',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Manufacturing', [
       'You cannot prove ERP value if there is no baseline to compare against.',
       'Track OTIF, schedule adherence, inventory turns, and rework rates before and after launch.',
       'Make KPI ownership explicit across operations, finance, and IT.',
@@ -556,7 +692,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Professional Services',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Professional Services', [
       'Services firms should anchor selection around project margin visibility and billing control.',
       'Define how timesheets, expenses, milestone billing, and revenue recognition interact.',
       'Keep hand-offs between CRM, PSA, and ERP clear to reduce leakage.',
@@ -571,7 +707,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Retail',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Retail', [
       'Retail ERP success depends on disciplined item data and channel governance.',
       'Prioritise stock accuracy and fulfilment reliability before advanced analytics ambitions.',
       'Set margin guardrails by channel and promotion type.',
@@ -586,7 +722,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Business Central',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Business Central', [
       'Do not treat every new feature as mandatory in the next sprint.',
       'Assess impact by business process, regression risk, and training overhead.',
       'Use a quarterly release governance forum with product owners and finance.',
@@ -601,7 +737,7 @@ export const mockPosts: PostDoc[] = [
     category: 'CRM + ERP',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('CRM + ERP', [
       'Most handover issues come from unclear ownership and inconsistent commercial data.',
       'Define mandatory fields and approval checks before conversion to order.',
       'Create visible queues for failed synchronisation events.',
@@ -616,7 +752,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Delivery Strategy',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Delivery Strategy', [
       'Big-bang can reduce transitional complexity but raises concentrated execution risk.',
       'Phased rollout de-risks adoption yet demands stronger interim process governance.',
       'Choose with explicit criteria, not internal preference alone.',
@@ -631,7 +767,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Change Management',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Change Management', [
       'In smaller organisations, informal behaviours can override formal process quickly.',
       'Use role-based training and manager-led reinforcement from week one.',
       'Track adoption with practical indicators, not training attendance alone.',
@@ -646,7 +782,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Finance',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Finance', [
       'Close quality in the first three cycles sets confidence for the whole programme.',
       'Run daily reconciliation checkpoints during close week.',
       'Classify issues by accounting impact and process root cause.',
@@ -661,7 +797,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Architecture',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Architecture', [
       'Unowned integrations become silent operational risk after go-live.',
       'Document canonical data objects and system ownership per process.',
       'Design alerting so business users can act before customers are impacted.',
@@ -676,7 +812,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Selection',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Selection', [
       'Without a script, demos turn into marketing theatre rather than fit validation.',
       'Base scenarios on real operational edge cases from your organisation.',
       'Score live and capture assumptions immediately after each session.',
@@ -691,7 +827,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Partner Selection',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Partner Selection', [
       'Ask who will actually deliver your programme, not only who presents in sales meetings.',
       'Request recent references matching your industry and complexity profile.',
       'Probe assumptions on scope boundaries and change request handling.',
@@ -706,7 +842,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Data',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Data', [
       'Data quality is a business accountability supported by technology, not an IT-only task.',
       'Assign data stewards by domain and require measurable quality thresholds.',
       'Track defects to source process owners to prevent recurrence.',
@@ -721,7 +857,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Commercial',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Commercial', [
       'Licensing costs drift when role definitions are vague and access is over-provisioned.',
       'Review licence assignment quarterly and align with actual usage patterns.',
       'Separate break-fix support from enhancement demand to manage spend transparently.',
@@ -736,7 +872,7 @@ export const mockPosts: PostDoc[] = [
     category: 'Optimisation',
     publishedAt,
     updatedAt: publishedAt,
-    body: introBlocks([
+    body: detailedPostBlocks('Optimisation', [
       'Without a roadmap, improvement work turns into ad hoc requests with weak business value.',
       'Create quarterly release trains with prioritisation criteria agreed by leadership.',
       'Track realised value per release to sustain executive support.',
