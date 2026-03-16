@@ -1,7 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
-import {pageVisuals} from '../../lib/pageVisuals'
+import {getGuideVisual} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getGuideBySlug, getGuides} from '../../lib/sanity'
@@ -23,6 +23,7 @@ if (!guide) {
 const paragraphs = blocksToPlainParagraphs(guide.body)
 const readTime = estimateReadTimeMinutes(guide)
 const canonicalPath = `/guides/${guide.slug}/`
+const visual = getGuideVisual(guide.slug)
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -30,7 +31,7 @@ const articleSchema = {
   description: guide.seo?.metaDescription || guide.excerpt,
   datePublished: guide.publishedAt,
   dateModified: guide.updatedAt || guide.publishedAt,
-  image: [pageVisuals.guides.src],
+  image: [visual.src],
   articleSection: guide.intent || 'Guide',
   mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
 }
@@ -40,7 +41,7 @@ const articleSchema = {
   title={`${guide.seo?.metaTitle || guide.title} | ERP Navigator`}
   description={guide.seo?.metaDescription || guide.excerpt}
   canonicalPath={canonicalPath}
-  ogImage={pageVisuals.guides.src}
+  ogImage={visual.src}
   ogType="article"
   noIndex={Boolean(guide.seo?.noIndex)}
   jsonLd={articleSchema}
@@ -55,9 +56,9 @@ const articleSchema = {
         {guide.updatedAt && <span class="meta-pill">Updated {formatPublishDate(guide.updatedAt)}</span>}
       </div>
       <PageVisual
-        src={pageVisuals.guides.src}
-        alt={pageVisuals.guides.alt}
-        caption="Use this guide to plan your ERP scope before demos and proposals."
+        src={visual.src}
+        alt={visual.alt}
+        caption={visual.caption}
       />
       <section class="summary-box" aria-label="Guide summary">
         <h2>At a glance</h2>

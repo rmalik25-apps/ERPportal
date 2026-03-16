@@ -1,7 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
-import {pageVisuals} from '../../lib/pageVisuals'
+import {getComparisonVisual} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getComparisonBySlug, getComparisons} from '../../lib/sanity'
@@ -21,6 +21,7 @@ if (!item) {
 const paragraphs = blocksToPlainParagraphs(item.body)
 const readTime = estimateReadTimeMinutes(item)
 const canonicalPath = `/compare/${item.slug}/`
+const visual = getComparisonVisual(item.slug)
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -28,7 +29,7 @@ const articleSchema = {
   description: item.seo?.metaDescription || item.excerpt,
   datePublished: item.publishedAt,
   dateModified: item.updatedAt || item.publishedAt,
-  image: [pageVisuals.comparisons.src],
+  image: [visual.src],
   articleSection: 'ERP comparison',
   mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
 }
@@ -38,7 +39,7 @@ const articleSchema = {
   title={`${item.seo?.metaTitle || item.title} | ERP Navigator`}
   description={item.seo?.metaDescription || item.excerpt}
   canonicalPath={canonicalPath}
-  ogImage={pageVisuals.comparisons.src}
+  ogImage={visual.src}
   ogType="article"
   noIndex={Boolean(item.seo?.noIndex)}
   jsonLd={articleSchema}
@@ -53,9 +54,9 @@ const articleSchema = {
         {item.updatedAt && <span class="meta-pill">Updated {formatPublishDate(item.updatedAt)}</span>}
       </div>
       <PageVisual
-        src={pageVisuals.comparisons.src}
-        alt={pageVisuals.comparisons.alt}
-        caption="Use this comparison to pressure-test product fit before starting partner discovery."
+        src={visual.src}
+        alt={visual.alt}
+        caption={visual.caption}
       />
       <section class="summary-box" aria-label="Comparison summary">
         <h2>At a glance</h2>

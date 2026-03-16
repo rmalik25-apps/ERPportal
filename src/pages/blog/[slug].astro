@@ -1,7 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
-import {pageVisuals} from '../../lib/pageVisuals'
+import {getBlogVisual} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getPostBySlug, getPosts} from '../../lib/sanity'
@@ -21,6 +21,7 @@ if (!post) {
 const paragraphs = blocksToPlainParagraphs(post.body)
 const readTime = estimateReadTimeMinutes(post)
 const canonicalPath = `/blog/${post.slug}/`
+const visual = getBlogVisual(post.slug)
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -28,7 +29,7 @@ const articleSchema = {
   description: post.seo?.metaDescription || post.excerpt,
   datePublished: post.publishedAt,
   dateModified: post.updatedAt || post.publishedAt,
-  image: [pageVisuals.blog.src],
+  image: [visual.src],
   articleSection: post.category || 'ERP insights',
   mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
 }
@@ -38,7 +39,7 @@ const articleSchema = {
   title={`${post.seo?.metaTitle || post.title} | ERP Navigator`}
   description={post.seo?.metaDescription || post.excerpt}
   canonicalPath={canonicalPath}
-  ogImage={pageVisuals.blog.src}
+  ogImage={visual.src}
   ogType="article"
   noIndex={Boolean(post.seo?.noIndex)}
   jsonLd={articleSchema}
@@ -53,9 +54,9 @@ const articleSchema = {
         {post.updatedAt && <span class="meta-pill">Updated {formatPublishDate(post.updatedAt)}</span>}
       </div>
       <PageVisual
-        src={pageVisuals.blog.src}
-        alt={pageVisuals.blog.alt}
-        caption="Actionable perspective to help buyers move from research to a realistic ERP plan."
+        src={visual.src}
+        alt={visual.alt}
+        caption={visual.caption}
       />
       <section class="summary-box" aria-label="Post summary">
         <h2>Editorial context</h2>
