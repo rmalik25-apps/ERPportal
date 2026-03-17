@@ -56,22 +56,23 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
             </ul>
           </article>
           <article class="hero-utility-card">
-            <p class="hero-utility-label">What buyers use this site for</p>
-            <div class="hero-metric-grid">
-              <div>
-                <strong>{guides.length}</strong>
-                <span>guides</span>
+            <p class="hero-utility-label">Quick poll</p>
+            <h2>Which ERP are you using today?</h2>
+            <form class="hero-poll" data-hero-poll>
+              <div class="hero-poll-options">
+                <label><input type="radio" name="currentErp" value="Business Central / NAV" /> <span>Business Central / NAV</span></label>
+                <label><input type="radio" name="currentErp" value="NetSuite" /> <span>NetSuite</span></label>
+                <label><input type="radio" name="currentErp" value="MYOB Acumatica" /> <span>MYOB Acumatica</span></label>
+                <label><input type="radio" name="currentErp" value="Odoo" /> <span>Odoo</span></label>
+                <label><input type="radio" name="currentErp" value="Sage Intacct" /> <span>Sage Intacct</span></label>
+                <label><input type="radio" name="currentErp" value="SAP / other legacy ERP" /> <span>SAP / other legacy ERP</span></label>
+                <label><input type="radio" name="currentErp" value="Spreadsheets / none yet" /> <span>Spreadsheets / none yet</span></label>
               </div>
-              <div>
-                <strong>{comparisons.length}</strong>
-                <span>comparisons</span>
+              <div class="hero-poll-actions">
+                <button class="btn btn-secondary btn-small" type="submit">Vote</button>
+                <p class="hero-poll-status" data-hero-poll-status role="status" aria-live="polite"></p>
               </div>
-              <div>
-                <strong>{posts.length}</strong>
-                <span>blog posts</span>
-              </div>
-            </div>
-            <p class="hero-utility-copy">Selection, migration, finance design, partner due diligence, operational rollout, and post-go-live improvement.</p>
+            </form>
           </article>
           <article class="hero-utility-card">
             <p class="hero-utility-label">Popular current topics</p>
@@ -532,6 +533,46 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
     </div>
   </section>
 </SiteLayout>
+
+<script is:inline>
+  {`
+    (() => {
+      const poll = document.querySelector('[data-hero-poll]');
+      if (!poll) return;
+
+      const status = poll.querySelector('[data-hero-poll-status]');
+      const storageKey = 'erp-navigator-current-erp-vote';
+      const saved = window.localStorage.getItem(storageKey);
+
+      if (saved) {
+        const selected = poll.querySelector(\`input[value="\${CSS.escape(saved)}"]\`);
+        if (selected) selected.checked = true;
+        if (status) {
+          status.textContent = \`Saved: \${saved}. Thanks for sharing.\`;
+        }
+      }
+
+      poll.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const selected = poll.querySelector('input[name="currentErp"]:checked');
+        if (!selected) {
+          if (status) status.textContent = 'Choose an option first.';
+          return;
+        }
+
+        window.localStorage.setItem(storageKey, selected.value);
+        if (status) status.textContent = \`Saved: \${selected.value}. Thanks for sharing.\`;
+
+        if (window.gtag) {
+          window.gtag('event', 'hero_poll_vote', {
+            poll_name: 'current_erp',
+            option: selected.value,
+          });
+        }
+      });
+    })();
+  `}
+</script>
 
 <script is:inline define:vars={{assessmentEndpoint, newsletterEndpoint}}>
   const asText = (value) => (typeof value === 'string' ? value.trim() : '');
