@@ -729,6 +729,193 @@ const pillarComparisonBlocks = (slug: string) => {
   return skimmableBlocks(...(content[slug] || []))
 }
 
+const topicalComparisonBlocks = (slug: string) => {
+  const content: Record<string, string[][]> = {
+    'myob-acumatica-vs-business-central': [
+      ['This is one of the most relevant ANZ-oriented ERP comparisons for growing businesses because both platforms can serve the same broad market while pushing buyers toward slightly different operating and ecosystem choices.', 'MYOB Acumatica often appeals where local familiarity, ANZ market alignment, and a partner-led deployment model matter. Business Central often wins where Microsoft alignment, broader ecosystem integration, and a staged maturity path are stronger drivers.', 'The useful question is not which brand feels more familiar. It is which platform plus partner model best matches your growth path, reporting needs, and change capacity.'],
+      ['## Where MYOB Acumatica tends to fit well'],
+      [
+        '• Businesses wanting a strong ANZ-facing proposition with finance and operational breadth.',
+        '• Teams comfortable with a partner-led model and willing to evaluate implementation capability closely.',
+        '• Organisations comparing modern cloud ERP without wanting the decision to be driven mainly by Microsoft stack alignment.',
+      ],
+      ['## Where Business Central often fits better'],
+      [
+        '• Businesses already invested in Microsoft productivity, reporting, and identity tooling.',
+        '• Teams wanting a staged path from finance and ops improvement into a broader Microsoft application landscape.',
+        '• Organisations where internal familiarity with Microsoft tools will help adoption and governance.',
+      ],
+      ['## What to compare closely'],
+      [
+        '• Reporting and finance design for Australian operating requirements.',
+        '• Warehouse, project, or service process depth relative to your actual business model.',
+        '• Partner quality, upgrade governance, and support model after go-live.',
+        '• Total cost over 18 to 24 months, including delivery and improvement backlog, not just software fees.',
+      ],
+      ['## FAQ'],
+      [
+        '• Is this mainly a local-vs-global question? Partly, but the bigger issue is ecosystem fit and delivery model.',
+        '• Which one is simpler? That depends more on scope discipline and partner method than product branding.',
+      ],
+    ],
+    'odoo-vs-business-central': [
+      ['Odoo and Business Central attract some of the same SMB buyers, but usually for very different reasons. Odoo often enters the shortlist because of modular flexibility and perceived price accessibility. Business Central usually enters because buyers want a more structured ERP path with stronger Microsoft ecosystem alignment.', 'The wrong way to compare them is on module count alone. The right way is to test governance, financial control maturity, implementation discipline, and how much operational variation the business genuinely needs.', 'This comparison matters most for buyers who are balancing cost sensitivity against long-term control and supportability.'],
+      ['## Where Odoo can be attractive'],
+      [
+        '• Businesses wanting modular entry points and flexibility around how much of the suite is adopted.',
+        '• Teams with stronger tolerance for process tailoring and more willingness to manage application complexity actively.',
+        '• Price-sensitive buyers willing to invest extra effort in governance and design discipline.',
+      ],
+      ['## Where Business Central is usually stronger'],
+      [
+        '• Businesses prioritising finance control, reporting confidence, and Microsoft ecosystem alignment.',
+        '• Teams wanting a clearer structure for partner delivery, permissions, and long-term upgrade path.',
+        '• Organisations where supportability and standardisation matter more than high configurability.',
+      ],
+      ['## What to pressure-test'],
+      [
+        '• Can the business run core finance, approvals, and reporting with enough discipline in the chosen model?',
+        '• How much extension or local tailoring will be needed to support real process variation?',
+        '• What internal capability exists to govern change, testing, and support once the partner steps back?',
+      ],
+      ['## FAQ'],
+      [
+        '• Is Odoo always cheaper? Not necessarily once delivery complexity and support effort are included.',
+        '• Is Business Central too rigid? Only if the business truly needs process flexibility it cannot reasonably redesign.',
+      ],
+    ],
+    'odoo-vs-netsuite': [
+      ['This comparison usually comes up when buyers are deciding between a more flexible, modular route and a more structured cloud ERP path. Odoo can look attractive because of breadth and accessibility, while NetSuite often looks stronger where governance, standardisation, and multi-entity ambitions are more developed.', 'The decision hinges on how much process variability the business wants to preserve, how much internal control maturity exists, and how far the business expects to scale in complexity over the next two years.', 'A business that wants discipline and standardisation may land very differently from a business that wants maximum modular freedom.'],
+      ['## Odoo tends to appeal when'],
+      [
+        '• Flexibility and modular rollout are valued above stricter platform governance.',
+        '• The team is willing to own more configuration and application management complexity.',
+        '• Budget sensitivity is high and scope can be tightly controlled.',
+      ],
+      ['## NetSuite tends to appeal when'],
+      [
+        '• The business expects to scale entities, geographies, or process complexity more quickly.',
+        '• Leadership wants a stronger cloud-standard operating model with clearer controls.',
+        '• The organisation would benefit from tighter process discipline rather than a more open-ended application model.',
+      ],
+      ['## Comparison checkpoints'],
+      [
+        '• Multi-entity and reporting maturity.',
+        '• Partner capability and fit for your industry.',
+        '• Integration and extension overhead after phase one.',
+        '• Business readiness to support either a more flexible or more structured design approach.',
+      ],
+    ],
+    'sage-intacct-vs-myob-acumatica': [
+      ['This is a useful finance-led comparison because it pits a finance-first platform against a broader ERP proposition. Many SMB buyers are really deciding whether finance transformation is the immediate priority or whether they need a more operationally complete platform from the start.', 'Sage Intacct can be compelling when finance visibility, close process, approvals, and reporting are the urgent drivers. MYOB Acumatica becomes more attractive where the business wants broader operational scope in the same core platform.', 'The right answer depends on whether the business wants to build out from finance first or implement a wider ERP operating model earlier.'],
+      ['## Intacct is often stronger when'],
+      [
+        '• Finance process, control, and reporting are the main business case.',
+        '• The business can keep some operational tooling outside the finance platform for now.',
+        '• Leadership wants a more focused finance transformation before broader ERP redesign.',
+      ],
+      ['## MYOB Acumatica is often stronger when'],
+      [
+        '• Operational coverage matters early, not just finance depth.',
+        '• The business wants a broader ERP foundation for inventory, supply chain, projects, or services.',
+        '• A single core platform is preferred over a finance-led core plus additional systems.',
+      ],
+      ['## What to challenge in demos and proposals'],
+      [
+        '• What operational process compromises remain if the finance-first option is chosen?',
+        '• What finance design compromises appear if the broader ERP option is chosen?',
+        '• Which path leaves the cleaner 18-month roadmap, not just the cleaner first phase?',
+      ],
+    ],
+    'generic-erp-vs-vertical-erp-food-manufacturers': [
+      ['Food manufacturers often sit right on the line between generic ERP viability and the need for a vertical solution. Generic ERP can be enough when the process model is relatively controlled and industry complexity is not extreme. Vertical ERP becomes more compelling when traceability, QA, formulation, yield, and compliance requirements are core to the business model.', 'The wrong decision here usually happens when buyers assume “manufacturing is manufacturing”. Food and beverage businesses often have process and compliance pressures that make a standard ERP design much harder to operate cleanly.', 'The practical question is whether a generic platform with add-ons can support the plant reality, or whether the business will spend too much time rebuilding vertical capability through customisation and workarounds.'],
+      ['## When generic ERP can still work'],
+      [
+        '• Product structures and production processes are relatively stable.',
+        '• Traceability, QA, and compliance needs are meaningful but not highly specialised.',
+        '• The business has access to strong industry add-ons and a partner with food-sector delivery experience.',
+      ],
+      ['## When a vertical ERP often becomes the better choice'],
+      [
+        '• Lot traceability, shelf life, QA, recall readiness, or yield management are central operating risks.',
+        '• Catch weight, formulation, process manufacturing, or plant-floor compliance create specialised data and control needs.',
+        '• The cost of customising a generic ERP to behave like a vertical solution would be high and hard to support.',
+      ],
+      ['## Buyer decision checklist'],
+      [
+        '• Test a real quality incident or recall scenario.',
+        '• Test lot, batch, shelf-life, and yield behaviour in normal operations.',
+        '• Compare not just software fit but how much industry logic would sit in add-ons, extensions, or spreadsheets.',
+      ],
+    ],
+    'erp-for-meat-processing-generic-vs-specialist': [
+      ['Meat processing is one of the clearest examples of where buyers should take vertical fit seriously. Variable weight, yield, traceability, QA, and plant realities create a very different ERP demand profile from lighter discrete manufacturing or distribution businesses.', 'A generic ERP can still be viable in some environments, but only if the business proves that catch weight, lot control, processing stages, and compliance needs can be handled without a fragile web of customisation and workarounds.', 'For meat processors, the safest choice is rarely the broadest feature list. It is the platform that best supports daily control in the plant and clean reporting back to finance and management.'],
+      ['## What makes meat processing ERP different'],
+      [
+        '• Variable weight and yield need to be managed as normal operating data, not as exceptions.',
+        '• Traceability and recall readiness must work under pressure, not only in theory.',
+        '• QA, compliance, shelf life, and production handling often need deeper plant-level capability than generic suites provide by default.',
+      ],
+      ['## When a specialist platform is often justified'],
+      [
+        '• Meat-specific process logic drives commercial performance and compliance risk.',
+        '• The plant cannot tolerate manual workaround layers for weight, yield, or traceability.',
+        '• Leadership wants stronger operational fit even if it means a more specialised market choice.',
+      ],
+      ['## When a generic ERP might still be enough'],
+      [
+        '• The business is at the lighter-complexity end of processing and can prove a clean operating model with extensions or add-ons.',
+        '• Strong partner and vertical add-on capability exists, with clear support responsibility.',
+        '• The business values broader finance or ecosystem fit and the plant process can realistically adapt.',
+      ],
+    ],
+    'business-central-food-addons-vs-justfood': [
+      ['This is a useful comparison for food manufacturers already leaning toward Microsoft. The real question is whether Business Central plus food-specific add-ons gives enough industry fit, or whether a more dedicated vertical option such as JustFood is the cleaner answer.', 'Business Central with the right vertical layer can work well for some food businesses, especially where the Microsoft ecosystem matters and the process model is not at the most specialised end. A dedicated food ERP often makes more sense where traceability, QA, production controls, and industry workflows are too central to treat as add-on concerns.', 'This decision should be made by testing real production, quality, and recall workflows rather than generic ERP demos.'],
+      ['## Business Central plus food add-ons tends to fit when'],
+      [
+        '• The business wants Microsoft alignment and a broader business platform beyond plant operations.',
+        '• Food-sector requirements are meaningful but can be served well by a mature add-on and an experienced partner.',
+        '• Leadership values ecosystem consistency and wider reporting integration.',
+      ],
+      ['## JustFood tends to fit when'],
+      [
+        '• Food manufacturing process complexity is central rather than adjacent.',
+        '• Traceability, QA, recipes, shelf life, and compliance workflows need to feel native to the system design.',
+        '• The business would otherwise risk building too much vertical logic through extensions and process compromise.',
+      ],
+      ['## What to test before deciding'],
+      [
+        '• Quality event and recall handling.',
+        '• Batch, lot, shelf-life, and production workflow behaviour.',
+        '• Commercial and reporting consequences of whichever architecture is chosen.',
+      ],
+    ],
+    'odoo-manufacturing-smb-fit-analysis': [
+      ['Odoo gets serious attention from manufacturing SMBs because of its breadth, modularity, and accessibility. The challenge is that “manufacturing fit” can mean very different things depending on planning discipline, shop-floor complexity, compliance needs, and leadership tolerance for configuration overhead.', 'For some manufacturers, Odoo can be a good fit where process complexity is moderate and the business wants flexibility. For others, it can create too much governance and support burden compared with a more structured ERP path.', 'The important question is whether the business wants an adaptable application framework or a more bounded operating model with stronger controls out of the box.'],
+      ['## Odoo can fit well when'],
+      [
+        '• Manufacturing complexity is moderate and the business is comfortable with a more configurable approach.',
+        '• The team values modular rollout and can support stronger process ownership internally.',
+        '• Budget sensitivity is high and scope can be carefully controlled.',
+      ],
+      ['## Odoo can become risky when'],
+      [
+        '• Planning, compliance, or reporting needs are more demanding than the initial shortlist assumes.',
+        '• The business underestimates the governance needed to keep modules, extensions, and processes coherent over time.',
+        '• Internal ownership of data, testing, and support is weak.',
+      ],
+      ['## What to test in demos'],
+      [
+        '• BOM and routing management.',
+        '• MRP behaviour using your own lead-time and production reality.',
+        '• Shop-floor reporting, inventory trust, and reporting handover to finance.',
+      ],
+    ],
+  }
+
+  return skimmableBlocks(...(content[slug] || []))
+}
+
 const pillarPostBlocks = (slug: string) => {
   const content: Record<string, string[][]> = {
     'erp-priorities-professional-services-project-firms': [
@@ -1211,6 +1398,134 @@ export const mockComparisons: ComparisonDoc[] = [
       'Hidden legacy complexity can make reimplementation the lower-risk option in practice.',
       'Pilot data migration and extension conversion on a representative subset first.',
     ], 'Technical Upgrade', 'Reimplementation'),
+  },
+  {
+    _id: 'comparison-myob-acumatica-vs-bc',
+    _type: 'comparison',
+    title: 'MYOB Acumatica vs Business Central for Australian SMBs',
+    slug: 'myob-acumatica-vs-business-central',
+    excerpt: 'A fit-first comparison for Australian small and medium businesses weighing local-market ERP positioning against Microsoft ecosystem alignment.',
+    leftProduct: 'MYOB Acumatica',
+    rightProduct: 'Dynamics 365 Business Central',
+    bestFor: [
+      'MYOB Acumatica: ANZ-focused businesses comparing broad cloud ERP options with strong local relevance',
+      'Business Central: teams wanting Microsoft alignment and a staged ERP maturity path',
+    ],
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalComparisonBlocks('myob-acumatica-vs-business-central'),
+  },
+  {
+    _id: 'comparison-odoo-vs-bc',
+    _type: 'comparison',
+    title: 'Odoo vs Business Central for growing SMBs',
+    slug: 'odoo-vs-business-central',
+    excerpt: 'A practical comparison of modular flexibility, governance, and finance control for price-sensitive SMB buyers.',
+    leftProduct: 'Odoo',
+    rightProduct: 'Dynamics 365 Business Central',
+    bestFor: [
+      'Odoo: modular, flexible adoption for businesses willing to govern configuration actively',
+      'Business Central: stronger structured ERP path with Microsoft ecosystem support',
+    ],
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalComparisonBlocks('odoo-vs-business-central'),
+  },
+  {
+    _id: 'comparison-odoo-vs-netsuite',
+    _type: 'comparison',
+    title: 'Odoo vs NetSuite for scaling businesses',
+    slug: 'odoo-vs-netsuite',
+    excerpt: 'Compare modular flexibility against a more structured cloud ERP model for businesses scaling in complexity.',
+    leftProduct: 'Odoo',
+    rightProduct: 'NetSuite',
+    bestFor: [
+      'Odoo: flexible, modular rollouts with tighter budget pressure',
+      'NetSuite: cloud-standard operating model with stronger governance expectations',
+    ],
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalComparisonBlocks('odoo-vs-netsuite'),
+  },
+  {
+    _id: 'comparison-intacct-vs-myob-acumatica',
+    _type: 'comparison',
+    title: 'Sage Intacct vs MYOB Acumatica for finance-led SMB teams',
+    slug: 'sage-intacct-vs-myob-acumatica',
+    excerpt: 'A comparison of finance-first depth versus broader ERP scope for growing organisations.',
+    leftProduct: 'Sage Intacct',
+    rightProduct: 'MYOB Acumatica',
+    bestFor: [
+      'Sage Intacct: finance-led transformation with selective operational integration',
+      'MYOB Acumatica: broader ERP coverage where operations matter early',
+    ],
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalComparisonBlocks('sage-intacct-vs-myob-acumatica'),
+  },
+  {
+    _id: 'comparison-generic-vs-vertical-food',
+    _type: 'comparison',
+    title: 'Generic ERP vs vertical ERP for food manufacturers',
+    slug: 'generic-erp-vs-vertical-erp-food-manufacturers',
+    excerpt: 'When a generic ERP with add-ons is enough, and when food-sector complexity justifies a dedicated vertical platform.',
+    leftProduct: 'Generic ERP',
+    rightProduct: 'Vertical Food ERP',
+    bestFor: [
+      'Generic ERP: food businesses with manageable complexity and strong add-on/partner support',
+      'Vertical ERP: manufacturers where traceability, QA, yield, and compliance are core operational risks',
+    ],
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalComparisonBlocks('generic-erp-vs-vertical-erp-food-manufacturers'),
+  },
+  {
+    _id: 'comparison-meat-processing-generic-vs-specialist',
+    _type: 'comparison',
+    title: 'ERP for meat processing: generic vs specialist platforms',
+    slug: 'erp-for-meat-processing-generic-vs-specialist',
+    excerpt: 'A practical fit analysis for meat processors deciding between broad ERP suites and more specialised industry platforms.',
+    leftProduct: 'Generic ERP',
+    rightProduct: 'Specialist Meat Processing ERP',
+    bestFor: [
+      'Generic ERP: lighter-complexity processors with strong vertical add-ons and disciplined design',
+      'Specialist ERP: processors where catch weight, yield, traceability, and QA are core to daily control',
+    ],
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalComparisonBlocks('erp-for-meat-processing-generic-vs-specialist'),
+  },
+  {
+    _id: 'comparison-bc-food-addons-vs-justfood',
+    _type: 'comparison',
+    title: 'Business Central with food add-ons vs JustFood',
+    slug: 'business-central-food-addons-vs-justfood',
+    excerpt: 'Compare Microsoft ecosystem flexibility against a more dedicated food-industry ERP approach.',
+    leftProduct: 'Business Central + Food Add-ons',
+    rightProduct: 'JustFood',
+    bestFor: [
+      'Business Central + add-ons: Microsoft-oriented businesses with moderate food-sector complexity',
+      'JustFood: food manufacturers wanting deeper native industry capability in the core platform',
+    ],
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalComparisonBlocks('business-central-food-addons-vs-justfood'),
+  },
+  {
+    _id: 'comparison-odoo-manufacturing-fit',
+    _type: 'comparison',
+    title: 'Odoo for manufacturing SMBs: where it fits and where it does not',
+    slug: 'odoo-manufacturing-smb-fit-analysis',
+    excerpt: 'A fit analysis for manufacturers considering Odoo as a flexible SMB ERP option.',
+    leftProduct: 'Odoo',
+    rightProduct: 'Structured Manufacturing ERP',
+    bestFor: [
+      'Odoo: moderate-complexity manufacturers wanting a more flexible modular approach',
+      'Structured ERP: manufacturers prioritising tighter governance and stronger out-of-the-box controls',
+    ],
+    publishedAt,
+    updatedAt: publishedAt,
+    body: topicalComparisonBlocks('odoo-manufacturing-smb-fit-analysis'),
   },
 ]
 

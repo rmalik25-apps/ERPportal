@@ -42,6 +42,26 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
   ],
+  'myob-acumatica-vs-business-central': [
+    {href: '/compare/sage-intacct-vs-myob-acumatica/', label: 'Sage Intacct vs MYOB Acumatica'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+  ],
+  'odoo-vs-business-central': [
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
+    {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
+  ],
+  'generic-erp-vs-vertical-erp-food-manufacturers': [
+    {href: '/compare/erp-for-meat-processing-generic-vs-specialist/', label: 'ERP for meat processing'},
+    {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central food add-ons vs JustFood'},
+    {href: '/guides/industry-specific-erp-challenges-and-recommendations/', label: 'Industry-specific ERP challenges'},
+  ],
+  'erp-for-meat-processing-generic-vs-specialist': [
+    {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
+    {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central food add-ons vs JustFood'},
+    {href: '/guides/industry-specific-erp-challenges-and-recommendations/', label: 'Industry-specific ERP challenges'},
+  ],
 }
 
 const blogLinks: Record<string, RelatedLink[]> = {

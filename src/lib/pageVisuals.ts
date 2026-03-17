@@ -185,6 +185,46 @@ const comparisonVisualsBySlug: Record<string, Visual> = {
     alt: 'Migration team reviewing upgrade and reimplementation paths on a whiteboard',
     caption: 'Legacy ERP decisions need an honest view of customisation debt, process drift, and data quality.',
   },
+  'myob-acumatica-vs-business-central': {
+    src: pexels('3182812'),
+    alt: 'Australian business team comparing ERP options in a structured workshop',
+    caption: 'ANZ SMB comparisons should test local market fit, partner model, and ecosystem direction together.',
+  },
+  'odoo-vs-business-central': {
+    src: pexels('5716032'),
+    alt: 'Analyst comparing modular ERP and Microsoft-aligned ERP options on screen',
+    caption: 'This decision is usually about governance and operating model as much as software cost.',
+  },
+  'odoo-vs-netsuite': {
+    src: pexels('590022'),
+    alt: 'Leadership team comparing flexible modular software with structured cloud ERP',
+    caption: 'The real trade-off is flexibility versus standardised cloud operating discipline.',
+  },
+  'sage-intacct-vs-myob-acumatica': {
+    src: pexels('36021621'),
+    alt: 'Finance-led team reviewing ERP and reporting strategy choices',
+    caption: 'Finance-led buyers need to decide whether depth in finance or broader ERP scope matters first.',
+  },
+  'generic-erp-vs-vertical-erp-food-manufacturers': {
+    src: pexels('6169668'),
+    alt: 'Food manufacturing team reviewing plant operations and traceability workflows',
+    caption: 'Food-sector ERP fit depends on traceability, quality, and process reality more than generic feature breadth.',
+  },
+  'erp-for-meat-processing-generic-vs-specialist': {
+    src: pexels('4481259'),
+    alt: 'Processing plant team reviewing specialised production and compliance workflows',
+    caption: 'Meat processing ERP choices should be tested against plant control, traceability, and yield management.',
+  },
+  'business-central-food-addons-vs-justfood': {
+    src: pexels('6169049'),
+    alt: 'Food operations leaders comparing Microsoft-based ERP and dedicated food ERP paths',
+    caption: 'This decision turns on whether industry capability belongs in add-ons or in the core product.',
+  },
+  'odoo-manufacturing-smb-fit-analysis': {
+    src: pexels('31352672'),
+    alt: 'Manufacturing team evaluating flexible ERP fit on the shop floor',
+    caption: 'Manufacturing buyers should test Odoo against planning discipline, reporting needs, and support model.',
+  },
 }
 
 const blogVisualsBySlug: Record<string, Visual> = {
