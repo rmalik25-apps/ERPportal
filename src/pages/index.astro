@@ -547,115 +547,113 @@ const pollBrandAssets = {
 </SiteLayout>
 
 <script is:inline define:vars={{pollEndpoint, pollBrandAssets}}>
-  {`
-    (() => {
-      const poll = document.querySelector('[data-hero-poll]');
-      if (!poll) return;
+  (() => {
+    const poll = document.querySelector('[data-hero-poll]');
+    if (!poll) return;
 
-      const status = poll.querySelector('[data-hero-poll-status]');
-      const leaderNode = poll.querySelector('[data-hero-poll-leader]');
-      const resultsNode = poll.querySelector('[data-hero-poll-results]');
-      const storageKey = 'erp-navigator-current-erp-vote';
-      const savedVote = window.localStorage.getItem(storageKey);
+    const status = poll.querySelector('[data-hero-poll-status]');
+    const leaderNode = poll.querySelector('[data-hero-poll-leader]');
+    const resultsNode = poll.querySelector('[data-hero-poll-results]');
+    const storageKey = 'erp-navigator-current-erp-vote';
+    const savedVote = window.localStorage.getItem(storageKey);
 
-      const brandMarkup = (option) => {
-        const asset = pollBrandAssets[option] || pollBrandAssets['Spreadsheets / none yet'];
-        return \`<img class="hero-brand-logo hero-brand-logo-inline" src="\${asset}" alt="" aria-hidden="true" />\`;
-      };
+    const brandMarkup = (option) => {
+      const asset = pollBrandAssets[option] || pollBrandAssets['Spreadsheets / none yet'];
+      return `<img class="hero-brand-logo hero-brand-logo-inline" src="${asset}" alt="" aria-hidden="true" />`;
+    };
 
-      const renderResults = (results, selectedOption) => {
-        if (!resultsNode || !results || !Array.isArray(results.options)) return;
-        const leader = results.options
-          .slice()
-          .sort((a, b) => (b.votes - a.votes) || a.option.localeCompare(b.option))[0];
+    const renderResults = (results, selectedOption) => {
+      if (!resultsNode || !results || !Array.isArray(results.options)) return;
+      const leader = results.options
+        .slice()
+        .sort((a, b) => (b.votes - a.votes) || a.option.localeCompare(b.option))[0];
 
-        if (leaderNode && leader && results.total > 0) {
-          leaderNode.hidden = false;
-          leaderNode.innerHTML = \`
-            <span class="hero-poll-leader-kicker">Current leader</span>
-            <span class="hero-poll-leader-main">\${brandMarkup(leader.option)}<strong>\${leader.option}</strong></span>
-            <span class="hero-poll-leader-meta">\${leader.percent}% · \${leader.votes} vote\${leader.votes === 1 ? '' : 's'}</span>
-          \`;
-        } else if (leaderNode) {
-          leaderNode.hidden = true;
-          leaderNode.innerHTML = '';
-        }
-
-        resultsNode.hidden = false;
-        resultsNode.innerHTML = results.options
-          .map((entry) => {
-            const active = selectedOption && entry.option === selectedOption ? ' is-selected' : '';
-            return \`
-              <div class="hero-poll-result\${active}">
-                <div class="hero-poll-result-row">
-                  <strong>\${brandMarkup(entry.option)} \${entry.option}</strong>
-                  <span>\${entry.percent}%</span>
-                </div>
-                <div class="hero-poll-bar"><span style="width: \${entry.percent}%"></span></div>
-                <small>\${entry.votes} vote\${entry.votes === 1 ? '' : 's'}</small>
-              </div>
-            \`
-          })
-          .join('') + \`<p class="hero-poll-total">Total votes: \${results.total || 0}</p>\`;
-      };
-
-      const loadResults = async () => {
-        try {
-          const response = await fetch(pollEndpoint);
-          const data = await response.json();
-          if (response.ok && data.ok && data.results) {
-            renderResults(data.results, window.localStorage.getItem(storageKey));
-          }
-        } catch {}
-      };
-
-      if (savedVote) {
-        const selected = poll.querySelector(\`input[value="\${CSS.escape(savedVote)}"]\`);
-        if (selected) selected.checked = true;
-        if (status) status.textContent = \`Your saved vote: \${savedVote}\`;
+      if (leaderNode && leader && results.total > 0) {
+        leaderNode.hidden = false;
+        leaderNode.innerHTML = `
+          <span class="hero-poll-leader-kicker">Current leader</span>
+          <span class="hero-poll-leader-main">${brandMarkup(leader.option)}<strong>${leader.option}</strong></span>
+          <span class="hero-poll-leader-meta">${leader.percent}% · ${leader.votes} vote${leader.votes === 1 ? '' : 's'}</span>
+        `;
+      } else if (leaderNode) {
+        leaderNode.hidden = true;
+        leaderNode.innerHTML = '';
       }
 
-      loadResults();
+      resultsNode.hidden = false;
+      resultsNode.innerHTML = results.options
+        .map((entry) => {
+          const active = selectedOption && entry.option === selectedOption ? ' is-selected' : '';
+          return `
+            <div class="hero-poll-result${active}">
+              <div class="hero-poll-result-row">
+                <strong>${brandMarkup(entry.option)} ${entry.option}</strong>
+                <span>${entry.percent}%</span>
+              </div>
+              <div class="hero-poll-bar"><span style="width: ${entry.percent}%"></span></div>
+              <small>${entry.votes} vote${entry.votes === 1 ? '' : 's'}</small>
+            </div>
+          `;
+        })
+        .join('') + `<p class="hero-poll-total">Total votes: ${results.total || 0}</p>`;
+    };
 
-      poll.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const selected = poll.querySelector('input[name="currentErp"]:checked');
-        if (!selected) {
-          if (status) status.textContent = 'Choose an option first.';
-          return;
+    const loadResults = async () => {
+      try {
+        const response = await fetch(pollEndpoint);
+        const data = await response.json();
+        if (response.ok && data.ok && data.results) {
+          renderResults(data.results, window.localStorage.getItem(storageKey));
         }
+      } catch {}
+    };
 
-        try {
-          const response = await fetch(pollEndpoint, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              type: 'poll',
-              option: selected.value,
-              page: window.location.href,
-              submittedAt: new Date().toISOString(),
-            }),
-          });
-          const data = await response.json();
-          if (!response.ok || !data.ok) throw new Error(data.error || 'Poll vote failed');
+    if (savedVote) {
+      const selected = poll.querySelector(`input[value="${CSS.escape(savedVote)}"]`);
+      if (selected) selected.checked = true;
+      if (status) status.textContent = `Your saved vote: ${savedVote}`;
+    }
 
-          window.localStorage.setItem(storageKey, selected.value);
-          if (status) status.textContent = \`Saved: \${selected.value}. Thanks for sharing.\`;
-          if (data.results) renderResults(data.results, selected.value);
-        } catch (error) {
-          if (status) status.textContent = 'Vote failed. Please try again.';
-          return;
-        }
+    loadResults();
 
-        if (window.gtag) {
-          window.gtag('event', 'hero_poll_vote', {
-            poll_name: 'current_erp',
+    poll.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const selected = poll.querySelector('input[name="currentErp"]:checked');
+      if (!selected) {
+        if (status) status.textContent = 'Choose an option first.';
+        return;
+      }
+
+      try {
+        const response = await fetch(pollEndpoint, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            type: 'poll',
             option: selected.value,
-          });
-        }
-      });
-    })();
-  `}
+            page: window.location.href,
+            submittedAt: new Date().toISOString(),
+          }),
+        });
+        const data = await response.json();
+        if (!response.ok || !data.ok) throw new Error(data.error || 'Poll vote failed');
+
+        window.localStorage.setItem(storageKey, selected.value);
+        if (status) status.textContent = `Saved: ${selected.value}. Thanks for sharing.`;
+        if (data.results) renderResults(data.results, selected.value);
+      } catch (error) {
+        if (status) status.textContent = 'Vote failed. Please try again.';
+        return;
+      }
+
+      if (window.gtag) {
+        window.gtag('event', 'hero_poll_vote', {
+          poll_name: 'current_erp',
+          option: selected.value,
+        });
+      }
+    });
+  })();
 </script>
 
 <script is:inline define:vars={{assessmentEndpoint, newsletterEndpoint}}>
