@@ -81,12 +81,12 @@ const pollBrandAssets = {
                 </div>
                 <div class="hero-poll-actions">
                   <button class="btn btn-secondary btn-small" type="submit">Vote</button>
-                  <p class="hero-poll-status" data-hero-poll-status role="status" aria-live="polite"></p>
+                  <p class="hero-poll-status" data-hero-poll-input-status role="status" aria-live="polite"></p>
                 </div>
               </div>
               <div class="hero-poll-summary" data-hero-poll-summary hidden>
                 <div class="hero-poll-summary-bar">
-                  <p class="hero-poll-status" data-hero-poll-status role="status" aria-live="polite"></p>
+                  <p class="hero-poll-status" data-hero-poll-summary-status role="status" aria-live="polite"></p>
                   <button class="hero-poll-change" data-hero-poll-change type="button">Change my vote</button>
                 </div>
                 <p class="hero-poll-leader" data-hero-poll-leader hidden></p>
@@ -580,7 +580,8 @@ const pollBrandAssets = {
     const poll = document.querySelector('[data-hero-poll]');
     if (!poll) return;
 
-    const status = poll.querySelector('[data-hero-poll-status]');
+    const inputStatus = poll.querySelector('[data-hero-poll-input-status]');
+    const summaryStatus = poll.querySelector('[data-hero-poll-summary-status]');
     const inputsNode = poll.querySelector('[data-hero-poll-inputs]');
     const summaryNode = poll.querySelector('[data-hero-poll-summary]');
     const changeVoteButton = poll.querySelector('[data-hero-poll-change]');
@@ -598,6 +599,11 @@ const pollBrandAssets = {
       const showResults = mode === 'results';
       if (inputsNode) inputsNode.hidden = showResults;
       if (summaryNode) summaryNode.hidden = !showResults;
+    };
+
+    const setStatus = (text, mode = 'input') => {
+      if (inputStatus) inputStatus.textContent = mode === 'input' ? text : '';
+      if (summaryStatus) summaryStatus.textContent = mode === 'results' ? text : '';
     };
 
     const renderResults = (results, selectedOption) => {
@@ -649,7 +655,7 @@ const pollBrandAssets = {
     if (savedVote) {
       const selected = poll.querySelector(`input[value="${CSS.escape(savedVote)}"]`);
       if (selected) selected.checked = true;
-      if (status) status.textContent = `Your saved vote: ${savedVote}`;
+      setStatus(`Your saved vote: ${savedVote}`, 'results');
       setMode('results');
     } else {
       setMode('input');
@@ -660,7 +666,7 @@ const pollBrandAssets = {
     if (changeVoteButton) {
       changeVoteButton.addEventListener('click', () => {
         setMode('input');
-        if (status) status.textContent = '';
+        setStatus('', 'input');
       });
     }
 
@@ -668,7 +674,7 @@ const pollBrandAssets = {
       event.preventDefault();
       const selected = poll.querySelector('input[name="currentErp"]:checked');
       if (!selected) {
-        if (status) status.textContent = 'Choose an option first.';
+        setStatus('Choose an option first.', 'input');
         return;
       }
 
@@ -687,11 +693,11 @@ const pollBrandAssets = {
         if (!response.ok || !data.ok) throw new Error(data.error || 'Poll vote failed');
 
         window.localStorage.setItem(storageKey, selected.value);
-        if (status) status.textContent = `Saved: ${selected.value}. Thanks for sharing.`;
         setMode('results');
+        setStatus(`Saved: ${selected.value}. Thanks for sharing.`, 'results');
         if (data.results) renderResults(data.results, selected.value);
       } catch (error) {
-        if (status) status.textContent = 'Vote failed. Please try again.';
+        setStatus('Vote failed. Please try again.', 'input');
         return;
       }
 

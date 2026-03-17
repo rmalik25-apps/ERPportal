@@ -378,6 +378,11 @@ a {
   gap: 0.75rem;
 }
 
+.hero-poll-inputs[hidden],
+.hero-poll-summary[hidden] {
+  display: none !important;
+}
+
 .hero-poll-options {
   display: grid;
   gap: 0.55rem;
