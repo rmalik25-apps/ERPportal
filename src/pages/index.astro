@@ -80,7 +80,7 @@ const pollBrandAssets = {
                   <label><input type="radio" name="currentErp" value="Spreadsheets / none yet" /> <img class="hero-brand-logo" src={pollBrandAssets['Spreadsheets / none yet']} alt="Spreadsheets / none yet" /><span>Spreadsheets / none yet</span></label>
                 </div>
                 <div class="hero-poll-actions">
-                  <button class="btn btn-secondary btn-small" type="submit">Vote</button>
+                  <button class="btn btn-secondary btn-small" data-hero-poll-submit type="submit">Vote</button>
                   <p class="hero-poll-status" data-hero-poll-input-status role="status" aria-live="polite"></p>
                 </div>
               </div>
@@ -582,6 +582,7 @@ const pollBrandAssets = {
 
     const inputStatus = poll.querySelector('[data-hero-poll-input-status]');
     const summaryStatus = poll.querySelector('[data-hero-poll-summary-status]');
+    const submitButton = poll.querySelector('[data-hero-poll-submit]');
     const inputsNode = poll.querySelector('[data-hero-poll-inputs]');
     const summaryNode = poll.querySelector('[data-hero-poll-summary]');
     const changeVoteButton = poll.querySelector('[data-hero-poll-change]');
@@ -604,6 +605,15 @@ const pollBrandAssets = {
     const setStatus = (text, mode = 'input') => {
       if (inputStatus) inputStatus.textContent = mode === 'input' ? text : '';
       if (summaryStatus) summaryStatus.textContent = mode === 'results' ? text : '';
+    };
+
+    const setBusy = (busy) => {
+      poll.classList.toggle('is-busy', busy);
+      if (submitButton) {
+        if (!submitButton.dataset.label) submitButton.dataset.label = submitButton.textContent || 'Vote';
+        submitButton.disabled = busy;
+        submitButton.textContent = busy ? 'Saving...' : submitButton.dataset.label;
+      }
     };
 
     const renderResults = (results, selectedOption) => {
@@ -672,6 +682,8 @@ const pollBrandAssets = {
 
     poll.addEventListener('submit', async (event) => {
       event.preventDefault();
+      if (poll.classList.contains('is-busy')) return;
+
       const selected = poll.querySelector('input[name="currentErp"]:checked');
       if (!selected) {
         setStatus('Choose an option first.', 'input');
@@ -679,6 +691,8 @@ const pollBrandAssets = {
       }
 
       try {
+        setBusy(true);
+        setStatus('Saving your vote...', 'input');
         const response = await fetch(pollEndpoint, {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
@@ -698,8 +712,11 @@ const pollBrandAssets = {
         if (data.results) renderResults(data.results, selected.value);
       } catch (error) {
         setStatus('Vote failed. Please try again.', 'input');
+        setBusy(false);
         return;
       }
+
+      setBusy(false);
 
       if (window.gtag) {
         window.gtag('event', 'hero_poll_vote', {

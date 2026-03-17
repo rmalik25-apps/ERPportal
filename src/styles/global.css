@@ -434,6 +434,15 @@ a {
   flex-wrap: wrap;
 }
 
+.hero-poll.is-busy .hero-poll-options {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.hero-poll.is-busy .hero-poll-options label {
+  cursor: progress;
+}
+
 .hero-poll-summary-bar {
   display: flex;
   align-items: center;
