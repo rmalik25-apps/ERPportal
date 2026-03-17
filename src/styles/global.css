@@ -416,6 +416,61 @@ a {
   font-size: 0.86rem;
 }
 
+.hero-poll-results {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.hero-poll-result {
+  border-radius: 12px;
+  border: 1px solid rgba(216, 209, 198, 0.92);
+  background: rgba(255, 255, 255, 0.75);
+  padding: 0.55rem 0.7rem;
+}
+
+.hero-poll-result.is-selected {
+  border-color: rgba(14, 90, 79, 0.4);
+  background: #eef7f4;
+}
+
+.hero-poll-result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.28rem;
+}
+
+.hero-poll-result-row strong {
+  font-size: 0.9rem;
+}
+
+.hero-poll-result-row span,
+.hero-poll-result small,
+.hero-poll-total {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.hero-poll-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: #e7e1d7;
+  overflow: hidden;
+  margin-bottom: 0.22rem;
+}
+
+.hero-poll-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #1f8d78);
+}
+
+.hero-poll-total {
+  margin: 0.15rem 0 0;
+}
+
 .hero-shell {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;

@@ -11,6 +11,7 @@ const navGuide = guides.find((guide) => guide.slug.includes('nav'))
 const partnerGuide = guides.find((guide) => guide.slug.includes('partner'))
 const assessmentEndpoint = import.meta.env.PUBLIC_ASSESSMENT_ENDPOINT || '/api/assessment'
 const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/newsletter'
+const pollEndpoint = import.meta.env.PUBLIC_POLL_ENDPOINT || '/api/poll'
 ---
 
 <SiteLayout
@@ -72,6 +73,7 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
                 <button class="btn btn-secondary btn-small" type="submit">Vote</button>
                 <p class="hero-poll-status" data-hero-poll-status role="status" aria-live="polite"></p>
               </div>
+              <div class="hero-poll-results" data-hero-poll-results hidden></div>
             </form>
           </article>
           <article class="hero-utility-card">
@@ -534,25 +536,56 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
   </section>
 </SiteLayout>
 
-<script is:inline>
+<script is:inline define:vars={{pollEndpoint}}>
   {`
     (() => {
       const poll = document.querySelector('[data-hero-poll]');
       if (!poll) return;
 
       const status = poll.querySelector('[data-hero-poll-status]');
+      const resultsNode = poll.querySelector('[data-hero-poll-results]');
       const storageKey = 'erp-navigator-current-erp-vote';
-      const saved = window.localStorage.getItem(storageKey);
+      const savedVote = window.localStorage.getItem(storageKey);
 
-      if (saved) {
-        const selected = poll.querySelector(\`input[value="\${CSS.escape(saved)}"]\`);
+      const renderResults = (results, selectedOption) => {
+        if (!resultsNode || !results || !Array.isArray(results.options)) return;
+        resultsNode.hidden = false;
+        resultsNode.innerHTML = results.options
+          .map((entry) => {
+            const active = selectedOption && entry.option === selectedOption ? ' is-selected' : '';
+            return \`
+              <div class="hero-poll-result\${active}">
+                <div class="hero-poll-result-row">
+                  <strong>\${entry.option}</strong>
+                  <span>\${entry.percent}%</span>
+                </div>
+                <div class="hero-poll-bar"><span style="width: \${entry.percent}%"></span></div>
+                <small>\${entry.votes} vote\${entry.votes === 1 ? '' : 's'}</small>
+              </div>
+            \`
+          })
+          .join('') + \`<p class="hero-poll-total">Total votes: \${results.total || 0}</p>\`;
+      };
+
+      const loadResults = async () => {
+        try {
+          const response = await fetch(pollEndpoint);
+          const data = await response.json();
+          if (response.ok && data.ok && data.results) {
+            renderResults(data.results, window.localStorage.getItem(storageKey));
+          }
+        } catch {}
+      };
+
+      if (savedVote) {
+        const selected = poll.querySelector(\`input[value="\${CSS.escape(savedVote)}"]\`);
         if (selected) selected.checked = true;
-        if (status) {
-          status.textContent = \`Saved: \${saved}. Thanks for sharing.\`;
-        }
+        if (status) status.textContent = \`Your saved vote: \${savedVote}\`;
       }
 
-      poll.addEventListener('submit', (event) => {
+      loadResults();
+
+      poll.addEventListener('submit', async (event) => {
         event.preventDefault();
         const selected = poll.querySelector('input[name="currentErp"]:checked');
         if (!selected) {
@@ -560,8 +593,27 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
           return;
         }
 
-        window.localStorage.setItem(storageKey, selected.value);
-        if (status) status.textContent = \`Saved: \${selected.value}. Thanks for sharing.\`;
+        try {
+          const response = await fetch(pollEndpoint, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              type: 'poll',
+              option: selected.value,
+              page: window.location.href,
+              submittedAt: new Date().toISOString(),
+            }),
+          });
+          const data = await response.json();
+          if (!response.ok || !data.ok) throw new Error(data.error || 'Poll vote failed');
+
+          window.localStorage.setItem(storageKey, selected.value);
+          if (status) status.textContent = \`Saved: \${selected.value}. Thanks for sharing.\`;
+          if (data.results) renderResults(data.results, selected.value);
+        } catch (error) {
+          if (status) status.textContent = 'Vote failed. Please try again.';
+          return;
+        }
 
         if (window.gtag) {
           window.gtag('event', 'hero_poll_vote', {
