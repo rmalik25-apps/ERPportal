@@ -822,6 +822,8 @@ a {
   border-radius: 14px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(251, 250, 247, 0.96));
   padding: 0.95rem;
+  display: grid;
+  gap: 0.7rem;
 }
 
 .path-card h3 {
@@ -833,6 +835,28 @@ a {
 .path-card p {
   margin: 0;
   color: var(--muted);
+}
+
+.path-card-visual {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(216, 209, 198, 0.92);
+  background: #f8f4ee;
+}
+
+.path-card-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  object-fit: cover;
+}
+
+.path-card-visual figcaption {
+  padding: 0.55rem 0.7rem 0.6rem;
+  color: #5d5b56;
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
 
 .mini-list {
