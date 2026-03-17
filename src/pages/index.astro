@@ -69,21 +69,29 @@ const pollBrandAssets = {
             <p class="hero-utility-label">Quick poll</p>
             <h2>Which ERP are you using today?</h2>
             <form class="hero-poll" data-hero-poll>
-              <div class="hero-poll-options">
-                <label><input type="radio" name="currentErp" value="Business Central / NAV" /> <img class="hero-brand-logo" src={pollBrandAssets['Business Central / NAV']} alt="Business Central / NAV" /><span>Business Central / NAV</span></label>
-                <label><input type="radio" name="currentErp" value="NetSuite" /> <img class="hero-brand-logo" src={pollBrandAssets['NetSuite']} alt="NetSuite" /><span>NetSuite</span></label>
-                <label><input type="radio" name="currentErp" value="MYOB Acumatica" /> <img class="hero-brand-logo" src={pollBrandAssets['MYOB Acumatica']} alt="MYOB Acumatica" /><span>MYOB Acumatica</span></label>
-                <label><input type="radio" name="currentErp" value="Odoo" /> <img class="hero-brand-logo" src={pollBrandAssets['Odoo']} alt="Odoo" /><span>Odoo</span></label>
-                <label><input type="radio" name="currentErp" value="Sage Intacct" /> <img class="hero-brand-logo" src={pollBrandAssets['Sage Intacct']} alt="Sage Intacct" /><span>Sage Intacct</span></label>
-                <label><input type="radio" name="currentErp" value="SAP / other legacy ERP" /> <img class="hero-brand-logo" src={pollBrandAssets['SAP / other legacy ERP']} alt="SAP / other legacy ERP" /><span>SAP / other legacy ERP</span></label>
-                <label><input type="radio" name="currentErp" value="Spreadsheets / none yet" /> <img class="hero-brand-logo" src={pollBrandAssets['Spreadsheets / none yet']} alt="Spreadsheets / none yet" /><span>Spreadsheets / none yet</span></label>
+              <div class="hero-poll-inputs" data-hero-poll-inputs>
+                <div class="hero-poll-options">
+                  <label><input type="radio" name="currentErp" value="Business Central / NAV" /> <img class="hero-brand-logo" src={pollBrandAssets['Business Central / NAV']} alt="Business Central / NAV" /><span>Business Central / NAV</span></label>
+                  <label><input type="radio" name="currentErp" value="NetSuite" /> <img class="hero-brand-logo" src={pollBrandAssets['NetSuite']} alt="NetSuite" /><span>NetSuite</span></label>
+                  <label><input type="radio" name="currentErp" value="MYOB Acumatica" /> <img class="hero-brand-logo" src={pollBrandAssets['MYOB Acumatica']} alt="MYOB Acumatica" /><span>MYOB Acumatica</span></label>
+                  <label><input type="radio" name="currentErp" value="Odoo" /> <img class="hero-brand-logo" src={pollBrandAssets['Odoo']} alt="Odoo" /><span>Odoo</span></label>
+                  <label><input type="radio" name="currentErp" value="Sage Intacct" /> <img class="hero-brand-logo" src={pollBrandAssets['Sage Intacct']} alt="Sage Intacct" /><span>Sage Intacct</span></label>
+                  <label><input type="radio" name="currentErp" value="SAP / other legacy ERP" /> <img class="hero-brand-logo" src={pollBrandAssets['SAP / other legacy ERP']} alt="SAP / other legacy ERP" /><span>SAP / other legacy ERP</span></label>
+                  <label><input type="radio" name="currentErp" value="Spreadsheets / none yet" /> <img class="hero-brand-logo" src={pollBrandAssets['Spreadsheets / none yet']} alt="Spreadsheets / none yet" /><span>Spreadsheets / none yet</span></label>
+                </div>
+                <div class="hero-poll-actions">
+                  <button class="btn btn-secondary btn-small" type="submit">Vote</button>
+                  <p class="hero-poll-status" data-hero-poll-status role="status" aria-live="polite"></p>
+                </div>
               </div>
-              <div class="hero-poll-actions">
-                <button class="btn btn-secondary btn-small" type="submit">Vote</button>
-                <p class="hero-poll-status" data-hero-poll-status role="status" aria-live="polite"></p>
+              <div class="hero-poll-summary" data-hero-poll-summary hidden>
+                <div class="hero-poll-summary-bar">
+                  <p class="hero-poll-status" data-hero-poll-status role="status" aria-live="polite"></p>
+                  <button class="hero-poll-change" data-hero-poll-change type="button">Change my vote</button>
+                </div>
+                <p class="hero-poll-leader" data-hero-poll-leader hidden></p>
+                <div class="hero-poll-results" data-hero-poll-results hidden></div>
               </div>
-              <p class="hero-poll-leader" data-hero-poll-leader hidden></p>
-              <div class="hero-poll-results" data-hero-poll-results hidden></div>
             </form>
           </article>
           <article class="hero-utility-card">
@@ -552,6 +560,9 @@ const pollBrandAssets = {
     if (!poll) return;
 
     const status = poll.querySelector('[data-hero-poll-status]');
+    const inputsNode = poll.querySelector('[data-hero-poll-inputs]');
+    const summaryNode = poll.querySelector('[data-hero-poll-summary]');
+    const changeVoteButton = poll.querySelector('[data-hero-poll-change]');
     const leaderNode = poll.querySelector('[data-hero-poll-leader]');
     const resultsNode = poll.querySelector('[data-hero-poll-results]');
     const storageKey = 'erp-navigator-current-erp-vote';
@@ -560,6 +571,12 @@ const pollBrandAssets = {
     const brandMarkup = (option) => {
       const asset = pollBrandAssets[option] || pollBrandAssets['Spreadsheets / none yet'];
       return `<img class="hero-brand-logo hero-brand-logo-inline" src="${asset}" alt="" aria-hidden="true" />`;
+    };
+
+    const setMode = (mode) => {
+      const showResults = mode === 'results';
+      if (inputsNode) inputsNode.hidden = showResults;
+      if (summaryNode) summaryNode.hidden = !showResults;
     };
 
     const renderResults = (results, selectedOption) => {
@@ -612,9 +629,19 @@ const pollBrandAssets = {
       const selected = poll.querySelector(`input[value="${CSS.escape(savedVote)}"]`);
       if (selected) selected.checked = true;
       if (status) status.textContent = `Your saved vote: ${savedVote}`;
+      setMode('results');
+    } else {
+      setMode('input');
     }
 
     loadResults();
+
+    if (changeVoteButton) {
+      changeVoteButton.addEventListener('click', () => {
+        setMode('input');
+        if (status) status.textContent = '';
+      });
+    }
 
     poll.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -640,6 +667,7 @@ const pollBrandAssets = {
 
         window.localStorage.setItem(storageKey, selected.value);
         if (status) status.textContent = `Saved: ${selected.value}. Thanks for sharing.`;
+        setMode('results');
         if (data.results) renderResults(data.results, selected.value);
       } catch (error) {
         if (status) status.textContent = 'Vote failed. Please try again.';

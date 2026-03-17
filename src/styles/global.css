@@ -372,6 +372,12 @@ a {
   gap: 0.75rem;
 }
 
+.hero-poll-inputs,
+.hero-poll-summary {
+  display: grid;
+  gap: 0.75rem;
+}
+
 .hero-poll-options {
   display: grid;
   gap: 0.55rem;
@@ -423,10 +429,34 @@ a {
   flex-wrap: wrap;
 }
 
+.hero-poll-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .hero-poll-status {
   margin: 0;
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+.hero-poll-change {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hero-poll-change:hover {
+  text-decoration: underline;
 }
 
 .hero-poll-leader {
