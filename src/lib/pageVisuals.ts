@@ -152,6 +152,21 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Team workshop focused on adoption planning, process change, and training',
     caption: 'ERP change lands better when leaders, managers, and users all know what changes for them.',
   },
+  'what-is-an-erp-guide': {
+    src: pexels('3184291'),
+    alt: 'Business owners reviewing core operations and reporting on a shared table',
+    caption: 'A good ERP introduction should connect software decisions back to real business control and growth needs.',
+  },
+  'spreadsheet-to-erp-migration-guide': {
+    src: pexels('669610'),
+    alt: 'Analyst comparing spreadsheet work with structured system data on screen',
+    caption: 'The move from spreadsheets to ERP is really a move from informal workarounds to repeatable control.',
+  },
+  'first-time-erp-buyers-roadmap': {
+    src: pexels('3182812'),
+    alt: 'Leadership team building a first-time ERP shortlist and roadmap in a planning workshop',
+    caption: 'First-time ERP buyers need a roadmap that keeps selection, partner choice, and change readiness in the right order.',
+  },
 }
 
 const comparisonVisualsBySlug: Record<string, Visual> = {
