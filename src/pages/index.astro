@@ -45,6 +45,44 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
             ? 'Independent buyer guidance with transparent disclosure. Use this site to shortlist options before vendor demos.'
             : 'Independent buyer guidance with transparent partner-introduction disclosure. Content is being expanded and refreshed regularly.'}
         </p>
+        <div class="hero-utility-grid">
+          <article class="hero-utility-card">
+            <p class="hero-utility-label">Most useful first clicks</p>
+            <h2>Start with the page that matches your project</h2>
+            <ul class="hero-utility-list">
+              <li><a href={navGuide ? `/guides/${navGuide.slug}/` : '/guides/'}>Upgrading NAV / Navision to Business Central</a></li>
+              <li><a href={featuredComparison ? `/compare/${featuredComparison.slug}/` : '/compare/'}>Compare two leading ERP platforms</a></li>
+              <li><a href={partnerGuide ? `/guides/${partnerGuide.slug}/` : '/guides/'}>How to choose the right implementation partner</a></li>
+            </ul>
+          </article>
+          <article class="hero-utility-card">
+            <p class="hero-utility-label">What buyers use this site for</p>
+            <div class="hero-metric-grid">
+              <div>
+                <strong>{guides.length}</strong>
+                <span>guides</span>
+              </div>
+              <div>
+                <strong>{comparisons.length}</strong>
+                <span>comparisons</span>
+              </div>
+              <div>
+                <strong>{posts.length}</strong>
+                <span>blog posts</span>
+              </div>
+            </div>
+            <p class="hero-utility-copy">Selection, migration, finance design, partner due diligence, operational rollout, and post-go-live improvement.</p>
+          </article>
+          <article class="hero-utility-card">
+            <p class="hero-utility-label">Popular current topics</p>
+            <ul class="hero-topic-list">
+              <li><a href="/guides/how-to-run-erp-rfp/">How to run an ERP RFP properly</a></li>
+              <li><a href="/compare/myob-acumatica-vs-business-central/">MYOB Acumatica vs Business Central</a></li>
+              <li><a href="/compare/erp-for-meat-processing-generic-vs-specialist/">ERP for meat processing</a></li>
+              <li><a href="/guides/managing-organisational-change-for-erp/">Managing organisational change for ERP</a></li>
+            </ul>
+          </article>
+        </div>
       </div>
       <aside class="hero-panel">
         <figure class="hero-visual">
