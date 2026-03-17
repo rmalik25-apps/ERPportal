@@ -1315,6 +1315,58 @@ a {
   font-size: 0.8rem;
 }
 
+.guidance-card {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+}
+
+.guidance-visual {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.guidance-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+}
+
+.guidance-visual figcaption {
+  padding: 0.55rem 0.7rem 0.65rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.guidance-steps {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.guidance-steps div {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  padding: 0.65rem 0.7rem;
+  display: grid;
+  gap: 0.18rem;
+}
+
+.guidance-steps strong {
+  font-size: 0.9rem;
+}
+
+.guidance-steps span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 .doc-main p + p {
   max-width: 72ch;
 }
