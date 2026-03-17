@@ -588,6 +588,10 @@ a {
   padding: 0.95rem;
 }
 
+.note-card .compact {
+  margin-bottom: 0.75rem;
+}
+
 .note-visual {
   margin: 0 0 0.75rem;
 }
@@ -624,6 +628,59 @@ a {
 
 .note-card a:hover {
   text-decoration: underline;
+}
+
+.radar-stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.radar-card {
+  border-radius: 14px;
+  border: 1px solid rgba(231, 211, 184, 0.95);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0.8rem;
+  box-shadow: 0 10px 18px rgba(47, 36, 24, 0.05);
+}
+
+.radar-card p {
+  margin: 0.35rem 0;
+}
+
+.radar-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.radar-head strong {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.98rem;
+}
+
+.radar-head span {
+  color: #7b6c5d;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.radar-why {
+  color: #3f433f;
+  font-size: 0.9rem;
+}
+
+.note-divider {
+  height: 1px;
+  background: rgba(211, 188, 158, 0.9);
+  margin: 0.9rem 0 0.8rem;
+}
+
+.note-card h4 {
+  margin: 0 0 0.3rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.98rem;
 }
 
 .stats-row {

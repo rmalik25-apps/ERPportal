@@ -183,15 +183,43 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '/api/n
         </article>
       </div>
       <aside class="note-card">
-        <figure class="note-visual">
-          <img
-            src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="Team planning implementation priorities on a whiteboard"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-        <h3>Find your best starting point</h3>
+        <p class="eyebrow">Product Update Radar</p>
+        <h3>What changed recently across major ERP products</h3>
+        <p class="section-subtle compact">
+          Use this as a buyer signal, not just product news. New release timing and feature direction can affect shortlist fit,
+          upgrade planning, and partner conversations.
+        </p>
+        <div class="radar-stack">
+          <article class="radar-card">
+            <div class="radar-head">
+              <strong>Microsoft Dynamics 365</strong>
+              <span>1 Apr 2026</span>
+            </div>
+            <p>Microsoft published 2026 release wave 1 timing, with general availability starting on 1 Apr 2026.</p>
+            <p class="radar-why"><strong>Why it matters:</strong> useful for Business Central and Dynamics buyers planning sandbox review, upgrade timing, and partner readiness.</p>
+            <a href="https://learn.microsoft.com/en-us/dynamics365/get-started/release-schedule" target="_blank" rel="noreferrer">Official release schedule ↗</a>
+          </article>
+          <article class="radar-card">
+            <div class="radar-head">
+              <strong>NetSuite 2026.1</strong>
+              <span>2026.1 release</span>
+            </div>
+            <p>NetSuite refreshed its 2026.1 release notes with finance, AI connector, and REST web services updates.</p>
+            <p class="radar-why"><strong>Why it matters:</strong> good signal for finance-first teams and buyers with integration-heavy environments.</p>
+            <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html" target="_blank" rel="noreferrer">Official release notes ↗</a>
+          </article>
+          <article class="radar-card">
+            <div class="radar-head">
+              <strong>Sage Intacct</strong>
+              <span>17 Feb 2026</span>
+            </div>
+            <p>Sage announced AI-powered close analytics, cash intelligence, connected data access, and import improvements.</p>
+            <p class="radar-why"><strong>Why it matters:</strong> relevant for finance-led organisations comparing focused finance depth against broader ERP scope.</p>
+            <a href="https://www.sage.com/en-us/news/press-releases/2026/02/sage-intacct-delivers-new-ai-powered-capabilities-to-transform-how-finance-teams-close/" target="_blank" rel="noreferrer">Official product announcement ↗</a>
+          </article>
+        </div>
+        <div class="note-divider"></div>
+        <h4>Find your best starting point</h4>
         <ul>
           <li><a href="/guides/">I’m selecting a new ERP</a></li>
           <li><a href={navGuide ? `/guides/${navGuide.slug}/` : '/guides/'}>I’m upgrading NAV / legacy ERP</a></li>
