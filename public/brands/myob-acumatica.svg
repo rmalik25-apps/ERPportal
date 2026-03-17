@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="28" viewBox="0 0 112 28" role="img" aria-label="MYOB Acumatica">
+  <rect width="112" height="28" rx="14" fill="#F8EEE9"/>
+  <rect x="4" y="4" width="22" height="20" rx="10" fill="#7C2D12"/>
+  <text x="8.3" y="18" fill="#fff" font-size="8.8" font-weight="800" font-family="Arial, Helvetica, sans-serif">MY</text>
+  <text x="34" y="18" fill="#3A2219" font-size="11" font-weight="700" font-family="Arial, Helvetica, sans-serif">MYOB Acumatica</text>
+</svg>
