@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro'
+import EditorialMarker from '../../components/EditorialMarker.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {editorialTeamName} from '../../lib/editorial'
@@ -35,6 +36,14 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <div class="editorial-list section">
     {items.map((item) => (
       <article class="editorial-item">
+        <div class="editorial-topline">
+          <EditorialMarker
+            variant="comparison"
+            leftProduct={item.leftProduct}
+            rightProduct={item.rightProduct}
+          />
+          <p class="eyebrow">Comparison</p>
+        </div>
         <h2><a href={`/compare/${item.slug}/`}>{item.title}</a></h2>
         <div class="meta-row">
           <p class="meta">

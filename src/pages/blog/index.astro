@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro'
+import EditorialMarker from '../../components/EditorialMarker.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
@@ -32,7 +33,10 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <div class="editorial-list section">
     {posts.map((post) => (
       <article class="editorial-item">
-        <p class="eyebrow">{post.category}</p>
+        <div class="editorial-topline">
+          <EditorialMarker variant="post" category={post.category} />
+          <p class="eyebrow">{post.category}</p>
+        </div>
         <h2><a href={`/blog/${post.slug}/`}>{post.title}</a></h2>
         <div class="meta-row">
           <p class="meta">Published {formatPublishDate(post.publishedAt)}</p>

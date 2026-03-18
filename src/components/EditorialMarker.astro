@@ -1,0 +1,167 @@
+---
+type MarkerVariant = 'guide' | 'post' | 'comparison'
+
+interface Props {
+  variant: MarkerVariant
+  intent?: string
+  category?: string
+  leftProduct?: string
+  rightProduct?: string
+}
+
+const {variant, intent = '', category = '', leftProduct = '', rightProduct = ''} = Astro.props
+
+const normalise = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+
+const productLogo = (product: string) => {
+  const normalized = normalise(product)
+  if (normalized.includes('business central') || normalized.includes('nav')) {
+    return {src: '/brands/business-central-nav.svg', alt: 'Business Central'}
+  }
+  if (normalized.includes('netsuite')) {
+    return {src: '/brands/netsuite.svg', alt: 'NetSuite'}
+  }
+  if (normalized.includes('myob') || normalized.includes('acumatica')) {
+    return {src: '/brands/myob-acumatica.svg', alt: 'MYOB Acumatica'}
+  }
+  if (normalized.includes('odoo')) {
+    return {src: '/brands/odoo.svg', alt: 'Odoo'}
+  }
+  if (normalized.includes('sage intacct') || normalized.includes('intacct')) {
+    return {src: '/brands/sage-intacct.svg', alt: 'Sage Intacct'}
+  }
+  if (normalized.includes('sap') || normalized.includes('legacy')) {
+    return {src: '/brands/sap-legacy.svg', alt: 'SAP or legacy ERP'}
+  }
+  if (normalized.includes('spreadsheet')) {
+    return {src: '/brands/spreadsheets.svg', alt: 'Spreadsheets'}
+  }
+  return null
+}
+
+const initials = (value: string) =>
+  value
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((token) => token[0]?.toUpperCase() || '')
+    .join('')
+
+const guideTone =
+  intent === 'Selection'
+    ? 'green'
+    : intent === 'Finance'
+      ? 'copper'
+      : intent === 'Migration' || intent === 'Data Migration'
+        ? 'slate'
+        : 'green'
+
+const postTone =
+  category === 'Finance'
+    ? 'copper'
+    : category === 'Architecture' || category === 'Business Central' || category === 'CRM + ERP'
+      ? 'slate'
+      : 'green'
+
+const guideIcon =
+  intent === 'Migration' || intent === 'Data Migration'
+    ? 'path'
+    : intent === 'Finance'
+      ? 'ledger'
+      : intent === 'Partner Selection'
+        ? 'people'
+        : intent === 'Security'
+          ? 'shield'
+          : 'checklist'
+
+const postIcon =
+  category === 'Finance'
+    ? 'chart'
+    : category === 'Architecture' || category === 'CRM + ERP'
+      ? 'link'
+      : category === 'Change Management'
+        ? 'people'
+        : 'note'
+---
+
+{variant === 'comparison' ? (
+  <div class="editorial-marker editorial-logo-stack" aria-hidden="true">
+    {[leftProduct, rightProduct].map((product) => {
+      const logo = productLogo(product)
+      return logo ? (
+        <span class="editorial-logo-pill">
+          <img src={logo.src} alt="" loading="lazy" />
+        </span>
+      ) : (
+        <span class="editorial-logo-fallback">{initials(product)}</span>
+      )
+    })}
+    <span class="editorial-versus">VS</span>
+  </div>
+) : (
+  <span class={`editorial-marker editorial-icon editorial-icon-${variant === 'guide' ? guideTone : postTone}`} aria-hidden="true">
+    {((variant === 'guide' ? guideIcon : postIcon) === 'checklist') && (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 7h8" />
+        <path d="M9 12h8" />
+        <path d="M9 17h8" />
+        <path d="m5.5 7 .8.8 1.7-1.7" />
+        <path d="m5.5 12 .8.8 1.7-1.7" />
+        <path d="m5.5 17 .8.8 1.7-1.7" />
+      </svg>
+    )}
+    {((variant === 'guide' ? guideIcon : postIcon) === 'ledger') && (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="4.5" width="14" height="15" rx="2" />
+        <path d="M9 8h6" />
+        <path d="M9 12h2" />
+        <path d="M13 12h2" />
+        <path d="M9 16h6" />
+      </svg>
+    )}
+    {((variant === 'guide' ? guideIcon : postIcon) === 'people') && (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="9" r="2.5" />
+        <circle cx="16" cy="10" r="2.2" />
+        <path d="M4.8 17c.8-2.4 2.6-3.6 4.9-3.6 2.3 0 4.1 1.2 4.9 3.6" />
+        <path d="M14.2 16.6c.6-1.7 1.9-2.7 3.8-2.9" />
+      </svg>
+    )}
+    {((variant === 'guide' ? guideIcon : postIcon) === 'shield') && (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 4.5 18 7v4.5c0 4-2.3 6.6-6 8-3.7-1.4-6-4-6-8V7z" />
+        <path d="m9.4 12 1.7 1.7 3.6-3.8" />
+      </svg>
+    )}
+    {((variant === 'guide' ? guideIcon : postIcon) === 'path') && (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 7h4a2 2 0 0 1 2 2v6a2 2 0 0 0 2 2h4" />
+        <path d="m15.5 14.5 2.5 2.5-2.5 2.5" />
+        <circle cx="6" cy="7" r="1.5" />
+      </svg>
+    )}
+    {((variant === 'guide' ? guideIcon : postIcon) === 'chart') && (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 18.5h14" />
+        <path d="M7.5 16V11" />
+        <path d="M12 16V7.5" />
+        <path d="M16.5 16v-5" />
+      </svg>
+    )}
+    {((variant === 'guide' ? guideIcon : postIcon) === 'link') && (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 14 8.2 15.8a3 3 0 1 1-4.2-4.2L6.5 9" />
+        <path d="m14 10 1.8-1.8a3 3 0 1 1 4.2 4.2L17.5 15" />
+        <path d="m8.5 15.5 7-7" />
+      </svg>
+    )}
+    {((variant === 'guide' ? guideIcon : postIcon) === 'note') && (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="6" y="4.5" width="12" height="15" rx="2" />
+        <path d="M9 9h6" />
+        <path d="M9 12.5h6" />
+        <path d="M9 16h4" />
+      </svg>
+    )}
+  </span>
+)}

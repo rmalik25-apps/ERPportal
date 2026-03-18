@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro'
+import EditorialMarker from '../../components/EditorialMarker.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {editorialTeamName} from '../../lib/editorial'
@@ -35,7 +36,10 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   <div class="editorial-list section">
     {guides.map((guide) => (
       <article class="editorial-item">
-        <p class="eyebrow">{guide.intent || 'Guide'}</p>
+        <div class="editorial-topline">
+          <EditorialMarker variant="guide" intent={guide.intent} />
+          <p class="eyebrow">{guide.intent || 'Guide'}</p>
+        </div>
         <h2><a href={`/guides/${guide.slug}/`}>{guide.title}</a></h2>
         <div class="meta-row">
           <p class="meta">Updated {new Date(guide.updatedAt || guide.publishedAt).toLocaleDateString()}</p>
