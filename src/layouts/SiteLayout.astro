@@ -13,7 +13,7 @@ interface Props {
 
 const {
   title,
-  description = 'ERP Navigator: independent ERP guidance, comparisons, and implementation insights for small and medium businesses',
+  description = 'ERP Search: independent ERP guidance, comparisons, and implementation insights for small and medium businesses',
   canonicalPath,
   ogImage,
   ogType = 'website',
@@ -29,7 +29,7 @@ const robotsContent = noIndex ? 'noindex,nofollow' : 'index,follow,max-image-pre
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'ERP Navigator',
+  name: 'ERP Search',
   url: `${siteOrigin}/`,
   potentialAction: {
     '@type': 'SearchAction',
@@ -51,7 +51,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
     <meta name="description" content={description} />
     <meta name="robots" content={robotsContent} />
     <link rel="canonical" href={canonicalUrl} />
-    <meta property="og:site_name" content="ERP Navigator" />
+    <meta property="og:site_name" content="ERP Search" />
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -108,10 +108,10 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
     <header class="site-header">
       <div class="container header-row">
         <a class="brand" href="/">
-          <img class="mark" src="/logo-navigator-mark.svg" alt="ERP Navigator" />
+          <img class="mark" src="/logo-navigator-mark.svg" alt="ERP Search" />
           <span>
-            <strong>ERP Navigator</strong>
-            <small>ERP intelligence for growing businesses</small>
+            <strong>ERP Search</strong>
+            <small>Independent ERP guidance for growing businesses</small>
           </span>
         </a>
         <nav class="nav">
@@ -140,7 +140,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
     <footer class="site-footer">
       <div class="container footer-row">
         <div>
-          <p class="footer-title">ERP Navigator</p>
+          <p class="footer-title">ERP Search</p>
           <p>Independent ERP buyer education and partner-fit guidance for small and medium businesses.</p>
         </div>
         <p>
