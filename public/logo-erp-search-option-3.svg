@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" role="img" aria-labelledby="title desc">
+  <title id="title">ERP Search logo option 3</title>
+  <desc id="desc">Signal radar logo for ERP Search</desc>
+  <rect x="14" y="14" width="116" height="116" rx="30" fill="#0d4038"/>
+  <circle cx="72" cy="72" r="10" fill="#f0b772"/>
+  <path d="M72 72 92 52" stroke="#f7f4ef" stroke-width="4" stroke-linecap="round"/>
+  <path d="M72 72 100 72" stroke="#f7f4ef" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+  <path d="M72 72 92 92" stroke="#f7f4ef" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+  <path d="M72 72a22 22 0 0 1 22-22" fill="none" stroke="#9fd0c5" stroke-width="3" opacity="0.9"/>
+  <path d="M72 72a34 34 0 0 1 34-34" fill="none" stroke="#9fd0c5" stroke-width="3" opacity="0.65"/>
+  <path d="M72 72a46 46 0 0 1 46-46" fill="none" stroke="#9fd0c5" stroke-width="3" opacity="0.4"/>
+  <text x="162" y="70" font-size="54" font-weight="700" fill="#182022" font-family="Fraunces, Georgia, serif">ERP Search</text>
+  <text x="164" y="101" font-size="18" font-weight="700" letter-spacing="0.12em" fill="#0f6b5d" font-family="IBM Plex Sans, Arial, sans-serif">ERP INTELLIGENCE FOR BUYERS</text>
+  <text x="164" y="124" font-size="17" font-weight="500" fill="#5a6463" font-family="IBM Plex Sans, Arial, sans-serif">Fit, risk, and delivery guidance before vendor decisions</text>
+</svg>
