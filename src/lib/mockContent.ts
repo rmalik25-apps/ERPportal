@@ -1038,6 +1038,20 @@ const topicalComparisonBlocks = (slug: string) => {
         '• How much extension or local tailoring will be needed to support real process variation?',
         '• What internal capability exists to govern change, testing, and support once the partner steps back?',
       ],
+      ['## Manufacturing lens: MRP stability and planner workload'],
+      [
+        '• Business Central tends to suit businesses that want a more bounded planning rhythm built around planning worksheets, action messages, reorder logic, and tighter connection into finance and operational controls.',
+        '• Odoo tends to suit businesses that want more flexibility around replenishment rules, modular manufacturing rollout, and a more configurable process model, but that usually requires stronger internal discipline to keep planning behaviour consistent over time.',
+        '• If demand or supply changes create a lot of schedule churn, the key question is not only whether the software can recalculate plans. It is whether planners, buyers, and production leads can still trust and act on the recommendations without creating manual noise.',
+        '• In practice, buyers should compare how each platform handles exception visibility, re-planning effort, safety stock/buffer decisions, and the amount of administrator or partner involvement needed to keep planning stable.',
+      ],
+      ['## What to ask in a manufacturing-focused demo'],
+      [
+        '• Show how the system reacts when demand changes after purchase and production suggestions already exist.',
+        '• Show how planners review and act on suggested changes, rather than only showing the initial plan creation.',
+        '• Show how reordering rules, planning parameters, lead-time assumptions, and inventory buffers are governed over time.',
+        '• Show the handover from planning into production, purchasing, stock visibility, and finance impact so the team can see whether “MRP fit” is operationally credible.',
+      ],
       ['## FAQ'],
       [
         '• Is Odoo always cheaper? Not necessarily once delivery complexity and support effort are included.',
@@ -1175,6 +1189,13 @@ const topicalComparisonBlocks = (slug: string) => {
         '• BOM and routing management.',
         '• MRP behaviour using your own lead-time and production reality.',
         '• Shop-floor reporting, inventory trust, and reporting handover to finance.',
+      ],
+      ['## Planning nervousness: where buyers should look harder'],
+      [
+        '• If your environment sees frequent demand changes, supply variability, or rushed planner intervention, test how quickly Odoo starts producing planning noise when assumptions are imperfect.',
+        '• The useful comparison is not whether Odoo can recalculate. It is whether the planning team can govern parameters, understand recommendations, and keep the process stable without heavy ongoing clean-up.',
+        '• Businesses with lower process discipline or weaker master data often find that a more flexible manufacturing model feels attractive early but becomes harder to control once production pressure increases.',
+        '• That is why Odoo should be tested against planner workload, exception handling, and support overhead, not just manufacturing feature breadth.',
       ],
     ],
   }
