@@ -1,21 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" role="img" aria-labelledby="title desc">
-  <title id="title">ERP Search logo option 1</title>
-  <desc id="desc">Editorial compass logo for ERP Search</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 180" role="img" aria-labelledby="title desc">
+  <title id="title">ERP Search logo</title>
+  <desc id="desc">ERP Search wordmark with magnifying glass and ERP analytics mark</desc>
   <defs>
-    <linearGradient id="bg1" x1="8%" y1="10%" x2="92%" y2="90%">
-      <stop offset="0%" stop-color="#155f54"/>
-      <stop offset="100%" stop-color="#0b433b"/>
+    <linearGradient id="navy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#173b72"/>
+      <stop offset="100%" stop-color="#102d57"/>
     </linearGradient>
+    <linearGradient id="teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39c4bb"/>
+      <stop offset="100%" stop-color="#1f9f97"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#102d57" flood-opacity="0.14"/>
+    </filter>
   </defs>
-  <rect x="14" y="14" width="116" height="116" rx="30" fill="url(#bg1)"/>
-  <circle cx="72" cy="72" r="29" fill="none" stroke="#d8ece7" stroke-width="3.5" opacity="0.95"/>
-  <path d="M72 37v16" stroke="#d8ece7" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M72 91v16" stroke="#d8ece7" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M37 72h16" stroke="#d8ece7" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M91 72h16" stroke="#d8ece7" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M72 49 86 72 72 95 58 72z" fill="#f0b772" opacity="0.96"/>
-  <circle cx="72" cy="72" r="5.5" fill="#fff7ee"/>
-  <text x="162" y="70" font-size="54" font-weight="700" fill="#182022" font-family="Fraunces, Georgia, serif">ERP Search</text>
-  <text x="164" y="101" font-size="18" font-weight="700" letter-spacing="0.12em" fill="#0f6b5d" font-family="IBM Plex Sans, Arial, sans-serif">INDEPENDENT ERP GUIDANCE</text>
-  <text x="164" y="124" font-size="17" font-weight="500" fill="#5a6463" font-family="IBM Plex Sans, Arial, sans-serif">Clear comparisons, practical guides, and shortlist support for growing businesses</text>
+
+  <g transform="translate(18 18)" filter="url(#softShadow)">
+    <circle cx="74" cy="74" r="58" fill="none" stroke="url(#navy)" stroke-width="11"/>
+    <path d="M113 113 145 145" stroke="url(#navy)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M145 145 157 133" stroke="url(#navy)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M48 98V63c0-4 3-7 7-7h15c4 0 7 3 7 7v35z" fill="url(#teal)"/>
+    <path d="M79 98V48c0-4 3-7 7-7h15c4 0 7 3 7 7v50z" fill="url(#teal)"/>
+    <path d="M31 91 54 68 80 68 101 45 122 45" fill="none" stroke="url(#teal)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="54" cy="68" r="5" fill="#ffffff"/>
+    <circle cx="80" cy="68" r="5" fill="#ffffff"/>
+    <circle cx="101" cy="45" r="5" fill="#ffffff"/>
+    <circle cx="122" cy="45" r="5" fill="#ffffff"/>
+  </g>
+
+  <text x="198" y="102" font-size="92" font-weight="700" fill="#153769" font-family="IBM Plex Sans, Arial, sans-serif">erpsearch</text>
+  <text x="655" y="126" font-size="42" font-weight="700" fill="#153769" font-family="IBM Plex Sans, Arial, sans-serif">.com.au</text>
+  <text x="198" y="154" font-size="28" font-weight="500" fill="#284a78" font-family="IBM Plex Sans, Arial, sans-serif">Your one-stop hub for ERP decisions</text>
 </svg>
