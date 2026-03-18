@@ -18,6 +18,7 @@ export const GET: APIRoute = async ({url}) => {
     {path: '/guides/'},
     {path: '/compare/'},
     {path: '/blog/'},
+    {path: '/about/'},
     {path: '/privacy/'},
     {path: '/disclosure/'},
   ]
@@ -44,4 +45,3 @@ export const GET: APIRoute = async ({url}) => {
     },
   })
 }
-

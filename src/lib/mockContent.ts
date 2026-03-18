@@ -463,6 +463,12 @@ const topicalGuideBlocks = (slug: string) => {
   const content: Record<string, string[][]> = {
     'how-to-run-erp-rfp': [
       ['An ERP RFP can be useful, but only when the business already understands what it needs, what it can realistically deliver, and how it will evaluate responses. Without that groundwork, the RFP becomes a polished document that creates false confidence and a lot of low-value reading.', 'The goal of a good ERP RFP is not to produce the longest response pack. It is to make vendor and partner assumptions visible, force scope clarity, and let the buying team compare like with like.', 'For most small and medium businesses, the best RFP is focused, scenario-led, and commercial enough to expose delivery risk rather than just software marketing.'],
+      ['## Who this guide is for'],
+      [
+        '• Finance, operations, and IT leaders who already have a shortlist or are close to one.',
+        '• Project sponsors who need a more structured way to compare partner proposals and delivery assumptions.',
+        '• Buyers who want to avoid a long, generic RFP that creates admin without improving decision quality.',
+      ],
       ['## What to prepare before you write the RFP'],
       [
         '• A clear statement of business outcomes, phase-one scope, and what success should look like 12 months after go-live.',
@@ -498,9 +504,20 @@ const topicalGuideBlocks = (slug: string) => {
         '• How long should it be? Shorter than most businesses think. Clarity matters more than volume.',
         '• Who should own it? A programme lead supported by finance, operations, and the eventual business sponsors.',
       ],
+      ['## Best next step'],
+      [
+        '• If you are still early in selection, read the ERP selection checklist before drafting the RFP.',
+        '• If procurement is pushing for formality, compare this guide with the “Is an ERP RFP really required?” page before deciding the level of process you need.',
+      ],
     ],
     'is-erp-rfp-really-required': [
       ['Not every ERP selection needs a formal RFP. In many cases, smaller businesses create one because procurement expects it or because the team wants structure, not because it is the best way to reach a decision.', 'An RFP is most useful when requirements are mature, the shortlist is already narrow, and the business needs a formal way to compare delivery and commercial assumptions. It is much less useful when the buying team is still discovering what it actually needs.', 'A weak RFP can create the illusion of rigour while slowing the process, overwhelming stakeholders, and rewarding vendors who are best at writing responses rather than solving the problem.'],
+      ['## Who should read this first'],
+      [
+        '• Owner-led teams wondering whether they need a formal procurement process at all.',
+        '• Sponsors trying to keep selection moving without losing rigour.',
+        '• Buyers deciding between a lightweight shortlist process and a more formal RFP route.',
+      ],
       ['## When an RFP is genuinely useful'],
       [
         '• The business has already completed discovery and can describe its target scope, process priorities, and non-negotiable requirements clearly.',
@@ -653,6 +670,12 @@ const topicalGuideBlocks = (slug: string) => {
     ],
     'what-is-an-erp-guide': [
       ['ERP stands for enterprise resource planning, but that label does not help most buyers very much. In practice, an ERP is the core system a business uses to run and control the flow of orders, purchasing, stock, finance, projects, production, reporting, and operational decisions.', 'For growing businesses, the reason ERP matters is not because “big companies have one”. It matters because manual hand-offs, disconnected tools, and spreadsheet-heavy control processes eventually create too much friction, too much rework, and too little visibility.', 'A useful introduction to ERP should help new buyers understand what the system is meant to solve, what it is not meant to solve, and how to tell when the business is ready for one.'],
+      ['## Who this page is for'],
+      [
+        '• First-time ERP buyers who are still learning the language and trying to work out whether ERP is actually relevant to their business.',
+        '• Finance or operations leaders moving beyond accounting software plus spreadsheets.',
+        '• Teams that know they have process problems but are not yet sure whether ERP is the right response.',
+      ],
       ['## What an ERP actually does'],
       [
         '• It creates one operational and financial backbone for the business instead of relying on disconnected tools and manual reconciliation.',
@@ -686,9 +709,20 @@ const topicalGuideBlocks = (slug: string) => {
         '• Do all businesses need ERP? No. Some can stay with simpler tools for longer if process complexity remains low.',
         '• What is the biggest mistake for first-time buyers? Buying too early without clear objectives, or too late after workarounds have multiplied everywhere.',
       ],
+      ['## Best next step'],
+      [
+        '• If your business still runs on spreadsheets and shared workarounds, move next to the spreadsheet-to-ERP migration guide.',
+        '• If you already know ERP is needed, use the first-time buyer roadmap and the ERP selection checklist together.',
+      ],
     ],
     'spreadsheet-to-erp-migration-guide': [
       ['Many first-time ERP projects do not start from a legacy ERP. They start from a patchwork of spreadsheets, entry-level accounting software, shared inboxes, and manual hand-offs between teams. That is a normal stage of growth, but it becomes risky when the business can no longer control operations confidently.', 'Moving from spreadsheets to ERP should not be framed as “we need a big system now”. It should be framed as a shift from informal control to repeatable control, where important decisions no longer rely on one or two people holding the process together.', 'The businesses that handle this move well usually spend more time clarifying process, ownership, and phase-one priorities before they ever choose a platform.'],
+      ['## Who this guide is for'],
+      [
+        '• Growing businesses running core operations through spreadsheets, shared drives, and manual approvals.',
+        '• Teams replacing spreadsheet-based stock, project, purchasing, or reporting processes for the first time.',
+        '• Leaders who need to explain internally why “the spreadsheet way” is no longer safe enough.',
+      ],
       ['## Signs spreadsheets are becoming the problem'],
       [
         '• Different teams are using different versions of core data such as customer pricing, stock levels, BOMs, supplier lists, or project budgets.',
@@ -802,6 +836,12 @@ const pillarComparisonBlocks = (slug: string) => {
     ],
     'business-central-vs-netsuite-growing-businesses': [
       ['This is one of the most common shortlist decisions for growing Australian businesses because both platforms can support a meaningful step up from legacy systems or spreadsheet-heavy operations. The mistake is assuming they solve the same growth problem in the same way.', 'Business Central often appeals where Microsoft alignment, staged maturity, and practical operational control matter. NetSuite often appeals where cloud-first standardisation, broader native footprint, and multi-entity ambition are stronger drivers.', 'The choice becomes clearer when the business defines where complexity will sit: inside one broader platform, or within a more staged ecosystem anchored around Microsoft tooling.'],
+      ['## Who should use this comparison'],
+      [
+        '• SMB buyers choosing between two mainstream ERP shortlists with different ecosystem implications.',
+        '• Businesses deciding whether Microsoft alignment or a broader cloud-standard operating model matters more.',
+        '• Sponsors who want a practical fit and delivery trade-off view before they engage deeper with partners.',
+      ],
       ['## When Business Central tends to fit better'],
       [
         '• The business already relies heavily on Microsoft tools and wants a pragmatic extension of that ecosystem.',
@@ -829,6 +869,11 @@ const pillarComparisonBlocks = (slug: string) => {
         '• Is NetSuite always more future-proof? Not by default. Future value depends on whether the organisation can absorb the design and governance model well.',
         '• What usually breaks the tie? Partner quality, change capacity, and clarity on future operating scope.',
       ],
+      ['## Best next step'],
+      [
+        '• Pair this comparison with the ERP selection checklist so your team can score both options against the same scenarios.',
+        '• Before final proposals, review the implementation partner guide so the software choice and delivery choice stay connected.',
+      ],
     ],
   }
 
@@ -839,6 +884,12 @@ const topicalComparisonBlocks = (slug: string) => {
   const content: Record<string, string[][]> = {
     'myob-acumatica-vs-business-central': [
       ['This is one of the most relevant ANZ-oriented ERP comparisons for growing businesses because both platforms can serve the same broad market while pushing buyers toward slightly different operating and ecosystem choices.', 'MYOB Acumatica often appeals where local familiarity, ANZ market alignment, and a partner-led deployment model matter. Business Central often wins where Microsoft alignment, broader ecosystem integration, and a staged maturity path are stronger drivers.', 'The useful question is not which brand feels more familiar. It is which platform plus partner model best matches your growth path, reporting needs, and change capacity.'],
+      ['## Who should use this comparison'],
+      [
+        '• Australian and New Zealand businesses narrowing their shortlist to practical mid-market ERP options.',
+        '• Buyers deciding how much Microsoft ecosystem alignment matters versus a more locally familiar ERP route.',
+        '• Teams weighing local support comfort against broader platform strategy.',
+      ],
       ['## Where MYOB Acumatica tends to fit well'],
       [
         '• Businesses wanting a strong ANZ-facing proposition with finance and operational breadth.',
@@ -866,6 +917,12 @@ const topicalComparisonBlocks = (slug: string) => {
     ],
     'odoo-vs-business-central': [
       ['Odoo and Business Central attract some of the same SMB buyers, but usually for very different reasons. Odoo often enters the shortlist because of modular flexibility and perceived price accessibility. Business Central usually enters because buyers want a more structured ERP path with stronger Microsoft ecosystem alignment.', 'The wrong way to compare them is on module count alone. The right way is to test governance, financial control maturity, implementation discipline, and how much operational variation the business genuinely needs.', 'This comparison matters most for buyers who are balancing cost sensitivity against long-term control and supportability.'],
+      ['## Who this comparison is really for'],
+      [
+        '• SMB teams balancing cost sensitivity against stronger controls and supportability.',
+        '• Businesses deciding whether they want a modular application framework or a more structured ERP operating model.',
+        '• Buyers who expect to keep evolving the platform and need to think carefully about governance overhead.',
+      ],
       ['## Where Odoo can be attractive'],
       [
         '• Businesses wanting modular entry points and flexibility around how much of the suite is adopted.',
@@ -956,6 +1013,12 @@ const topicalComparisonBlocks = (slug: string) => {
     ],
     'erp-for-meat-processing-generic-vs-specialist': [
       ['Meat processing is one of the clearest examples of where buyers should take vertical fit seriously. Variable weight, yield, traceability, QA, and plant realities create a very different ERP demand profile from lighter discrete manufacturing or distribution businesses.', 'A generic ERP can still be viable in some environments, but only if the business proves that catch weight, lot control, processing stages, and compliance needs can be handled without a fragile web of customisation and workarounds.', 'For meat processors, the safest choice is rarely the broadest feature list. It is the platform that best supports daily control in the plant and clean reporting back to finance and management.'],
+      ['## Who should read this first'],
+      [
+        '• Meat processors, protein businesses, and food manufacturers dealing with variable weight, traceability, and QA pressure.',
+        '• Buyers deciding whether a general ERP plus add-ons is enough or whether specialist plant fit is non-negotiable.',
+        '• Leadership teams that need to protect both compliance and commercial yield in the same system decision.',
+      ],
       ['## What makes meat processing ERP different'],
       [
         '• Variable weight and yield need to be managed as normal operating data, not as exceptions.',

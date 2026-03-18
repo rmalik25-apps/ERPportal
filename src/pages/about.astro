@@ -1,0 +1,121 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro'
+import PageVisual from '../components/PageVisual.astro'
+import {buildBreadcrumbSchema} from '../lib/seo'
+import {pageVisuals} from '../lib/pageVisuals'
+
+const breadcrumbSchema = buildBreadcrumbSchema([
+  {name: 'Home', path: '/'},
+  {name: 'About', path: '/about/'},
+])
+
+const methodologySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About ERP Search',
+  description: 'How ERP Search reviews ERP software, implementation partners, and ERP project guidance for growing businesses.',
+}
+---
+
+<SiteLayout
+  title="About ERP Search | How We Review ERP Software and Guidance"
+  description="Learn how ERP Search reviews ERP software, implementation partners, and practical ERP guidance for growing businesses."
+  canonicalPath="/about/"
+  ogImage={pageVisuals.home.src}
+  jsonLd={[breadcrumbSchema, methodologySchema]}
+>
+  <div class="doc-layout">
+    <article class="doc-main">
+      <p class="eyebrow">About</p>
+      <h1>About ERP Search</h1>
+      <p class="lead">
+        ERP Search exists to help finance, operations, and IT leaders make better ERP decisions before they commit to
+        software, implementation partners, or major project spend.
+      </p>
+      <PageVisual
+        src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        alt="Cross-functional leadership team reviewing ERP options and project priorities"
+        caption="ERP Search is built around practical buyer guidance, not vendor-led messaging."
+      />
+
+      <h2>What ERP Search is for</h2>
+      <p>
+        The site is designed for growing businesses that need help with ERP selection, migration, implementation,
+        partner choice, and post-go-live improvement. The focus is practical decision support rather than vendor
+        promotion.
+      </p>
+      <ul>
+        <li>Selection and shortlisting support for first-time ERP buyers and replacement projects</li>
+        <li>Comparisons between common SMB ERP options and vertical ERP paths</li>
+        <li>Implementation guidance covering change, data, governance, and operating risk</li>
+        <li>Editorial content that helps teams avoid common ERP mistakes before contracts are signed</li>
+      </ul>
+
+      <h2>How we review ERP software and guidance</h2>
+      <p>
+        ERP Search does not treat software comparison as a feature-count exercise. Products are reviewed through a
+        buyer lens: operating model fit, finance and reporting needs, implementation complexity, partner capability,
+        support overhead, and likely trade-offs over the first 12 to 24 months.
+      </p>
+      <ul>
+        <li>We compare platforms using practical scenarios, not generic module lists alone</li>
+        <li>We look at delivery risk and partner fit, not just software capability</li>
+        <li>We prioritise process, control, and reporting impact over marketing language</li>
+        <li>We try to show who a product fits, who it does not fit, and why</li>
+      </ul>
+
+      <h2>What the content is based on</h2>
+      <p>
+        Content on the site is created from original writing, synthesis of practical ERP project patterns, product
+        release analysis, and structured comparison frameworks. It is intended to help buyers ask better questions and
+        make more confident decisions.
+      </p>
+      <ul>
+        <li>Common implementation risks across finance, operations, warehousing, projects, and manufacturing</li>
+        <li>Recurring buyer questions around RFPs, partner selection, and migration paths</li>
+        <li>Product positioning differences across common SMB and mid-market ERP options</li>
+        <li>Industry-specific decision points where vertical fit matters more than generic ERP breadth</li>
+      </ul>
+
+      <h2>Disclosure and independence</h2>
+      <p>
+        ERP Search may introduce buyers to consulting or implementation partners and may be compensated for some of
+        those introductions. That does not change the aim of the content: help buyers reach a better shortlist and a
+        clearer decision before formal procurement and vendor demos.
+      </p>
+      <p>
+        For full disclosure details, see the <a href="/disclosure/">disclosure page</a>. For information about
+        analytics and contact handling, see the <a href="/privacy/">privacy page</a>.
+      </p>
+
+      <h2>How to use the site</h2>
+      <ul>
+        <li>Start with a guide if your team is still clarifying process, scope, or project approach</li>
+        <li>Move into comparison pages when you are testing shortlist fit and trade-offs</li>
+        <li>Use blog posts for buyer questions, release implications, and practical execution advice</li>
+        <li>Use the shortlist form when you want a more direct recommendation path</li>
+      </ul>
+    </article>
+
+    <aside class="doc-side">
+      <section class="card">
+        <h2>Recommended starting points</h2>
+        <ul>
+          <li><a href="/guides/what-is-an-erp-guide/">What is an ERP?</a></li>
+          <li><a href="/guides/erp-selection-checklist-smb/">ERP selection checklist for SMBs</a></li>
+          <li><a href="/guides/how-to-run-erp-rfp/">How to run an ERP RFP</a></li>
+          <li><a href="/compare/business-central-vs-netsuite-growing-businesses/">Business Central vs NetSuite</a></li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Trust signals</h2>
+        <div class="badge-list">
+          <span class="badge">Independent guidance</span>
+          <span class="badge">Scenario-led reviews</span>
+          <span class="badge">Disclosure published</span>
+          <span class="badge">Practical buyer focus</span>
+        </div>
+      </section>
+    </aside>
+  </div>
+</SiteLayout>

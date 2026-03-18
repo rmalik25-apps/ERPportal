@@ -6,6 +6,7 @@ type RelatedLink = {
 const guideLinks: Record<string, RelatedLink[]> = {
   'erp-selection-checklist-smb': [
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
@@ -28,6 +29,36 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
+  ],
+  'how-to-run-erp-rfp': [
+    {href: '/guides/is-erp-rfp-really-required/', label: 'Is an ERP RFP really required?'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
+  ],
+  'is-erp-rfp-really-required': [
+    {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
+    {href: '/guides/first-time-erp-buyers-roadmap/', label: 'First-time ERP buyers roadmap'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+  ],
+  'what-is-an-erp-guide': [
+    {href: '/guides/spreadsheet-to-erp-migration-guide/', label: 'Spreadsheet to ERP migration guide'},
+    {href: '/guides/first-time-erp-buyers-roadmap/', label: 'First-time ERP buyer roadmap'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+  ],
+  'spreadsheet-to-erp-migration-guide': [
+    {href: '/guides/what-is-an-erp-guide/', label: 'What is an ERP?'},
+    {href: '/guides/first-time-erp-buyers-roadmap/', label: 'First-time ERP buyer roadmap'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+  ],
+  'first-time-erp-buyers-roadmap': [
+    {href: '/guides/what-is-an-erp-guide/', label: 'What is an ERP?'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
+  ],
+  'industry-specific-erp-challenges-and-recommendations': [
+    {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
+    {href: '/compare/erp-for-meat-processing-generic-vs-specialist/', label: 'ERP for meat processing: generic vs specialist'},
+    {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central food add-ons vs JustFood'},
   ],
 }
 
@@ -79,6 +110,11 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/compare/netsuite-vs-sage-intacct-finance-first-teams/', label: 'NetSuite vs Sage Intacct'},
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
+  ],
+  'implementation-partner-due-diligence-ten-questions': [
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
   ],
 }
 
