@@ -4,6 +4,7 @@ import PageVisual from '../../components/PageVisual.astro'
 import {getComparisonVisual} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
+import {editorialMethod, editorialTeamName, getLastReviewedDate} from '../../lib/editorial'
 import {getRelatedComparisonLinks} from '../../lib/relatedContent'
 import {buildBreadcrumbSchema, extractFaqSchema, getDocMeta} from '../../lib/seo'
 import {getComparisonBySlug, getComparisons} from '../../lib/sanity'
@@ -27,6 +28,7 @@ const canonicalPath = `/compare/${item.slug}/`
 const visual = getComparisonVisual(item.slug)
 const relatedLinks = getRelatedComparisonLinks(item.slug)
 const seoMeta = getDocMeta(item)
+const lastReviewed = getLastReviewedDate(item.updatedAt, item.publishedAt)
 const breadcrumbSchema = buildBreadcrumbSchema([
   {name: 'Home', path: '/'},
   {name: 'Compare', path: '/compare/'},
@@ -43,6 +45,14 @@ const articleSchema = {
   image: [visual.src],
   articleSection: 'ERP comparison',
   mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
+  author: {
+    '@type': 'Organization',
+    name: editorialTeamName,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'ERP Search',
+  },
 }
 const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [breadcrumbSchema, articleSchema]
 ---
@@ -64,6 +74,11 @@ const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [
         <p class="meta">{item.leftProduct} vs {item.rightProduct} • Published {formatPublishDate(item.publishedAt)}</p>
         <span class="meta-pill">{readTime} min read</span>
         {item.updatedAt && <span class="meta-pill">Updated {formatPublishDate(item.updatedAt)}</span>}
+      </div>
+      <div class="trust-row" aria-label="Editorial review details">
+        <span class="trust-pill">Reviewed by {editorialTeamName}</span>
+        {lastReviewed && <span class="trust-pill">Last reviewed {formatPublishDate(lastReviewed)}</span>}
+        <span class="trust-pill">{editorialMethod}</span>
       </div>
       <PageVisual
         src={visual.src}

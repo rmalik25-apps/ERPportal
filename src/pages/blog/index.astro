@@ -3,6 +3,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
+import {editorialTeamName} from '../../lib/editorial'
 import {buildBreadcrumbSchema, getListPageMeta} from '../../lib/seo'
 import {getPosts} from '../../lib/sanity'
 
@@ -36,6 +37,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         <div class="meta-row">
           <p class="meta">Published {formatPublishDate(post.publishedAt)}</p>
           <span class="meta-pill">{estimateReadTimeMinutes(post)} min read</span>
+          <span class="meta-pill">Reviewed by {editorialTeamName}</span>
         </div>
         <p>{post.excerpt}</p>
       </article>

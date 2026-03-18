@@ -4,6 +4,7 @@ import PageVisual from '../../components/PageVisual.astro'
 import {getBlogVisual} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
+import {editorialMethod, editorialTeamName, getLastReviewedDate} from '../../lib/editorial'
 import {getRelatedBlogLinks} from '../../lib/relatedContent'
 import {buildBreadcrumbSchema, extractFaqSchema, getDocMeta} from '../../lib/seo'
 import {getPostBySlug, getPosts} from '../../lib/sanity'
@@ -27,6 +28,7 @@ const canonicalPath = `/blog/${post.slug}/`
 const visual = getBlogVisual(post.slug)
 const relatedLinks = getRelatedBlogLinks(post.slug)
 const seoMeta = getDocMeta(post)
+const lastReviewed = getLastReviewedDate(post.updatedAt, post.publishedAt)
 const breadcrumbSchema = buildBreadcrumbSchema([
   {name: 'Home', path: '/'},
   {name: 'Blog', path: '/blog/'},
@@ -43,6 +45,14 @@ const articleSchema = {
   image: [visual.src],
   articleSection: post.category || 'ERP insights',
   mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
+  author: {
+    '@type': 'Organization',
+    name: editorialTeamName,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'ERP Search',
+  },
 }
 const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [breadcrumbSchema, articleSchema]
 ---
@@ -64,6 +74,11 @@ const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [
         <p class="meta">Published {formatPublishDate(post.publishedAt)}</p>
         <span class="meta-pill">{readTime} min read</span>
         {post.updatedAt && <span class="meta-pill">Updated {formatPublishDate(post.updatedAt)}</span>}
+      </div>
+      <div class="trust-row" aria-label="Editorial review details">
+        <span class="trust-pill">Reviewed by {editorialTeamName}</span>
+        {lastReviewed && <span class="trust-pill">Last reviewed {formatPublishDate(lastReviewed)}</span>}
+        <span class="trust-pill">{editorialMethod}</span>
       </div>
       <PageVisual
         src={visual.src}
