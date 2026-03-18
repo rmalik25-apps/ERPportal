@@ -2,12 +2,13 @@
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import EditorialMarker from '../../components/EditorialMarker.astro'
 import PageVisual from '../../components/PageVisual.astro'
+import {estimateReadTimeMinutes, formatPublishDate, sortByPublishedDateDesc} from '../../lib/contentMeta'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {editorialTeamName} from '../../lib/editorial'
 import {buildBreadcrumbSchema, getListPageMeta} from '../../lib/seo'
 import {getComparisons} from '../../lib/sanity'
 
-const items = await getComparisons()
+const items = sortByPublishedDateDesc(await getComparisons())
 const meta = getListPageMeta('compare')
 const breadcrumbSchema = buildBreadcrumbSchema([
   {name: 'Home', path: '/'},
@@ -47,8 +48,9 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         <h2><a href={`/compare/${item.slug}/`}>{item.title}</a></h2>
         <div class="meta-row">
           <p class="meta">
-            {item.leftProduct} vs {item.rightProduct} • Updated {new Date(item.updatedAt || item.publishedAt).toLocaleDateString()}
+            {item.leftProduct} vs {item.rightProduct} • Published {formatPublishDate(item.publishedAt)}
           </p>
+          <span class="meta-pill">{estimateReadTimeMinutes(item)} min read</span>
           <span class="meta-pill">Reviewed by {editorialTeamName}</span>
         </div>
         <p>{item.excerpt}</p>

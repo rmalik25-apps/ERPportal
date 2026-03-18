@@ -2,12 +2,13 @@
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import EditorialMarker from '../../components/EditorialMarker.astro'
 import PageVisual from '../../components/PageVisual.astro'
+import {estimateReadTimeMinutes, formatPublishDate, sortByPublishedDateDesc} from '../../lib/contentMeta'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {editorialTeamName} from '../../lib/editorial'
 import {buildBreadcrumbSchema, getListPageMeta} from '../../lib/seo'
 import {getGuides} from '../../lib/sanity'
 
-const guides = await getGuides()
+const guides = sortByPublishedDateDesc(await getGuides())
 const meta = getListPageMeta('guides')
 const breadcrumbSchema = buildBreadcrumbSchema([
   {name: 'Home', path: '/'},
@@ -42,7 +43,8 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         </div>
         <h2><a href={`/guides/${guide.slug}/`}>{guide.title}</a></h2>
         <div class="meta-row">
-          <p class="meta">Updated {new Date(guide.updatedAt || guide.publishedAt).toLocaleDateString()}</p>
+          <p class="meta">Published {formatPublishDate(guide.publishedAt)}</p>
+          <span class="meta-pill">{estimateReadTimeMinutes(guide)} min read</span>
           <span class="meta-pill">Reviewed by {editorialTeamName}</span>
         </div>
         <p>{guide.excerpt}</p>

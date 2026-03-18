@@ -190,10 +190,10 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
           const formatDate = (value) => {
             try {
               return new Date(value).toLocaleDateString('en-AU', {
-                day: 'numeric',
+                day: '2-digit',
                 month: 'short',
                 year: 'numeric',
-              });
+              }).replace(/\s/g, '-');
             } catch {
               return '';
             }

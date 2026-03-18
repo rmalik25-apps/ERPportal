@@ -10,8 +10,16 @@ export function estimateReadTimeMinutes(doc: Pick<BaseDoc, 'body' | 'excerpt'>) 
 
 export function formatPublishDate(value: string) {
   return new Date(value).toLocaleDateString('en-AU', {
-    day: 'numeric',
+    day: '2-digit',
     month: 'short',
     year: 'numeric',
+  }).replace(/\s/g, '-')
+}
+
+export function sortByPublishedDateDesc<T extends {publishedAt: string}>(items: T[]) {
+  return [...items].sort((a, b) => {
+    const aTime = new Date(a.publishedAt).getTime()
+    const bTime = new Date(b.publishedAt).getTime()
+    return bTime - aTime
   })
 }
