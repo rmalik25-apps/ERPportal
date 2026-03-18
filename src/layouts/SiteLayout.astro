@@ -205,7 +205,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
             let score = 0;
             if (title.includes(query)) score += 8;
             if (text.includes(query)) score += 4;
-            for (const term of query.split(/\\s+/)) {
+            for (const term of query.split(/\s+/)) {
               if (!term) continue;
               if (title.includes(term)) score += 3;
               if (text.includes(term)) score += 1;
@@ -232,14 +232,14 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
             results.innerHTML = items
               .map((item) => {
                 const meta = [item.section, item.kind, item.readTime + ' min read', formatDate(item.publishedAt)].filter(Boolean).join(' · ');
-                return \`
-                  <a class="site-search-hit" href="\${item.href}" aria-selected="false">
-                    <span class="site-search-hit-section">\${escapeHtml(item.section)}</span>
-                    <strong>\${escapeHtml(item.title)}</strong>
-                    <span class="site-search-hit-meta">\${escapeHtml(meta)}</span>
-                    <span class="site-search-hit-excerpt">\${escapeHtml(item.excerpt)}</span>
+                return `
+                  <a class="site-search-hit" href="${item.href}" aria-selected="false">
+                    <span class="site-search-hit-section">${escapeHtml(item.section)}</span>
+                    <strong>${escapeHtml(item.title)}</strong>
+                    <span class="site-search-hit-meta">${escapeHtml(meta)}</span>
+                    <span class="site-search-hit-excerpt">${escapeHtml(item.excerpt)}</span>
                   </a>
-                \`;
+                `;
               })
               .join('');
             resetActiveHit();
