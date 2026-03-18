@@ -3,23 +3,30 @@ import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
+import {buildBreadcrumbSchema, getListPageMeta} from '../../lib/seo'
 import {getPosts} from '../../lib/sanity'
 
 const posts = await getPosts()
+const meta = getListPageMeta('blog')
+const breadcrumbSchema = buildBreadcrumbSchema([
+  {name: 'Home', path: '/'},
+  {name: 'Blog', path: '/blog/'},
+])
 ---
 
 <SiteLayout
-  title="ERP Blog and Insights | ERP Search"
-  description="Independent ERP insights, practical commentary, and decision support for small and medium business teams."
+  title={`${meta.metaTitle} | ERP Search`}
+  description={meta.metaDescription}
   canonicalPath="/blog/"
   ogImage={pageVisuals.blog.src}
+  jsonLd={breadcrumbSchema}
 >
   <div class="page-kicker">
     <p class="eyebrow">Blog</p>
     <p class="editorial-toolbar">{posts.length} published post{posts.length === 1 ? '' : 's'}</p>
   </div>
-  <h1 class="page-title">Editorial Posts</h1>
-  <p class="section-subtle">News, commentary, and practical ERP operating insights that support your lead-gen funnel.</p>
+  <h1 class="page-title">ERP Blog for SMBs</h1>
+  <p class="section-subtle">Buyer guidance, release notes, and practical ERP insights for finance, operations, and IT leaders.</p>
   <PageVisual src={pageVisuals.blog.src} alt={pageVisuals.blog.alt} caption="Market context and execution patterns that matter during ERP projects." />
   <div class="editorial-list section">
     {posts.map((post) => (

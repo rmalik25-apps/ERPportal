@@ -2,6 +2,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro'
 import {estimateReadTimeMinutes, formatPublishDate} from '../lib/contentMeta'
 import {getComparisons, getGuides, getPosts, sanityConfigured} from '../lib/sanity'
+import {getListPageMeta} from '../lib/seo'
 
 const [guides, comparisons, posts] = await Promise.all([getGuides(), getComparisons(), getPosts()])
 const featuredGuides = guides.slice(0, 2)
@@ -21,11 +22,12 @@ const pollBrandAssets = {
   'SAP / other legacy ERP': '/brands/sap-legacy.svg',
   'Spreadsheets / none yet': '/brands/spreadsheets.svg',
 }
+const homeMeta = getListPageMeta('home')
 ---
 
 <SiteLayout
-  title="ERP Search | ERP Guidance, Comparisons & Partner Matching for SMBs"
-  description="Independent ERP guidance for small and medium businesses: selection, migration, implementation best practices, and partner-fit recommendations."
+  title={homeMeta.metaTitle}
+  description={homeMeta.metaDescription}
   canonicalPath="/"
   ogImage="/hero-erp-brief.svg"
 >

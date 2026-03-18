@@ -31,13 +31,19 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'ERP Search',
   url: `${siteOrigin}/`,
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: `${siteOrigin}/guides/`,
-    'query-input': 'required name=query',
-  },
 }
-const jsonLdPayload = Array.isArray(jsonLd) ? [websiteSchema, ...jsonLd] : jsonLd ? [websiteSchema, jsonLd] : [websiteSchema]
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ERP Search',
+  url: `${siteOrigin}/`,
+  logo: new URL('/logo-navigator-mark.svg', `${siteOrigin}/`).toString(),
+}
+const jsonLdPayload = Array.isArray(jsonLd)
+  ? [organizationSchema, websiteSchema, ...jsonLd]
+  : jsonLd
+    ? [organizationSchema, websiteSchema, jsonLd]
+    : [organizationSchema, websiteSchema]
 const ga4Id = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID
 const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
 ---

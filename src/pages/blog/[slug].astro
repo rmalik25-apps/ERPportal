@@ -5,6 +5,7 @@ import {getBlogVisual} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getRelatedBlogLinks} from '../../lib/relatedContent'
+import {buildBreadcrumbSchema, extractFaqSchema, getDocMeta} from '../../lib/seo'
 import {getPostBySlug, getPosts} from '../../lib/sanity'
 
 export async function getStaticPaths() {
@@ -25,27 +26,35 @@ const readTime = estimateReadTimeMinutes(post)
 const canonicalPath = `/blog/${post.slug}/`
 const visual = getBlogVisual(post.slug)
 const relatedLinks = getRelatedBlogLinks(post.slug)
+const seoMeta = getDocMeta(post)
+const breadcrumbSchema = buildBreadcrumbSchema([
+  {name: 'Home', path: '/'},
+  {name: 'Blog', path: '/blog/'},
+  {name: post.title, path: canonicalPath},
+])
+const faqSchema = extractFaqSchema(post.body)
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: post.seo?.metaTitle || post.title,
-  description: post.seo?.metaDescription || post.excerpt,
+  headline: seoMeta.metaTitle,
+  description: seoMeta.metaDescription,
   datePublished: post.publishedAt,
   dateModified: post.updatedAt || post.publishedAt,
   image: [visual.src],
   articleSection: post.category || 'ERP insights',
   mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
 }
+const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [breadcrumbSchema, articleSchema]
 ---
 
 <SiteLayout
-  title={`${post.seo?.metaTitle || post.title} | ERP Search`}
-  description={post.seo?.metaDescription || post.excerpt}
+  title={`${seoMeta.metaTitle} | ERP Search`}
+  description={seoMeta.metaDescription}
   canonicalPath={canonicalPath}
   ogImage={visual.src}
   ogType="article"
   noIndex={Boolean(post.seo?.noIndex)}
-  jsonLd={articleSchema}
+  jsonLd={pageSchemas}
 >
   <div class="doc-layout">
     <article class="doc-main">

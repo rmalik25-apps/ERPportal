@@ -2,23 +2,30 @@
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
+import {buildBreadcrumbSchema, getListPageMeta} from '../../lib/seo'
 import {getGuides} from '../../lib/sanity'
 
 const guides = await getGuides()
+const meta = getListPageMeta('guides')
+const breadcrumbSchema = buildBreadcrumbSchema([
+  {name: 'Home', path: '/'},
+  {name: 'Guides', path: '/guides/'},
+])
 ---
 
 <SiteLayout
-  title="ERP Guides for Growing Businesses | ERP Search"
-  description="Step-by-step ERP guides for small and medium businesses covering selection, migration, implementation, and optimisation."
+  title={`${meta.metaTitle} | ERP Search`}
+  description={meta.metaDescription}
   canonicalPath="/guides/"
   ogImage={pageVisuals.guides.src}
+  jsonLd={breadcrumbSchema}
 >
   <div class="page-kicker">
     <p class="eyebrow">Guides</p>
     <p class="editorial-toolbar">{guides.length} published guide{guides.length === 1 ? '' : 's'}</p>
   </div>
-  <h1 class="page-title">ERP Guides</h1>
-  <p class="section-subtle">Buyer checklists, migration planning, partner selection, and implementation benchmarks.</p>
+  <h1 class="page-title">ERP Guides for SMBs</h1>
+  <p class="section-subtle">ERP selection, migration, implementation, and change-management guides for growing business teams.</p>
   <PageVisual
     src={pageVisuals.guides.src}
     alt={pageVisuals.guides.alt}

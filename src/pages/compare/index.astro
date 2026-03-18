@@ -2,23 +2,30 @@
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
+import {buildBreadcrumbSchema, getListPageMeta} from '../../lib/seo'
 import {getComparisons} from '../../lib/sanity'
 
 const items = await getComparisons()
+const meta = getListPageMeta('compare')
+const breadcrumbSchema = buildBreadcrumbSchema([
+  {name: 'Home', path: '/'},
+  {name: 'Compare', path: '/compare/'},
+])
 ---
 
 <SiteLayout
-  title="ERP Software Comparisons | ERP Search"
-  description="Compare ERP options for small and medium businesses across fit, complexity, and implementation tradeoffs."
+  title={`${meta.metaTitle} | ERP Search`}
+  description={meta.metaDescription}
   canonicalPath="/compare/"
   ogImage={pageVisuals.comparisons.src}
+  jsonLd={breadcrumbSchema}
 >
   <div class="page-kicker">
     <p class="eyebrow">Comparisons</p>
     <p class="editorial-toolbar">{items.length} published comparison{items.length === 1 ? '' : 's'}</p>
   </div>
-  <h1 class="page-title">ERP Comparison Hub</h1>
-  <p class="section-subtle">Compare platforms by fit, complexity, and implementation tradeoffs for small and medium business buyers.</p>
+  <h1 class="page-title">ERP Software Comparisons for SMBs</h1>
+  <p class="section-subtle">Compare ERP platforms by fit, complexity, costs, and implementation trade-offs for growing business buyers.</p>
   <PageVisual
     src={pageVisuals.comparisons.src}
     alt={pageVisuals.comparisons.alt}

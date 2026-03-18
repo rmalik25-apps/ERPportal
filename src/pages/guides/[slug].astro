@@ -5,6 +5,7 @@ import {getGuideVisual} from '../../lib/pageVisuals'
 import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableText'
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {getRelatedGuideLinks} from '../../lib/relatedContent'
+import {buildBreadcrumbSchema, extractFaqSchema, getDocMeta} from '../../lib/seo'
 import {getGuideBySlug, getGuides} from '../../lib/sanity'
 
 export async function getStaticPaths() {
@@ -27,27 +28,35 @@ const readTime = estimateReadTimeMinutes(guide)
 const canonicalPath = `/guides/${guide.slug}/`
 const visual = getGuideVisual(guide.slug)
 const relatedLinks = getRelatedGuideLinks(guide.slug)
+const seoMeta = getDocMeta(guide)
+const breadcrumbSchema = buildBreadcrumbSchema([
+  {name: 'Home', path: '/'},
+  {name: 'Guides', path: '/guides/'},
+  {name: guide.title, path: canonicalPath},
+])
+const faqSchema = extractFaqSchema(guide.body)
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: guide.seo?.metaTitle || guide.title,
-  description: guide.seo?.metaDescription || guide.excerpt,
+  headline: seoMeta.metaTitle,
+  description: seoMeta.metaDescription,
   datePublished: guide.publishedAt,
   dateModified: guide.updatedAt || guide.publishedAt,
   image: [visual.src],
   articleSection: guide.intent || 'Guide',
   mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
 }
+const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [breadcrumbSchema, articleSchema]
 ---
 
 <SiteLayout
-  title={`${guide.seo?.metaTitle || guide.title} | ERP Search`}
-  description={guide.seo?.metaDescription || guide.excerpt}
+  title={`${seoMeta.metaTitle} | ERP Search`}
+  description={seoMeta.metaDescription}
   canonicalPath={canonicalPath}
   ogImage={visual.src}
   ogType="article"
   noIndex={Boolean(guide.seo?.noIndex)}
-  jsonLd={articleSchema}
+  jsonLd={pageSchemas}
 >
   <div class="doc-layout">
     <article class="doc-main">
