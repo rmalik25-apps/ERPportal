@@ -60,6 +60,21 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/erp-for-meat-processing-generic-vs-specialist/', label: 'ERP for meat processing: generic vs specialist'},
     {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central food add-ons vs JustFood'},
   ],
+  'erp-for-food-and-drink-manufacturing': [
+    {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
+    {href: '/guides/formulation-yield-and-batch-production-in-food-erp/', label: 'Formulation, yield, and batch production in food ERP'},
+    {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
+  ],
+  'food-traceability-quality-and-recall-controls-in-erp': [
+    {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
+    {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central with food add-ons vs JustFood'},
+    {href: '/compare/erp-for-meat-processing-generic-vs-specialist/', label: 'ERP for meat processing: generic vs specialist'},
+  ],
+  'formulation-yield-and-batch-production-in-food-erp': [
+    {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
+    {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
+    {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
+  ],
 }
 
 const comparisonLinks: Record<string, RelatedLink[]> = {
@@ -93,6 +108,11 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central food add-ons vs JustFood'},
     {href: '/guides/industry-specific-erp-challenges-and-recommendations/', label: 'Industry-specific ERP challenges'},
   ],
+  'business-central-food-addons-vs-justfood': [
+    {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
+    {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
+    {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
+  ],
 }
 
 const blogLinks: Record<string, RelatedLink[]> = {
@@ -115,6 +135,21 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
+  ],
+  'why-generic-erp-demos-miss-food-manufacturing-reality': [
+    {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
+    {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
+    {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
+  ],
+  'food-erp-projects-scope-warehouse-quality-and-production-together': [
+    {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
+    {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
+    {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central with food add-ons vs JustFood'},
+  ],
+  'erp-checklist-for-beverage-manufacturers': [
+    {href: '/guides/formulation-yield-and-batch-production-in-food-erp/', label: 'Formulation, yield, and batch production in food ERP'},
+    {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
+    {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
   ],
 }
 

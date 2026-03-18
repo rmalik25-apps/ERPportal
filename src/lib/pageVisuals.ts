@@ -167,6 +167,21 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Leadership team building a first-time ERP shortlist and roadmap in a planning workshop',
     caption: 'First-time ERP buyers need a roadmap that keeps selection, partner choice, and change readiness in the right order.',
   },
+  'erp-for-food-and-drink-manufacturing': {
+    src: pexels('6169668'),
+    alt: 'Food manufacturing leaders reviewing plant operations and traceability requirements',
+    caption: 'Food and drink ERP decisions should start with plant control, traceability, quality, and reporting reality.',
+  },
+  'food-traceability-quality-and-recall-controls-in-erp': {
+    src: pexels('4481259'),
+    alt: 'Quality and production team reviewing traceability and recall controls in a processing environment',
+    caption: 'Traceability and recall readiness should be tested as live operating controls, not treated as side features.',
+  },
+  'formulation-yield-and-batch-production-in-food-erp': {
+    src: pexels('6169049'),
+    alt: 'Food production team reviewing batch, yield, and formulation workflows',
+    caption: 'Formulation, yield, and batch complexity need to be reflected in operations, warehouse execution, and finance together.',
+  },
 }
 
 const comparisonVisualsBySlug: Record<string, Visual> = {
@@ -317,6 +332,21 @@ const blogVisualsBySlug: Record<string, Visual> = {
     src: pexels('3183153'),
     alt: 'Leadership team prioritising continuous improvement after an ERP project',
     caption: 'The move from project to BAU is where improvement discipline and ownership either harden or drift.',
+  },
+  'why-generic-erp-demos-miss-food-manufacturing-reality': {
+    src: pexels('6169668'),
+    alt: 'Food manufacturing team challenging a generic ERP demo against plant realities',
+    caption: 'Generic demos often miss the exception-heavy workflows that matter most in food manufacturing.',
+  },
+  'food-erp-projects-scope-warehouse-quality-and-production-together': {
+    src: pexels('6169056'),
+    alt: 'Warehouse, quality, and production teams aligning one operating workflow',
+    caption: 'Food ERP design is safer when warehouse, quality, and production are scoped as one control model.',
+  },
+  'erp-checklist-for-beverage-manufacturers': {
+    src: pexels('5946975'),
+    alt: 'Beverage manufacturing team reviewing batch control and packaging requirements',
+    caption: 'Beverage ERP selection should test packaging, batch status, planning, and reporting under real operating pressure.',
   },
 }
 
