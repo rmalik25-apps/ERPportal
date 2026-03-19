@@ -5,6 +5,7 @@ type RelatedLink = {
 
 const guideLinks: Record<string, RelatedLink[]> = {
   'erp-selection-checklist-smb': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
@@ -18,7 +19,14 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'business-central-implementation-wholesale-distribution': [
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
+  ],
+  'business-central-pricing-australia-licences-budget': [
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'd365-sales-business-central-integration-guide': [
     {href: '/blog/where-d365-sales-to-erp-handovers-usually-break/', label: 'Where D365 Sales to ERP handovers usually break'},
@@ -79,6 +87,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
 
 const comparisonLinks: Record<string, RelatedLink[]> = {
   'business-central-vs-netsuite-growing-businesses': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
@@ -94,6 +103,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'odoo-vs-business-central': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
@@ -123,8 +133,14 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'vendor-demo-script-erp-buyers-what-to-ask': [
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
+  ],
+  'erp-licensing-and-support-cost-control-growing-organisations': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'month-end-close-new-erp-first-three-cycles-playbook': [
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
