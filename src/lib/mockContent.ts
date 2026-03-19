@@ -1500,7 +1500,7 @@ export const mockGuides: GuideDoc[] = [
       ['## What changed in the November 2025 price increase'],
       [
         '• Microsoft announced in May 2025, then updated in September 2025, that the first Business Central price increase in more than five years would take effect on November 1, 2025.',
-        '• In Microsoft’s announcement, Business Central Essentials moved from US$70 to US$80 per month, Premium from US$100 to US$110, and Device from US$40 to US$45.',
+        '• For Australian buyers, the important commercial reference is the live Microsoft Australia pricing page rather than older US-dollar pricing screenshots or partner slides. That page now lists the current AU Essentials, Premium, and Team Members prices used in this guide.',
         '• Microsoft also tied the increase to higher storage entitlements per licence. That matters if the business expects document growth, multiple companies, or broader operational usage over time.',
         '• The practical buyer lesson is simple: old community pricing references and older consultant estimates are easy to over-trust. Always validate against the live Australian pricing page before signing off an internal budget.',
       ],
