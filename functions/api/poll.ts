@@ -14,7 +14,12 @@ type PollPayload = {
 function json(body: Record<string, unknown>, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
-    headers: {'content-type': 'application/json; charset=utf-8'},
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'access-control-allow-origin': '*',
+      'access-control-allow-methods': 'GET, POST, OPTIONS',
+      'access-control-allow-headers': 'Content-Type',
+    },
   })
 }
 
@@ -55,6 +60,16 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     return json({ok: false, error: 'Webhook request failed'}, 502)
   }
 }
+
+export const onRequestOptions: PagesFunction<Env> = async () =>
+  new Response(null, {
+    status: 204,
+    headers: {
+      'access-control-allow-origin': '*',
+      'access-control-allow-methods': 'GET, POST, OPTIONS',
+      'access-control-allow-headers': 'Content-Type',
+    },
+  })
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const payload = (await parseJson(context.request)) as PollPayload | null
