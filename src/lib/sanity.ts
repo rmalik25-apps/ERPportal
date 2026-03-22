@@ -20,6 +20,11 @@ const client = sanityConfigured
     })
   : null
 
+const legacyGuideAliases: Record<string, string> = {
+  'nav-navision-to-business-central-migration-guide': 'navision-to-business-central-migration',
+  'erp-selection-checklist-for-mid-market-companies': 'erp-selection-checklist-smb',
+}
+
 function mapBase(doc: any) {
   return {
     _id: doc._id,
@@ -143,15 +148,17 @@ export async function getGuides() {
     mockGuides,
     mapGuide,
   )
-  return mergeBySlug(fetched.map(enrichGuide).filter(Boolean) as GuideDoc[], mockGuides)
+  const filtered = fetched.filter((guide) => !legacyGuideAliases[guide.slug])
+  return mergeBySlug(filtered.map(enrichGuide).filter(Boolean) as GuideDoc[], mockGuides)
 }
 
 export async function getGuideBySlug(slug: string) {
+  const canonicalSlug = legacyGuideAliases[slug] || slug
   const doc = await fetchOrFallback<GuideDoc | undefined>(
     groq`*[_type == "guide" && slug.current == $slug][0] ${guideProjection}`,
-    mockGuides.find((item) => item.slug === slug),
+    mockGuides.find((item) => item.slug === canonicalSlug),
     mapGuide,
-    {slug},
+    {slug: canonicalSlug},
   )
   return enrichGuide(doc)
 }
