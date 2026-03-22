@@ -23,10 +23,18 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
   ],
   'business-central-pricing-australia-licences-budget': [
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+  ],
+  'odoo-pricing-australia-standard-vs-custom': [
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
   ],
   'd365-sales-business-central-integration-guide': [
     {href: '/blog/where-d365-sales-to-erp-handovers-usually-break/', label: 'Where D365 Sales to ERP handovers usually break'},
@@ -103,6 +111,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'odoo-vs-business-central': [
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
@@ -139,6 +148,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'erp-licensing-and-support-cost-control-growing-organisations': [
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
