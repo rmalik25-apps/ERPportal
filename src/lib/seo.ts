@@ -1,6 +1,13 @@
 import type {AnyContentDoc, PortableTextBlock} from './types'
 import {blocksToRichContent} from './portableText'
 
+const siteOrigin = (import.meta.env.PUBLIC_SITE_URL || 'http://localhost:4321').replace(/\/$/, '')
+
+function toAbsoluteUrl(path: string) {
+  if (/^https?:\/\//i.test(path)) return path
+  return `${siteOrigin}${path.startsWith('/') ? path : `/${path}`}`
+}
+
 const overrideMap: Record<string, {metaTitle: string; metaDescription: string}> = {
   'erp-selection-checklist-smb': {
     metaTitle: 'ERP Selection Checklist for SMBs: How to Shortlist the Right System',
@@ -92,9 +99,13 @@ export function buildBreadcrumbSchema(items: Array<{name: string; path: string}>
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.path,
+      item: toAbsoluteUrl(item.path),
     })),
   }
+}
+
+export function toSchemaUrl(path: string) {
+  return toAbsoluteUrl(path)
 }
 
 export function extractFaqSchema(blocks: PortableTextBlock[] | undefined) {

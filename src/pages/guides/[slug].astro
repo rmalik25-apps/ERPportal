@@ -6,7 +6,7 @@ import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableTe
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {editorialMethod, editorialTeamName, getLastReviewedDate} from '../../lib/editorial'
 import {getRelatedGuideLinks} from '../../lib/relatedContent'
-import {buildBreadcrumbSchema, extractFaqSchema, getDocMeta} from '../../lib/seo'
+import {buildBreadcrumbSchema, extractFaqSchema, getDocMeta, toSchemaUrl} from '../../lib/seo'
 import {getGuideBySlug, getGuides} from '../../lib/sanity'
 
 export async function getStaticPaths() {
@@ -46,7 +46,7 @@ const articleSchema = {
   dateModified: guide.updatedAt || guide.publishedAt,
   image: [visual.src],
   articleSection: guide.intent || 'Guide',
-  mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
+  mainEntityOfPage: {'@type': 'WebPage', '@id': toSchemaUrl(canonicalPath)},
   author: {
     '@type': 'Organization',
     name: editorialTeamName,

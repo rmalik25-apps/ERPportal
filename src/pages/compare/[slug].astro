@@ -6,7 +6,7 @@ import {blocksToPlainParagraphs, blocksToRichContent} from '../../lib/portableTe
 import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
 import {editorialMethod, editorialTeamName, getLastReviewedDate} from '../../lib/editorial'
 import {getRelatedComparisonLinks} from '../../lib/relatedContent'
-import {buildBreadcrumbSchema, extractFaqSchema, getDocMeta} from '../../lib/seo'
+import {buildBreadcrumbSchema, extractFaqSchema, getDocMeta, toSchemaUrl} from '../../lib/seo'
 import {getComparisonBySlug, getComparisons} from '../../lib/sanity'
 
 export async function getStaticPaths() {
@@ -44,7 +44,7 @@ const articleSchema = {
   dateModified: item.updatedAt || item.publishedAt,
   image: [visual.src],
   articleSection: 'ERP comparison',
-  mainEntityOfPage: {'@type': 'WebPage', '@id': canonicalPath},
+  mainEntityOfPage: {'@type': 'WebPage', '@id': toSchemaUrl(canonicalPath)},
   author: {
     '@type': 'Organization',
     name: editorialTeamName,
