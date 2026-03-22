@@ -1,0 +1,139 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro'
+---
+
+<SiteLayout
+  title="Search ERP Search"
+  description="Search ERP Search for guides, comparisons, and ERP insights."
+  canonicalPath="/search/"
+  noIndex={true}
+>
+  <section class="section section-frame search-page-shell">
+    <div class="section-head">
+      <p class="eyebrow">Search Results</p>
+      <h1 class="page-title">Find related ERP guides, comparisons, and insights</h1>
+      <p class="section-subtle">Use a product, topic, industry, or project term to find matching content across ERP Search.</p>
+    </div>
+
+    <form class="search-page-form" action="/search/" method="get">
+      <label class="site-search-label" for="search-page-input">Search ERP content</label>
+      <input id="search-page-input" class="search-page-input" type="search" name="q" placeholder="e.g. Business Central, Odoo, RFP, food manufacturing" />
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+    <div class="search-page-state">
+      <p class="search-page-query" data-search-page-query></p>
+      <p class="section-subtle" data-search-page-count></p>
+    </div>
+
+    <div class="search-page-grid" data-search-page-results></div>
+    <p class="search-page-empty" data-search-page-empty hidden>No matching results yet. Try a broader term like `Business Central`, `NetSuite`, `Odoo`, `RFP`, or `manufacturing`.</p>
+  </section>
+</SiteLayout>
+
+<script is:inline>
+  (() => {
+    const queryNode = document.querySelector('[data-search-page-query]');
+    const countNode = document.querySelector('[data-search-page-count]');
+    const resultsNode = document.querySelector('[data-search-page-results]');
+    const emptyNode = document.querySelector('[data-search-page-empty]');
+    const input = document.getElementById('search-page-input');
+    if (!queryNode || !countNode || !resultsNode || !emptyNode || !input) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const rawQuery = (params.get('q') || '').trim();
+    input.value = rawQuery;
+
+    const escapeHtml = (value) =>
+      String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+    const formatDate = (value) => {
+      try {
+        return new Date(value).toLocaleDateString('en-AU', {
+          day: '2-digit',
+          month: 'short',
+          year: 'numeric',
+        }).replace(/\s/g, '-');
+      } catch {
+        return '';
+      }
+    };
+
+    const scoreItem = (item, query) => {
+      const title = item.title.toLowerCase();
+      const text = item.searchableText.toLowerCase();
+      let score = 0;
+      if (title.includes(query)) score += 8;
+      if (text.includes(query)) score += 4;
+      for (const term of query.split(/\s+/)) {
+        if (!term) continue;
+        if (title.includes(term)) score += 3;
+        if (text.includes(term)) score += 1;
+      }
+      return score;
+    };
+
+    const render = (items, query) => {
+      if (!query) {
+        queryNode.textContent = 'Enter a topic to explore related content';
+        countNode.textContent = '';
+        resultsNode.innerHTML = '';
+        emptyNode.hidden = false;
+        emptyNode.textContent = 'Try terms like Business Central, NetSuite, Odoo, RFP, food manufacturing, WMS, or change management.';
+        return;
+      }
+
+      const lowered = query.toLowerCase();
+      const matches = items
+        .map((item) => ({item, score: scoreItem(item, lowered)}))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score || new Date(b.item.publishedAt).getTime() - new Date(a.item.publishedAt).getTime())
+        .map((entry) => entry.item);
+
+      queryNode.textContent = `Results for “${query}”`;
+      countNode.textContent = `${matches.length} matching item${matches.length === 1 ? '' : 's'}`;
+
+      if (!matches.length) {
+        resultsNode.innerHTML = '';
+        emptyNode.hidden = false;
+        emptyNode.textContent = `No matches for “${query}”. Try a broader term or a product name.`;
+        return;
+      }
+
+      emptyNode.hidden = true;
+      resultsNode.innerHTML = matches
+        .map(
+          (item) => `
+            <article class="editorial-item search-result-card">
+              <div class="editorial-topline">
+                <p class="eyebrow">${escapeHtml(item.section)}</p>
+              </div>
+              <h2><a href="${escapeHtml(item.href)}">${escapeHtml(item.title)}</a></h2>
+              <div class="meta-row">
+                <p class="meta">${escapeHtml(item.kind)} · Published ${escapeHtml(formatDate(item.publishedAt))}</p>
+                <span class="meta-pill">${escapeHtml(item.readTime)} min read</span>
+              </div>
+              <p>${escapeHtml(item.excerpt)}</p>
+            </article>
+          `,
+        )
+        .join('');
+    };
+
+    fetch('/search-index.json')
+      .then((response) => response.json())
+      .then((items) => render(Array.isArray(items) ? items : [], rawQuery))
+      .catch(() => {
+        queryNode.textContent = 'Search is temporarily unavailable';
+        countNode.textContent = '';
+        resultsNode.innerHTML = '';
+        emptyNode.hidden = false;
+        emptyNode.textContent = 'Please try again in a moment.';
+      });
+  })();
+</script>
