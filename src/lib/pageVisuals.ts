@@ -288,6 +288,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Finance team reviewing invoices and AI-assisted payables workflow on laptops',
     caption: 'AP automation only creates value when mailbox flow, review controls, and finance ownership are designed properly.',
   },
+  'business-central-payment-times-reporting-australia-february-2026': {
+    src: pexels('6693655'),
+    alt: 'Finance team reviewing payables controls and compliance reporting',
+    caption: 'Australian localisation features still need finance ownership, supplier controls, and clean payables data.',
+  },
   'where-d365-sales-to-erp-handovers-usually-break': {
     src: pexels('3184465'),
     alt: 'Sales and operations teams aligning customer handover workflow',

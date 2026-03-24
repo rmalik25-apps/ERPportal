@@ -26,9 +26,16 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+  ],
+  'erp-finance-design-chart-accounts-dimensions': [
+    {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
+    {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
+    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
   ],
   'odoo-pricing-australia-standard-vs-custom': [
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
@@ -147,16 +154,23 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
   ],
+  'review-business-central-release-notes-without-project-churn': [
+    {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
+    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
+    {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
+  ],
+  'business-central-payment-times-reporting-australia-february-2026': [
+    {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+    {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
+  ],
   'erp-licensing-and-support-cost-control-growing-organisations': [
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
-  ],
-  'review-business-central-release-notes-without-project-churn': [
-    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
-    {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
-    {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
   ],
   'business-central-payables-agent-australia-what-to-test': [
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
@@ -165,9 +179,9 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
   ],
   'month-end-close-new-erp-first-three-cycles-playbook': [
+    {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
-    {href: '/compare/netsuite-vs-sage-intacct-finance-first-teams/', label: 'NetSuite vs Sage Intacct'},
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
   ],
   'implementation-partner-due-diligence-ten-questions': [
