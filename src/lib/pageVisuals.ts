@@ -283,6 +283,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Project manager reviewing release notes and backlog decisions on screen',
     caption: 'Release management works best when updates are triaged against business value and regression risk.',
   },
+  'business-central-payables-agent-australia-what-to-test': {
+    src: pexels('6693655'),
+    alt: 'Finance team reviewing invoices and AI-assisted payables workflow on laptops',
+    caption: 'AP automation only creates value when mailbox flow, review controls, and finance ownership are designed properly.',
+  },
   'where-d365-sales-to-erp-handovers-usually-break': {
     src: pexels('3184465'),
     alt: 'Sales and operations teams aligning customer handover workflow',
