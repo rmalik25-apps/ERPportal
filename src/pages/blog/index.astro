@@ -3,12 +3,12 @@ import SiteLayout from '../../layouts/SiteLayout.astro'
 import EditorialMarker from '../../components/EditorialMarker.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
-import {estimateReadTimeMinutes, formatPublishDate} from '../../lib/contentMeta'
+import {estimateReadTimeMinutes, formatPublishDate, sortByPublishedDateDesc} from '../../lib/contentMeta'
 import {editorialTeamName} from '../../lib/editorial'
 import {buildBreadcrumbSchema, getListPageMeta} from '../../lib/seo'
 import {getPosts} from '../../lib/sanity'
 
-const posts = await getPosts()
+const posts = sortByPublishedDateDesc(await getPosts())
 const meta = getListPageMeta('blog')
 const breadcrumbSchema = buildBreadcrumbSchema([
   {name: 'Home', path: '/'},
