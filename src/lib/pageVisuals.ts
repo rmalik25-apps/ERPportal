@@ -298,6 +298,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Finance team reviewing payables controls and compliance reporting',
     caption: 'Australian localisation features still need finance ownership, supplier controls, and clean payables data.',
   },
+  'business-central-sales-order-agent-australia-what-to-test': {
+    src: pexels('6169659'),
+    alt: 'Sales operations team reviewing customer order emails and quote workflow on screens',
+    caption: 'Order-capture automation only works when mailbox design, stock logic, and review checkpoints are explicit.',
+  },
   'where-d365-sales-to-erp-handovers-usually-break': {
     src: pexels('3184465'),
     alt: 'Sales and operations teams aligning customer handover workflow',

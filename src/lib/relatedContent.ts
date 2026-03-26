@@ -167,6 +167,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'review-business-central-release-notes-without-project-churn': [
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
   ],
@@ -183,14 +184,22 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'business-central-payables-agent-australia-what-to-test': [
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
   ],
+  'business-central-sales-order-agent-australia-what-to-test': [
+    {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
+    {href: '/guides/d365-sales-business-central-integration-guide/', label: 'D365 Sales + Business Central integration guide'},
+    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+  ],
   'month-end-close-new-erp-first-three-cycles-playbook': [
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
   ],
