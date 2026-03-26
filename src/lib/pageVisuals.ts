@@ -102,6 +102,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Warehouse staff checking picking and storage processes in an aisle',
     caption: 'Before go-live, warehouse process redesign should remove workarounds rather than automate them.',
   },
+  'business-central-warehouse-management-standard-vs-standalone-wms': {
+    src: pexels('6169056'),
+    alt: 'Warehouse team reviewing bin layouts, replenishment flow, and system decisions in an aisle',
+    caption: 'Warehouse software choices should be tested against real receiving, put-away, replenishment, and picking behaviour.',
+  },
   'multi-entity-erp-setup-growing-business-groups': {
     src: pexels('3183153'),
     alt: 'Finance and operations team coordinating across multiple business units',

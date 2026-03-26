@@ -1620,6 +1620,78 @@ export const mockGuides: GuideDoc[] = [
     ),
   },
   {
+    _id: 'guide-bc-wms-standard-vs-standalone',
+    _type: 'guide',
+    title: 'Business Central warehouse management: when standard WMS is enough and when it is not',
+    slug: 'business-central-warehouse-management-standard-vs-standalone-wms',
+    excerpt:
+      'A practical guide for Australian buyers comparing standard Business Central warehouse capability against the point where a standalone WMS or heavier add-on discussion becomes necessary.',
+    intent: 'Operations',
+    publishedAt: '2026-03-27T00:00:00Z',
+    updatedAt: '2026-03-27T00:00:00Z',
+    seo: {
+      metaTitle: 'Business Central Warehouse Management: Standard WMS vs Standalone WMS',
+      metaDescription:
+        'Understand what standard Business Central warehouse management covers, where advanced warehousing fits, and when buyers should assess a standalone WMS.',
+    },
+    body: skimmableBlocks(
+      [
+        'Australian search intent around warehousing is active enough to matter. Google autocomplete for Australia currently surfaces exact queries including “business central warehouse management”, “business central wms”, and “wms software australia”, which is a strong sign that buyers are trying to decide whether standard Business Central warehousing is sufficient before they commit to add-ons or a separate WMS path.',
+        'That question is commercially important because warehouse complexity is rarely solved by software labels alone. The practical issue is whether the business needs standard bins, picks, receipts, and warehouse documents, or whether the operating model depends on more specialised execution, tracking, and device workflows than a lean Business Central setup can comfortably carry.',
+        'This guide uses current Microsoft documentation rather than partner marketing to map what standard Business Central warehouse management supports today, where the design pressure points appear, and how Australian buyers should decide whether a standalone WMS conversation is actually justified.',
+      ],
+      ['## What standard Business Central warehouse management covers today'],
+      [
+        '• Microsoft\'s current warehouse management overview says Business Central standard warehousing includes bins, warehouse shipments, inventory picks, and movement worksheets as core capabilities layered onto inventory management.',
+        '• The same Microsoft documentation describes several configuration levels, from no dedicated warehouse activity through basic warehouse documents and up to advanced warehousing with directed put-away and pick.',
+        '• In Microsoft\'s warehouse setup documentation, the highest complexity level is effectively the WMS tier. It includes directed workflows, bin replenishment planning, bin ranking, capacity-based bin setup, slotting support, internal picks and put-aways, and optional zones or warehouse classes.',
+        '• Microsoft also documents standard inventory and warehouse reporting, plus barcode printing and scanning support, which means buyers should not assume every barcode or reporting requirement automatically needs extra software on day one.',
+      ],
+      ['## Where standard Business Central usually fits well'],
+      [
+        '• One or a few warehouses with moderate bin complexity, disciplined receiving and shipping, and a clear owner for warehouse process design.',
+        '• Businesses that mainly need warehouse receipts, put-aways, picks, shipments, replenishment logic, and stronger inventory visibility rather than a broad warehouse transformation programme.',
+        '• Operations that can work within Microsoft\'s documented warehouse complexity ladder instead of needing every advanced workflow at once. This lets the warehouse model become more structured as the business grows.',
+        '• Teams that can benefit from standard features such as default bins, directed put-away and pick, FEFO-based picking for item-tracked stock, and breakbulk handling before they spend on more architecture.',
+      ],
+      ['## The pressure points buyers should test harder'],
+      [
+        '• Reservation and item tracking design. Microsoft states reservations and item tracking numbers are handled at the location level, not at the bin or zone level, and the Item Tracking Lines page cannot be opened from warehouse activity documents. If your warehouse operating model depends on deeper bin-level reservation behaviour, test that explicitly.',
+        '• Conversion effort. Microsoft\'s conversion guidance for turning an existing location into a warehouse location requires clearing negative inventory, resolving open warehouse documents, running the Create Warehouse Location batch job, and then performing warehouse physical inventory. That is not a trivial toggle.',
+        '• Default-bin assumptions. Microsoft notes that the default bin property is not used at locations that run directed put-away and pick. Once the business moves into more advanced warehousing, process discipline around bin setup, ranking, and replenishment matters more than simple default-bin habits.',
+        '• Unit-of-measure handling. Microsoft documents that multiple units of measure in bin content are only available in WMS installations and that breakbulk behaviour depends on directed put-away and pick settings. If the real warehouse relies on pallets, cartons, and pieces moving together, test that with live scenarios.',
+      ],
+      ['## Signals that a standalone WMS or heavier add-on discussion may be justified'],
+      [
+        '• The business cannot describe its warehouse need in Microsoft\'s standard complexity levels and keeps jumping straight to edge cases without a stable base receiving, put-away, picking, and shipping model.',
+        '• Warehouse execution depends on very tight slotting, replenishment, item-tracking nuance, or exception control that becomes uncomfortable once reservations stay at location level rather than bin level.',
+        '• Multiple entities or sites need different warehouse process maturity, but leadership still wants one control model and one support model.',
+        '• The project is trying to solve weak warehouse master data, poor bin discipline, and unclear ownership by buying more software instead of fixing operating rules first.',
+      ],
+      ['## A practical buyer method before expanding scope'],
+      [
+        '• Step 1: map each warehouse or site against Microsoft\'s documented complexity levels rather than using generic labels such as “we need a WMS”.',
+        '• Step 2: run one live scenario for receiving, put-away, replenishment, picking, shipping, and stock adjustment with your real unit-of-measure, item-tracking, and bin rules.',
+        '• Step 3: decide whether location-level reservation and standard warehouse document behaviour are acceptable for your operating model before discussing add-ons.',
+        '• Step 4: separate standard Business Central setup effort, warehouse add-on cost, mobility tooling, and support overhead into different commercial lines so the design decision stays honest.',
+        '• Step 5: if a partner recommends extra WMS capability, ask them to show exactly which standard Microsoft behaviours fail in your scenario and why process redesign alone would not solve it.',
+      ],
+      ['## What Australian buyers should conclude now'],
+      [
+        '• Standard Business Central warehousing is stronger than many first-time buyers assume, especially for structured SMB warehouse operations that need bins, warehouse documents, replenishment logic, item tracking, and disciplined process flow.',
+        '• The real decision is not “Business Central versus WMS” in the abstract. It is whether your warehouse can live within Microsoft\'s documented operating model without building too much workaround complexity around the edges.',
+        '• If your team has not yet tested real warehouse scenarios against standard Business Central, do that before expanding the architecture. It is usually the fastest way to separate genuine capability gaps from avoidable design anxiety.',
+      ],
+      ['## FAQ'],
+      [
+        '• Is Business Central a real WMS? Yes. Microsoft documents a highest-complexity warehouse tier with directed put-away and pick, bin ranking, capacity setup, replenishment planning, zones, and warehouse classes. The real question is whether that documented model fits your operation.',
+        '• Does every distributor need a standalone WMS with Business Central? No. Many SMB warehouses can operate well inside standard Business Central if the warehouse process, bin design, and master data are disciplined.',
+        '• Are default bins enough for advanced warehousing? Not always. Microsoft states default bins are not used at directed put-away and pick locations, so more mature warehouse setups rely on broader bin logic and replenishment design.',
+        '• What should we test first? Test one full receive-to-ship scenario with your real units of measure, item tracking, replenishment needs, and exception cases before assuming extra warehouse software is necessary.',
+      ],
+    ),
+  },
+  {
     _id: 'guide-post-go-live-90-days',
     _type: 'guide',
     title: 'Post-go-live stabilisation plan: first 90 days',
