@@ -2394,6 +2394,77 @@ export const mockPosts: PostDoc[] = [
     ),
   },
   {
+    _id: 'post-bc-needs-wms',
+    _type: 'post',
+    title: 'Warehouse KPIs that tell you when ERP needs a WMS',
+    slug: 'warehouse-kpis-that-tell-you-when-erp-needs-wms',
+    excerpt: 'A practical scorecard for distributors deciding whether warehouse pain is really a WMS gap or a process-and-data problem they should fix inside the ERP first.',
+    category: 'WMS',
+    publishedAt: '2026-03-30T00:00:00Z',
+    updatedAt: '2026-03-30T00:00:00Z',
+    seo: {
+      metaTitle: 'Warehouse KPIs That Tell You When ERP Needs a WMS',
+      metaDescription:
+        'Use these warehouse KPIs to decide whether ERP warehouse setup is enough or whether a dedicated WMS is justified for your distribution operation.',
+    },
+    body: skimmableBlocks(
+      [
+        'Australian search interest is currently leaning harder into warehouse management system topics than into the ERP pricing terms we tested for this run. That is a useful signal, but it does not answer the real buying question for distributors: is the warehouse struggling because the business genuinely needs WMS-grade execution control, or because the current ERP setup, data discipline, and floor routines are still weak?',
+        'ERP teams often jump too quickly from “the warehouse feels hard” to “we need another platform”. In practice, the cleaner decision comes from measurable operating signals. If those signals are not visible, buyers risk spending money on a WMS project that simply automates the same confusion faster.',
+        'This article is designed to complement broader Business Central warehouse guidance with a narrower test: which KPIs and warehouse control signals should trigger a serious WMS conversation, and which ones usually point back to process redesign inside the ERP first.',
+      ],
+      ['## Start with the KPIs, not the software demo'],
+      [
+        '• The right KPI set should separate execution pain from governance pain. Without that split, teams over-interpret anecdotal frustration and under-measure where service, stock confidence, and labour time are actually being lost.',
+        '• Microsoft already documents several warehouse maturity levels inside Business Central, which means the real issue is often not “can the ERP do warehousing at all?” but “have we actually stabilised the right warehouse model yet?”',
+        '• A dedicated WMS deserves attention when the metrics show persistent floor-execution complexity that cleaner ERP setup alone is unlikely to remove.',
+      ],
+      ['## KPI 1: pick productivity and travel efficiency'],
+      [
+        '• Track picks per labour hour, lines per picker hour, and average travel distance or touches per order if the business can estimate it reliably.',
+        '• If productivity is weak because pick faces are wrong, items are poorly slotted, or staff keep overriding bin rules, the issue is often warehouse design and discipline rather than missing software.',
+        '• If productivity stays weak even after slotting, bin policy, and replenishment routines have been tightened, the operation may be hitting a genuine execution-control limit.',
+      ],
+      ['## KPI 2: on-time dispatch and queue visibility'],
+      [
+        '• Measure order release-to-dispatch time, same-day order completion rate, and the share of orders that miss the promised cut-off because warehouse work was not prioritised clearly.',
+        '• If managers cannot see queue state early enough to rebalance labour or re-sequence urgent work, that is a stronger WMS signal than generic complaints about “slow picking”.',
+        '• If the issue is simply that sales, warehouse, and transport priorities are misaligned, a second system may add noise before it adds control.',
+      ],
+      ['## KPI 3: inventory accuracy and bin trust'],
+      [
+        '• Track inventory accuracy by location or zone, count variance rate, stock adjustments as a percentage of movements, and the frequency of “system says yes, floor says no” exceptions.',
+        '• Low bin trust often pushes supervisors into verbal workarounds, manual reallocations, and shadow records. That does not always mean a WMS is needed. It often means the business needs stronger receiving, put-away, and counting discipline first.',
+        '• A WMS conversation becomes more credible when the operation already has sound counting routines and still cannot maintain trustworthy execution visibility at the pace required.',
+      ],
+      ['## KPI 4: replenishment stability and stock availability'],
+      [
+        '• Measure pick-bin stockouts, emergency replenishments, backorders caused by warehouse execution rather than supply, and the labour time spent chasing stock that should have been available.',
+        '• If replenishment is unstable because min-max logic, item dimensions, or location governance are poor, fix that before buying specialist software.',
+        '• If replenishment complexity reflects genuine multi-zone, high-velocity floor pressure and frequent task interdependence, the WMS case gets stronger.',
+      ],
+      ['## KPI 5: exception recovery speed'],
+      [
+        '• Track how long it takes to recover from a short pick, wrong-bin issue, receiving mismatch, urgent order interruption, or shipment exception.',
+        '• The hard question is not whether exceptions happen. It is whether the floor can recover from them quickly, visibly, and repeatably without heroics.',
+        '• A dedicated WMS earns its place when exception handling needs faster task-level control than the ERP-led operating model can realistically provide.',
+      ],
+      ['## What the pattern usually means'],
+      [
+        '• If the KPIs are weak but root causes point to item data, bin policy, training, or operating discipline, stay focused on ERP and warehouse-process cleanup first.',
+        '• If the KPIs are weak because the floor needs faster task orchestration, denser scanning, more granular queue control, and stronger supervisor visibility than the current model can provide, a WMS may be justified.',
+        '• If the business cannot explain why the KPIs are weak, pause the software conversation and instrument the warehouse properly before committing budget.',
+      ],
+      ['## FAQ'],
+      [
+        '• Which KPI should matter most? Usually on-time dispatch, inventory accuracy, and exception recovery speed. Those three tell you whether warehouse pain is hurting service and control, not only labour efficiency.',
+        '• Can a smaller distributor still justify a WMS? Yes, but the decision should come from execution complexity and measurable service risk, not from warehouse size alone.',
+        '• Should we run this KPI review before or after ERP go-live? Ideally before major warehouse-platform decisions and again after the ERP-led process has stabilised enough to show the real remaining gap.',
+        '• Does poor KPI performance always mean the ERP is the wrong warehouse platform? No. Weak KPIs often point to process, layout, data, or training issues first. The value of the scorecard is separating those from genuine WMS-trigger conditions.',
+      ],
+    ),
+  },
+  {
     _id: 'post-d365-sales-handoffs',
     _type: 'post',
     title: 'Where D365 Sales to ERP handovers usually break',

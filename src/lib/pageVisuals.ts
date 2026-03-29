@@ -303,6 +303,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Sales operations team reviewing customer order emails and quote workflow on screens',
     caption: 'Order-capture automation only works when mailbox design, stock logic, and review checkpoints are explicit.',
   },
+  'warehouse-kpis-that-tell-you-when-erp-needs-wms': {
+    src: pexels('6169056'),
+    alt: 'Warehouse leaders reviewing handheld workflows and stock movement decisions in an aisle',
+    caption: 'Warehouse KPI trends should separate genuine WMS need from issues that still belong to process and data cleanup.',
+  },
   'where-d365-sales-to-erp-handovers-usually-break': {
     src: pexels('3184465'),
     alt: 'Sales and operations teams aligning customer handover workflow',

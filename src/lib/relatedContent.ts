@@ -20,6 +20,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
+    {href: '/blog/warehouse-kpis-that-tell-you-when-erp-needs-wms/', label: 'Warehouse KPIs that tell you when ERP needs a WMS'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
   ],
@@ -36,6 +37,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'business-central-warehouse-management-standard-vs-standalone-wms': [
     {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
+    {href: '/blog/warehouse-kpis-that-tell-you-when-erp-needs-wms/', label: 'Warehouse KPIs that tell you when ERP needs a WMS'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
@@ -97,6 +99,11 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
     {href: '/guides/formulation-yield-and-batch-production-in-food-erp/', label: 'Formulation, yield, and batch production in food ERP'},
     {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
+  ],
+  'warehouse-process-redesign-before-erp-go-live': [
+    {href: '/blog/warehouse-kpis-that-tell-you-when-erp-needs-wms/', label: 'Warehouse KPIs that tell you when ERP needs a WMS'},
+    {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
+    {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
   ],
   'food-traceability-quality-and-recall-controls-in-erp': [
     {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
@@ -195,6 +202,13 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/d365-sales-business-central-integration-guide/', label: 'D365 Sales + Business Central integration guide'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+  ],
+  'warehouse-kpis-that-tell-you-when-erp-needs-wms': [
+    {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
+    {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
+    {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
+    {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
+    {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
   ],
   'month-end-close-new-erp-first-three-cycles-playbook': [
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
