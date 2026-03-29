@@ -1543,6 +1543,77 @@ export const mockGuides: GuideDoc[] = [
     ),
   },
   {
+    _id: 'guide-netsuite-pricing-australia',
+    _type: 'guide',
+    title: 'NetSuite pricing in Australia: licensing structure, modules, and budget traps',
+    slug: 'netsuite-pricing-australia-licensing-modules-budget',
+    excerpt:
+      'A practical Australian buyer guide to NetSuite pricing, why public list pricing is hard to find, and the cost drivers that usually reshape the budget.',
+    intent: 'Commercial',
+    publishedAt: '2026-03-30T00:00:00Z',
+    updatedAt: '2026-03-30T00:00:00Z',
+    seo: {
+      metaTitle: 'NetSuite Pricing Australia: Licensing, Modules, and Budget Guide',
+      metaDescription:
+        'Current Australian NetSuite pricing guide covering licensing structure, OneWorld, optional modules, implementation scope, and the budget traps buyers should test early.',
+    },
+    body: skimmableBlocks(
+      [
+        'Australian ERP buyer intent still clusters around shortlist cost questions, and NetSuite is one of the hardest products to budget quickly because Oracle does not publish a simple public Australian per-user price table in the same way Microsoft and Odoo do.',
+        'That does not mean NetSuite pricing is unknowable. It means the commercial model needs to be broken into clearer parts: core platform, entity structure, users, add-on modules, implementation services, integration work, support, and renewal exposure.',
+        'This guide matters in March 2026 because Oracle\'s current 2026.1 release notes continue adding capabilities while explicitly noting that some features and SuiteApps may require extra purchase. For Australian buyers, that is the practical reminder that “NetSuite cost” is rarely just the base ERP subscription.',
+      ],
+      ['## What Oracle makes clear publicly'],
+      [
+        '• Oracle\'s Australian NetSuite product pages position NetSuite as a modular suite rather than a single flat package, with separate product areas including ERP, CRM, inventory management, OneWorld, planning and budgeting, warehouse management, field service management, and Analytics Warehouse.',
+        '• Oracle\'s NetSuite 2026.1 release notes state that the features and SuiteApps described in the release may not be available in every account and that some features may require extra purchase. That matters because new capability does not automatically mean no extra commercial impact.',
+        '• Oracle\'s public Australian site steers buyers toward demos and tailored discussions, not fixed public AU list pricing. The practical takeaway is that quote quality matters more than trying to reverse-engineer one universal NetSuite price.',
+      ],
+      ['## What usually determines NetSuite price in Australia'],
+      [
+        '• Base suite and entity complexity. The commercial shape changes quickly if the business needs OneWorld for multi-entity, multi-subsidiary, or multi-currency operation rather than a simpler single-entity setup.',
+        '• User mix and access model. Named users, operational roles, finance roles, approvers, external users, and admin requirements all influence the quote, especially once businesses start adding specialised teams.',
+        '• Optional modules and adjacent products. Warehouse Management, Planning and Budgeting, Analytics Warehouse, SuiteCommerce, CRM, and other add-ons can each move the budget materially if they are treated as phase-one assumptions.',
+        '• Delivery scope. Data migration, integrations, reporting rebuild, testing, training, change support, and post-go-live coverage usually reshape the total investment more than small subscription differences.',
+        '• Commercial protections. Renewal terms, support boundaries, sandbox and environment assumptions, and annual uplift language can change the three-year cost picture significantly.',
+      ],
+      ['## The budget traps buyers miss most often'],
+      [
+        '• Comparing NetSuite to Business Central or Odoo on software headline alone. NetSuite often looks expensive or vague until the buyer separates finance depth, entity structure, operational scope, and implementation risk properly.',
+        '• Assuming the first quote is the whole estate. Buyers should test whether the quote includes OneWorld, required modules, integrations, sandbox needs, SuiteSuccess assumptions, and realistic support coverage.',
+        '• Under-scoping operational complexity. Warehouse mobility, demand planning, approval design, revenue rules, or intercompany work can all push the solution into a broader and more expensive shape.',
+        '• Ignoring renewal exposure. A discounted first-year or first-term deal can still become an expensive platform if annual uplift terms and add-on growth are not understood early.',
+        '• Treating partner services as interchangeable. Implementation quality, local support capability, and contract clarity matter because weak delivery assumptions often become hidden cost later.',
+      ],
+      ['## A practical budgeting method for Australian buyers'],
+      [
+        '• Step 1: define the platform shape first. Decide whether the real requirement is single-entity ERP, multi-entity control through OneWorld, heavier warehousing, stronger planning, or a broader suite strategy.',
+        '• Step 2: separate the commercial model into annual software, one-off implementation, integrations, change and training, optional products, and ongoing support. This is the only fair way to compare NetSuite against Business Central, Odoo, or MYOB Acumatica.',
+        '• Step 3: ask for the quote to be itemised line by line. Buyers should be able to see what is assumed for users, subsidiaries, modules, environments, partner IP, and any non-standard support commitments.',
+        '• Step 4: build a three-year run-rate, not only a first-year number. Renewal position, added users, likely module expansion, and support ownership usually matter more than the first subscription headline.',
+        '• Step 5: test the Australian operating realities that often change the final price, such as warehouse execution, local tax and reporting process, bank integration, approval controls, and whether local teams need stronger partner-led support after go-live.',
+      ],
+      ['## Where market guidance helps and where it does not'],
+      [
+        '• Australian partner DWR currently says NetSuite pricing in Australia starts from about AU$1,000 per month for basic implementations, while also stressing that actual investment depends on business requirements. That is useful only as a floor-level market signal, not as a shortlist-ready budget.',
+        '• The more reliable interpretation is that NetSuite should be budgeted as a configurable commercial model, not as a single public list price. Two businesses can both “buy NetSuite” and end up with very different cost outcomes because the required suite shape is different.',
+        '• For serious selection work, the better question is not “What is the NetSuite price?” It is “What is the cheapest safe NetSuite architecture for our actual operating model?”',
+      ],
+      ['## When this guide should change your shortlist'],
+      [
+        '• Keep NetSuite high on the shortlist if the business needs stronger multi-entity control, a broad cloud suite, and enough finance or operational complexity to justify a quote-led commercial model.',
+        '• Pressure-test NetSuite harder if the project is really a simpler Australian SMB requirement with modest warehousing, low entity complexity, and a leadership team that needs clearer public pricing before partner engagement.',
+        '• Re-open comparisons with Business Central or Odoo if the NetSuite quote only looks defendable when too many assumptions are left vague. Clarity in scope and three-year cost is more important than brand strength.',
+      ],
+      ['## FAQ'],
+      [
+        '• Does Oracle publish fixed public NetSuite list pricing for Australia? Not in the same simple way some competing ERP vendors do. Oracle\'s Australian site uses product overviews and demo-led sales flow, so buyers should expect a tailored quote.',
+        '• Why do NetSuite quotes vary so much? The price usually changes with entity structure, user mix, modules, integrations, implementation scope, and commercial terms such as support and renewal assumptions.',
+        '• Can buyers use a partner\'s “starts from” figure as the real budget? No. It can help set a minimum expectation, but it is not enough for shortlist approval until the solution shape and delivery scope are itemised.',
+      ],
+    ),
+  },
+  {
     _id: 'guide-odoo-pricing-australia',
     _type: 'guide',
     title: 'Odoo pricing in Australia: Standard vs Custom, implementation, and budget traps',

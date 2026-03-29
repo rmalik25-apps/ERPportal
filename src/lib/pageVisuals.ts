@@ -117,6 +117,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Commercial analyst reviewing pricing and margin dashboards',
     caption: 'Margin control frameworks work best when pricing rules, approvals, and exception reporting are connected.',
   },
+  'netsuite-pricing-australia-licensing-modules-budget': {
+    src: pexels('4386371'),
+    alt: 'Finance lead reviewing ERP licensing, contract notes, and budget assumptions',
+    caption: 'NetSuite budgeting works better when the quote is broken into platform, modules, services, and renewal exposure.',
+  },
   'post-go-live-stabilisation-plan-first-90-days': {
     src: pexels('3184339'),
     alt: 'Project team running a post-launch review around laptops and notes',

@@ -5,6 +5,7 @@ type RelatedLink = {
 
 const guideLinks: Record<string, RelatedLink[]> = {
   'erp-selection-checklist-smb': [
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
@@ -25,6 +26,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
   ],
   'business-central-pricing-australia-licences-budget': [
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
@@ -49,11 +51,20 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
   ],
   'odoo-pricing-australia-standard-vs-custom': [
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
+  ],
+  'netsuite-pricing-australia-licensing-modules-budget': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'd365-sales-business-central-integration-guide': [
     {href: '/blog/where-d365-sales-to-erp-handovers-usually-break/', label: 'Where D365 Sales to ERP handovers usually break'},
@@ -119,6 +130,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
 
 const comparisonLinks: Record<string, RelatedLink[]> = {
   'business-central-vs-netsuite-growing-businesses': [
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
