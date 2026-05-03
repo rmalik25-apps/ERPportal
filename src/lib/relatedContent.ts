@@ -52,12 +52,21 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
   ],
   'odoo-pricing-australia-standard-vs-custom': [
+    {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
+  ],
+  'odoo-warehouse-management-built-in-vs-standalone-wms': [
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
+    {href: '/blog/warehouse-kpis-that-tell-you-when-erp-needs-wms/', label: 'Warehouse KPIs that tell you when ERP needs a WMS'},
+    {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
   ],
   'netsuite-pricing-australia-licensing-modules-budget': [
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
@@ -114,6 +123,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   ],
   'warehouse-process-redesign-before-erp-go-live': [
     {href: '/blog/warehouse-kpis-that-tell-you-when-erp-needs-wms/', label: 'Warehouse KPIs that tell you when ERP needs a WMS'},
+    {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
     {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
   ],
@@ -149,11 +159,19 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'odoo-vs-business-central': [
+    {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
+  ],
+  'odoo-vs-netsuite': [
+    {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
   ],
   'generic-erp-vs-vertical-erp-food-manufacturers': [
     {href: '/compare/erp-for-meat-processing-generic-vs-specialist/', label: 'ERP for meat processing'},
@@ -229,6 +247,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'warehouse-kpis-that-tell-you-when-erp-needs-wms': [
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
+    {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},

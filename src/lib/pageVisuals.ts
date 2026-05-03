@@ -102,6 +102,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Warehouse staff checking picking and storage processes in an aisle',
     caption: 'Before go-live, warehouse process redesign should remove workarounds rather than automate them.',
   },
+  'odoo-warehouse-management-built-in-vs-standalone-wms': {
+    src: pexels('6169056'),
+    alt: 'Warehouse team reviewing scanner-led picking, putaway flow, and storage decisions on the floor',
+    caption: 'Warehouse fit should be tested through real receiving, putaway, scanning, and dispatch scenarios before customisation starts.',
+  },
   'business-central-warehouse-management-standard-vs-standalone-wms': {
     src: pexels('6169056'),
     alt: 'Warehouse team reviewing bin layouts, replenishment flow, and system decisions in an aisle',
