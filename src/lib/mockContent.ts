@@ -2541,6 +2541,78 @@ export const mockPosts: PostDoc[] = [
     ),
   },
   {
+    _id: 'post-netsuite-2026-1-australia',
+    _type: 'post',
+    title: 'NetSuite 2026.1 for Australian teams: what to test in finance, pricing, warehouse, and manufacturing',
+    slug: 'netsuite-2026-1-australia-what-to-test',
+    excerpt:
+      'A practical Australian review guide for NetSuite 2026.1 across finance AI, pricing controls, warehouse execution, and manufacturing changes.',
+    category: 'NetSuite',
+    publishedAt: '2026-05-04T00:00:00Z',
+    updatedAt: '2026-05-04T00:00:00Z',
+    seo: {
+      metaTitle: 'NetSuite 2026.1 for Australian Teams: What to Test First',
+      metaDescription:
+        'Australian NetSuite guide to 2026.1 priorities across Narrative Insights, cash controls, pricing rules, warehouse management, and manufacturing updates.',
+    },
+    body: skimmableBlocks(
+      [
+        'Google Trends data for Australia over the last 12 months shows NetSuite holding stronger search interest than Odoo and WMS through most of March and April 2026. That does not make every NetSuite 2026.1 feature urgent, but it is a useful signal that Australian buyers and existing customers are actively researching the platform during the current release window.',
+        'Oracle\'s NetSuite 2026.1 release notes also need to be read carefully rather than treated as one giant upgrade list. Oracle says the release notes are subject to weekly change, and individual sections were still being updated through April 2026. That means finance, operations, and manufacturing leaders should filter the release by operating relevance, not by how many new items appear in the menu.',
+        'This article focuses on the 2026.1 changes that are most likely to matter for Australian SMB teams: finance AI and cash-control features, new pricing controls, warehouse and consignment processes, and manufacturing improvements that affect outsourced work and production discipline.',
+      ],
+      ['## What Oracle changed that deserves real attention'],
+      [
+        '• Oracle\'s 2026.1 release documentation highlights changes across AI, banking, inventory management, item pricing, order management, and manufacturing rather than only generic user-interface updates.',
+        '• Several of the more commercially interesting items are not passive upgrades. They require feature enablement, process redesign, SuiteApps, or governance decisions before they are safe to use at scale.',
+        '• Australian teams should therefore treat 2026.1 as a selective adoption exercise. The question is not “what is new?” but “which of these changes removes current manual work, weak control, or avoidable customisation in our business?”',
+      ],
+      ['## Priority 1: finance teams should test AI and cash controls together'],
+      [
+        '• Oracle added a new Narrative Insights subtab in AI Preferences, with settings to enable or disable the feature, control external-role access, and optionally use OCI credentials for paid unlimited usage. That is more important than a generic AI headline because it turns AI output into a controllable admin decision.',
+        '• The main 2026.1 notes also list Payment Date Prediction for Invoices and Enriched Bank Data for Transaction Matching. For Australian finance teams, that means the better pilot is not “does the AI sound smart?” but “does it improve payment timing visibility, reconciliation effort, and exception handling without weakening audit discipline?”',
+        '• Run any pilot with finance operations, treasury or AP ownership, and the NetSuite administrator in the same room. AI-generated summaries and cash recommendations are useful only if the business can explain when they are trusted, when they are overridden, and how usage is governed.',
+      ],
+      ['## Priority 2: pricing governance just became a more serious design decision'],
+      [
+        '• NetSuite 2026.1 adds Advanced Pricing price rules, which let pricing managers apply price levels automatically by criteria such as customer, item, and date range.',
+        '• Oracle also added Cost-Plus pricing at the price-level record, including markup or discount settings based on average cost or a dedicated cost-for-pricing field. For distributors and product businesses, that is a meaningful control improvement if margin governance has been too manual.',
+        '• The catch is important: Oracle documents that some areas are not currently compatible with Advanced Pricing, including Price Lists, Customer Center and SuiteCommerce, and Pricing Search in saved searches. Australian teams with ecommerce or customer self-service dependency should test those interactions before redesigning pricing policy around the new model.',
+      ],
+      ['## Priority 3: warehouse and supply teams should review consignment and landed cost flow'],
+      [
+        '• Oracle introduced Consigned Inventory Management in 2026.1, including separate tracking for consigned and non-consigned stock, support for purchasing through outbound fulfilment, and automatic ownership transfer when consigned stock is sold or consumed.',
+        '• Oracle also documents Warehouse Management enhancements for receiving with estimated or actual landed cost through the WMS app. That matters for import-heavy Australian distributors who need cleaner inventory costing and fewer manual receiving adjustments.',
+        '• This is not a universal win. Oracle notes that Warehouse Management requires the SCM Mobile and Oracle NetSuite WMS SuiteApps in sequence, so teams should validate environment readiness, mobile workflow fit, and landed-cost policy before assuming the release removes warehouse friction by itself.',
+      ],
+      ['## Priority 4: manufacturers should focus on outsourced work and production control'],
+      [
+        '• The manufacturing release notes were updated on April 20, 2026, later than the top-level notes, which is a reminder to manufacturing teams to read their own section directly rather than rely on summary pages.',
+        '• Oracle added outsourced manufacturing enhancements that let users update quantity or destination location for outsourced assemblies directly on the Item Receipt page, with related Assembly Build and Inventory Transfer updates applied automatically. That is a practical improvement for subcontract and co-manufacturing flows.',
+        '• Oracle also added simultaneous start of multiple operations, reopened closed non-WIP work orders, and bulk update costs for manufacturing charges. Those changes are most valuable when the business already has disciplined routings, production ownership, and cost-review routines. Without that foundation, the release can make process complexity faster without making it clearer.',
+      ],
+      ['## A sensible 2026.1 review method for Australian teams'],
+      [
+        '• Step 1: split the release into finance, commercial, warehouse, and manufacturing workstreams so each owner reviews only the features that affect their operating model.',
+        '• Step 2: tag each feature as “test now”, “validate dependencies first”, or “watch only”. Features that need new governance, SuiteApps, or pricing-policy change should not go live casually.',
+        '• Step 3: test with real Australian scenarios such as import landed cost, customer-specific pricing, outsourced production receipts, and cash forecasting around actual invoice patterns.',
+        '• Step 4: confirm commercial impact before adoption. Oracle states that some features and SuiteApps may require extra purchase, so the product question and the budget question should stay linked.',
+      ],
+      ['## What Australian buyers should conclude now'],
+      [
+        '• NetSuite 2026.1 is commercially relevant in Australia because the strongest changes are tied to finance control, pricing governance, warehouse execution, and manufacturing administration rather than cosmetic UI refresh alone.',
+        '• The highest-value near-term review is usually pricing plus finance controls for trading businesses, and manufacturing plus outsourced-work handling for product businesses.',
+        '• If the organisation is still struggling with master data, warehouse discipline, or role ownership, fix those first. NetSuite 2026.1 adds useful controls, but it does not remove the need for process clarity.',
+      ],
+      ['## FAQ'],
+      [
+        '• Is every 2026.1 item already stable and final? No. Oracle says the release notes are subject to weekly updates, so teams should recheck the specific module notes they rely on before rollout decisions.',
+        '• Should Australian teams focus on AI first? Only if the control model is ready. Narrative Insights and payment prediction are worth testing, but pricing, warehouse, or manufacturing changes may create faster value in many businesses.',
+        '• Does warehouse improvement in 2026.1 mean NetSuite WMS is now automatically the right answer? No. The release adds useful capability, but the fit still depends on warehouse complexity, SuiteApp readiness, and process discipline.',
+      ],
+    ),
+  },
+  {
     _id: 'post-bc-needs-wms',
     _type: 'post',
     title: 'Warehouse KPIs that tell you when ERP needs a WMS',
