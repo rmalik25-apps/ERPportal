@@ -308,6 +308,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Sales operations team reviewing customer order emails and quote workflow on screens',
     caption: 'Order-capture automation only works when mailbox design, stock logic, and review checkpoints are explicit.',
   },
+  'business-central-2026-release-wave-1-australia-priorities': {
+    src: pexels('5716032'),
+    alt: 'ERP leadership team reviewing release priorities, AI workflows, and operating decisions',
+    caption: 'Release-wave value comes from choosing the few changes that improve control or throughput in the real operating model.',
+  },
   'warehouse-kpis-that-tell-you-when-erp-needs-wms': {
     src: pexels('6169056'),
     alt: 'Warehouse leaders reviewing handheld workflows and stock movement decisions in an aisle',
