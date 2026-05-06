@@ -2259,6 +2259,77 @@ export const mockComparisons: ComparisonDoc[] = [
 
 export const mockPosts: PostDoc[] = [
   {
+    _id: 'post-odoo-19-ai-au-buyers',
+    _type: 'post',
+    title: 'Odoo 19 AI for Australian ERP buyers: what matters now',
+    slug: 'odoo-19-ai-australian-erp-buyers-what-matters-now',
+    excerpt: 'Odoo 19 puts AI across more of the product, but Australian buyers should separate useful automation from customisation, localisation, and operating-model risk.',
+    category: 'Odoo',
+    publishedAt: '2026-05-06T00:00:00Z',
+    updatedAt: '2026-05-06T00:00:00Z',
+    seo: {
+      metaTitle: 'Odoo 19 AI for Australian ERP Buyers: What Matters Now',
+      metaDescription:
+        'Practical Australian guide to Odoo 19 AI covering Ask AI, AI fields, finance and warehouse implications, and what ERP buyers should validate before rollout.',
+    },
+    body: skimmableBlocks(
+      [
+        'Australian Odoo search demand is currently clustering around two closely related themes: Odoo 19 and Odoo AI. That is a useful timing signal, but it can also push buyers into the wrong question. The real issue is not whether Odoo can now say “AI” more often. It is which Odoo 19 capabilities genuinely reduce workload in finance, operations, and product administration without creating fresh control or support risk.',
+        'Odoo\'s own 19.0 documentation now makes AI a visible product layer rather than a niche add-on. Odoo describes AI as productivity support across apps, documents Ask AI as a natural-language assistant inside the database, and documents AI fields that can generate or suggest values based on record context. For buyers, that moves the conversation from vague roadmap language into something that should be tested operationally.',
+        'For Australian SMB teams, the practical decision is whether Odoo 19 improves day-to-day execution enough to justify shortlist momentum, and where local design still needs caution around pricing, localisation, bank connectivity, and supportability. That is where a disciplined buyer can separate real value from demo theatre.',
+      ],
+      ['## What Odoo 19 officially documents now'],
+      [
+        '• Odoo\'s 19.0 AI documentation says AI is designed to enhance productivity across apps with context-aware assistance, helping users work faster, make decisions, and automate routine tasks inside the normal Odoo interface.',
+        '• The same documentation says Ask AI can answer questions, open views, and improve content from within the database. Odoo also makes clear that the standard Ask AI agent cannot directly change database records, which is a useful control boundary for buyers evaluating risk.',
+        '• Odoo 19 also documents AI fields that can generate or suggest values automatically from record context, existing data, or external information. The examples Odoo gives include product descriptions, note summaries, and turning unstructured content into more structured output.',
+        '• On the operations side, Odoo 19 documentation still positions Inventory as both an inventory application and a warehouse management system, with lead-time management, automated replenishment, and advanced routes as standard capability areas rather than partner-only claims.',
+        '• On the finance side, Odoo documents automatic bank-transaction matching through default rules and reconciliation models, including tolerance logic for some exceptions. That matters because finance automation in Odoo is broader than generative AI headlines alone.',
+      ],
+      ['## Why this matters for Australian buyers now'],
+      [
+        '• A rising Odoo 19 search pattern usually means buyers are no longer comparing “Odoo in theory” against older competitors. They are asking what the current version changes in practice.',
+        '• Odoo 19 expands the number of areas where demos can look impressive quickly: content generation, document handling, product administration, and AI-assisted help. That makes buyer discipline more important, not less.',
+        '• Australian SMB teams are often evaluating Odoo precisely because it can cover CRM, sales, inventory, manufacturing, ecommerce, and finance in one platform. AI only matters if it improves that operating model without pushing the business into uncontrolled customisation or unclear support ownership.',
+      ],
+      ['## Where Odoo 19 AI is most credible'],
+      [
+        '• Product and catalogue administration. AI fields are a practical fit when teams need help drafting product descriptions, cleaning inconsistent text, or creating structured content from internal notes. That is easier to supervise than high-risk transaction automation.',
+        '• Internal user assistance. Ask AI is useful where users need faster navigation, help finding views, or help improving content inside Odoo. Because Odoo documents that the standard agent cannot directly alter data, this is a safer starting point than pretending the system is already an autonomous ERP operator.',
+        '• Repetitive document and finance support. Odoo\'s AI and finance documentation together suggest a realistic near-term value case around document-heavy workflows, reconciliation support, and reducing manual handling around standard patterns rather than replacing finance judgement.',
+      ],
+      ['## Where buyers should slow down'],
+      [
+        '• Do not confuse AI fields with free flexibility. Odoo\'s own AI fields documentation warns that installing Studio may affect the pricing plan. That means buyers should treat AI-enabled field design as a commercial and governance choice, not just a clever admin trick.',
+        '• Do not assume AI solves localisation. Australian tax, payroll, and reporting requirements still need validation against the local operating model and partner approach. AI assistance does not remove localisation due diligence.',
+        '• Do not over-read finance automation claims. Odoo documents automatic matching logic and reconciliation models, but the finance operating model still depends on chart design, bank-feed coverage, exception handling, and close discipline.',
+        '• Do not let warehouse complexity hide behind the AI story. Odoo still positions Inventory as a WMS-capable module, but barcode discipline, routing design, replenishment logic, and floor execution need to be tested against your real warehouse before adding new AI aspirations.',
+      ],
+      ['## What to test in a serious Odoo 19 evaluation'],
+      [
+        '• Test one controlled product-data scenario. Use AI fields to draft or enrich product descriptions, then assess edit quality, supervision effort, and whether the output actually reduces admin work.',
+        '• Test one finance scenario with real exceptions. Review how bank synchronization, transaction matching, and reconciliation models behave with the business\'s actual bank data, fees, references, and approval rules.',
+        '• Test one warehouse scenario with real operational pressure. Run receipts, put-away, replenishment, and outbound flows using your barcode and routing assumptions rather than a clean demo dataset.',
+        '• Test one governance scenario. Decide who is allowed to create AI-enabled fields, who approves prompt logic, how outputs are reviewed, and how changes are documented once the system moves beyond standard setup.',
+        '• Test one support scenario with your partner. Ask who will own AI configuration, prompt behaviour, Studio changes, bank-feed troubleshooting, and regression testing after upgrades.',
+      ],
+      ['## The practical buyer conclusion'],
+      [
+        '• Odoo 19 deserves attention because the official documentation now shows AI as a product-wide capability set, not just a marketing theme.',
+        '• The strongest early use cases are supervised productivity gains in content, navigation, document-heavy workflows, and well-bounded administrative tasks.',
+        '• The biggest buyer mistake is letting those demos short-circuit the harder questions about localisation, warehouse fit, finance controls, pricing-plan impact, and long-term support ownership.',
+        '• If Odoo is already on your shortlist, Odoo 19 should push you toward a more specific test script, not a faster signature.',
+      ],
+      ['## FAQ'],
+      [
+        '• Is Odoo 19 AI mainly about generative content? No. Odoo documents Ask AI, AI fields, document automation, finance matching logic, and broader workflow assistance, so the buyer question is where those capabilities genuinely help your operating model.',
+        '• Does Odoo 19 AI mean users can safely let the system change ERP data on its own? Not by default. Odoo\'s AI documentation says the standard Ask AI agent can open views and display reports but cannot directly create or alter records.',
+        '• Is this relevant only for marketing or ecommerce teams? No. The practical value can touch product data, finance support, document-heavy workflows, and internal navigation as well as customer-facing content.',
+        '• What should Australian buyers validate first? Pricing-plan impact for Studio-led AI changes, localisation fit, bank connectivity, warehouse execution reality, and who supports the design after go-live.',
+      ],
+    ),
+  },
+  {
     _id: 'post-distribution-red-flags',
     _type: 'post',
     title: 'Seven ERP red flags for distributors before contract signing',

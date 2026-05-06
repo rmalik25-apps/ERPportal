@@ -52,6 +52,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
   ],
   'odoo-pricing-australia-standard-vs-custom': [
+    {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
@@ -61,6 +62,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
   ],
   'odoo-warehouse-management-built-in-vs-standalone-wms': [
+    {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
@@ -161,6 +163,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'odoo-vs-business-central': [
+    {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
@@ -169,6 +172,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
   ],
   'odoo-vs-netsuite': [
+    {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
@@ -193,6 +197,13 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
 }
 
 const blogLinks: Record<string, RelatedLink[]> = {
+  'odoo-19-ai-australian-erp-buyers-what-matters-now': [
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
+  ],
   'erp-priorities-professional-services-project-firms': [
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
     {href: '/guides/d365-sales-business-central-integration-guide/', label: 'D365 Sales + Business Central integration guide'},
