@@ -22,6 +22,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/blog/warehouse-kpis-that-tell-you-when-erp-needs-wms/', label: 'Warehouse KPIs that tell you when ERP needs a WMS'},
+    {href: '/blog/business-central-shopify-2026-australia-what-to-test/', label: 'Business Central + Shopify in 2026'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
   ],
@@ -81,6 +82,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   ],
   'd365-sales-business-central-integration-guide': [
     {href: '/blog/where-d365-sales-to-erp-handovers-usually-break/', label: 'Where D365 Sales to ERP handovers usually break'},
+    {href: '/blog/business-central-shopify-2026-australia-what-to-test/', label: 'Business Central + Shopify in 2026'},
     {href: '/compare/integrated-erp-crm-vs-best-of-breed-stack/', label: 'Integrated ERP+CRM vs best-of-breed stack'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
@@ -217,6 +219,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'review-business-central-release-notes-without-project-churn': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-shopify-2026-australia-what-to-test/', label: 'Business Central + Shopify in 2026'},
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
@@ -225,6 +228,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'business-central-2026-release-wave-1-australia-priorities': [
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+    {href: '/blog/business-central-shopify-2026-australia-what-to-test/', label: 'Business Central + Shopify in 2026'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
@@ -262,10 +266,18 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'business-central-sales-order-agent-australia-what-to-test': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-shopify-2026-australia-what-to-test/', label: 'Business Central + Shopify in 2026'},
     {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
     {href: '/guides/d365-sales-business-central-integration-guide/', label: 'D365 Sales + Business Central integration guide'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+  ],
+  'business-central-shopify-2026-australia-what-to-test': [
+    {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
+    {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
   ],
   'warehouse-kpis-that-tell-you-when-erp-needs-wms': [
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
