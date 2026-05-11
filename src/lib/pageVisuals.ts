@@ -318,6 +318,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'ERP leadership team reviewing release priorities, AI workflows, and operating decisions',
     caption: 'Release-wave value comes from choosing the few changes that improve control or throughput in the real operating model.',
   },
+  'business-central-shopify-australia-b2b-wholesale-what-to-test': {
+    src: pexels('6169056'),
+    alt: 'Warehouse and ecommerce team reviewing inventory, fulfilment, and B2B order flow',
+    caption: 'Commerce integration works best when stock, pricing, and fulfilment ownership stay clear across ERP and storefront teams.',
+  },
   'warehouse-kpis-that-tell-you-when-erp-needs-wms': {
     src: pexels('6169056'),
     alt: 'Warehouse leaders reviewing handheld workflows and stock movement decisions in an aisle',

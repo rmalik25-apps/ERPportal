@@ -2259,6 +2259,85 @@ export const mockComparisons: ComparisonDoc[] = [
 
 export const mockPosts: PostDoc[] = [
   {
+    _id: 'post-bc-shopify-au-b2b',
+    _type: 'post',
+    title: 'Business Central + Shopify in Australia: what B2B and wholesale teams should test now',
+    slug: 'business-central-shopify-australia-b2b-wholesale-what-to-test',
+    excerpt: 'A practical Australian guide to the native Business Central Shopify path, with current checks for B2B, pricing, inventory, tax setup, and when middleware is still the safer choice.',
+    category: 'Business Central',
+    publishedAt: '2026-05-11T00:00:00Z',
+    updatedAt: '2026-05-11T00:00:00Z',
+    seo: {
+      metaTitle: 'Business Central + Shopify in Australia: What B2B Teams Should Test',
+      metaDescription:
+        'Current Australian guide to Business Central and Shopify integration covering B2B sync, pricing, catalogues, inventory, tax setup, upgrade risk, and when to add middleware.',
+    },
+    body: skimmableBlocks(
+      [
+        'Australian search intent is currently clustering around practical integration phrases such as “business central shopify integration”, “business central shopify connector”, “shopify erp integration”, and “warehouse management system australia”. On 11 May 2026, that is a stronger buying signal than generic ERP curiosity because it shows teams are trying to solve the real boundary between commerce, stock, pricing, and fulfilment.',
+        'Two official platform changes make this a current topic rather than a recycled integration article. Shopify announced on 2 April 2026 that foundational B2B features are rolling out beyond Shopify Plus, while Microsoft\'s 2026 release wave 1 plans continue refining the Business Central Shopify connection with April 2026 improvements around collections, product options, and related catalogue flow.',
+        'The practical question for Australian wholesalers, importers, and hybrid B2B+DTC businesses is not whether a connector exists. It is whether the native Business Central and Shopify path is strong enough for your operating model, and where pricing, tax, inventory, and support complexity still justify a more deliberate architecture.',
+      ],
+      ['## What the official platforms support today'],
+      [
+        '• Microsoft documents the Shopify Connector as a native Business Central capability for multiple shops, bidirectional product synchronisation, location-based inventory updates, customer and company sync, Shopify order import, payout information, fulfilment tracking, and exported posted sales invoices.',
+        '• Shopify\'s own B2B integration guidance lists Business Central as a direct integration option. Shopify says the direct integration can synchronise companies and customers, orders and order updates, products, fulfilments, and payment status in both directions, with inventory plus catalogues and price lists flowing from Business Central to Shopify and PO numbers flowing from Shopify back to Business Central.',
+        '• Microsoft\'s customer and company synchronisation documentation also shows that Business Central can export B2B companies, create company-specific catalogues, sync prices for those catalogues, map company tax identifiers, and add extra customer locations in Shopify.',
+        '• Microsoft\'s technical FAQ adds an important boundary: the connector is available only for Business Central online, not on-premises deployments, and it is not the integration path for other Dynamics 365 products such as Dynamics 365 Sales.',
+      ],
+      ['## Why this matters more now than it did a year ago'],
+      [
+        '• Shopify\'s April 2026 B2B expansion changes the conversation for smaller and mid-sized merchants because more of them can now look at native B2B features without automatically treating Shopify Plus as the only starting point.',
+        '• Microsoft is still investing in the connector rather than leaving it as a static bridge. The 2026 release wave 1 plan says Shopify integration is being refined further, and the current feature list includes April 2026 work around custom collections and item-attribute-driven product options.',
+        '• Australian buyers are often trying to combine wholesale orders, direct ecommerce, distributor pricing, and operational control in one design. That is exactly where ERP-commerce integration stops being a technical side project and becomes an operating-model decision.',
+      ],
+      ['## Five things to test before you trust the native path'],
+      [
+        '• 1. Decide the system of record for products, prices, and inventory. The native connector is strongest when Business Central is treated as the commercial and operational source of truth and Shopify is treated as the storefront and ordering channel. If teams keep changing ownership by object, sync rules become hard to reason about.',
+        '• 2. Test B2B customer and catalogue mapping with your real pricing model. Microsoft documents company export, company-location handling, tax ID mapping, auto-created catalogues, and customer-specific price sync. That is promising, but it should be tested against your actual account structures, discount rules, payment terms, and channel exceptions.',
+        '• 3. Test inventory promise logic at warehouse level, not just total stock level. Microsoft says you can choose some or all Business Central locations for inventory sync, while Shopify documents order, fulfilment, and inventory data movement. That means the real design question is which locations should influence available-to-sell and how exceptions are handled when warehouse execution lags the storefront.',
+        '• 4. Test Australian tax and entity setup explicitly. Microsoft documents country or region templates and tax-related fields for customer creation, which implies the connector can support cleaner localisation setup. That is not the same as proving your Australian GST, entity structure, and cross-channel tax treatment are correct, so validate those scenarios directly.',
+        '• 5. Test your upgrade and support rhythm. Microsoft says the connector relies primarily on Shopify\'s GraphQL Admin API and that Shopify releases a new API version every quarter, while Business Central adopts newer versions in major releases. If your business delays major Business Central updates, connector risk becomes a governance issue rather than just an IT issue.',
+      ],
+      ['## When the native connector is probably enough'],
+      [
+        '• One or a few Shopify stores, with Business Central clearly owning inventory, customer finance records, and price logic.',
+        '• Moderate B2B complexity where catalogue, payment-term, and company-account needs are important but still fit Shopify\'s standard B2B model.',
+        '• A warehouse and fulfilment process that is disciplined enough to publish reliable availability without needing a separate orchestration layer for every exception.',
+        '• A team that can stay current with Business Central major releases and does not need deep cross-platform transformation logic.',
+      ],
+      ['## When middleware or custom API work is still the safer choice'],
+      [
+        '• The business needs broader orchestration across Shopify, a third-party WMS, 3PL, marketplaces, EDI, or additional CRM and service tools.',
+        '• Pricing logic is too conditional or channel-specific to map cleanly through standard catalogues, price lists, and customer structures.',
+        '• The operating model needs richer monitoring, retry control, or transformation logic than a direct connector comfortably provides.',
+        '• The organisation is trying to blend DTC, B2B, multiple entities, and several fulfilment paths while still running informal master-data and warehouse routines.',
+        '• This guidance is an inference from Shopify\'s own three integration paths: direct integrations, iPaaS, and custom APIs. In practice, the architecture choice should follow business complexity, not platform enthusiasm.',
+      ],
+      ['## A sensible pilot for an Australian team'],
+      [
+        '• Start with one store, one legal entity, one controlled customer group, and one warehouse availability model.',
+        '• Run four scenarios end to end: new B2B customer setup, customer-specific pricing and catalogue sync, standard order import and fulfilment, and one exception path such as partial stock, refund, or location mismatch.',
+        '• Measure order-touch time, pricing accuracy, sync failures, stock-promise accuracy, and support effort per exception rather than only checking whether records moved between systems.',
+        '• Review the outcome with finance, operations, and ecommerce owners together. If each group tells a different story about where the truth lives, the design is not ready.',
+      ],
+      ['## What buyers should conclude now'],
+      [
+        '• Business Central and Shopify now have enough official B2B and connector depth to justify serious evaluation for Australian wholesale and hybrid-commerce businesses.',
+        '• The native path is most credible when the business wants standardisation, clear object ownership, and a cleaner ERP-led operating model.',
+        '• The biggest mistake is assuming that because the connector is native, pricing, GST, inventory promise logic, and support ownership will sort themselves out.',
+        '• If Business Central is already on your shortlist, this topic deserves a tighter test script now than it did before April 2026.',
+      ],
+      ['## FAQ'],
+      [
+        '• Does the native Business Central connector support Shopify B2B? Yes, both Microsoft and Shopify document B2B-related sync scenarios including companies, customers, catalogues, prices, and payment-related data. The right question is whether your specific B2B model still fits the standard flow cleanly.',
+        '• Is Shopify Plus still mandatory for every B2B scenario? Not in the old blanket sense. Shopify announced on 2 April 2026 that foundational B2B features are rolling out beyond Plus, but Shopify\'s integration documentation still says app functionality that interacts with B2B features requires a plan that supports B2B capabilities. Verify your exact plan and required feature set before you scope the integration.',
+        '• Does this replace the need for a WMS? Not automatically. If your warehouse control model is already strained, publishing inventory to Shopify more quickly can expose weak execution rather than solve it.',
+        '• Will this work for Business Central on-premises? No. Microsoft\'s current Shopify Connector FAQ says the connector is for Business Central online only.',
+      ],
+    ),
+  },
+  {
     _id: 'post-odoo-19-ai-au-buyers',
     _type: 'post',
     title: 'Odoo 19 AI for Australian ERP buyers: what matters now',
