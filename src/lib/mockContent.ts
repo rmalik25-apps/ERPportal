@@ -1847,6 +1847,82 @@ export const mockGuides: GuideDoc[] = [
     ),
   },
   {
+    _id: 'guide-erp-wms-integration-au-distributors',
+    _type: 'guide',
+    title: 'ERP-to-WMS integration guide for Australian distributors',
+    slug: 'erp-to-wms-integration-guide-australian-distributors',
+    excerpt:
+      'A practical guide to ERP-to-WMS integration patterns, process checkpoints, and platform-specific watch-outs for Australian distribution teams.',
+    intent: 'Architecture',
+    publishedAt: '2026-05-11T00:00:00Z',
+    updatedAt: '2026-05-11T00:00:00Z',
+    seo: {
+      metaTitle: 'ERP-to-WMS Integration Guide for Australian Distributors',
+      metaDescription:
+        'Learn how to scope ERP-to-WMS integration across Business Central, NetSuite, and Odoo without breaking inventory, fulfilment, or finance controls.',
+    },
+    body: skimmableBlocks(
+      [
+        'Australian search intent around warehouse systems is still strong, and the buyer language is getting more specific. Google autocomplete in Australia currently expands queries such as “wms integration” to “wms integration with erp” and “wms integration with netsuite”, while “business central wms”, “netsuite wms”, and “odoo wms” each return their own product-led suggestion sets. That is a useful signal that buyers are no longer asking only whether they need a WMS. They are asking how the warehouse stack should connect.',
+        'That shift matters because an ERP-to-WMS integration can improve warehouse speed and inventory accuracy, but it can also create a hard-to-see control problem if order status, item masters, lot tracking, or exception handling are split poorly between systems.',
+        'This guide is designed for Australian distributors, wholesalers, and multi-site operators choosing between native warehouse capability, an add-on WMS, or a separate warehouse platform connected back to ERP.',
+      ],
+      ['## What has to stay true after integration'],
+      [
+        '• One source of truth for item, customer, supplier, and location master data. Duplicate ownership creates downstream support noise quickly.',
+        '• Explicit ownership of order release, pick confirmation, shipment confirmation, returns, stock adjustments, and cycle count variances.',
+        '• A posted financial outcome that matches the physical warehouse outcome, especially for inventory valuation, COGS timing, and exception stock movements.',
+        '• Recoverable interfaces with monitoring, replay rules, and named owners rather than “fire and forget” message passing.',
+      ],
+      ['## The three integration patterns that buyers should compare'],
+      [
+        '• Native ERP warehousing: useful when the warehouse is moderately complex and the business values one platform and simpler support boundaries over best-of-breed depth.',
+        '• Add-on WMS inside the ERP ecosystem: useful when barcode mobility, directed processes, or vertical workflows need to improve without creating a fully separate application estate.',
+        '• Standalone WMS integrated to ERP: useful when wave picking, labour orchestration, automation, 3PL complexity, or multi-site execution is materially beyond what the ERP team can govern natively.',
+      ],
+      ['## Product-specific watch-outs'],
+      [
+        '• Business Central: Microsoft documents multiple warehouse complexity levels and exposes standard API endpoints for integrations. It also supports barcode scanning from the Business Central mobile app for item-tracking fields. That makes Business Central viable for structured warehousing, but teams should still test whether the planned floor execution model needs more mobility and orchestration than the base process design comfortably provides.',
+        '• NetSuite: Oracle documents that NetSuite WMS mobile transactions post real-time updates to the NetSuite account, and its REST web services support a broad set of records. That is attractive for unified execution, but buyers should still test whether they are adopting native WMS deeply enough to avoid building a second warehouse control layer around it.',
+        '• Odoo: Odoo documents Inventory as both an inventory app and a warehouse management system, with barcode-driven warehouse tasks. Odoo 19 also introduces the External JSON-2 API, while warning that XML-RPC and JSON-RPC are scheduled for removal in Odoo 20. That means integration architecture decisions should now account for the newer API direction instead of assuming older connector patterns will remain safe long term.',
+      ],
+      ['## The process checkpoints to design before build starts'],
+      [
+        '• Order handoff: decide exactly when an order becomes executable in WMS and what validations must pass first.',
+        '• Inventory sync: define which events move in real time, which can be batched safely, and how negative or blocked stock is prevented.',
+        '• Lot, serial, and expiry control: prove that traceability survives receipts, transfers, picks, returns, and recalls across both systems.',
+        '• Carrier and dispatch events: confirm when tracking numbers, shipped quantities, freight cost, and proof-of-dispatch flow back to ERP.',
+        '• Exceptions: map overship, short ship, substitute, damaged stock, quarantine, and recount workflows before anyone starts integration build.',
+      ],
+      ['## Questions that separate good designs from risky ones'],
+      [
+        '• If the WMS is unavailable for two hours, what can still ship and how is data recovered safely?',
+        '• If the ERP is unavailable, can warehouse teams continue executing without creating an unreconcilable backlog?',
+        '• Which system owns available-to-promise during pick, pack, and partial shipment scenarios?',
+        '• How will the team detect and clear interface failures before customer service and finance discover them indirectly?',
+        '• What is the practical support model after go-live: warehouse supervisor, ERP analyst, integration owner, vendor, or partner?',
+      ],
+      ['## Australian buyer guidance'],
+      [
+        '• Prioritise the warehouse realities that damage service in Australia first: multi-site replenishment, freight cut-off discipline, remote site stock visibility, and strong cycle-count governance.',
+        '• Test GST, landed cost, and adjustment handling wherever the WMS can trigger inventory or shipment events that later affect finance.',
+        '• If 3PL, e-commerce, or carrier platforms are also in scope, avoid treating the ERP-to-WMS interface as a standalone project. It is one part of a broader fulfilment architecture.',
+        '• Keep the first phase narrow enough that warehouse leaders can govern it after launch. Overly ambitious multi-system redesign is one of the fastest ways to lose inventory trust.',
+      ],
+      ['## Best next step'],
+      [
+        '• Use this guide alongside the Business Central and Odoo warehouse management guides if those platforms are already on your shortlist.',
+        '• Pair it with the warehouse KPI and process-redesign articles before you decide whether the real issue is warehouse discipline, WMS depth, or the interface between systems.',
+      ],
+      ['## FAQ'],
+      [
+        '• Is a standalone WMS always better for distributors? No. It is better only when the additional execution depth outweighs the support and integration overhead.',
+        '• Should the ERP or the WMS own inventory truth? Usually the answer is split by process, which is why explicit transaction ownership matters more than generic “single source of truth” claims.',
+        '• Can we leave exception flows until later? No. Most integration pain sits in short ships, recounts, substitutions, and traceability edge cases rather than standard happy-path orders.',
+      ],
+    ),
+  },
+  {
     _id: 'guide-post-go-live-90-days',
     _type: 'guide',
     title: 'Post-go-live stabilisation plan: first 90 days',
