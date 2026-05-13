@@ -2862,6 +2862,83 @@ export const mockPosts: PostDoc[] = [
     ),
   },
   {
+    _id: 'post-bc-quality-management-au',
+    _type: 'post',
+    title: 'Business Central quality management for Australian manufacturers: what to test now and what to wait for',
+    slug: 'business-central-quality-management-australia-manufacturers-what-to-test',
+    excerpt:
+      'Microsoft now documents real quality-management capability for Business Central, but Australian manufacturers should separate what can be tested today from what is not yet broadly available locally.',
+    category: 'Business Central',
+    publishedAt: '2026-05-13T00:00:00Z',
+    updatedAt: '2026-05-13T00:00:00Z',
+    seo: {
+      metaTitle: 'Business Central Quality Management for Australian Manufacturers',
+      metaDescription:
+        'Current Australian guide to Business Central quality management covering Microsoft\'s documented capability, preview availability limits, subcontracting links, and what manufacturers should test now.',
+    },
+    body: skimmableBlocks(
+      [
+        'Australian search intent around Business Central manufacturing is getting more specific. On 13 May 2026, Google autocomplete with Australian locale settings expands into phrases such as “business central quality management”, “business central manufacturing”, “business central subcontracting”, and “quality management system australia”. That is a useful signal that buyers are moving beyond generic ERP fit and into plant-control questions.',
+        'Microsoft now documents quality management in Business Central as a real inspection application rather than a vague roadmap promise. The current overview says it can create inspections at purchasing, production, assembly, and warehouse points, while related setup and workflow documentation shows how templates, generation rules, grading, workflows, and non-compliance actions are meant to work together.',
+        'The Australian caution is important. Microsoft\'s current quality-management documentation says this early access feature is limited to Business Central partners using partner sandbox licences in the United States, United Kingdom, or Germany, and it is not meant for production use. So the right local question is not “can we switch this on tomorrow?”. It is “what should we test and prepare now so we can move quickly when Microsoft broadens availability?”.',
+      ],
+      ['## What Microsoft officially documents today'],
+      [
+        '• Microsoft\'s Quality Management Overview says the application can create inspections automatically when teams receive purchase orders, post production or assembly output, or process warehouse movements.',
+        '• Microsoft also documents manual inspections, scheduled inspections through job queues, predefined inspection templates with pass or fail criteria, automated workflows, and the ability to block noncompliant lots.',
+        '• For failed quality outcomes, Microsoft documents actions such as moving stock to quarantine bins, negative adjustments for disposal, transfers to other locations, and purchase returns to vendors.',
+        '• The overview explicitly says quality management supports locations with and without warehouse handling, which matters for Australian manufacturers operating mixed site maturity rather than one perfect warehouse model.',
+      ],
+      ['## Why this is commercially relevant even before broad Australian availability'],
+      [
+        '• Microsoft has moved past generic release language and published setup, workflow, troubleshooting, and use-case documentation. That usually means buyers and partners can evaluate the operating model more seriously than they could six months ago.',
+        '• The 2026 release wave 1 overview also names quality management and subcontracting as current investment areas. That makes this a live product direction topic, not background documentation only.',
+        '• For food, beverage, light manufacturing, and regulated distribution teams, quality inspections often sit exactly where generic ERP demos become unconvincing. Any current Microsoft move in this area deserves attention if Business Central is already shortlisted.',
+      ],
+      ['## The Australian constraint buyers should not gloss over'],
+      [
+        '• Microsoft currently says the early access feature is available only to partners with a Dynamics 365 Business Central Partner Sandbox licence in the United States, United Kingdom, or Germany.',
+        '• Microsoft also says early access features are not meant for production use and may have restricted functionality. That should stop Australian teams from treating this like a standard go-live feature in May 2026.',
+        '• If a partner says they can deliver this straight into an Australian production design now, ask exactly which parts are preview-only, which environment is being used, and what fallback exists if Microsoft timing shifts.',
+        '• The practical buyer conclusion is that this is a serious roadmap and design signal, not yet a safe excuse to promise a production-ready local rollout without conditions.',
+      ],
+      ['## Where quality management matters most in real manufacturing design'],
+      [
+        '• Purchase receipt controls. If inbound raw materials, packaging, or finished goods need inspection gates before release, Microsoft\'s documented purchase-receipt inspection flow is strategically relevant.',
+        '• Production-output controls. Microsoft documents production output inspections, which matters for manufacturers that need checks before stock becomes broadly usable or saleable.',
+        '• Warehouse and lot-status controls. The documented ability to block lots and move noncompliant items to quarantine bins is often more decision-useful than a generic “quality module” label.',
+        '• Cross-functional response. Because Microsoft also documents workflows and non-compliance actions, the stronger question is whether QA, warehouse, procurement, production, and finance can all work from one exception model.',
+      ],
+      ['## How subcontracting changes the conversation'],
+      [
+        '• Microsoft\'s 2026 release wave 1 subcontracting feature says Business Central will support logistics flows for subcontractor transfers of raw materials, components, and finished goods, along with warehouse handling, item tracking, and flexible pricing.',
+        '• That matters because many Australian manufacturers and brand owners inspect goods across internal and external production boundaries, not only inside one plant.',
+        '• If outsourced processing, co-manufacturing, or external finishing is part of the operating model, quality management should be reviewed together with subcontracting. Testing those topics separately can hide the real control gaps.',
+      ],
+      ['## What Australian teams should test and prepare now'],
+      [
+        '• Map the inspection points first: receipt, output, warehouse movement, rework, and vendor return. If the business cannot agree those control points, software detail is premature.',
+        '• Build one draft template set with measurements, pass or fail logic, quarantine decisions, and lot-blocking rules using your real product and supplier scenarios.',
+        '• Run one workshop that combines production, QA, warehouse, and finance owners. Quality design fails when it lives only with ERP admins or only with QA.',
+        '• Ask your partner how they will validate the feature path for Australian customers once broader availability arrives, including regression testing, localisation implications, and cutover sequencing.',
+        '• Keep the pilot mindset disciplined. Use partner sandbox learning and process design now, but avoid pretending that preview access equals production readiness.',
+      ],
+      ['## What buyers should conclude now'],
+      [
+        '• Business Central quality management is now concrete enough to influence shortlist and roadmap decisions for Australian manufacturers, especially where inbound checks, lot control, quarantine handling, or output inspections are important.',
+        '• The most important current caveat is availability. Microsoft\'s own documentation says this early access feature is not yet broadly available to Australian partners or meant for production use.',
+        '• The right move now is to tighten process design, test the inspection model with your partner, and watch Microsoft\'s rollout path closely rather than promising a near-term production shortcut.',
+      ],
+      ['## FAQ'],
+      [
+        '• Is Business Central quality management already broadly available in Australia? No. Microsoft\'s current documentation limits early access to partner sandbox licences in the United States, United Kingdom, or Germany and says the feature is not meant for production use.',
+        '• What can the feature do according to Microsoft today? Microsoft documents automatic, manual, and scheduled inspections, templates, grading, lot blocking, workflows, quarantine-style actions, and support for warehouse and non-warehouse scenarios.',
+        '• Why should Australian manufacturers care before local production availability broadens? Because the capability is now specific enough to shape process design, partner evaluation, and shortlist thinking around quality and subcontracting.',
+        '• What should teams test first? Start with one real receipt-to-release or output-to-release scenario, including who decides pass or fail, what gets blocked, where stock moves next, and how finance and operations see the exception.',
+      ],
+    ),
+  },
+  {
     _id: 'post-bc-needs-wms',
     _type: 'post',
     title: 'Warehouse KPIs that tell you when ERP needs a WMS',

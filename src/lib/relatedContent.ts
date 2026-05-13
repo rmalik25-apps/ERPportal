@@ -26,12 +26,19 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
   ],
+  'business-central-manufacturing-mrp-shop-floor': [
+    {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-quality-management-australia-manufacturers-what-to-test/', label: 'Business Central quality management for Australian manufacturers'},
+    {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
+    {href: '/blog/manufacturing-erp-kpi-pack-before-go-live/', label: 'Manufacturing ERP KPI pack before go-live'},
+  ],
   'business-central-pricing-australia-licences-budget': [
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-quality-management-australia-manufacturers-what-to-test/', label: 'Business Central quality management for Australian manufacturers'},
     {href: '/blog/business-central-shopify-australia-b2b-wholesale-what-to-test/', label: 'Business Central + Shopify in Australia'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
@@ -146,6 +153,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'food-traceability-quality-and-recall-controls-in-erp': [
     {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
     {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central with food add-ons vs JustFood'},
+    {href: '/blog/business-central-quality-management-australia-manufacturers-what-to-test/', label: 'Business Central quality management for Australian manufacturers'},
     {href: '/compare/erp-for-meat-processing-generic-vs-specialist/', label: 'ERP for meat processing: generic vs specialist'},
   ],
   'formulation-yield-and-batch-production-in-food-erp': [
@@ -244,9 +252,17 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/business-central-quality-management-australia-manufacturers-what-to-test/', label: 'Business Central quality management for Australian manufacturers'},
     {href: '/blog/business-central-shopify-australia-b2b-wholesale-what-to-test/', label: 'Business Central + Shopify in Australia'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+  ],
+  'business-central-quality-management-australia-manufacturers-what-to-test': [
+    {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/guides/business-central-manufacturing-mrp-shop-floor/', label: 'Business Central for manufacturing'},
+    {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
+    {href: '/blog/manufacturing-erp-kpi-pack-before-go-live/', label: 'Manufacturing ERP KPI pack before go-live'},
+    {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing'},
   ],
   'business-central-shopify-australia-b2b-wholesale-what-to-test': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
