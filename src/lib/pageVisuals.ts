@@ -127,6 +127,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Finance lead reviewing ERP licensing, contract notes, and budget assumptions',
     caption: 'NetSuite budgeting works better when the quote is broken into platform, modules, services, and renewal exposure.',
   },
+  'netsuite-warehouse-management-bins-vs-wms': {
+    src: pexels('6169056'),
+    alt: 'Warehouse team reviewing mobile picking, bins, and dispatch flow in a distribution aisle',
+    caption: 'Warehouse decisions are strongest when the team tests receiving, putaway, picking, and packing against real floor complexity.',
+  },
   'post-go-live-stabilisation-plan-first-90-days': {
     src: pexels('3184339'),
     alt: 'Project team running a post-launch review around laptops and notes',

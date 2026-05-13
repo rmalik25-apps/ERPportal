@@ -77,11 +77,20 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'netsuite-pricing-australia-licensing-modules-budget': [
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+  ],
+  'netsuite-warehouse-management-bins-vs-wms': [
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},
+    {href: '/blog/warehouse-kpis-that-tell-you-when-erp-needs-wms/', label: 'Warehouse KPIs that tell you when ERP needs a WMS'},
+    {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
   ],
   'd365-sales-business-central-integration-guide': [
     {href: '/blog/where-d365-sales-to-erp-handovers-usually-break/', label: 'Where D365 Sales to ERP handovers usually break'},
@@ -149,6 +158,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
 const comparisonLinks: Record<string, RelatedLink[]> = {
   'business-central-vs-netsuite-growing-businesses': [
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
@@ -181,6 +191,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/blog/odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks/', label: 'Odoo 19.2 for Australian wholesalers'},
+    {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
@@ -261,6 +272,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'netsuite-2026-1-australian-distributors-pricing-warehouse-checks': [
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/blog/odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks/', label: 'Odoo 19.2 for Australian wholesalers'},
@@ -294,6 +306,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'warehouse-kpis-that-tell-you-when-erp-needs-wms': [
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
+    {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/blog/odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks/', label: 'Odoo 19.2 for Australian wholesalers'},
     {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
