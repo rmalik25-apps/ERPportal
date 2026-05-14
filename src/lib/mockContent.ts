@@ -2346,6 +2346,79 @@ export const mockComparisons: ComparisonDoc[] = [
 
 export const mockPosts: PostDoc[] = [
   {
+    _id: 'post-bc-einvoicing-au-peppol',
+    _type: 'post',
+    title: 'Business Central eInvoicing in Australia: what to test before Peppol rollout',
+    slug: 'business-central-einvoicing-australia-what-to-test-before-peppol-rollout',
+    excerpt:
+      'A practical Australian guide to Business Central eInvoicing covering Peppol PINT A-NZ, service-provider choices, setup boundaries, and what finance teams should test before rollout.',
+    category: 'Business Central',
+    publishedAt: '2026-05-15T00:00:00Z',
+    updatedAt: '2026-05-15T00:00:00Z',
+    seo: {
+      metaTitle: 'Business Central eInvoicing in Australia: What to Test Before Peppol Rollout',
+      metaDescription:
+        'Current Australian guide to Business Central eInvoicing and Peppol covering PINT A-NZ support, provider selection, E-Documents setup, AP and AR test cases, and rollout risks.',
+    },
+    body: skimmableBlocks(
+      [
+        'Australian ERP search intent is increasingly shifting from generic accounts-payable automation language into more specific phrases around eInvoicing, Peppol, invoice fraud reduction, and Business Central finance automation. That matters because teams are no longer just asking how to digitise invoices. They are asking how to exchange structured invoice data safely with customers, suppliers, and government-connected trading partners without adding another brittle side system.',
+        'The Australian public guidance is clear about the operating model. Business.gov.au says software must be connected to the Peppol network through Australian Taxation Office approved service providers, and it also says it does not matter which invoicing software each party uses as long as both sides are connected. For Business Central teams, that means the real design question is not whether Microsoft has an eInvoicing story. It is how the Business Central setup, service provider choice, and finance process design fit together.',
+        'Microsoft has now documented a more concrete local path. Its release-plan page for Business Central says users in Australia and New Zealand can use e-invoicing in Business Central through the E-Documents framework localised for the Peppol PINT A-NZ format. That makes this a current buyer and optimisation topic, not just a compliance footnote.',
+      ],
+      ['## What the official sources show today'],
+      [
+        '• Business.gov.au says Australian businesses start eInvoicing by using software connected to the Peppol network through ATO-approved service providers. It also stresses that eInvoices are not emailed PDFs and that both sides can use different software if both are connected.',
+        '• The ATO\'s eInvoicing Ready product register says buyers should compare products on send and receive capability, certification level, attachment support, target market, registration method, and whether low-cost options exist. The same register explains that Ready+ products support additional best-practice fields such as payment due date, GST identifier, bank details, remittance information, references, and attachments.',
+        '• Microsoft\'s release-plan page says Business Central supports the Peppol PINT A-NZ electronic invoice format for Australia and New Zealand, and that users configure this on the E-Document Service page by selecting PINT A-NZ and a preferred service provider in the service-integration field.',
+        '• Microsoft\'s E-documents overview says the E-Document Core app must be installed in the environment and positions the framework as a foundation that can be extended for local or industry requirements.',
+        '• Microsoft\'s electronic-invoicing FAQ adds an important practical boundary: built-in Peppol support uses provider APIs from Avalara, B2BRouter, Continia, Logiq, Pagero, and SignUp, and the default Business Central version supports PEPPOL BIS 3.0 with local versions available in specific localisations.',
+      ],
+      ['## Why this matters now for Australian teams'],
+      [
+        '• This is current, not theoretical. Microsoft\'s Peppol PINT A-NZ release-plan page was last updated on 8 January 2026, so Australian teams now have a more explicit local documentation trail than they did when eInvoicing was mostly discussed as a generic AP automation idea.',
+        '• The Australian government messaging is also commercially relevant. Business.gov.au frames eInvoicing as a way to reduce manual processing, invoice errors, scams, and payment delays. That turns the discussion into a control and cashflow issue, not just a finance-efficiency project.',
+        '• The ATO register makes clear that software choice is only part of the answer. The implementation still depends on service-provider capability, registration path, attachment handling, and the exact document data your customers and suppliers expect.',
+      ],
+      ['## What to test before rollout'],
+      [
+        '• 1. Decide whether your first goal is outbound AR, inbound AP, or both. The fastest way to create confusion is to say “we are doing eInvoicing” without deciding which transaction flows and business outcomes actually matter first.',
+        '• 2. Validate the provider model early. Microsoft says Business Central users choose a service provider in the E-Documents setup, while the ATO register shows meaningful differences between products and certification levels. Compare real support scope, onboarding effort, attachment handling, and whether Ready+ data matters for your trading-partner base.',
+        '• 3. Test customer and vendor master data quality. Peppol rollout depends on cleaner legal-entity identifiers, billing details, payment references, and contact ownership than many SMB finance teams currently maintain.',
+        '• 4. Test inbound AP conversion with your real approval model. It is not enough to prove that a document arrives. Test how purchase invoices, exceptions, coding, approval routing, and audit evidence behave once structured invoices start landing in Business Central.',
+        '• 5. Test outbound AR with mandatory fields and commercial edge cases. The ATO register\'s Ready+ fields are a useful checklist here because they highlight where due dates, GST IDs, references, bank details, and attachments may affect whether your customers can process invoices cleanly.',
+        '• 6. Test exception ownership. Decide who handles failed transmissions, master-data mismatches, supplier enablement questions, and customer claims that “we did not receive the invoice” once email PDFs are no longer the primary fallback.',
+      ],
+      ['## Where teams usually get this wrong'],
+      [
+        '• They assume native Business Central support means the service-provider decision is trivial. Microsoft\'s own documentation says provider selection is part of the setup, so this is an operating-model choice, not just a feature toggle.',
+        '• They treat eInvoicing as a prettier PDF process. The Australian government guidance is explicit that eInvoices are exchanged as structured data through Peppol, not as emailed invoice files.',
+        '• They focus only on AP automation and ignore outbound invoice quality. In practice, invoice success depends just as much on the completeness and reliability of what you send as on what you receive.',
+        '• They skip finance-process redesign. If approval routing, supplier onboarding, or customer reference discipline is weak today, Peppol will expose that weakness faster rather than hiding it.',
+      ],
+      ['## A sensible first pilot'],
+      [
+        '• Start with one legal entity, one controlled provider choice, one inbound flow or one outbound flow, and a small group of cooperative suppliers or customers.',
+        '• Keep the first scope narrow enough to measure real outcomes: processing time, exception rate, invoice rejection causes, approval-cycle impact, and support effort per document.',
+        '• Review the pilot jointly with finance, IT or partner admins, and whoever owns customer or supplier master data. Peppol success is usually a shared-process result rather than a finance-only configuration result.',
+        '• Expand only after you can explain how the Business Central setup, provider support model, and trading-partner onboarding approach work together without constant manual rescue.',
+      ],
+      ['## What buyers should conclude now'],
+      [
+        '• Business Central now has a credible documented path for Australian eInvoicing through Peppol PINT A-NZ, so this topic deserves active evaluation rather than watchlist status.',
+        '• The quality of the rollout will depend less on whether the feature exists and more on provider choice, data quality, and the discipline of your AP and AR processes.',
+        '• If your business is already reviewing Business Central finance automation, this is one of the more practical current topics to test because the source material from Microsoft, business.gov.au, and the ATO is concrete enough to support a real pilot.',
+      ],
+      ['## FAQ'],
+      [
+        '• Does Business Central support Australian eInvoicing natively? Microsoft documents local support for the Peppol PINT A-NZ format through the E-Documents framework, but you still need to configure a service provider and validate your rollout design.',
+        '• Do we still need a service provider? Yes. Microsoft\'s setup guidance and the Australian government guidance both point to provider-based connectivity on the Peppol network.',
+        '• Is this only an accounts-payable topic? No. The business case spans inbound AP, outbound AR, control quality, fraud reduction, and faster invoice handling across trading partners.',
+        '• Can we just switch this on for every supplier and customer at once? That is usually the wrong first move. A narrow pilot is safer because eInvoicing exposes master-data, approval, and exception-management weaknesses quickly.',
+      ],
+    ),
+  },
+  {
     _id: 'post-bc-shopify-au-b2b',
     _type: 'post',
     title: 'Business Central + Shopify in Australia: what B2B and wholesale teams should test now',

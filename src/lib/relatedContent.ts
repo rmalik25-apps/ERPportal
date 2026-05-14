@@ -38,6 +38,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-quality-management-australia-manufacturers-what-to-test/', label: 'Business Central quality management for Australian manufacturers'},
     {href: '/blog/business-central-shopify-australia-b2b-wholesale-what-to-test/', label: 'Business Central + Shopify in Australia'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
@@ -57,6 +58,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'erp-finance-design-chart-accounts-dimensions': [
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
+    {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
   ],
@@ -242,14 +244,24 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'review-business-central-release-notes-without-project-churn': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
   ],
+  'business-central-einvoicing-australia-what-to-test-before-peppol-rollout': [
+    {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
+    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
+    {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
+  ],
   'business-central-2026-release-wave-1-australia-priorities': [
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+    {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/blog/business-central-quality-management-australia-manufacturers-what-to-test/', label: 'Business Central quality management for Australian manufacturers'},
@@ -274,6 +286,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'business-central-payment-times-reporting-australia-february-2026': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
@@ -306,6 +319,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'business-central-payables-agent-australia-what-to-test': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
