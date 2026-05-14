@@ -318,6 +318,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Sales operations team reviewing customer order emails and quote workflow on screens',
     caption: 'Order-capture automation only works when mailbox design, stock logic, and review checkpoints are explicit.',
   },
+  'business-central-ai-agents-australia-payables-vs-sales-order': {
+    src: pexels('3183198'),
+    alt: 'Australian business team reviewing AI workflow choices across finance and sales operations',
+    caption: 'The first Business Central agent pilot should be chosen by workflow fit, control model, and measurable operating value.',
+  },
   'business-central-2026-release-wave-1-australia-priorities': {
     src: pexels('5716032'),
     alt: 'ERP leadership team reviewing release priorities, AI workflows, and operating decisions',
