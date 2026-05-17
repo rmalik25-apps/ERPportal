@@ -38,6 +38,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-quality-management-australia-manufacturers-what-to-test/', label: 'Business Central quality management for Australian manufacturers'},
     {href: '/blog/business-central-shopify-australia-b2b-wholesale-what-to-test/', label: 'Business Central + Shopify in Australia'},
@@ -244,6 +245,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'review-business-central-release-notes-without-project-churn': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
@@ -261,6 +263,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'business-central-2026-release-wave-1-australia-priorities': [
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+    {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
@@ -319,6 +322,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'business-central-payables-agent-australia-what-to-test': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
@@ -328,10 +332,20 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'business-central-sales-order-agent-australia-what-to-test': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
     {href: '/guides/d365-sales-business-central-integration-guide/', label: 'D365 Sales + Business Central integration guide'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+  ],
+  'business-central-copilot-agent-pricing-australia-2026': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
+    {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'warehouse-kpis-that-tell-you-when-erp-needs-wms': [
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
