@@ -333,6 +333,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Warehouse leaders reviewing handheld workflows and stock movement decisions in an aisle',
     caption: 'Warehouse KPI trends should separate genuine WMS need from issues that still belong to process and data cleanup.',
   },
+  'warehouse-management-system-australia-erp-vs-wms-shortlist': {
+    src: pexels('6169056'),
+    alt: 'Australian warehouse buyer team reviewing scanners, stock flow, and WMS shortlist decisions',
+    caption: 'The WMS decision is strongest when the team compares real warehouse execution pressure, not just feature labels.',
+  },
   'where-d365-sales-to-erp-handovers-usually-break': {
     src: pexels('3184465'),
     alt: 'Sales and operations teams aligning customer handover workflow',
