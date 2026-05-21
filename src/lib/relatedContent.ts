@@ -35,6 +35,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'business-central-pricing-australia-licences-budget': [
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
     {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
@@ -201,7 +202,16 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
   ],
   'myob-acumatica-vs-business-central': [
     {href: '/compare/sage-intacct-vs-myob-acumatica/', label: 'Sage Intacct vs MYOB Acumatica'},
+    {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+  ],
+  'wiise-vs-business-central-australian-smbs': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/compare/myob-acumatica-vs-business-central/', label: 'MYOB Acumatica vs Business Central'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'odoo-vs-business-central': [
@@ -316,6 +326,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'erp-licensing-and-support-cost-control-growing-organisations': [
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
     {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/blog/netsuite-ai-australia-2026-1-what-buyers-should-check/', label: 'NetSuite AI in Australia'},

@@ -240,6 +240,11 @@ const comparisonVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian business team comparing ERP options in a structured workshop',
     caption: 'ANZ SMB comparisons should test local market fit, partner model, and ecosystem direction together.',
   },
+  'wiise-vs-business-central-australian-smbs': {
+    src: pexels('3183153'),
+    alt: 'Australian buyer team comparing ERP pricing, local features, and Microsoft platform options',
+    caption: 'This comparison is really about packaged local fit versus a more direct platform-first Business Central path.',
+  },
   'odoo-vs-business-central': {
     src: pexels('5716032'),
     alt: 'Analyst comparing modular ERP and Microsoft-aligned ERP options on screen',
