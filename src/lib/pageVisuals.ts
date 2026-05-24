@@ -280,6 +280,11 @@ const comparisonVisualsBySlug: Record<string, Visual> = {
     alt: 'Manufacturing team evaluating flexible ERP fit on the shop floor',
     caption: 'Manufacturing buyers should test Odoo against planning discipline, reporting needs, and support model.',
   },
+  'odoo-australia-bas-payroll-super-peppol-readiness': {
+    src: pexels('6693655'),
+    alt: 'Australian finance team reviewing payroll, tax, and eInvoicing readiness in ERP',
+    caption: 'Australian Odoo fit depends on where localisation is genuinely native and where external compliance services still matter.',
+  },
 }
 
 const blogVisualsBySlug: Record<string, Visual> = {
