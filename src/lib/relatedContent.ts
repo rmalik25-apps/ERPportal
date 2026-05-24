@@ -79,6 +79,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'odoo-pricing-australia-standard-vs-custom': [
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
+    {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/blog/odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks/', label: 'Odoo 19.2 for Australian wholesalers'},
     {href: '/blog/erp-einvoicing-australia-business-central-netsuite-odoo-peppol-checklist/', label: 'ERP eInvoicing in Australia'},
@@ -227,6 +228,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
   'odoo-vs-business-central': [
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
+    {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/blog/odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks/', label: 'Odoo 19.2 for Australian wholesalers'},
@@ -238,6 +240,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
   'odoo-vs-netsuite': [
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
+    {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/blog/odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks/', label: 'Odoo 19.2 for Australian wholesalers'},
@@ -363,6 +366,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
     {href: '/blog/warehouse-management-system-australia-erp-vs-wms-shortlist/', label: 'Warehouse management system Australia guide'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
@@ -431,11 +435,20 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'erp-einvoicing-australia-business-central-netsuite-odoo-peppol-checklist': [
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
+    {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+  ],
+  'odoo-accounting-australia-gst-bas-payroll-peppol-checks': [
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/blog/erp-einvoicing-australia-business-central-netsuite-odoo-peppol-checklist/', label: 'ERP eInvoicing in Australia'},
+    {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
   ],
   'month-end-close-new-erp-first-three-cycles-playbook': [
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
