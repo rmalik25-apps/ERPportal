@@ -334,6 +334,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
     {href: '/guides/d365-sales-business-central-integration-guide/', label: 'D365 Sales + Business Central integration guide'},
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
+    {href: '/blog/shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks/', label: 'Shopify ERP integration in Australia'},
   ],
   'business-central-payment-times-reporting-australia-february-2026': [
     {href: '/blog/business-central-accounting-australia-gst-bas-eft-payroll-peppol-checks/', label: 'Business Central accounting in Australia'},
@@ -461,6 +462,17 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
+  ],
+  'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': [
+    {href: '/blog/business-central-shopify-australia-b2b-wholesale-what-to-test/', label: 'Business Central + Shopify in Australia'},
+    {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
   ],
   'month-end-close-new-erp-first-three-cycles-playbook': [
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},

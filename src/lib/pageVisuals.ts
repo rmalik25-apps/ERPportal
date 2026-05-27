@@ -343,6 +343,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Warehouse and ecommerce team reviewing inventory, fulfilment, and B2B order flow',
     caption: 'Commerce integration works best when stock, pricing, and fulfilment ownership stay clear across ERP and storefront teams.',
   },
+  'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
+    src: pexels('6169659'),
+    alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
+    caption: 'Shopify ERP projects are strongest when B2B pricing, stock ownership, and support accountability are tested together.',
+  },
   'warehouse-kpis-that-tell-you-when-erp-needs-wms': {
     src: pexels('6169056'),
     alt: 'Warehouse leaders reviewing handheld workflows and stock movement decisions in an aisle',
