@@ -36,6 +36,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
+    {href: '/blog/business-central-accounting-australia-gst-bas-eft-payroll-peppol-checks/', label: 'Business Central accounting in Australia'},
     {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
@@ -61,6 +62,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
   ],
   'erp-finance-design-chart-accounts-dimensions': [
+    {href: '/blog/business-central-accounting-australia-gst-bas-eft-payroll-peppol-checks/', label: 'Business Central accounting in Australia'},
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
@@ -297,6 +299,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
   ],
   'business-central-einvoicing-australia-what-to-test-before-peppol-rollout': [
+    {href: '/blog/business-central-accounting-australia-gst-bas-eft-payroll-peppol-checks/', label: 'Business Central accounting in Australia'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/blog/erp-einvoicing-australia-business-central-netsuite-odoo-peppol-checklist/', label: 'ERP eInvoicing in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
@@ -333,6 +336,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
   ],
   'business-central-payment-times-reporting-australia-february-2026': [
+    {href: '/blog/business-central-accounting-australia-gst-bas-eft-payroll-peppol-checks/', label: 'Business Central accounting in Australia'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
     {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
@@ -449,6 +453,14 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+  ],
+  'business-central-accounting-australia-gst-bas-eft-payroll-peppol-checks': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
+    {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
+    {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
+    {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
+    {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
   ],
   'month-end-close-new-erp-first-three-cycles-playbook': [
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
