@@ -79,6 +79,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
   ],
   'odoo-pricing-australia-standard-vs-custom': [
+    {href: '/blog/odoo-19-3-australia-buyers-upgrade-shortlist-checks/', label: 'Odoo 19.3 for Australian buyers'},
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
@@ -93,6 +94,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
   ],
   'odoo-australia-bas-payroll-super-peppol-readiness': [
+    {href: '/blog/odoo-19-3-australia-buyers-upgrade-shortlist-checks/', label: 'Odoo 19.3 for Australian buyers'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/blog/erp-einvoicing-australia-business-central-netsuite-odoo-peppol-checklist/', label: 'ERP eInvoicing in Australia'},
@@ -101,6 +103,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'odoo-warehouse-management-built-in-vs-standalone-wms': [
+    {href: '/blog/odoo-19-3-australia-buyers-upgrade-shortlist-checks/', label: 'Odoo 19.3 for Australian buyers'},
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
@@ -228,6 +231,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'odoo-vs-business-central': [
+    {href: '/blog/odoo-19-3-australia-buyers-upgrade-shortlist-checks/', label: 'Odoo 19.3 for Australian buyers'},
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
@@ -240,6 +244,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
   ],
   'odoo-vs-netsuite': [
+    {href: '/blog/odoo-19-3-australia-buyers-upgrade-shortlist-checks/', label: 'Odoo 19.3 for Australian buyers'},
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
     {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
@@ -269,6 +274,16 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
 }
 
 const blogLinks: Record<string, RelatedLink[]> = {
+  'odoo-19-3-australia-buyers-upgrade-shortlist-checks': [
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
+    {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
+    {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
+    {href: '/blog/odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks/', label: 'Odoo 19.2 for Australian wholesalers'},
+    {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+  ],
   'odoo-19-ai-australian-erp-buyers-what-matters-now': [
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
@@ -368,6 +383,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
   ],
   'odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks': [
+    {href: '/blog/odoo-19-3-australia-buyers-upgrade-shortlist-checks/', label: 'Odoo 19.3 for Australian buyers'},
     {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
