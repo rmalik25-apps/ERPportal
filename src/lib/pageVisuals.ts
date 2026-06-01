@@ -323,6 +323,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian finance team reviewing tax, banking, payroll, and eInvoicing setup in ERP',
     caption: 'Australian finance localisation is strongest when tax, bank files, payroll ownership, and eInvoicing are scoped together early.',
   },
+  'payday-super-australia-erp-checklist-business-central-netsuite-odoo': {
+    src: pexels('6693655'),
+    alt: 'Australian finance and payroll team reviewing superannuation timing, controls, and ERP handoffs',
+    caption: 'Payday Super readiness depends on who owns the handoffs between payroll, ERP, banking, and contribution delivery.',
+  },
   'business-central-payment-times-reporting-australia-february-2026': {
     src: pexels('6693655'),
     alt: 'Finance team reviewing payables controls and compliance reporting',
