@@ -73,12 +73,23 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
   ],
   'business-central-ai-billing-australia-copilot-credits-agents': [
+    {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
+  ],
+  'business-central-ai-agents-australia-what-to-test': [
+    {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
+    {href: '/blog/business-central-ai-agent-designer-australia-what-to-test/', label: 'Business Central AI agent designer in Australia'},
+    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
+    {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
   ],
   'odoo-pricing-australia-standard-vs-custom': [
     {href: '/blog/odoo-19-3-australia-buyers-upgrade-shortlist-checks/', label: 'Odoo 19.3 for Australian buyers'},
@@ -417,6 +428,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
   ],
   'business-central-payables-agent-australia-what-to-test': [
+    {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
     {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-ai-agent-designer-australia-what-to-test/', label: 'Business Central AI agent designer in Australia'},
@@ -429,6 +441,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
   ],
   'business-central-sales-order-agent-australia-what-to-test': [
+    {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
     {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-ai-agent-designer-australia-what-to-test/', label: 'Business Central AI agent designer in Australia'},
@@ -439,6 +452,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
   ],
   'business-central-copilot-agent-pricing-australia-2026': [
+    {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/business-central-ai-agent-designer-australia-what-to-test/', label: 'Business Central AI agent designer in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
@@ -449,6 +463,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'business-central-ai-agent-designer-australia-what-to-test': [
+    {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
