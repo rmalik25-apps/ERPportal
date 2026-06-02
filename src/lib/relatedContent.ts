@@ -33,6 +33,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/manufacturing-erp-kpi-pack-before-go-live/', label: 'Manufacturing ERP KPI pack before go-live'},
   ],
   'business-central-pricing-australia-licences-budget': [
+    {href: '/guides/wiise-pricing-australia-business-central-budget/', label: 'Wiise pricing in Australia'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
@@ -226,9 +227,17 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'wiise-vs-business-central-australian-smbs': [
+    {href: '/guides/wiise-pricing-australia-business-central-budget/', label: 'Wiise pricing in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/myob-acumatica-vs-business-central/', label: 'MYOB Acumatica vs Business Central'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+  ],
+  'wiise-pricing-australia-business-central-budget': [
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
