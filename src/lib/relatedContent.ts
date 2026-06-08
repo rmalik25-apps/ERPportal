@@ -473,6 +473,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'business-central-copilot-agent-pricing-australia-2026': [
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/blog/business-central-mcp-server-australia-what-to-test/', label: 'Business Central MCP server in Australia'},
     {href: '/blog/business-central-ai-agent-designer-australia-what-to-test/', label: 'Business Central AI agent designer in Australia'},
     {href: '/blog/business-central-expense-agent-australia-what-to-test/', label: 'Business Central Expense Agent in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
@@ -485,6 +486,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'business-central-ai-agent-designer-australia-what-to-test': [
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
+    {href: '/blog/business-central-mcp-server-australia-what-to-test/', label: 'Business Central MCP server in Australia'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
     {href: '/blog/business-central-expense-agent-australia-what-to-test/', label: 'Business Central Expense Agent in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
@@ -547,6 +549,16 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+  ],
+  'business-central-mcp-server-australia-what-to-test': [
+    {href: '/blog/business-central-ai-agent-designer-australia-what-to-test/', label: 'Business Central AI agent designer in Australia'},
+    {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
+    {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
+    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
+    {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
   ],
   'business-central-accounting-australia-gst-bas-eft-payroll-peppol-checks': [
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
