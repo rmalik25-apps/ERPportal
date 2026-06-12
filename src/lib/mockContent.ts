@@ -299,7 +299,7 @@ const detailedPostBlocks = (category: string, leadParagraphs: string[]) => {
 const pillarGuideBlocks = (slug: string) => {
   const content: Record<string, string[][]> = {
     'erp-selection-checklist-smb': [
-      ['Most ERP shortlists go wrong long before contract signature. The problem is rarely that teams did not work hard enough; it is that they evaluated products before agreeing how success would be judged.', 'For a small or medium business, the cost of a weak shortlist is high. You lose months in demos, absorb avoidable consulting spend, and often end up choosing the partner who sounded safest rather than the platform that fits your operating model.', 'A strong checklist should help the team slow down in the right places: scope, commercial assumptions, data quality, operational constraints, and ownership of decisions.'],
+      ['Most ERP shortlists go wrong long before contract signature. The problem is rarely that teams did not work hard enough; it is that they evaluated products before agreeing how success would be judged.', 'For a small or medium business, the cost of a weak shortlist is high. You lose months in demos, absorb avoidable consulting spend, and often end up choosing the partner who sounded safest rather than the platform that fits your operating model.', 'A strong ERP selection criteria checklist should help the team slow down in the right places: scope, commercial assumptions, data quality, operational constraints, and ownership of decisions.'],
       ['## The questions to answer before you talk to vendors'],
       [
         '• What are the top business outcomes the programme is meant to deliver in the next 12 to 24 months: better stock control, faster close, cleaner project billing, lower manual rework, or better reporting confidence?',
@@ -314,6 +314,14 @@ const pillarGuideBlocks = (slug: string) => {
         '• Delivery risk: data migration difficulty, integration count, change management load, testing effort, and internal team readiness.',
         '• Partner confidence: relevant industry experience, realistic scope assumptions, governance method, local support strength, and reference quality.',
         '• Commercial clarity: software, implementation, support, enhancement, and hidden future costs rather than headline licence price alone.',
+      ],
+      ['## ERP selection criteria checklist'],
+      [
+        '• Business outcomes: the measurable results the ERP programme must create and the constraints it must respect.',
+        '• Process fit: evidence that each shortlisted product can handle the real workflows that drive revenue, service, inventory, projects, or compliance.',
+        '• Reporting and control: how the system supports month-end, approvals, audit trail, management reporting, and exception visibility.',
+        '• Implementation partner fit: whether the partner has the method, team, references, and governance discipline to deliver the chosen scope.',
+        '• Total cost and risk: licences, modules, services, support, internal effort, change load, and likely phase-two work.',
       ],
       ['## Common small-business selection mistakes'],
       [
@@ -335,6 +343,57 @@ const pillarGuideBlocks = (slug: string) => {
         '• How many vendors should we shortlist? Usually two or three. More than that creates noise and slows decision quality.',
         '• Should we run an RFP? Only if the business already understands its real requirements. Otherwise, a lighter scenario-led process is usually more useful.',
         '• How early should we involve finance? Immediately. Finance structure, control needs, and reporting expectations shape the whole selection outcome.',
+      ],
+      ['## Related ERP comparison guide'],
+      [
+        '• If the team is comparing Business Central, NetSuite, Odoo, or another shortlist, use the ERP comparison criteria guide to turn this checklist into a weighted decision matrix.',
+      ],
+    ],
+    'erp-comparison-criteria-checklist': [
+      ['ERP software comparison searches usually start with product names, but the better comparison starts with decision criteria. A business that only compares feature lists can easily pick the most impressive demo and still choose the wrong operating model.', 'The practical goal is to compare each ERP option against the same scenarios, the same commercial assumptions, and the same implementation partner expectations. That is what turns an ERP comparison from a subjective debate into a usable decision record.', 'This guide is built from the search themes already showing buyer demand: ERP comparison, ERP software comparison, ERP selection checklist, implementation partner choice, NetSuite pricing, NetSuite warehouse management, Odoo vs Business Central, and NetSuite vs Business Central comparisons.'],
+      ['## Start with the comparison question'],
+      [
+        '• Are you comparing software products, implementation partners, or the total programme each option creates?',
+        '• Are you trying to solve a finance-control problem, an operations-control problem, or a wider growth-platform problem?',
+        '• Which constraints are immovable: Australian reporting, warehouse complexity, Microsoft alignment, multi-entity structure, integrations, budget, or change capacity?',
+      ],
+      ['## A practical ERP comparison matrix'],
+      [
+        '• Functional fit: score each option against real end-to-end workflows, not generic modules.',
+        '• Data and reporting fit: test whether leaders can see margin, stock, cash, project, and entity performance without spreadsheet repair.',
+        '• Implementation partner fit: compare delivery method, team continuity, governance, references, and support model beside the software score.',
+        '• Commercial model: compare licence cost, modules, implementation services, internal time, support, renewals, and likely enhancements.',
+        '• Risk profile: name the top five things that could make each option fail and ask the vendor or partner to prove how they would reduce that risk.',
+      ],
+      ['## How to compare Business Central vs Oracle NetSuite'],
+      [
+        '• Business Central often deserves a higher score where Microsoft alignment, staged maturity, and partner availability matter.',
+        '• NetSuite often deserves a higher score where cloud-standardisation, multi-entity governance, and a broader native ERP footprint matter.',
+        '• A NetSuite vs Business Central comparison should also test warehouse flow, reporting model, implementation partner strength, pricing assumptions, and change capacity rather than product positioning alone.',
+      ],
+      ['## How to compare Odoo vs Business Central'],
+      [
+        '• Odoo often scores well for modular flexibility, breadth, and lower entry friction when the business can govern configuration actively.',
+        '• Business Central often scores well for Microsoft alignment, finance control, partner structure, and a more bounded operating model.',
+        '• An Odoo vs Business Central comparison should test reporting discipline, support ownership, implementation partner capability, and the internal effort required to keep the system clean after go-live.',
+      ],
+      ['## How to compare ERP partners'],
+      [
+        '• Ask each ERP implementation partner to show the delivery team, governance rhythm, assumptions register, data migration approach, and cutover support plan.',
+        '• Score partner fit separately from product fit so a preferred platform does not hide a weak delivery model.',
+        '• Run reference calls around the risks that matter most to your business: warehouse adoption, finance close, reporting, integrations, change management, or executive governance.',
+      ],
+      ['## What to do after the comparison'],
+      [
+        '• Keep two or three options in the final comparison rather than expanding the list every time a new product appears.',
+        '• Document why each losing option lost, because that protects the decision when commercial pressure or stakeholder preference returns later.',
+        '• Convert the winning comparison into an implementation readiness plan with owners, dates, scope boundaries, and decision gates.',
+      ],
+      ['## FAQ'],
+      [
+        '• What is the best ERP comparison method? Use weighted criteria and scenario-led demos, then compare implementation partner quality and total cost beside product fit.',
+        '• Should ERP selection and partner selection be separate? They should be scored separately but decided together, because delivery quality changes the real risk of each software choice.',
+        '• Is an ERP selection criteria checklist enough? It is enough for early filtering, but final selection needs proof from scenarios, references, commercials, and partner delivery assumptions.',
       ],
     ],
     'navision-to-business-central-migration': [
@@ -430,7 +489,7 @@ const pillarGuideBlocks = (slug: string) => {
       ],
     ],
     'how-to-choose-erp-implementation-partner': [
-      ['Many ERP buyers spend far more time comparing software than comparing delivery partners. That is backwards. For most small and medium businesses, the implementation partner has as much influence on project success as the platform itself.', 'A strong partner brings structured governance, industry judgement, honest scope boundaries, and a team that can translate software into workable business design. A weak partner creates confidence in sales and ambiguity in delivery.', 'The right partner choice should reduce project risk, not just offer an acceptable day rate.'],
+      ['Many ERP buyers spend far more time comparing software than comparing delivery partners. That is backwards. For most small and medium businesses, the ERP implementation partner or ERP consultant has as much influence on project success as the platform itself.', 'A strong partner brings structured governance, industry judgement, honest scope boundaries, and a team that can translate software into workable business design. A weak partner creates confidence in sales and ambiguity in delivery.', 'The right partner choice should reduce project risk, not just offer an acceptable day rate. If you are asking how to choose an ERP partner or how to choose an ERP consultant, the answer should include delivery evidence, team fit, governance, commercials, and references.'],
       ['## What to test beyond the sales presentation'],
       [
         '• Who will actually lead the programme, configure the system, manage testing, and support cutover?',
@@ -445,6 +504,21 @@ const pillarGuideBlocks = (slug: string) => {
         '• References speak about communication discipline and issue resolution, not only likeability.',
         '• The proposed team feels coherent rather than stitched together for the bid.',
       ],
+      ['## ERP implementation partner selection criteria'],
+      [
+        '• Delivery team: named roles, senior continuity, industry experience, and enough capacity for design, build, testing, cutover, and support.',
+        '• Method: clear governance, decision logs, RAID management, scope control, testing ownership, and change request discipline.',
+        '• Evidence: reference customers with similar complexity, not only similar size or the same software brand.',
+        '• Commercial clarity: explicit assumptions for migration, integrations, reporting, training, support, and out-of-scope work.',
+        '• Operating fit: the partner can challenge weak process, translate business needs, and keep finance, operations, and leadership aligned.',
+      ],
+      ['## How to choose an ERP consultant'],
+      [
+        '• Treat the consultant as part of the decision system, not just a product expert. They should improve scope clarity, risk visibility, and business alignment.',
+        '• Ask whether they are independent, vendor-aligned, or implementation-led, because that changes the advice incentives and the handover risk.',
+        '• Check whether they can help compare ERP software, partner capability, and implementation assumptions together rather than giving a generic product recommendation.',
+        '• Make them show how they will support decision-making after demos: scoring, references, commercials, board papers, and transition into delivery.',
+      ],
       ['## Red flags to watch for'],
       [
         '• The senior people sell the project but cannot explain who will stay involved after signature.',
@@ -457,6 +531,7 @@ const pillarGuideBlocks = (slug: string) => {
         '• Should we pick the cheapest partner? Usually no. Low pricing often hides weak assumptions or limited delivery depth.',
         '• How many references should we check? At least two strong fit references and one more probing conversation if possible.',
         '• Is industry experience mandatory? Not always, but it matters a lot when your operational model is specialised.',
+        '• How should we compare ERP partners? Score partner quality beside software fit using the same decision criteria, then test both through scenario-led workshops and reference calls.',
       ],
     ],
   }
@@ -932,12 +1007,20 @@ const pillarComparisonBlocks = (slug: string) => {
       ],
     ],
     'business-central-vs-netsuite-growing-businesses': [
-      ['This is one of the most common shortlist decisions for growing Australian businesses because both platforms can support a meaningful step up from legacy systems or spreadsheet-heavy operations. The mistake is assuming they solve the same growth problem in the same way.', 'Business Central often appeals where Microsoft alignment, staged maturity, and practical operational control matter. NetSuite often appeals where cloud-first standardisation, broader native footprint, and multi-entity ambition are stronger drivers.', 'The choice becomes clearer when the business defines where complexity will sit: inside one broader platform, or within a more staged ecosystem anchored around Microsoft tooling.'],
+      ['This is one of the most common shortlist decisions for growing Australian businesses because both platforms can support a meaningful step up from legacy systems or spreadsheet-heavy operations. The mistake is assuming they solve the same growth problem in the same way.', 'Business Central often appeals where Microsoft alignment, staged maturity, and practical operational control matter. NetSuite often appeals where cloud-first standardisation, broader native footprint, and multi-entity ambition are stronger drivers.', 'A Business Central vs Oracle NetSuite comparison becomes clearer when the business defines where complexity will sit: inside one broader platform, or within a more staged ecosystem anchored around Microsoft tooling.'],
       ['## Who should use this comparison'],
       [
         '• SMB buyers choosing between two mainstream ERP shortlists with different ecosystem implications.',
         '• Businesses deciding whether Microsoft alignment or a broader cloud-standard operating model matters more.',
         '• Sponsors who want a practical fit and delivery trade-off view before they engage deeper with partners.',
+      ],
+      ['## Business Central vs Oracle NetSuite comparison criteria'],
+      [
+        '• Finance operating model: compare month-end close, approval controls, dimensions, consolidation, management reporting, and audit trail quality.',
+        '• Operations fit: test warehouse flow, purchasing, fulfilment, projects, pricing, and exception handling with real scenarios.',
+        '• Ecosystem strategy: decide whether Microsoft alignment or a more self-contained cloud ERP footprint reduces long-term complexity.',
+        '• Implementation partner strength: compare local partner method, references, governance, and support before treating either platform as the safer choice.',
+        '• Change capacity: score whether the business can absorb the operating discipline each option expects in the first 12 to 18 months.',
       ],
       ['## When Business Central tends to fit better'],
       [
@@ -964,6 +1047,7 @@ const pillarComparisonBlocks = (slug: string) => {
       [
         '• Is Business Central only for simpler businesses? No. The better question is whether the operating model and delivery path fit how the business wants to mature.',
         '• Is NetSuite always more future-proof? Not by default. Future value depends on whether the organisation can absorb the design and governance model well.',
+        '• Is a 2025 comparison still useful in 2026? It can be a starting point, but shortlist teams should refresh pricing, release changes, partner assumptions, and implementation risk before making a 2026 decision.',
         '• What usually breaks the tie? Partner quality, change capacity, and clarity on future operating scope.',
       ],
       ['## Best next step'],
@@ -1013,7 +1097,7 @@ const topicalComparisonBlocks = (slug: string) => {
       ],
     ],
     'odoo-vs-business-central': [
-      ['Odoo and Business Central attract some of the same SMB buyers, but usually for very different reasons. Odoo often enters the shortlist because of modular flexibility and perceived price accessibility. Business Central usually enters because buyers want a more structured ERP path with stronger Microsoft ecosystem alignment.', 'The wrong way to compare them is on module count alone. The right way is to test governance, financial control maturity, implementation discipline, and how much operational variation the business genuinely needs.', 'This comparison matters most for buyers who are balancing cost sensitivity against long-term control and supportability.'],
+      ['Odoo and Business Central attract some of the same SMB buyers, but usually for very different reasons. Odoo often enters the shortlist because of modular flexibility and perceived price accessibility. Business Central usually enters because buyers want a more structured ERP path with stronger Microsoft ecosystem alignment.', 'The wrong way to compare Odoo vs Business Central is on module count alone. The right way is to test governance, financial control maturity, implementation discipline, and how much operational variation the business genuinely needs.', 'This comparison matters most for buyers who are balancing cost sensitivity against long-term control and supportability.'],
       ['## Who this comparison is really for'],
       [
         '• SMB teams balancing cost sensitivity against stronger controls and supportability.',
@@ -1037,6 +1121,13 @@ const topicalComparisonBlocks = (slug: string) => {
         '• Can the business run core finance, approvals, and reporting with enough discipline in the chosen model?',
         '• How much extension or local tailoring will be needed to support real process variation?',
         '• What internal capability exists to govern change, testing, and support once the partner steps back?',
+      ],
+      ['## Odoo vs Business Central comparison criteria'],
+      [
+        '• Finance control: compare period-end close, approvals, audit trail, dimensions, and management reporting evidence.',
+        '• Implementation model: compare partner method, project governance, configuration discipline, and support ownership.',
+        '• Cost and effort: compare licence price, implementation services, extensions, internal admin effort, and ongoing support load.',
+        '• Change capacity: decide whether the business is better suited to Odoo flexibility or Business Central structure.',
       ],
       ['## Manufacturing lens: MRP stability and planner workload'],
       [
@@ -1292,13 +1383,20 @@ const pillarPostBlocks = (slug: string) => {
       ],
     ],
     'vendor-demo-script-erp-buyers-what-to-ask': [
-      ['Most ERP demos feel productive in the moment and useless afterwards. Buyers leave with notes, impressions, and a vague sense of preference, but not with decision-grade evidence.', 'A proper demo script changes that. It forces vendors to show how the system behaves in your reality: messy approvals, exception handling, reporting pressure, master data issues, and hand-offs between departments.', 'The point is not to catch vendors out. The point is to create comparable evidence so the team can separate presentation quality from true business fit.'],
+      ['Most ERP demos feel productive in the moment and useless afterwards. Buyers leave with notes, impressions, and a vague sense of preference, but not with decision-grade evidence.', 'A proper ERP software demo script changes that. It forces vendors to show how the system behaves in your reality: messy approvals, exception handling, reporting pressure, master data issues, and hand-offs between departments.', 'The point is not to catch vendors out. The point is to create comparable evidence so the team can separate presentation quality from true business fit.'],
       ['## What a strong demo script should contain'],
       [
         '• One or two end-to-end scenarios for each critical business flow.',
         '• Edge cases that regularly create pain today, such as backorders, project changes, returns, intercompany movement, or approval exceptions.',
         '• Required outputs: reports, approvals, alerts, dashboards, or audit trail evidence the business needs to see.',
         '• A structured scorecard completed live by business owners, not recollected days later.',
+      ],
+      ['## ERP software demo script structure'],
+      [
+        '• Opening context: business outcomes, current pain points, phase-one scope, and the decisions the demo must support.',
+        '• Scenario walkthroughs: one core happy path and one realistic exception path for each critical process.',
+        '• Evidence capture: reports, approvals, audit trail, role behaviour, data ownership, and implementation assumptions shown live.',
+        '• Scoring: each reviewer scores fit, usability, control, reporting, implementation risk, and partner confidence immediately after each scenario.',
       ],
       ['## Questions to ask during the demo'],
       [
@@ -1363,15 +1461,32 @@ export const mockGuides: GuideDoc[] = [
     _type: 'guide',
     title: 'ERP selection checklist for small and medium businesses',
     slug: 'erp-selection-checklist-smb',
-    excerpt: 'A practical checklist to align scope, business outcomes, demos, and decision controls before you shortlist vendors.',
+    excerpt: 'A practical ERP selection criteria checklist to align scope, business outcomes, demos, partners, and decision controls before you shortlist vendors.',
     intent: 'Selection',
     publishedAt,
     updatedAt: publishedAt,
     seo: {
-      metaTitle: 'ERP Selection Checklist for Small and Medium Businesses',
-      metaDescription: 'Use this ERP selection checklist to avoid expensive rework and compare vendors with consistent scoring criteria.',
+      metaTitle: 'ERP Selection Criteria Checklist for Small and Medium Businesses',
+      metaDescription: 'Use this ERP selection criteria checklist to compare vendors, partners, implementation risk, and total cost with consistent scoring criteria.',
     },
     body: pillarGuideBlocks('erp-selection-checklist-smb'),
+  },
+  {
+    _id: 'guide-erp-comparison-criteria-checklist',
+    _type: 'guide',
+    title: 'ERP comparison criteria checklist for Australian SMBs',
+    slug: 'erp-comparison-criteria-checklist',
+    excerpt:
+      'A practical ERP software comparison guide for scoring software, implementation partners, total cost, and delivery risk against the same criteria.',
+    intent: 'Selection',
+    publishedAt: '2026-06-12T00:00:00Z',
+    updatedAt: '2026-06-12T00:00:00Z',
+    seo: {
+      metaTitle: 'ERP Software Comparison Criteria Checklist for Australian SMBs',
+      metaDescription:
+        'Use this ERP software comparison checklist to score Business Central, NetSuite, Odoo, implementation partners, total cost, and selection risk.',
+    },
+    body: pillarGuideBlocks('erp-comparison-criteria-checklist'),
   },
   {
     _id: 'guide-navision-to-bc-migration',
@@ -1430,10 +1545,15 @@ export const mockGuides: GuideDoc[] = [
     _type: 'guide',
     title: 'How to choose an ERP implementation partner',
     slug: 'how-to-choose-erp-implementation-partner',
-    excerpt: 'Assess delivery model, team quality, references, and commercials before appointing a partner.',
+    excerpt: 'How to choose an ERP partner or consultant by assessing delivery model, team quality, references, selection criteria, and commercials before appointing a partner.',
     intent: 'Partner Selection',
     publishedAt,
     updatedAt: publishedAt,
+    seo: {
+      metaTitle: 'How to Choose an ERP Implementation Partner or Consultant',
+      metaDescription:
+        'How to choose an ERP partner or consultant using implementation selection criteria, delivery evidence, references, governance, and commercial assumptions.',
+    },
     body: pillarGuideBlocks('how-to-choose-erp-implementation-partner'),
   },
   {
@@ -1884,18 +2004,19 @@ export const mockGuides: GuideDoc[] = [
     title: 'NetSuite pricing in Australia: licensing structure, modules, and budget traps',
     slug: 'netsuite-pricing-australia-licensing-modules-budget',
     excerpt:
-      'A practical Australian buyer guide to NetSuite pricing, why public list pricing is hard to find, and the cost drivers that usually reshape the budget.',
+      'A practical Australian buyer guide to NetSuite pricing Australia searches, why public list pricing is hard to find, and the cost drivers that usually reshape the budget.',
     intent: 'Commercial',
     publishedAt: '2026-03-30T00:00:00Z',
     updatedAt: '2026-03-30T00:00:00Z',
     seo: {
       metaTitle: 'NetSuite Pricing Australia: Licensing, Modules, and Budget Guide',
       metaDescription:
-        'Current Australian NetSuite pricing guide covering licensing structure, OneWorld, optional modules, implementation scope, and the budget traps buyers should test early.',
+        'Current NetSuite pricing Australia guide covering licensing structure, OneWorld, optional modules, implementation scope, and the budget traps buyers should test early.',
     },
     body: skimmableBlocks(
       [
-        'Australian ERP buyer intent still clusters around shortlist cost questions, and NetSuite is one of the hardest products to budget quickly because Oracle does not publish a simple public Australian per-user price table in the same way Microsoft and Odoo do.',
+        'Australian ERP buyer intent still clusters around shortlist cost questions. Searches for “NetSuite pricing Australia” and “NetSuite pricing” usually come from teams trying to set a first budget before they speak with Oracle or an implementation partner.',
+        'NetSuite is one of the harder products to budget quickly because Oracle does not publish a simple public Australian per-user price table in the same way Microsoft and Odoo do.',
         'That does not mean NetSuite pricing is unknowable. It means the commercial model needs to be broken into clearer parts: core platform, entity structure, users, add-on modules, implementation services, integration work, support, and renewal exposure.',
         'This guide matters in March 2026 because Oracle\'s current 2026.1 release notes continue adding capabilities while explicitly noting that some features and SuiteApps may require extra purchase. For Australian buyers, that is the practical reminder that “NetSuite cost” is rarely just the base ERP subscription.',
       ],
@@ -1955,18 +2076,18 @@ export const mockGuides: GuideDoc[] = [
     title: 'NetSuite warehouse management: when bins are enough and when WMS is worth it',
     slug: 'netsuite-warehouse-management-bins-vs-wms',
     excerpt:
-      'A practical Australian buyer guide to the point where NetSuite bin and inventory controls are enough, when NetSuite WMS adds real value, and which current product constraints should change the design discussion.',
+      'A practical Australian buyer guide to the point where NetSuite warehouse management with bin and inventory controls is enough, when NetSuite WMS adds real value, and which current product constraints should change the design discussion.',
     intent: 'Operations',
     publishedAt: '2026-05-13T00:00:00Z',
     updatedAt: '2026-05-13T00:00:00Z',
     seo: {
-      metaTitle: 'NetSuite Warehouse Management: Bins vs WMS Guide',
+      metaTitle: 'NetSuite Warehouse Management System: Bins vs WMS Guide',
       metaDescription:
-        'Use this NetSuite warehouse management guide to decide when standard bin and inventory controls are enough and when NetSuite WMS is worth the extra complexity.',
+        'Use this NetSuite warehouse management system guide to decide when standard bin and inventory controls are enough and when NetSuite WMS is worth the extra complexity.',
     },
     body: skimmableBlocks(
       [
-        'Australian search behaviour around NetSuite is not only finance-led anymore. In Google autocomplete with Australian locale settings, queries expand into phrases such as “netsuite wms”, “netsuite warehouse management”, and “warehouse management system australia”, which is a useful signal that buyers are trying to map NetSuite against real warehouse execution rather than generic ERP fit.',
+        'Australian search behaviour around NetSuite is not only finance-led anymore. In Google autocomplete with Australian locale settings, queries expand into phrases such as “netsuite wms”, “netsuite warehouse management”, “netsuite warehouse management system”, and “warehouse management system australia”, which is a useful signal that buyers are trying to map NetSuite against real warehouse execution rather than generic ERP fit.',
         'That is a commercially important question because Oracle gives buyers several layers to work with: standard bin and inventory controls, NetSuite WMS for mobile warehouse execution, and Ship Central for packing and shipping. The wrong choice is rarely “too little feature” in the abstract. It is choosing an architecture that does not match the actual floor complexity, labour model, and inventory-control pressure.',
         'This guide uses current Oracle help and release material to separate what standard NetSuite already covers, what NetSuite WMS adds, and where current 2026.1 product constraints should change the warehouse design conversation for Australian distributors, importers, and multi-site operators.',
       ],
@@ -2531,7 +2652,7 @@ export const mockComparisons: ComparisonDoc[] = [
     _type: 'comparison',
     title: 'Business Central vs NetSuite for growing businesses',
     slug: 'business-central-vs-netsuite-growing-businesses',
-    excerpt: 'Fit, complexity, and implementation trade-offs for finance-led and operations-led organisations.',
+    excerpt: 'A NetSuite vs Business Central comparison covering fit, complexity, implementation partners, and delivery trade-offs for growing organisations.',
     leftProduct: 'Dynamics 365 Business Central',
     rightProduct: 'NetSuite',
     bestFor: [
@@ -2540,6 +2661,11 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
+    seo: {
+      metaTitle: 'NetSuite vs Business Central Comparison',
+      metaDescription:
+        'Compare NetSuite vs Business Central using ERP selection criteria for finance, operations, implementation partners, total cost, and change risk.',
+    },
     body: pillarComparisonBlocks('business-central-vs-netsuite-growing-businesses'),
   },
   {
@@ -2659,7 +2785,7 @@ export const mockComparisons: ComparisonDoc[] = [
     _type: 'comparison',
     title: 'Odoo vs Business Central for growing SMBs',
     slug: 'odoo-vs-business-central',
-    excerpt: 'A practical comparison of modular flexibility, governance, and finance control for price-sensitive SMB buyers.',
+    excerpt: 'A practical Odoo vs Business Central comparison of modular flexibility, governance, and finance control for price-sensitive SMB buyers.',
     leftProduct: 'Odoo',
     rightProduct: 'Dynamics 365 Business Central',
     bestFor: [
@@ -2668,6 +2794,11 @@ export const mockComparisons: ComparisonDoc[] = [
     ],
     publishedAt,
     updatedAt: publishedAt,
+    seo: {
+      metaTitle: 'Odoo vs Business Central Comparison',
+      metaDescription:
+        'Compare Odoo vs Business Central using ERP selection criteria for finance control, implementation model, cost, support, and change capacity.',
+    },
     body: topicalComparisonBlocks('odoo-vs-business-central'),
   },
   {
@@ -3766,10 +3897,15 @@ export const mockPosts: PostDoc[] = [
     _type: 'post',
     title: 'Vendor demo script for ERP buyers: what to ask and what to avoid',
     slug: 'vendor-demo-script-erp-buyers-what-to-ask',
-    excerpt: 'Use scenario scripts and scoring controls to keep demos comparable and decision-ready.',
+    excerpt: 'Use an ERP software demo script, scenario prompts, and scoring controls to keep demos comparable and decision-ready.',
     category: 'Selection',
     publishedAt,
     updatedAt: publishedAt,
+    seo: {
+      metaTitle: 'ERP Software Demo Script for Buyers',
+      metaDescription:
+        'Use this ERP software demo script to compare vendors with scenario walkthroughs, evidence capture, scoring controls, and implementation-risk questions.',
+    },
     body: pillarPostBlocks('vendor-demo-script-erp-buyers-what-to-ask'),
   },
   {

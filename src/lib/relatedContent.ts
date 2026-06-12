@@ -5,12 +5,21 @@ type RelatedLink = {
 
 const guideLinks: Record<string, RelatedLink[]> = {
   'erp-selection-checklist-smb': [
-    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
-    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
-    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
-    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
+  ],
+  'erp-comparison-criteria-checklist': [
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
+    {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management system guide'},
+    {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
   ],
   'navision-to-business-central-migration': [
     {href: '/compare/nav-technical-upgrade-vs-full-reimplementation/', label: 'NAV technical upgrade vs full reimplementation'},
@@ -42,7 +51,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/payday-super-australia-erp-checklist-business-central-netsuite-odoo/', label: 'Payday Super ERP checklist for Australia'},
     {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
-    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite for growing businesses'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
     {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-einvoicing-australia-what-to-test-before-peppol-rollout/', label: 'Business Central eInvoicing in Australia'},
@@ -103,7 +112,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/blog/odoo-19-2-australian-wholesalers-inventory-manufacturing-wms-checks/', label: 'Odoo 19.2 for Australian wholesalers'},
     {href: '/blog/erp-einvoicing-australia-business-central-netsuite-odoo-peppol-checklist/', label: 'ERP eInvoicing in Australia'},
-    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
     {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
@@ -148,6 +157,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'netsuite-warehouse-management-bins-vs-wms': [
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/blog/netsuite-ai-australia-2026-1-what-buyers-should-check/', label: 'NetSuite AI in Australia'},
     {href: '/blog/netsuite-soap-removal-australia-what-to-fix-now/', label: 'NetSuite SOAP removal guide'},
@@ -170,9 +180,10 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/where-d365-sales-to-erp-handovers-usually-break/', label: 'Where D365 Sales to ERP handovers usually break'},
     {href: '/compare/integrated-erp-crm-vs-best-of-breed-stack/', label: 'Integrated ERP+CRM vs best-of-breed stack'},
     {href: '/blog/odoo-crm-erp-australia-what-to-test-in-2026/', label: 'Odoo CRM + ERP in Australia'},
-    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
   ],
   'how-to-choose-erp-implementation-partner': [
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
@@ -234,19 +245,20 @@ const guideLinks: Record<string, RelatedLink[]> = {
 
 const comparisonLinks: Record<string, RelatedLink[]> = {
   'business-central-vs-netsuite-growing-businesses': [
-    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
     {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
-    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
-    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
   ],
   'netsuite-vs-sage-intacct-finance-first-teams': [
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
-    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central'},
   ],
   'myob-acumatica-vs-business-central': [
     {href: '/compare/sage-intacct-vs-myob-acumatica/', label: 'Sage Intacct vs MYOB Acumatica'},
@@ -341,6 +353,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'vendor-demo-script-erp-buyers-what-to-ask': [
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},

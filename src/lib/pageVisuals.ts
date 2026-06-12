@@ -57,6 +57,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Business team using sticky notes to shortlist options on a planning wall',
     caption: 'Selection work is strongest when requirements, risks, and evaluation criteria are visible to the whole team.',
   },
+  'erp-comparison-criteria-checklist': {
+    src: pexels('7681091'),
+    alt: 'Business team comparing software options and scoring criteria in a workshop',
+    caption: 'ERP comparisons work best when product fit, partner quality, risk, and total cost are scored against the same criteria.',
+  },
   'navision-to-business-central-migration': {
     src: pexels('7947758'),
     alt: 'Consultants reviewing system migration steps on laptops in a workshop',
