@@ -350,7 +350,7 @@ const pillarGuideBlocks = (slug: string) => {
       ],
     ],
     'erp-comparison-criteria-checklist': [
-      ['ERP software comparison searches usually start with product names, but the better comparison starts with decision criteria. A business that only compares feature lists can easily pick the most impressive demo and still choose the wrong operating model.', 'The practical goal is to compare each ERP option against the same scenarios, the same commercial assumptions, and the same implementation partner expectations. That is what turns an ERP comparison from a subjective debate into a usable decision record.', 'This guide is built from the search themes already showing buyer demand: ERP comparison, ERP software comparison, ERP selection checklist, implementation partner choice, NetSuite pricing, NetSuite warehouse management, Odoo vs Business Central, and NetSuite vs Business Central comparisons.'],
+      ['ERP software comparison should start with decision criteria, not just product names. A business that only compares feature lists can easily pick the most impressive demo and still choose the wrong operating model.', 'The practical goal is to compare each ERP option against the same scenarios, the same commercial assumptions, and the same implementation partner expectations. That is what turns an ERP comparison from a subjective debate into a usable decision record.', 'Use this guide when the shortlist includes Business Central, NetSuite, Odoo, warehouse management, pricing, implementation partners, or a broader ERP software comparison.'],
       ['## Start with the comparison question'],
       [
         '• Are you comparing software products, implementation partners, or the total programme each option creates?',
@@ -1193,7 +1193,7 @@ const topicalComparisonBlocks = (slug: string) => {
       ],
     ],
     'wiise-vs-business-central-australian-smbs': [
-      ['This is a specifically Australian comparison because Wiise is not a separate ERP family in the usual sense. Wiise says it is a modern ERP built on Microsoft Dynamics 365 Business Central, then packages that base with its own local commercial model and feature positioning for Australian and New Zealand businesses.', 'That means the real buyer question is not “Wiise or Microsoft?” in the abstract. It is whether you want a more packaged local Business Central path with Wiise-specific inclusions and pricing, or a more direct Business Central route where you validate local requirements, add-ons, and partner model separately.', 'Australian search-intent signals support covering this now. On 22 May 2026, Google autocomplete with Australia targeting returned direct suggestions for “wiise pricing”, “wiise business central”, and “wiise vs business central”, which is a strong sign that buyers are already trying to compare the two commercially rather than treating Wiise as a generic ERP brand.'],
+      ['This is a specifically Australian comparison because Wiise is not a separate ERP family in the usual sense. Wiise says it is a modern ERP built on Microsoft Dynamics 365 Business Central, then packages that base with its own local commercial model and feature positioning for Australian and New Zealand businesses.', 'That means the real buyer question is not “Wiise or Microsoft?” in the abstract. It is whether you want a more packaged local Business Central path with Wiise-specific inclusions and pricing, or a more direct Business Central route where you validate local requirements, add-ons, and partner model separately.', 'For Australian buyers, the decision should be framed as a total package comparison: licence model, local inclusions, payroll and bank-feed expectations, partner model, support ownership, and the cost of achieving equivalent outcomes through a direct Business Central route.'],
       ['## What the official sources show today'],
       [
         '• Microsoft\'s Australia pricing page currently lists Business Central Essentials at AU$119.70 user/month paid yearly, Premium at AU$164.60, and Team Members at AU$12.00, excluding GST.',
@@ -1241,7 +1241,6 @@ const topicalComparisonBlocks = (slug: string) => {
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting for wiise, wiise erp, wiise pricing, business central pricing australia, and wiise vs business central on 22 May 2026.',
         '• Microsoft Australia Business Central pricing page for current published AU Essentials, Premium, and Team Members pricing.',
         '• Wiise pricing page and Wiise full pricing page for current published AUD Business, Premium, Team Member, Device, and add-on references.',
         '• Wiise “enhances Microsoft Business Central” page for product-positioning and local packaged feature claims.',
@@ -1661,7 +1660,6 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian buyer intent around Business Central pricing is active right now. Google autocomplete for Australia surfaces “business central pricing australia” directly, which is a strong sign that teams are trying to compare licence cost before they commit to demos, partner workshops, or ERP shortlist work.',
         'The easy mistake is to treat the Microsoft list price as the total Business Central budget. In practice, software is only one part of the commercial picture. Role design, implementation shape, data migration, reporting, integrations, training, and support governance usually matter more than small monthly price differences.',
         'This guide is designed for Australian SMB buyers who need a cleaner first-pass budget and want to avoid comparing Business Central against Odoo, NetSuite, or MYOB Acumatica on incomplete numbers.',
       ],
@@ -1734,7 +1732,6 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Wiise is commercially specific enough to justify a standalone guide. On 3 June 2026, Google autocomplete with Australia targeting returned direct suggestions including “wiise pricing”, “wiise business central”, and “wiise vs business central”. That is a strong sign that buyers are not treating Wiise as a vague ERP brand. They are trying to work out what the packaged commercial model really means compared with Microsoft Business Central.',
         'Wiise itself says it is scalable, modern ERP software built on Microsoft Dynamics 365 Business Central. That matters because the shortlist question is not only “what does Wiise cost?” It is “what am I paying Wiise to package on top of the Microsoft base, and is that packaging worth it for my business?”.',
         'For Australian SMB buyers, the practical job is to separate base licences, optional add-ons, implementation effort, and the value of local packaging before the commercial story gets simplified into a single per-user number.',
       ],
@@ -1810,7 +1807,6 @@ export const mockGuides: GuideDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 3 June 2026 for wiise, wiise pricing, and wiise business central.',
         '• Wiise official pricing page for current Australian Business, Premium, Team Member, and Device list prices plus optional add-on references.',
         '• Wiise full pricing page for fuller licence breakdown and Team Member / Device usage descriptions.',
         '• Microsoft Business Central Australia pricing page for current Essentials, Premium, and Team Members list prices.',
@@ -1834,7 +1830,6 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Business Central is no longer limited to base licence pricing. Using Google autocomplete with Australian locale settings in May 2026, queries now expand into phrases such as “business central agents”, “business central copilot credits”, and “business central sales order agent pricing”. That is a strong sign that buyer questions have moved from “what does Business Central cost?” to “what will AI inside Business Central actually cost us to run?”.',
         'The confusion is understandable because Microsoft presents these ideas in two different ways. The Business Central pricing page says Copilot is included, yet Microsoft\'s current Business Central and Copilot Studio documentation also says that agent scenarios such as Sales Order Agent, Payables Agent, and Expense Agent use consumption billing through Copilot Credits or pay-as-you-go setup.',
         'For Australian SMB buyers and existing customers, the practical job is not to argue about whether AI is strategic. It is to separate included user-assistance features from billable autonomous or background agent work, then budget the first pilot with real transaction volume and real exception handling in mind.',
       ],
@@ -1919,7 +1914,6 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Business Central AI search intent in Australia is getting more specific. On 3 June 2026, Google autocomplete suggestions with Australian targeting expanded beyond generic terms into phrases such as “business central ai agents”, “business central copilot agents”, and “business central release wave 1 2026”. That is a stronger buying signal than vague AI curiosity because it usually means teams are now trying to separate practical agent use cases from general Copilot branding.',
         'Microsoft has also pushed the topic forward quickly. As of 3 June 2026, the current Microsoft Learn material shows an active Business Central agent stack that now spans Payables Agent, Sales Order Agent, Expense Agent in production-ready preview, and custom agent design capability that reached general availability in May 2026. At the same time, Microsoft\'s billing and setup documentation makes clear that these agent scenarios should not be treated as a casual “Copilot is included” add-on.',
         'For Australian finance and operations leaders, the useful question is not whether AI belongs somewhere in the roadmap. It is which agent scenario fits a real process bottleneck, what supervision and data quality it needs, and how to test it without creating new cost, mailbox, or control problems.',
       ],
@@ -1988,7 +1982,6 @@ export const mockGuides: GuideDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 3 June 2026 for business central ai, business central copilot, and business central release wave queries.',
         '• Microsoft Learn 2026 release wave 1 overview for Business Central agent investment areas and current product direction.',
         '• Microsoft Learn Payables Agent overview and FAQ for current AP-agent workflow and PDF-invoice limitation.',
         '• Microsoft Learn Sales Order Agent setup page for English (Australia) support and mailbox prerequisites.',
@@ -2015,7 +2008,7 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian ERP buyer intent still clusters around shortlist cost questions. Searches for “NetSuite pricing Australia” and “NetSuite pricing” usually come from teams trying to set a first budget before they speak with Oracle or an implementation partner.',
+        'Australian teams usually need a first-pass NetSuite budget before they speak with Oracle or an implementation partner, but the public information is rarely enough to make a confident shortlist decision on its own.',
         'NetSuite is one of the harder products to budget quickly because Oracle does not publish a simple public Australian per-user price table in the same way Microsoft and Odoo do.',
         'That does not mean NetSuite pricing is unknowable. It means the commercial model needs to be broken into clearer parts: core platform, entity structure, users, add-on modules, implementation services, integration work, support, and renewal exposure.',
         'This guide matters in March 2026 because Oracle\'s current 2026.1 release notes continue adding capabilities while explicitly noting that some features and SuiteApps may require extra purchase. For Australian buyers, that is the practical reminder that “NetSuite cost” is rarely just the base ERP subscription.',
@@ -2087,7 +2080,6 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search behaviour around NetSuite is not only finance-led anymore. In Google autocomplete with Australian locale settings, queries expand into phrases such as “netsuite wms”, “netsuite warehouse management”, “netsuite warehouse management system”, and “warehouse management system australia”, which is a useful signal that buyers are trying to map NetSuite against real warehouse execution rather than generic ERP fit.',
         'That is a commercially important question because Oracle gives buyers several layers to work with: standard bin and inventory controls, NetSuite WMS for mobile warehouse execution, and Ship Central for packing and shipping. The wrong choice is rarely “too little feature” in the abstract. It is choosing an architecture that does not match the actual floor complexity, labour model, and inventory-control pressure.',
         'This guide uses current Oracle help and release material to separate what standard NetSuite already covers, what NetSuite WMS adds, and where current 2026.1 product constraints should change the warehouse design conversation for Australian distributors, importers, and multi-site operators.',
       ],
@@ -2172,7 +2164,6 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian pricing-intent around ERP is not limited to Microsoft. Google Trends data for Australia over the last 12 months shows that “Odoo pricing” has enough live search volume to register alongside Business Central pricing and NetSuite pricing, which makes it a useful commercial topic for in-market buyers.',
         'The easy mistake is to assume Odoo is simply the low-cost ERP option because the subscription headline looks straightforward. In practice, the real budget question is which plan is needed, whether custom modules or external API access are required, and how much implementation effort sits behind the software choice.',
         'This guide is written for Australian buyers who want to compare Odoo against Business Central, NetSuite, or MYOB Acumatica with a cleaner commercial model before partner workshops or shortlist decisions.',
       ],
@@ -2251,8 +2242,7 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian Odoo buyer intent is increasingly less about generic “can Odoo do ERP?” questions and more about localisation readiness. Current Australia-focused search patterns and partner content are clustering around Odoo payroll, BAS, accounting, and local compliance, which is a stronger buying signal than another broad feature overview.',
-        'That makes this a useful gap for ERP Search to cover. The site already explains Odoo pricing, warehouse fit, and Odoo 19 AI, but not the harder Australian question: how much of finance, payroll, and eInvoicing is genuinely ready inside Odoo today, and where does the buyer still need external providers or extra validation?',
+        'For Australian Odoo buyers, the useful question is increasingly less about whether Odoo can operate as an ERP and more about localisation readiness: BAS, payroll, accounting, super, Peppol, and the partner responsibilities that sit around them.',
         'Odoo\'s current 19.0 documentation gives a more nuanced answer than either fans or critics usually admit. The Australian localisation is real and broader than many buyers assume, but Odoo also explicitly documents some important limits. For shortlist decisions, those limits matter more than polished demo breadth.',
       ],
       ['## What Odoo currently documents for Australia'],
@@ -2339,7 +2329,6 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian Odoo buyer intent is starting to look more operational, not only financial. In Google autocomplete with Australian locale settings, queries now expand into phrases such as “odoo warehouse management”, “odoo warehouse management system”, “odoo warehouse management barcode scanning”, and “odoo wms pricing”. That is a useful local signal that buyers are moving from broad platform research into warehouse-fit questions.',
         'That shift matters because Odoo already positions Inventory as both an inventory app and a warehouse management system, while its Odoo 19 documentation and release notes show real capability in routes, putaway, wave picking, barcode workflows, and inventory execution. The harder question is not whether Odoo can run warehouse processes at all. It is whether your warehouse complexity fits comfortably inside Odoo’s native model.',
         'This guide is written for Australian distributors, importers, manufacturers, and multi-site operators who want to separate a workable Odoo warehouse design from a warehouse problem that actually needs a dedicated WMS layer.',
       ],
@@ -2423,7 +2412,6 @@ export const mockGuides: GuideDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around warehousing is active enough to matter. Google autocomplete for Australia currently surfaces exact queries including “business central warehouse management”, “business central wms”, and “wms software australia”, which is a strong sign that buyers are trying to decide whether standard Business Central warehousing is sufficient before they commit to add-ons or a separate WMS path.',
         'That question is commercially important because warehouse complexity is rarely solved by software labels alone. The practical issue is whether the business needs standard bins, picks, receipts, and warehouse documents, or whether the operating model depends on more specialised execution, tracking, and device workflows than a lean Business Central setup can comfortably carry.',
         'This guide uses current Microsoft documentation rather than partner marketing to map what standard Business Central warehouse management supports today, where the design pressure points appear, and how Australian buyers should decide whether a standalone WMS conversation is actually justified.',
       ],
@@ -2938,7 +2926,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian ERP search intent is increasingly shifting from generic accounts-payable automation language into more specific phrases around eInvoicing, Peppol, invoice fraud reduction, and Business Central finance automation. That matters because teams are no longer just asking how to digitise invoices. They are asking how to exchange structured invoice data safely with customers, suppliers, and government-connected trading partners without adding another brittle side system.',
         'The Australian public guidance is clear about the operating model. Business.gov.au says software must be connected to the Peppol network through Australian Taxation Office approved service providers, and it also says it does not matter which invoicing software each party uses as long as both sides are connected. For Business Central teams, that means the real design question is not whether Microsoft has an eInvoicing story. It is how the Business Central setup, service provider choice, and finance process design fit together.',
         'Microsoft has now documented a more concrete local path. Its release-plan page for Business Central says users in Australia and New Zealand can use e-invoicing in Business Central through the E-Documents framework localised for the Peppol PINT A-NZ format. That makes this a current buyer and optimisation topic, not just a compliance footnote.',
       ],
@@ -3010,7 +2997,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent is currently clustering around practical integration phrases such as “business central shopify integration”, “business central shopify connector”, “shopify erp integration”, and “warehouse management system australia”. On 11 May 2026, that is a stronger buying signal than generic ERP curiosity because it shows teams are trying to solve the real boundary between commerce, stock, pricing, and fulfilment.',
         'Two official platform changes make this a current topic rather than a recycled integration article. Shopify announced on 2 April 2026 that foundational B2B features are rolling out beyond Shopify Plus, while Microsoft\'s 2026 release wave 1 plans continue refining the Business Central Shopify connection with April 2026 improvements around collections, product options, and related catalogue flow.',
         'The practical question for Australian wholesalers, importers, and hybrid B2B+DTC businesses is not whether a connector exists. It is whether the native Business Central and Shopify path is strong enough for your operating model, and where pricing, tax, inventory, and support complexity still justify a more deliberate architecture.',
       ],
@@ -3089,7 +3075,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian Odoo search demand is currently clustering around two closely related themes: Odoo 19 and Odoo AI. That is a useful timing signal, but it can also push buyers into the wrong question. The real issue is not whether Odoo can now say “AI” more often. It is which Odoo 19 capabilities genuinely reduce workload in finance, operations, and product administration without creating fresh control or support risk.',
         'Odoo\'s own 19.0 documentation now makes AI a visible product layer rather than a niche add-on. Odoo describes AI as productivity support across apps, documents Ask AI as a natural-language assistant inside the database, and documents AI fields that can generate or suggest values based on record context. For buyers, that moves the conversation from vague roadmap language into something that should be tested operationally.',
         'For Australian SMB teams, the practical decision is whether Odoo 19 improves day-to-day execution enough to justify shortlist momentum, and where local design still needs caution around pricing, localisation, bank connectivity, and supportability. That is where a disciplined buyer can separate real value from demo theatre.',
       ],
@@ -3299,7 +3284,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search demand around Business Central remains strongest where product change meets concrete risk. Payment Times Reporting is a good example because it combines Microsoft localisation updates, finance-process ownership, supplier compliance, and a genuinely local reporting obligation.',
         'This topic matters now because Microsoft\'s older Business Central documentation still described Payment Times Reporting as a largely manual exercise or one that required a partner add-in. In the 2025 release wave 2 plan, Microsoft then introduced a built-in feature for the Australian localisation with general availability dated February 2026.',
         'If your finance or ERP team has not revisited this area since 2025, the practical question is no longer whether Business Central holds the data. It is whether your Australian entity design, supplier classification, and reporting process are ready to use the new built-in capability properly.',
       ],
@@ -3451,7 +3435,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Business Central AI interest in Australia is no longer only about invoice capture and sales-order automation. On 5 June 2026, Google autocomplete with Australia targeting returned buyer-intent phrases including "business central expense agent" and "business central expense management", which is a useful signal that finance teams are now looking at practical employee-expense workflows as part of the ERP conversation.',
         'Microsoft has also turned this into a current buyer topic rather than a vague roadmap idea. Its release-plan article says Expense Agent entered public preview on 8 May 2026 and specifically lists Australia, New Zealand, and the UK as the next countries planned for July 2026 availability.',
         'For Australian finance leaders, the key question is not whether receipt scanning looks good in a demo. It is whether the operating model, approval path, billing model, and support boundaries are strong enough before employees start sending real expenses into the system.',
       ],
@@ -3511,7 +3494,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 5 June 2026 for business central expense agent, business central expense management, and expense management software australia.',
         '• Microsoft Learn release-plan article "Manage expenses in Business Central using Expense Agent", updated 14 May 2026.',
         '• Microsoft Learn product docs "Expense Management Overview", updated 11 May 2026.',
         '• Microsoft Learn product docs "Expense Agent overview", updated 20 May 2026.',
@@ -3535,7 +3517,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Business Central search interest in Australia is still strongest around pricing and concrete product changes, but release-wave content becomes more commercially important when Microsoft pushes new AI, supply chain, and manufacturing capabilities into the current planning window. That is exactly the position in May 2026: the 2026 release wave 1 cycle is now live, and buyers or existing customers need a clearer adoption filter than “Copilot sounds interesting”.',
         'Microsoft says the 2026 release wave 1 plan covers features planned for April 2026 through September 2026, and it also warns that some planned functionality may change before release. That matters because Australian SMB teams should not turn the whole wave into an immediate backlog. They should isolate the changes that affect governance, finance-process control, warehouse execution, or manufacturing complexity first.',
         'This article is for Australian Business Central teams that want to decide what deserves near-term partner review, what should stay on a watchlist, and where new functionality is actually relevant to the operating model rather than just the demo script.',
       ],
@@ -3612,7 +3593,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Business Central manufacturing is getting more specific. On 13 May 2026, Google autocomplete with Australian locale settings expands into phrases such as “business central quality management”, “business central manufacturing”, “business central subcontracting”, and “quality management system australia”. That is a useful signal that buyers are moving beyond generic ERP fit and into plant-control questions.',
         'Microsoft now documents quality management in Business Central as a real inspection application rather than a vague roadmap promise. The current overview says it can create inspections at purchasing, production, assembly, and warehouse points, while related setup and workflow documentation shows how templates, generation rules, grading, workflows, and non-compliance actions are meant to work together.',
         'The Australian caution is important. Microsoft\'s current quality-management documentation says this early access feature is limited to Business Central partners using partner sandbox licences in the United States, United Kingdom, or Germany, and it is not meant for production use. So the right local question is not “can we switch this on tomorrow?”. It is “what should we test and prepare now so we can move quickly when Microsoft broadens availability?”.',
       ],
@@ -3688,7 +3668,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search interest is currently leaning harder into warehouse management system topics than into the ERP pricing terms we tested for this run. That is a useful signal, but it does not answer the real buying question for distributors: is the warehouse struggling because the business genuinely needs WMS-grade execution control, or because the current ERP setup, data discipline, and floor routines are still weak?',
         'ERP teams often jump too quickly from “the warehouse feels hard” to “we need another platform”. In practice, the cleaner decision comes from measurable operating signals. If those signals are not visible, buyers risk spending money on a WMS project that simply automates the same confusion faster.',
         'This article is designed to complement broader Business Central warehouse guidance with a narrower test: which KPIs and warehouse control signals should trigger a serious WMS conversation, and which ones usually point back to process redesign inside the ERP first.',
       ],
@@ -3760,7 +3739,6 @@ export const mockPosts: PostDoc[] = [
     body: skimmableBlocks(
       [
         'NetSuite 2026.1 is a more useful release for Australian distributors than a quick scan might suggest. Oracle has tied together new pricing controls, vendor consignment capability, returns-oriented connector updates, and warehouse-related product constraints that can all affect real margin and fulfilment decisions.',
-        'That matters because Australian ERP search intent is still strong where pricing, WMS, ecommerce returns, and distribution operations overlap. The practical question is not whether every 2026.1 change should go live immediately. It is which changes alter margin governance, warehouse design, or integration priorities for distributors right now.',
         'This article is for distributors, importers, wholesalers, and product-led SMB teams that already use NetSuite or are comparing it with alternatives such as Business Central. The value is not in repeating the entire release notes set. It is in isolating the distributor-relevant changes Oracle has actually published as of April 2026.',
       ],
       ['## What Oracle has officially published'],
@@ -4029,8 +4007,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Odoo has become a more current buyer topic in Australia again because the official release cycle has moved from Odoo 19 in September 2025 to Odoo 19.1 in January 2026 and Odoo 19.2 in March 2026. That matters for shortlist buyers because Odoo search intent in Australia is still tied closely to pricing, inventory, and warehouse questions rather than generic ERP theory.',
-        'Australian Google autocomplete signals reinforce that pattern. Queries such as “odoo australia pricing”, “odoo inventory”, “odoo wms”, and “warehouse management system australia” continue to appear, which tells you buyers are still trying to connect Odoo product direction with practical warehouse decisions.',
         'The useful question is not whether every Odoo 19.2 feature should change your roadmap. It is whether the latest release gives wholesalers, distributors, and light manufacturers better evidence on routing logic, replenishment discipline, manufacturing control, and the point where native warehouse capability is or is not enough.',
       ],
       ['## What Odoo has officially released'],
@@ -4043,7 +4019,6 @@ export const mockPosts: PostDoc[] = [
       ['## Why this matters for Australian ERP buyers now'],
       [
         '• Australian wholesale and import businesses usually feel ERP pain in stock movement, lead-time promises, and warehouse exceptions before they feel it in polished dashboards.',
-        '• Search behaviour supports that. Buyers are not just looking for Odoo in the abstract. They are looking for Odoo in Australia, Odoo pricing, and Odoo WMS-related answers, which usually means the shortlist is being tested against operational fit and total delivery effort.',
         '• That makes Odoo 19.2 worth covering now because the release adds operational detail buyers can use in selection and upgrade decisions instead of relying on broad partner claims.',
       ],
       ['## Priority 1: test inventory routing before assuming native WMS is enough'],
@@ -4078,13 +4053,11 @@ export const mockPosts: PostDoc[] = [
       [
         '• Odoo 19.2 is worth attention for wholesalers and light manufacturers because the inventory and manufacturing changes are concrete enough to test against real operating flows.',
         '• The best use of this release is not feature tourism. It is using current Odoo product evidence to decide whether native capability is now sufficient for your warehouse model or whether WMS depth, implementation risk, or governance overhead still pushes you elsewhere.',
-        '• For ERP Search readers, the high-value follow-up is to compare this release direction against Odoo pricing, Odoo warehouse fit, and the equivalent current-release signals from Business Central and NetSuite.',
       ],
       ['## Sources used'],
       [
         '• Odoo release notes overview page for Version 19, 19.1, and 19.2 release timing.',
         '• Odoo 19.2 release notes for Inventory and Manufacturing changes.',
-        '• Google autocomplete suggestion data with Australia targeting for odoo australia pricing, odoo inventory, odoo wms, and warehouse management system australia.',
       ],
     ),
   },
@@ -4105,7 +4078,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Business Central AI is becoming more commercial and less abstract. On 18 May 2026, Google autocomplete with Australian locale settings expands into phrases such as “business central copilot”, “business central copilot agents”, and “business central copilot credits”. That is a stronger buying signal than generic AI hype because it usually means teams are trying to understand whether Microsoft\'s AI story changes budget, licensing, and rollout scope now.',
         'The current Microsoft documentation creates one important distinction that many buyers still miss. Standard Copilot capabilities inside Business Central are currently included with the Business Central licence, while selected autonomous agent capabilities such as Sales Order Agent and Payables Agent use separate consumption-based billing through Copilot Credits.',
         'For Australian teams, that changes the budgeting conversation. The key question is not whether Microsoft mentions Copilot on the pricing page. It is which capabilities are already covered by the core subscription, which ones need an Azure-linked billing model, and how quickly usage-based cost can move from trivial to material once real AP or order-volume hits production.',
       ],
@@ -4167,7 +4139,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting for business central copilot, business central copilot agents, and business central copilot credits on 18 May 2026.',
         '• Microsoft Dynamics 365 Business Central pricing page for Copilot inclusion and separately billed agent listings.',
         '• Microsoft Learn Copilot in Business Central overview for included Copilot, no minimum users, and the Azure AI time clarification.',
         '• Microsoft Learn manage consumption-based billing page for billable capabilities, setup model, and the Sales Order Agent and Payables Agent Copilot Credit examples.',
@@ -4192,7 +4163,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Business Central AI has become a more precise buyer topic in Australia, not just a branding topic. In a Google Trends Australia comparison run on 29 May 2026 covering the last 12 months, “Business Central AI” materially outranked narrower queries such as “Business Central pricing”, “Business Central training”, and “Business Central release wave”. That is a useful signal that local search intent is moving from general ERP evaluation toward practical AI use cases.',
         'Microsoft has now given that interest a new focal point. In the 2025 release wave 2 plan, Microsoft lists the in-product experience to envision and design AI agents in Business Central with public preview from 6 February 2026 and general availability in May 2026. At the same time, the feature-details section still describes the ability to design your own agents as being in public preview for some behaviour. That matters because the conversation can move beyond Microsoft’s built-in Payables Agent and Sales Order Agent into whether SMB teams should prototype their own role-specific automation, while still keeping rollout maturity under review.',
         'The useful question is not whether every Business Central customer should suddenly build custom agents. It is whether your business now has enough product evidence to test a narrow, supervised ERP use case without confusing prototype value, production readiness, billing, and governance.',
       ],
@@ -4272,7 +4242,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google Trends Australia comparison run on 29 May 2026 for Business Central AI, Business Central pricing, Business Central release wave, and Business Central training over the last 12 months.',
         '• Microsoft Learn release-plan page: Envision and design AI agents in Business Central.',
         '• Microsoft Learn release-plan overview: Copilot and agents in Business Central.',
         '• Microsoft Learn documentation: Configure Copilot and agent capabilities in Business Central.',
@@ -4297,7 +4266,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent is still pushing toward practical warehouse software decisions rather than generic ERP education. On 20 May 2026, Google autocomplete with Australian locale settings expands into phrases such as “warehouse management system australia”, “warehouse management software australia”, “business central warehouse management”, “netsuite warehouse management”, and “odoo wms”. That is a strong buyer signal because it usually means teams are trying to decide whether native ERP warehouse capability is enough or whether they have already outgrown it.',
         'The official product documentation also shows why this decision is easy to oversimplify. Microsoft documents a warehouse spectrum in Business Central that runs from no dedicated warehouse activity through basic warehouse documents to directed put-away and pick. Oracle documents NetSuite WMS as a separate warehouse-management layer that extends inventory capability through mobile inbound, inventory, and outbound processes, with prerequisite inventory features that must already be enabled. Odoo documents Inventory as both an inventory application and a warehouse management system, then layers barcode-driven operations, batch transfers, and GS1 support through its Barcode documentation.',
         'For Australian buyers, the useful question is not “which product mentions WMS on a webpage?” It is whether your current warehouse complexity, scan discipline, service expectations, and support model still fit inside ERP-native execution, or whether a standalone WMS now deserves explicit shortlist time before the ERP project design hardens.',
       ],
@@ -4310,7 +4278,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Why this matters now for Australian buyers'],
       [
-        '• Search behaviour suggests buyers are already trying to bridge ERP selection with warehouse execution decisions. That is commercially important because warehouse fit usually affects implementation cost, service risk, and adoption effort more than a finance-only feature gap does.',
         '• Many Australian wholesalers, importers, and light manufacturers still run with one ERP shortlist but two different warehouse realities: what leadership thinks the warehouse does, and what the floor actually has to do under pressure. That mismatch is where scanning, replenishment, dispatch, and exception handling problems usually surface.',
         '• The wrong time to discover you needed deeper warehouse execution is after item masters, location design, ecommerce integration, or 3PL boundaries have already been built around an oversimplified ERP assumption.',
       ],
@@ -4354,7 +4321,7 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## What readers should conclude now'],
       [
-        '• Australian buyer intent around WMS is real and current, not just a side topic under generic ERP selection.',
+        '• Warehouse management should be treated as its own shortlist workstream, not as a side topic under generic ERP selection.',
         '• The official Microsoft, Oracle, and Odoo documentation shows that ERP vendors support warehouse execution in materially different ways, so buyers should test process fit directly rather than assuming all native warehouse capability is equivalent.',
         '• If your warehouse complexity is climbing faster than your confidence in receiving, replenishment, picking, and counting discipline, a standalone WMS deserves explicit shortlist time before the ERP design is locked in.',
       ],
@@ -4367,7 +4334,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting for warehouse management system australia, warehouse management software australia, business central warehouse management, netsuite warehouse management, and odoo wms on 20 May 2026.',
         '• Microsoft Learn warehouse management overview for Business Central warehouse complexity levels and process options.',
         '• Oracle NetSuite WMS Overview and NetSuite WMS feature setup documentation for mobile processing scope and prerequisite inventory features.',
         '• Odoo 19 Inventory and Barcode documentation for native warehouse and barcode process coverage.',
@@ -4391,7 +4357,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'NetSuite is the strongest current ERP search signal in Australia among the shortlist terms checked for this run. On 20 May 2026, a Google Trends Australia comparison over the previous 12 months in the Business and Industrial category showed NetSuite materially ahead of Business Central, Odoo, and WMS as a search term. That does not prove product fit by itself, but it does make NetSuite a high-value topic for current buyer guidance.',
         'The content gap on ERP Search is not NetSuite pricing or warehouse fit. Those topics already exist. The more useful missing piece is AI buyer clarity, because Oracle is now mixing three different layers into the same market conversation: AI features already in NetSuite 2026.1, broader AI connector and MCP tooling, and the forward-looking NetSuite Next experience.',
         'For Australian finance and operations leaders, those layers should not be evaluated the same way. Some capabilities are live in the current 2026.1 release notes. Some are regionally announced and available now. Some are explicitly future-direction items that Oracle says should not be relied on for purchasing decisions. If you flatten all of that into one “NetSuite AI” story, you will almost certainly overstate near-term value and under-budget governance work.',
       ],
@@ -4446,7 +4411,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google Trends Australia comparison run on 20 May 2026 for NetSuite, Business Central, Odoo, and WMS in the Business and Industrial category over the previous 12 months.',
         '• Oracle NetSuite 2026.1 release notes overview, revision date 20 April 2026.',
         '• Oracle NetSuite 2026.1 Artificial Intelligence release note, updated 18 May 2026.',
         '• Oracle NetSuite 2026.1 Item Record Management release note, updated 18 May 2026.',
@@ -4472,7 +4436,6 @@ export const mockPosts: PostDoc[] = [
     body: skimmableBlocks(
       [
         'This is a timely ERP topic in Australia because Shopify materially changed the B2B buying conversation on 2 April 2026. Shopify announced that foundational B2B features are rolling out to Basic, Grow, and Advanced plans at no extra cost, which means more wholesale and trade sellers can now run B2B and DTC in one storefront without first moving to Shopify Plus.',
-        'Australian search signals support that timing. On 27 May 2026, Google autocomplete with Australia targeting expanded queries such as "shopify erp", "shopify business central", "shopify netsuite", "shopify odoo", "shopify b2b", and "shopify wholesale" into integration, connector, pricing, and B2B variants. That usually means the market is no longer asking whether Shopify can be part of the stack. It is asking which ERP path is least risky once wholesale pricing, inventory, and fulfilment matter.',
         'ERP Search already has a Business Central specific Shopify article. The gap on the site is broader buyer guidance across shortlist products. For most Australian teams, the real decision is not "can these systems connect?" It is whether the integration model fits the operating complexity of B2B catalog pricing, customer-specific terms, stock ownership, finance reconciliation, and support accountability after go-live.',
       ],
       ['## Why this topic matters more now'],
@@ -4537,7 +4500,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting for shopify erp, shopify business central, shopify netsuite, shopify odoo, shopify b2b, and shopify wholesale on 27 May 2026.',
         '• Shopify newsroom announcement dated 2 April 2026 on B2B features rolling out across Basic, Grow, and Advanced plans.',
         '• Shopify Help Center B2B documentation for current B2B areas including catalogs, pricing, checkout, orders, reporting, automations, and ERP integrations.',
         '• Microsoft Learn Shopify Connector overview and Shopify Connector technical FAQ for Business Central capability, support model, online-only scope, quarterly Shopify API cadence, and unsupported draft orders.',
@@ -4563,7 +4525,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search behaviour is making Peppol a more practical ERP topic rather than a niche finance compliance topic. On 22 May 2026, Google autocomplete with Australia targeting expanded “peppol australia” into queries such as “peppol australia mandatory”, “peppol directory australia”, and “peppol pint australia”. That is a useful signal that buyers are trying to connect ERP choices with real rollout, trading-partner, and standards questions.',
         'The ATO is also keeping the topic commercially relevant. Its current guidance says businesses need to register on the Peppol network to start using eInvoicing, and its government guidance says the Australian Government is establishing eInvoicing as the default method of invoicing in government procurement for most Australian Government entities. That does not create one simple private-sector mandate tomorrow, but it does make Peppol readiness a stronger shortlist question now.',
         'ERP Search already has a Business Central-specific eInvoicing article. The gap on the site is broader buyer guidance across shortlist products. The useful question is not “does this ERP mention eInvoicing?” It is how differently Business Central, NetSuite, and Odoo document Australian Peppol readiness, external-provider dependency, and the work still left with the buyer or implementation partner.',
       ],
@@ -4635,7 +4596,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 22 May 2026 for peppol australia, business central peppol, netsuite einvoicing, and odoo peppol.',
         '• Australian Taxation Office guidance on eInvoicing for businesses and eInvoicing for government.',
         '• Microsoft Learn pages for Electronic invoicing in Australia and the Electronic Invoicing FAQ for Business Central.',
         '• Oracle NetSuite help pages for NetSuite Electronic Business Overview and Electronic Invoicing, including the ANZ PEPPOL template reference.',
@@ -4660,7 +4620,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Odoo is still clustering around current-version and practical-operating questions rather than abstract ERP curiosity. On 29 May 2026, Google autocomplete with Australia targeting expanded into phrases such as "odoo 19.3 release notes", "odoo ai", "odoo australia pricing", "odoo inventory", and "odoo wms". That is a useful signal because it suggests buyers are trying to connect the newest Odoo release with commercial fit, warehouse behaviour, and rollout effort now.',
         'Odoo 19.3 is current enough to matter. Odoo\'s official release notes mark 19.3 as the May 2026 release and add several operational changes that are more useful for ERP buyers than generic feature tourism: offline actions, improved mobile form handling, AI agents that can create and update records, simpler returns, variant-specific packagings, and clearer manufacturing component analysis.',
         'For Australian teams, the main question is not whether every 19.3 feature is exciting. It is whether this release changes the evidence base for warehouse-led SMBs, field-heavy teams, and shortlist buyers who are already comparing Odoo against Business Central or NetSuite. Some parts do. Others still need harder proof before they should move budget or scope.',
       ],
@@ -4734,7 +4693,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 29 May 2026 for odoo 19.3, odoo ai, odoo australia, odoo inventory, and odoo wms.',
         '• Odoo 19.3 release notes for general, AI, Inventory, and Manufacturing changes.',
         '• Odoo release notes overview page confirming 19.3 as the current May 2026 release.',
       ],
@@ -4757,9 +4715,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Odoo is no longer only about low entry pricing. On 25 May 2026, Google autocomplete with Australia targeting expanded into phrases such as "odoo australia pricing", "odoo australia payroll", and "odoo accounting australia". That is a useful signal that shortlist buyers are moving from curiosity into finance, compliance, and rollout questions.',
         'Odoo now has enough official Australia-specific documentation to deserve a more serious review than "cheap ERP with apps". Its current documentation describes an Australian accounting localisation, BAS and TPAR reporting, ABA batch-payment support, payroll localisation, Employment Hero payroll synchronisation, and a separate Peppol e-invoicing framework. The gap is that these pieces do not all carry the same implementation risk.',
-        'That makes this a high-value buyer topic for ERP Search. The important question is not whether Odoo can show Australian finance features in a demo. It is which parts look production-ready from Odoo\'s own documentation, which parts still need manual ATO process or third-party support, and where Australian finance leaders should slow the project down before committing scope.',
       ],
       ['## What Odoo officially documents for Australia today'],
       [
@@ -4831,7 +4787,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 25 May 2026 for odoo australia, odoo accounting australia, and odoo australia payroll.',
         '• Odoo 19.0 documentation for Australia fiscal localisation, including BAS, GST, ABA, payroll modules, and Employment Hero integration.',
         '• Odoo 19.0 documentation for electronic invoicing and Peppol registration eligibility.',
         '• Odoo 19.0 documentation for Australian payroll, including the STP Phase 2 and SuperStream compliance note.',
@@ -4856,7 +4811,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Business Central is still strongly local and practical. On 27 May 2026, Google autocomplete with Australia targeting expanded into phrases such as "business central australia localization", "business central pricing australia", "business central implementation australia", and "business central payroll australia". That is a useful signal that buyers are not only comparing ERP brands. They are trying to work out whether the Australian finance operating model will hold up in the real product.',
         'ERP Search already covers Business Central pricing, eInvoicing, payment times reporting, and AI. The missing buyer question on the site is broader and more foundational: what does Microsoft itself officially document for Australian finance teams before partner extensions and project promises start filling the gaps?',
         'Microsoft\'s current documentation gives a clearer answer than many buyers expect. Business Central has explicit Australian local functionality across GST, BAS structure, electronic funds transfer, eInvoicing, and payment-times support. At the same time, the payroll story in Microsoft\'s own docs is more integration-led than "native Australian payroll is fully solved inside ERP". That distinction matters before rollout scope is signed off.',
       ],
@@ -4930,7 +4884,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 27 May 2026 for business central australia, business central pricing australia, business central implementation australia, and business central payroll australia.',
         '• Microsoft Learn Australia local functionality page for feature coverage across GST, EFT, BAS, eInvoicing, and Payment Times Reporting.',
         '• Microsoft Learn articles for GST posting setup, EFT in Australia, BAS business units, electronic invoicing in Australia, Payment Times Reporting in the Australian version, and Import payroll transactions.',
         '• Australian Taxation Office guidance on how to lodge your BAS and eInvoicing for businesses.',
@@ -4950,12 +4903,10 @@ export const mockPosts: PostDoc[] = [
     seo: {
       metaTitle: 'Odoo CRM + ERP in Australia: What to Test in 2026',
       metaDescription:
-        'Practical Australian guide to Odoo CRM + ERP in 2026 using Odoo 19 release notes, CRM capability, pricing, and AU search-interest signals.',
+        'Practical Australian guide to Odoo CRM + ERP in 2026 using Odoo 19 release notes, CRM capability, pricing, and rollout-risk checks.',
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Odoo is no longer limited to generic ERP research. On 5 June 2026, Google autocomplete with Australia targeting expanded queries such as "odoo crm", "odoo crm pricing", "odoo crm features", and "odoo crm software". That is a useful demand signal because it suggests buyers are not only asking whether Odoo exists on the shortlist. They are asking whether one integrated platform can realistically cover lead management, quoting, customer data, and downstream ERP execution without creating fresh delivery risk.',
-        'That makes Odoo CRM + ERP a good topic gap for ERP Search. The site already covers generic CRM and ERP stack strategy plus a D365 Sales + Business Central integration guide, but it does not yet give Australian buyers a practical Odoo-specific view of when the integrated stack is genuinely attractive and where the standard story still needs discipline.',
         'Odoo\'s current public product pages and 19.0 release notes make the integrated position more credible than some buyers assume. Odoo markets CRM as part of one connected suite, documents AI lead scoring and pipeline automation on the CRM page, and in the 19.0 release notes documents upgrades such as Gmail and Outlook account connection plus a Dun & Bradstreet-backed partner autocomplete provider. The commercial boundary matters too: Odoo\'s pricing page says the Standard and Custom plans both include all apps, while Custom is the plan that adds Odoo Studio, multi-company support, and the external API.',
       ],
       ['## Why this matters for Australian buyers now'],
@@ -5008,7 +4959,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 5 June 2026 for odoo crm, odoo crm pricing, odoo crm features, and odoo crm software.',
         '• Odoo CRM product page for current positioning around pipeline management, forecasting, quotations, integrations, automation, and AI lead scoring.',
         '• Odoo 19 release notes for Gmail and Outlook account connection and the Dun & Bradstreet partner autocomplete provider.',
         '• Odoo pricing page for Standard and Custom plan boundaries including all apps, Odoo Studio, multi-company, and external API access.',
@@ -5028,12 +4978,10 @@ export const mockPosts: PostDoc[] = [
     seo: {
       metaTitle: 'Business Central Subscription Billing Australia: What to Test',
       metaDescription:
-        'Australian buyer guide to Business Central subscription billing using current Microsoft docs, release-wave updates, and AU search-interest signals.',
+        'Australian buyer guide to Business Central subscription billing using current Microsoft docs, release-wave updates, and rollout-risk checks.',
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around recurring ERP revenue is getting more specific. On 12 June 2026, Google autocomplete with Australia targeting returned phrases such as "business central subscription billing", "business central recurring billing", "business central usage based billing", and "business central project invoicing". That is a useful signal because it suggests buyers are no longer asking only about licence cost or generic finance fit. They are asking how Business Central should handle recurring commercial models in practice.',
-        'That makes subscription billing a strong current topic gap for ERP Search. The site already covers Business Central pricing, AI agents, finance localisation, and implementation risk, but it does not yet give Australian service, managed-service, rental, and project-led teams a dedicated view of Microsoft\'s own recurring-billing model.',
         'Microsoft\'s current documentation is detailed enough to support that view. Its subscription billing overview says the product now supports recurring billing through contracts, subscription lines, renewals, billing templates, notice periods, and deferral-based posting. Microsoft\'s 2026 release wave 1 plan also lists "Reduce time spent on recurring invoicing in Subscription Billing" as generally available from 1 April 2026. That implies recurring billing is no longer only a partner-story edge case inside Business Central. It is a current Microsoft-owned workflow buyers should evaluate directly.',
       ],
       ['## What Microsoft officially documents today'],
@@ -5096,7 +5044,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 12 June 2026 for business central subscription billing, business central recurring billing, business central usage based billing, and business central project invoicing.',
         '• Microsoft Learn article: Welcome to subscription billing.',
         '• Microsoft Learn article: Examples for subscription billing.',
         '• Microsoft Learn article: Subscription lines for items.',
@@ -5119,12 +5066,10 @@ export const mockPosts: PostDoc[] = [
     seo: {
       metaTitle: 'Business Central MCP Server in Australia: What SMB Teams Should Test',
       metaDescription:
-        'Australian buyer guide to the Business Central MCP server using current Microsoft documentation, MCP release details, and AU search-interest signals.',
+        'Australian buyer guide to the Business Central MCP server using current Microsoft documentation, MCP release details, and governance checks.',
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Business Central AI is getting more technical and more commercial at the same time. On 8 June 2026, Google autocomplete with Australia targeting expanded queries such as "business central mcp server", "business central mcp connector", "business central mcp endpoint", and "configure business central mcp server". That is a useful demand signal because it usually means teams have moved past generic Copilot curiosity and started asking how external AI agents will actually connect to ERP data and actions.',
-        'That makes the Business Central MCP server a worthwhile topic gap for ERP Search. The site already covers Business Central agent pricing, built-in agents, and the in-product AI agent designer, but it does not yet give Australian buyers a dedicated guide to Microsoft\'s MCP path itself: what it is for, what it still is not, and what controls should be proven before production ERP access is opened to AI tooling.',
         'Microsoft\'s current documentation is clear enough to support a practical buying view. The 2025 release wave 2 plan says the Business Central MCP server reached public preview on 31 October 2025. Microsoft\'s current overview and configuration documentation then explain the operating model: the MCP server is aimed at AI-agent scenarios, works with Business Central online, exposes API pages and queries as tools, supports clients such as Copilot Studio and non-Microsoft MCP clients, and starts with read-only access unless administrators explicitly extend it. For most SMB teams, that is the real decision point. The question is no longer whether Microsoft has an MCP story. It is whether your business is ready to govern one.',
       ],
       ['## What Microsoft has officially released'],
@@ -5198,7 +5143,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 8 June 2026 for business central mcp, business central mcp server, business central ai agent, and business central sales order agent.',
         '• Microsoft Learn release-plan page: Connect AI agents to Business Central through MCP server.',
         '• Microsoft Learn article: Use the Business Central MCP server in AI applications.',
         '• Microsoft Learn article: Configure the Business Central MCP Server.',
@@ -5225,8 +5169,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around older NetSuite integration paths is turning into an upgrade-risk topic, not just a developer curiosity. On 10 June 2026, Google autocomplete with Australia targeting expanded queries such as "netsuite soap api", "netsuite soap api deprecation", "netsuite soap removal", "netsuite suiteanalytics connect", and "netsuite2.com data source". That is a useful demand signal because it usually means teams are no longer debating integration style in theory. They are trying to work out what breaks, when it breaks, and what should be migrated first.',
-        'That makes NetSuite SOAP removal a worthwhile site gap for ERP Search. The site already covers NetSuite pricing, warehouse fit, and broader AI direction, but it does not yet give Australian buyers and delivery teams a dedicated guide to the integration deadlines now sitting inside Oracle\'s own documentation: the gradual removal of SOAP, the narrowing of supported WSDL endpoints, and the fact that the older NetSuite.com data source is gone once an account reaches NetSuite 2026.1.',
         'Oracle\'s current help content is clear enough to support a practical buyer view. Oracle says SOAP web services are being removed gradually, the 2025.2 SOAP endpoint is the last planned endpoint, from 2027.1 only the 2025.2 endpoint will be supported, and with the 2028.2 release SOAP will no longer be available in NetSuite. Oracle also says the outdated NetSuite.com data source is no longer available as of NetSuite 2026.1 and that NetSuite2.com is now the only data source for SuiteAnalytics Connect. For Australian finance, operations, and IT teams, that turns integration debt into a dated business risk.',
       ],
       ['## What Oracle has officially said'],
@@ -5291,7 +5233,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 10 June 2026 for netsuite soap api, netsuite soap api deprecation, netsuite soap removal, netsuite suiteanalytics connect, and netsuite2.com data source.',
         '• Oracle NetSuite Help Center: SOAP Removal Plans FAQ.',
         '• Oracle NetSuite Help Center: Support for Existing WSDL Versions and SOAP Web Services Overview.',
         '• Oracle NetSuite Help Center: Removal of SuiteAnalytics Connect NetSuite.com Data Source.',
@@ -5317,8 +5258,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around Payday Super is now clearly operational, not theoretical. On 1 June 2026, Google autocomplete with Australia targeting returned phrases such as "payday super ato", "payday super legislation", "payday super changes", and "payday super penalties". That is a strong sign that buyers and operators are moving from policy awareness into system, process, and compliance questions.',
-        'For ERP Search, this is a high-value topic because Payday Super is not only a payroll change. It reaches ERP architecture, finance close rhythm, clearing-house dependency, bank timing, exception handling, and the boundary between payroll software and the core ERP.',
         'The most important date is fixed: from 1 July 2026, the ATO says employers must pay super guarantee on payday, at the same time as salary and wages, with the contribution received by the employee super fund within 7 business days unless an extended timeframe applies. If your business runs Business Central, NetSuite, or Odoo, the real question is whether the end-to-end operating model can meet that rule repeatedly under normal and exception scenarios.',
       ],
       ['## What changes on 1 July 2026'],
@@ -5388,7 +5327,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 1 June 2026 for payday super and payday super australia.',
         '• ATO Software Developers Payday Super page for the 1 July 2026 start date, qualifying earnings, and the 7-business-day receipt requirement.',
         '• ATO Small Business Superannuation Clearing House page for the 30 June 2026 final-use timing and 1 July 2026 closure.',
         '• Microsoft Learn Import payroll transactions article for Business Central payroll-provider import workflow.',
@@ -5414,7 +5352,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around NetSuite is becoming more operational and finance-led. On 8 June 2026, Google autocomplete with Australia targeting returned phrases including "netsuite australia bank feeds", "netsuite australia localization", and "netsuite payroll australia". That is a useful signal that shortlist buyers are not only comparing brand names. They are trying to work out whether the Australian finance operating model is strong enough before rollout.',
         'ERP Search already covers NetSuite pricing, AI, 2026.1 release impacts, and warehouse management. The missing buyer question on the site is more foundational: what does Oracle itself currently document for Australian finance teams across GST, BAS, banking, payroll boundaries, and eInvoicing before partner promises fill the gaps?',
         'Oracle\'s current documentation shows that NetSuite has a real Australian finance story, but it is not a "switch it on and everything is localised" story. Australia Help Topics and ANZ reporting content are useful, the 2026.1 banking change matters immediately for some teams, and payroll plus eInvoicing still need more explicit operating-model proof than a generic demo usually provides.',
       ],
@@ -5482,7 +5419,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 8 June 2026 for netsuite australia bank feeds, netsuite australia localization, and netsuite payroll australia.',
         '• Oracle NetSuite Help content for Australia Help Topics, ANZ reports, banking and the Australia Bank Feeds SuiteApp, payroll setup boundaries, and e-document or Peppol capabilities.',
         '• Australian Taxation Office guidance on Business Activity Statements and the eInvoicing Ready product register.',
       ],
@@ -5505,7 +5441,6 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Australian search intent around NetSuite AI is getting more technical and more specific. On 10 June 2026, Google autocomplete with Australia targeting returned phrases such as "netsuite ai connector", "netsuite ai connector service", "netsuite ai integration", and "netsuite ai connector claude". That is a useful demand signal because it suggests buyers are moving past generic AI curiosity and into the practical question of how external AI clients will actually connect to ERP data and actions.',
         'ERP Search already covers NetSuite AI more broadly, plus NetSuite pricing, accounting, and warehouse fit. The missing buyer topic on the site is narrower and more urgent: what Oracle now officially documents about the NetSuite AI Connector itself, what the connector is good for, and which governance checks matter before a finance or operations team opens live MCP access.',
         'Oracle\'s current help content is detailed enough to support a practical buying view. The NetSuite AI Connector Service uses the Model Context Protocol, supports standard tools or custom tools, works with AI clients that meet Oracle\'s protocol and OAuth requirements, and gives users direct access to NetSuite data and actions through their existing role permissions. That makes this less like a generic integration feature and more like a role-design, access-control, and operational-governance decision.',
       ],
@@ -5578,7 +5513,6 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Google autocomplete suggestion data with Australia targeting on 10 June 2026 for netsuite ai connector, netsuite ai connector service, netsuite ai integration, and netsuite ai connector claude.',
         '• Oracle NetSuite Help pages for Get Started with the NetSuite AI Connector Service, NetSuite AI Connector Service FAQ, Required Features and Permissions, Connect to the NetSuite AI Connector Service, Associated Risks, Controls, and Mitigation Strategies, and NetSuite AI Connector Service And Concurrency Governance.',
       ],
     ),
