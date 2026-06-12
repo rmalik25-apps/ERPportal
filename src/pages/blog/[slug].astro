@@ -85,17 +85,6 @@ const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [
         alt={visual.alt}
         caption={visual.caption}
       />
-      <section class="summary-box" aria-label="Post summary">
-        <h2>Editorial context</h2>
-        <dl>
-          <dt>Category</dt>
-          <dd>{post.category}</dd>
-          <dt>Role</dt>
-          <dd>Top-of-funnel trust + newsletter content</dd>
-          <dt>Next step</dt>
-          <dd>Link to related guide or comparison page</dd>
-        </dl>
-      </section>
       <p class="lead">{post.excerpt}</p>
       {content.length ? (
         content.map((block) =>
