@@ -8,8 +8,8 @@ const [guides, comparisons, posts] = await Promise.all([getGuides(), getComparis
 const latestGuides = sortByPublishedDateDesc(guides).slice(0, 2)
 const latestComparisons = sortByPublishedDateDesc(comparisons).slice(0, 2)
 const latestPosts = sortByPublishedDateDesc(posts).slice(0, 2)
-const featuredGuides = guides.slice(0, 2)
-const featuredPosts = posts.slice(0, 4)
+const featuredGuides = sortByPublishedDateDesc(guides).slice(0, 2)
+const featuredPosts = sortByPublishedDateDesc(posts).slice(0, 4)
 const featuredComparison = comparisons[0]
 const navGuide = guides.find((guide) => guide.slug.includes('nav'))
 const partnerGuide = guides.find((guide) => guide.slug.includes('partner'))
