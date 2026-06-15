@@ -72,10 +72,19 @@ function shouldUseFallbackBody(body: any) {
   return !Array.isArray(body) || body.length < 8
 }
 
+function contentTimestamp(doc: {updatedAt?: string; publishedAt?: string}) {
+  return Date.parse(doc.updatedAt || doc.publishedAt || '') || 0
+}
+
+function fallbackIsNewer<T extends {updatedAt?: string; publishedAt?: string}>(doc: T, fallback: T) {
+  return contentTimestamp(fallback) > contentTimestamp(doc)
+}
+
 function enrichGuide(doc: GuideDoc | undefined) {
   if (!doc) return doc
   const fallback = mockGuides.find((item) => item.slug === doc.slug)
   if (!fallback) return doc
+  if (fallbackIsNewer(doc, fallback)) return {...doc, ...fallback, _id: doc._id || fallback._id}
   return {
     ...fallback,
     ...doc,
@@ -89,6 +98,7 @@ function enrichComparison(doc: ComparisonDoc | undefined) {
   if (!doc) return doc
   const fallback = mockComparisons.find((item) => item.slug === doc.slug)
   if (!fallback) return doc
+  if (fallbackIsNewer(doc, fallback)) return {...doc, ...fallback, _id: doc._id || fallback._id}
   return {
     ...fallback,
     ...doc,
@@ -103,6 +113,7 @@ function enrichPost(doc: PostDoc | undefined) {
   if (!doc) return doc
   const fallback = mockPosts.find((item) => item.slug === doc.slug)
   if (!fallback) return doc
+  if (fallbackIsNewer(doc, fallback)) return {...doc, ...fallback, _id: doc._id || fallback._id}
   return {
     ...fallback,
     ...doc,
