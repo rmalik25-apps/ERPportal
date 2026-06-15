@@ -2990,7 +2990,7 @@ export const mockPosts: PostDoc[] = [
     body: skimmableBlocks(
       [
         'The Australian public guidance is clear about the operating model. Business.gov.au says software must be connected to the Peppol network through Australian Taxation Office approved service providers, and it also says it does not matter which invoicing software each party uses as long as both sides are connected. For Business Central teams, that means the real design question is not whether Microsoft has an eInvoicing story. It is how the Business Central setup, service provider choice, and finance process design fit together.',
-        'Microsoft has now documented a more concrete local path. Its release-plan page for Business Central says users in Australia and New Zealand can use e-invoicing in Business Central through the E-Documents framework localised for the Peppol PINT A-NZ format. That makes this a current buyer and optimisation topic, not just a compliance footnote.',
+        'Microsoft has now documented a more concrete local path. Its release-plan page for Business Central says users in Australia and New Zealand can use e-invoicing in Business Central through the E-Documents framework localised for the Peppol PINT A-NZ format. Buyers should treat that as a process-design question covering provider choice, E-Document setup, AP and AR workflows, and exception handling.',
       ],
       ['## What the official sources show today'],
       [
@@ -3060,7 +3060,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Two official platform changes make this a current topic rather than a recycled integration article. Shopify announced on 2 April 2026 that foundational B2B features are rolling out beyond Shopify Plus, while Microsoft\'s 2026 release wave 1 plans continue refining the Business Central Shopify connection with April 2026 improvements around collections, product options, and related catalogue flow.',
+        'Shopify and Microsoft have both changed the practical integration picture. Shopify announced on 2 April 2026 that foundational B2B features are rolling out beyond Shopify Plus, while Microsoft\'s 2026 release wave 1 plans continue refining the Business Central Shopify connection with April 2026 improvements around collections, product options, and related catalogue flow.',
         'The practical question for Australian wholesalers, importers, and hybrid B2B+DTC businesses is not whether a connector exists. It is whether the native Business Central and Shopify path is strong enough for your operating model, and where pricing, tax, inventory, and support complexity still justify a more deliberate architecture.',
       ],
       ['## What the official platforms support today'],
@@ -3669,7 +3669,7 @@ export const mockPosts: PostDoc[] = [
       ['## Why this is commercially relevant even before broad Australian availability'],
       [
         '• Microsoft has moved past generic release language and published setup, workflow, troubleshooting, and use-case documentation. That usually means buyers and partners can evaluate the operating model more seriously than they could six months ago.',
-        '• The 2026 release wave 1 overview also names quality management and subcontracting as current investment areas. That makes this a live product direction topic, not background documentation only.',
+        '• The 2026 release wave 1 overview also names quality management and subcontracting as current investment areas, so buyers should track whether Microsoft\'s roadmap changes the add-on, customisation, or partner-extension assumptions in their manufacturing design.',
         '• For food, beverage, light manufacturing, and regulated distribution teams, quality inspections often sit exactly where generic ERP demos become unconvincing. Any current Microsoft move in this area deserves attention if Business Central is already shortlisted.',
       ],
       ['## The Australian constraint buyers should not gloss over'],
@@ -5045,7 +5045,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'Microsoft\'s current documentation is detailed enough to support that view. Its subscription billing overview says the product now supports recurring billing through contracts, subscription lines, renewals, billing templates, notice periods, and deferral-based posting. Microsoft\'s 2026 release wave 1 plan also lists "Reduce time spent on recurring invoicing in Subscription Billing" as generally available from 1 April 2026. That implies recurring billing is no longer only a partner-story edge case inside Business Central. It is a current Microsoft-owned workflow buyers should evaluate directly.',
+        'Business Central now has first-party subscription billing capabilities that Australian service, managed-service, rental, and project-led teams can test directly. Microsoft\'s subscription billing overview describes recurring billing through contracts, subscription lines, renewals, billing templates, notice periods, and deferral-based posting. Microsoft\'s 2026 release wave 1 plan also lists "Reduce time spent on recurring invoicing in Subscription Billing" as generally available from 1 April 2026, so buyers should validate contract setup, recurring invoice runs, deferral posting, usage import, and reporting before assuming a third-party billing layer is required.',
       ],
       ['## What Microsoft officially documents today'],
       [
