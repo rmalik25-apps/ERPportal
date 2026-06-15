@@ -253,6 +253,8 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
+    {href: '/blog/netsuite-ai-connector-australia-what-to-test/', label: 'NetSuite AI Connector in Australia'},
+    {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},

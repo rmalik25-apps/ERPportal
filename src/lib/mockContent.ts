@@ -1036,18 +1036,27 @@ const pillarComparisonBlocks = (slug: string) => {
       ],
     ],
     'business-central-vs-netsuite-growing-businesses': [
-      ['This is one of the most common shortlist decisions for growing Australian businesses because both platforms can support a meaningful step up from legacy systems or spreadsheet-heavy operations. The mistake is assuming they solve the same growth problem in the same way.', 'Business Central often appeals where Microsoft alignment, staged maturity, and practical operational control matter. NetSuite often appeals where cloud-first standardisation, broader native footprint, and multi-entity ambition are stronger drivers.', 'A Business Central vs Oracle NetSuite comparison becomes clearer when the business defines where complexity will sit: inside one broader platform, or within a more staged ecosystem anchored around Microsoft tooling.'],
+      ['This is one of the most common shortlist decisions for growing Australian businesses because both platforms can support a meaningful step up from legacy systems or spreadsheet-heavy operations. The mistake is assuming they solve the same growth problem in the same way.', 'Business Central often appeals where Microsoft alignment, staged maturity, clearer public licence pricing, and practical operational control matter. NetSuite often appeals where cloud-first standardisation, broader native footprint, and multi-entity ambition are stronger drivers.', 'A Business Central vs Oracle NetSuite comparison becomes clearer when the business defines where complexity will sit: inside one broader platform, or within a staged ecosystem anchored around Microsoft tooling and specialist extensions.'],
       ['## Who should use this comparison'],
       [
         '• SMB buyers choosing between two mainstream ERP shortlists with different ecosystem implications.',
         '• Businesses deciding whether Microsoft alignment or a broader cloud-standard operating model matters more.',
         '• Sponsors who want a practical fit and delivery trade-off view before they engage deeper with partners.',
       ],
+      ['## What changed for 2026 shortlist decisions'],
+      [
+        '• Microsoft now publishes Australian Business Central licence prices clearly: Essentials at AU$119.70 per user/month, Premium at AU$164.60, and Team Members at AU$12.00, paid yearly and excluding GST.',
+        '• Microsoft\'s 2026 release wave 1 plan shows current Business Central investment in Copilot and agents, electronic documents, Shopify/ecommerce, financial management, reporting, and supply-chain improvements.',
+        '• Oracle\'s NetSuite 2026.1 release notes were revised on 18 May 2026 and explicitly warn that some features and SuiteApps may require extra purchase or may not be available in every account.',
+        '• Oracle\'s 2026.1 inventory notes include consigned inventory, warehouse management enhancements, supply-chain planning and allocation changes, SCM Mobile updates, and quality-management enhancements.',
+        '• The practical result is that a 2026 comparison should not stop at old feature grids. It should compare total cost visibility, release direction, implementation partner evidence, and the operating model each platform will force the business to run.',
+      ],
       ['## Business Central vs Oracle NetSuite comparison criteria'],
       [
         '• Finance operating model: compare month-end close, approval controls, dimensions, consolidation, management reporting, and audit trail quality.',
         '• Operations fit: test warehouse flow, purchasing, fulfilment, projects, pricing, and exception handling with real scenarios.',
         '• Ecosystem strategy: decide whether Microsoft alignment or a more self-contained cloud ERP footprint reduces long-term complexity.',
+        '• Commercial visibility: compare published licence pricing, quote structure, add-on assumptions, implementation services, support model, renewal exposure, and any extra product purchases required to reach the same outcome.',
         '• Implementation partner strength: compare local partner method, references, governance, and support before treating either platform as the safer choice.',
         '• Change capacity: score whether the business can absorb the operating discipline each option expects in the first 12 to 18 months.',
       ],
@@ -1056,6 +1065,7 @@ const pillarComparisonBlocks = (slug: string) => {
         '• The business already relies heavily on Microsoft tools and wants a pragmatic extension of that ecosystem.',
         '• Growth is real, but the team still wants a staged implementation approach rather than a broad transformation all at once.',
         '• Operational areas like warehousing, purchasing, projects, or reporting need to improve without over-engineering the solution.',
+        '• Leadership needs clearer first-pass software pricing before it can approve a shortlist or compare implementation partner proposals.',
         '• Internal change capacity is limited and the business values familiarity and incremental maturity.',
       ],
       ['## When NetSuite tends to fit better'],
@@ -1063,7 +1073,22 @@ const pillarComparisonBlocks = (slug: string) => {
         '• Leadership wants a stronger cloud-standard operating model and is prepared to change ways of working to get there.',
         '• Multi-entity design and governance matter early rather than later.',
         '• The business wants to reduce architectural fragmentation by consolidating more process in the core platform.',
+        '• Warehouse, pricing, inventory ownership, ecommerce, or international entity complexity is already material enough to justify a broader quote-led platform discussion.',
         '• The implementation team and sponsors are prepared for a more substantial design and adoption effort.',
+      ],
+      ['## How to compare pricing without getting misled'],
+      [
+        '• Treat Business Central\'s published AU prices as a useful starting point, not a full budget. The final cost still depends on licence mix, Premium needs, extensions, data migration, reporting, integrations, training, and support.',
+        '• Treat NetSuite as a quote-led commercial model. Oracle documents a broad suite, but buyers should make the quote separate platform, users, entities, modules, SuiteApps, environments, services, support, and renewal assumptions.',
+        '• Compare three-year run-rate, not first-year subscription. A lower software line can become expensive if the delivery model needs more add-ons, custom reporting, integration work, or support coverage.',
+        '• Ask both sides to show what is included, what is optional, what requires extra purchase, and what will be deferred to phase two.',
+      ],
+      ['## How to test current product direction'],
+      [
+        '• For Business Central, test how 2026 wave 1 capabilities affect real workflows: agent supervision, e-documents, Shopify orders, subscription billing, reporting, quality, and warehouse or supply-chain routines.',
+        '• For NetSuite, test current 2026.1 release areas against actual operating pressure: consigned inventory, WMS, landed cost receiving, quality management, AI, pricing, and connector behaviour.',
+        '• Do not give either product credit for release notes alone. Ask the partner to show which capabilities are available in the target country, tenant, licence, SuiteApp, or implementation phase.',
+        '• Where AI is part of the business case, run one controlled scenario with real data boundaries, role permissions, review points, and consumption or support-cost ownership visible.',
       ],
       ['## What to pressure-test before deciding'],
       [
@@ -1077,12 +1102,21 @@ const pillarComparisonBlocks = (slug: string) => {
         '• Is Business Central only for simpler businesses? No. The better question is whether the operating model and delivery path fit how the business wants to mature.',
         '• Is NetSuite always more future-proof? Not by default. Future value depends on whether the organisation can absorb the design and governance model well.',
         '• Is a 2025 comparison still useful in 2026? It can be a starting point, but shortlist teams should refresh pricing, release changes, partner assumptions, and implementation risk before making a 2026 decision.',
+        '• Which platform is cheaper in Australia? Business Central has clearer public AU licence pricing. NetSuite needs a quote-led comparison because module, entity, SuiteApp, support, and renewal assumptions can change the answer materially.',
         '• What usually breaks the tie? Partner quality, change capacity, and clarity on future operating scope.',
       ],
       ['## Best next step'],
       [
         '• Pair this comparison with the ERP selection checklist so your team can score both options against the same scenarios.',
         '• Before final proposals, review the implementation partner guide so the software choice and delivery choice stay connected.',
+      ],
+      ['## Sources used'],
+      [
+        '• Microsoft Dynamics 365 Business Central Australia pricing page for current AU Essentials, Premium, and Team Members pricing.',
+        '• Microsoft Learn 2026 release wave 1 plan for Business Central planned and released capabilities across Copilot and agents, e-documents, reporting, ecommerce, and supply chain.',
+        '• Microsoft Learn Business Central 2026 release wave 1 update 28.0 notes for released feature context.',
+        '• Oracle NetSuite 2026.1 release notes for current release timing, feature availability, and extra-purchase caveats.',
+        '• Oracle NetSuite 2026.1 inventory-management release notes for consigned inventory, WMS, SCM Mobile, supply-chain planning, and quality-management changes.',
       ],
     ],
   }
@@ -2669,7 +2703,7 @@ export const mockComparisons: ComparisonDoc[] = [
     _type: 'comparison',
     title: 'Business Central vs NetSuite for growing businesses',
     slug: 'business-central-vs-netsuite-growing-businesses',
-    excerpt: 'A NetSuite vs Business Central comparison covering fit, complexity, implementation partners, and delivery trade-offs for growing organisations.',
+    excerpt: 'A current NetSuite vs Business Central comparison covering pricing visibility, 2026 product direction, partner fit, implementation risk, and operating-model trade-offs.',
     leftProduct: 'Dynamics 365 Business Central',
     rightProduct: 'NetSuite',
     bestFor: [
@@ -2677,11 +2711,11 @@ export const mockComparisons: ComparisonDoc[] = [
       'NetSuite: finance-driven global standardisation and cloud-first governance',
     ],
     publishedAt,
-    updatedAt: publishedAt,
+    updatedAt: '2026-06-15T00:00:00Z',
     seo: {
-      metaTitle: 'NetSuite vs Business Central Comparison',
+      metaTitle: 'NetSuite vs Business Central Comparison Australia 2026',
       metaDescription:
-        'Compare NetSuite vs Business Central using ERP selection criteria for finance, operations, implementation partners, total cost, and change risk.',
+        'Compare NetSuite vs Business Central in Australia using 2026 pricing, release direction, implementation partner fit, total cost, and change-risk criteria.',
     },
     body: pillarComparisonBlocks('business-central-vs-netsuite-growing-businesses'),
   },
@@ -4662,7 +4696,7 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Why this matters for Australian buyers now'],
       [
-        '• The current autocomplete pattern suggests Australian buyers are joining version-specific interest with pricing, inventory, and WMS questions. That usually means the shortlist is moving from awareness into practical validation.',
+        '• Version-specific Odoo questions are now practical shortlist questions, especially where pricing, inventory, manufacturing, and WMS decisions are already active.',
         '• Odoo 19.2 already gave buyers more to inspect in inventory and manufacturing. Odoo 19.3 strengthens the operational conversation again, but this time with more emphasis on mobile work, offline handling, packaging detail, and day-to-day exception recovery.',
         '• That matters because many Australian SMB and mid-market projects struggle at the boundaries between warehouse execution, field or mobile users, and informal exception handling. Release claims are only valuable if they improve those realities under pressure.',
       ],
@@ -4840,7 +4874,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'A foundational buyer question sits underneath pricing, eInvoicing, payment-times reporting, and AI: what does Microsoft itself officially document for Australian finance teams before partner extensions and project promises start filling the blanks?',
+        'Australian finance teams evaluating Business Central need to separate Microsoft-documented local capability from partner extensions, payroll providers, and project promises before rollout scope is approved.',
         'Microsoft\'s current documentation gives a clearer answer than many buyers expect. Business Central has explicit Australian local functionality across GST, BAS structure, electronic funds transfer, eInvoicing, and payment-times support. At the same time, the payroll story in Microsoft\'s own docs is more integration-led than "native Australian payroll is fully solved inside ERP". That distinction matters before rollout scope is signed off.',
       ],
       ['## What Microsoft officially documents for Australia today'],
@@ -5381,7 +5415,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'A foundational buyer question sits underneath NetSuite pricing, AI, release impacts, and warehouse management: what does Oracle itself currently document for Australian finance teams across GST, BAS, banking, payroll boundaries, and eInvoicing before partner promises fill the blanks?',
+        'Australian finance teams evaluating NetSuite should start with what Oracle currently documents across GST, BAS, banking, payroll boundaries, and eInvoicing before partner promises fill the gaps.',
         'Oracle\'s current documentation shows that NetSuite has a real Australian finance story, but it is not a "switch it on and everything is localised" story. Australia Help Topics and ANZ reporting content are useful, the 2026.1 banking change matters immediately for some teams, and payroll plus eInvoicing still need more explicit operating-model proof than a generic demo usually provides.',
       ],
       ['## What Oracle officially documents for Australia today'],
@@ -5470,7 +5504,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'The urgent buyer topic is narrower than broad NetSuite AI: what Oracle now officially documents about the NetSuite AI Connector itself, what the connector is good for, and which governance checks matter before a finance or operations team opens live MCP access.',
+        'Australian NetSuite teams looking at AI need a practical view of what Oracle now officially documents about the NetSuite AI Connector itself, what the connector is good for, and which governance checks matter before finance or operations users open live MCP access.',
         'Oracle\'s current help content is detailed enough to support a practical buying view. The NetSuite AI Connector Service uses the Model Context Protocol, supports standard tools or custom tools, works with AI clients that meet Oracle\'s protocol and OAuth requirements, and gives users direct access to NetSuite data and actions through their existing role permissions. That makes this less like a generic integration feature and more like a role-design, access-control, and operational-governance decision.',
       ],
       ['## What Oracle officially documents today'],
