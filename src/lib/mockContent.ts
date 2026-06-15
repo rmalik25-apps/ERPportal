@@ -489,13 +489,27 @@ const pillarGuideBlocks = (slug: string) => {
       ],
     ],
     'how-to-choose-erp-implementation-partner': [
-      ['Many ERP buyers spend far more time comparing software than comparing delivery partners. That is backwards. For most small and medium businesses, the ERP implementation partner or ERP consultant has as much influence on project success as the platform itself.', 'A strong partner brings structured governance, industry judgement, honest scope boundaries, and a team that can translate software into workable business design. A weak partner creates confidence in sales and ambiguity in delivery.', 'The right partner choice should reduce project risk, not just offer an acceptable day rate. If you are asking how to choose an ERP partner or how to choose an ERP consultant, the answer should include delivery evidence, team fit, governance, commercials, and references.'],
+      ['Many ERP buyers spend far more time comparing software than comparing delivery partners. That is backwards. For most small and medium businesses, the ERP implementation partner or ERP consultant has as much influence on project success as the platform itself.', 'A strong partner brings structured governance, industry judgement, honest scope boundaries, and a team that can translate software into workable business design. A weak partner creates confidence in sales and ambiguity in delivery.', 'The right partner choice should reduce project risk, not just offer an acceptable day rate. If you are asking how to choose an ERP partner or how to choose an ERP consultant, the answer should include delivery evidence, official ecosystem standing, team fit, governance, commercials, and references.'],
+      ['## Use official partner evidence, but do not stop there'],
+      [
+        '• Microsoft publishes Dynamics 365 and Microsoft partner directories that buyers can use to check whether a proposed Business Central partner is visible in the Microsoft ecosystem.',
+        '• Oracle NetSuite publishes a partner finder and separates partner models such as Alliance Partners and Solution Providers, so buyers should confirm whether licensing, implementation, and support sit with one party or several.',
+        '• Odoo publishes an official partner directory and explains its Ready, Silver, and Gold partner ranking system. The ranking is useful context, but it is not a substitute for proving fit against your own scope.',
+        '• Treat directory status as a starting filter. It can show a formal relationship with the vendor, but it does not prove the named delivery team, local availability, industry experience, or cutover discipline.',
+      ],
       ['## What to test beyond the sales presentation'],
       [
         '• Who will actually lead the programme, configure the system, manage testing, and support cutover?',
         '• What assumptions are built into the fixed price or estimate, and what happens when those assumptions prove wrong?',
         '• How does the partner handle governance, scope control, risk escalation, and change requests?',
         '• Can they show evidence from businesses with similar industry pressures, complexity, and leadership style?',
+      ],
+      ['## Questions by ERP ecosystem'],
+      [
+        '• Business Central: ask the partner to show relevant Microsoft relationship evidence, named Business Central delivery roles, Power Platform or reporting ownership, and which Australian localisation or payroll items sit outside standard scope.',
+        '• NetSuite: ask whether the proposal is direct Oracle licensing plus an Alliance Partner, a Solution Provider model, or another support structure, then make the commercial and escalation boundaries explicit.',
+        '• Odoo: confirm official partner status, current-version experience, Standard versus Custom assumptions, and how issues escalate between the partner, Odoo, hosting, and any third-party apps.',
+        '• Multi-product advisors: ask how they separate software recommendation, implementation revenue, and independence so the buying team can understand advice incentives clearly.',
       ],
       ['## Good signs in a partner process'],
       [
@@ -511,6 +525,14 @@ const pillarGuideBlocks = (slug: string) => {
         '• Evidence: reference customers with similar complexity, not only similar size or the same software brand.',
         '• Commercial clarity: explicit assumptions for migration, integrations, reporting, training, support, and out-of-scope work.',
         '• Operating fit: the partner can challenge weak process, translate business needs, and keep finance, operations, and leadership aligned.',
+      ],
+      ['## Evidence to collect before contract'],
+      [
+        '• A named delivery team with role descriptions, expected allocation, escalation path, and replacement rules if key people leave.',
+        '• A short assumptions register covering data migration, integrations, reporting, training, testing, change management, and post-go-live support.',
+        '• Two reference calls that match process complexity, not just industry label or company size.',
+        '• A commercial model that separates software, services, support, third-party products, travel, change requests, and optional optimisation work.',
+        '• A vendor-status check using the official Microsoft, NetSuite, or Odoo directory where that ecosystem applies.',
       ],
       ['## How to choose an ERP consultant'],
       [
@@ -532,6 +554,13 @@ const pillarGuideBlocks = (slug: string) => {
         '• How many references should we check? At least two strong fit references and one more probing conversation if possible.',
         '• Is industry experience mandatory? Not always, but it matters a lot when your operational model is specialised.',
         '• How should we compare ERP partners? Score partner quality beside software fit using the same decision criteria, then test both through scenario-led workshops and reference calls.',
+        '• Are official partner directories enough? No. Use them to verify ecosystem standing, then rely on delivery evidence, named-team review, references, and commercial assumptions before deciding.',
+      ],
+      ['## Official sources to check'],
+      [
+        '• Microsoft Dynamics 365 partner directory and Microsoft partner finder.',
+        '• Oracle NetSuite partner finder, Alliance Partner Program, and partner-program pages.',
+        '• Odoo official partner directory and Odoo partner programme guidance.',
       ],
     ],
   }
@@ -1542,16 +1571,16 @@ export const mockGuides: GuideDoc[] = [
   {
     _id: 'guide-partner-selection',
     _type: 'guide',
-    title: 'How to choose an ERP implementation partner',
+    title: 'How to choose an ERP implementation partner or consultant',
     slug: 'how-to-choose-erp-implementation-partner',
-    excerpt: 'How to choose an ERP partner or consultant by assessing delivery model, team quality, references, selection criteria, and commercials before appointing a partner.',
+    excerpt: 'How to choose an ERP partner or consultant by checking official ecosystem status, delivery model, team quality, references, selection criteria, and commercial assumptions.',
     intent: 'Partner Selection',
     publishedAt,
-    updatedAt: publishedAt,
+    updatedAt: '2026-06-15T00:00:00Z',
     seo: {
       metaTitle: 'How to Choose an ERP Implementation Partner or Consultant',
       metaDescription:
-        'How to choose an ERP partner or consultant using implementation selection criteria, delivery evidence, references, governance, and commercial assumptions.',
+        'How to choose an ERP partner or consultant using official ecosystem checks, implementation selection criteria, references, governance, and commercial assumptions.',
     },
     body: pillarGuideBlocks('how-to-choose-erp-implementation-partner'),
   },
@@ -4357,7 +4386,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'The content gap on ERP Search is not NetSuite pricing or warehouse fit. Those topics already exist. The more useful missing piece is AI buyer clarity, because Oracle is now mixing three different layers into the same market conversation: AI features already in NetSuite 2026.1, broader AI connector and MCP tooling, and the forward-looking NetSuite Next experience.',
+        'NetSuite AI now needs buyer clarity because Oracle is mixing three different layers into the same market conversation: AI features already in NetSuite 2026.1, broader AI connector and MCP tooling, and the forward-looking NetSuite Next experience.',
         'For Australian finance and operations leaders, those layers should not be evaluated the same way. Some capabilities are live in the current 2026.1 release notes. Some are regionally announced and available now. Some are explicitly future-direction items that Oracle says should not be relied on for purchasing decisions. If you flatten all of that into one “NetSuite AI” story, you will almost certainly overstate near-term value and under-budget governance work.',
       ],
       ['## What the official sources show is available now'],
@@ -4436,7 +4465,7 @@ export const mockPosts: PostDoc[] = [
     body: skimmableBlocks(
       [
         'This is a timely ERP topic in Australia because Shopify materially changed the B2B buying conversation on 2 April 2026. Shopify announced that foundational B2B features are rolling out to Basic, Grow, and Advanced plans at no extra cost, which means more wholesale and trade sellers can now run B2B and DTC in one storefront without first moving to Shopify Plus.',
-        'ERP Search already has a Business Central specific Shopify article. The gap on the site is broader buyer guidance across shortlist products. For most Australian teams, the real decision is not "can these systems connect?" It is whether the integration model fits the operating complexity of B2B catalog pricing, customer-specific terms, stock ownership, finance reconciliation, and support accountability after go-live.',
+        'For most Australian teams, the real decision is not "can these systems connect?" It is whether the integration model fits the operating complexity of B2B catalog pricing, customer-specific terms, stock ownership, finance reconciliation, and support accountability after go-live.',
       ],
       ['## Why this topic matters more now'],
       [
@@ -4526,7 +4555,7 @@ export const mockPosts: PostDoc[] = [
     body: skimmableBlocks(
       [
         'The ATO is also keeping the topic commercially relevant. Its current guidance says businesses need to register on the Peppol network to start using eInvoicing, and its government guidance says the Australian Government is establishing eInvoicing as the default method of invoicing in government procurement for most Australian Government entities. That does not create one simple private-sector mandate tomorrow, but it does make Peppol readiness a stronger shortlist question now.',
-        'ERP Search already has a Business Central-specific eInvoicing article. The gap on the site is broader buyer guidance across shortlist products. The useful question is not “does this ERP mention eInvoicing?” It is how differently Business Central, NetSuite, and Odoo document Australian Peppol readiness, external-provider dependency, and the work still left with the buyer or implementation partner.',
+        'The useful question is not “does this ERP mention eInvoicing?” It is how differently Business Central, NetSuite, and Odoo document Australian Peppol readiness, external-provider dependency, and the work still left with the buyer or implementation partner.',
       ],
       ['## What the Australian baseline looks like'],
       [
@@ -4811,7 +4840,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'ERP Search already covers Business Central pricing, eInvoicing, payment times reporting, and AI. The missing buyer question on the site is broader and more foundational: what does Microsoft itself officially document for Australian finance teams before partner extensions and project promises start filling the gaps?',
+        'A foundational buyer question sits underneath pricing, eInvoicing, payment-times reporting, and AI: what does Microsoft itself officially document for Australian finance teams before partner extensions and project promises start filling the blanks?',
         'Microsoft\'s current documentation gives a clearer answer than many buyers expect. Business Central has explicit Australian local functionality across GST, BAS structure, electronic funds transfer, eInvoicing, and payment-times support. At the same time, the payroll story in Microsoft\'s own docs is more integration-led than "native Australian payroll is fully solved inside ERP". That distinction matters before rollout scope is signed off.',
       ],
       ['## What Microsoft officially documents for Australia today'],
@@ -5352,7 +5381,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'ERP Search already covers NetSuite pricing, AI, 2026.1 release impacts, and warehouse management. The missing buyer question on the site is more foundational: what does Oracle itself currently document for Australian finance teams across GST, BAS, banking, payroll boundaries, and eInvoicing before partner promises fill the gaps?',
+        'A foundational buyer question sits underneath NetSuite pricing, AI, release impacts, and warehouse management: what does Oracle itself currently document for Australian finance teams across GST, BAS, banking, payroll boundaries, and eInvoicing before partner promises fill the blanks?',
         'Oracle\'s current documentation shows that NetSuite has a real Australian finance story, but it is not a "switch it on and everything is localised" story. Australia Help Topics and ANZ reporting content are useful, the 2026.1 banking change matters immediately for some teams, and payroll plus eInvoicing still need more explicit operating-model proof than a generic demo usually provides.',
       ],
       ['## What Oracle officially documents for Australia today'],
@@ -5441,7 +5470,7 @@ export const mockPosts: PostDoc[] = [
     },
     body: skimmableBlocks(
       [
-        'ERP Search already covers NetSuite AI more broadly, plus NetSuite pricing, accounting, and warehouse fit. The missing buyer topic on the site is narrower and more urgent: what Oracle now officially documents about the NetSuite AI Connector itself, what the connector is good for, and which governance checks matter before a finance or operations team opens live MCP access.',
+        'The urgent buyer topic is narrower than broad NetSuite AI: what Oracle now officially documents about the NetSuite AI Connector itself, what the connector is good for, and which governance checks matter before a finance or operations team opens live MCP access.',
         'Oracle\'s current help content is detailed enough to support a practical buying view. The NetSuite AI Connector Service uses the Model Context Protocol, supports standard tools or custom tools, works with AI clients that meet Oracle\'s protocol and OAuth requirements, and gives users direct access to NetSuite data and actions through their existing role permissions. That makes this less like a generic integration feature and more like a role-design, access-control, and operational-governance decision.',
       ],
       ['## What Oracle officially documents today'],

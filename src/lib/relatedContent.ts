@@ -187,6 +187,8 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite comparison'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
   ],
   'how-to-run-erp-rfp': [
     {href: '/guides/is-erp-rfp-really-required/', label: 'Is an ERP RFP really required?'},
