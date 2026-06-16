@@ -61,6 +61,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/business-central-payment-times-reporting-australia-february-2026/', label: 'Business Central payment times reporting for Australia'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/blog/erp-einvoicing-australia-business-central-netsuite-odoo-peppol-checklist/', label: 'ERP eInvoicing in Australia'},
+    {href: '/blog/business-central-expense-agent-australia-what-to-test/', label: 'Business Central Expense Agent in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
@@ -502,7 +503,9 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'business-central-expense-agent-australia-what-to-test': [
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
+    {href: '/blog/business-central-mcp-server-australia-what-to-test/', label: 'Business Central MCP server in Australia'},
     {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/blog/business-central-ai-agent-designer-australia-what-to-test/', label: 'Business Central AI agent designer in Australia'},

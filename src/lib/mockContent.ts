@@ -3484,28 +3484,29 @@ export const mockPosts: PostDoc[] = [
   {
     _id: 'post-bc-expense-agent-au',
     _type: 'post',
-    title: 'Business Central Expense Agent in Australia: what finance teams should test before July 2026',
+    title: 'Business Central Expense Agent in Australia: what finance teams should test before rollout',
     slug: 'business-central-expense-agent-australia-what-to-test',
     excerpt:
-      'A practical guide to Microsoft\'s new Business Central Expense Agent, covering July 2026 Australia availability, Copilot Credits, approval limits, and the rollout checks finance teams should run first.',
+      'A practical guide to Microsoft\'s Business Central Expense Agent, covering Australia availability, Copilot Credits, approval limits, licensing, and the rollout checks finance teams should run first.',
     category: 'Business Central',
     publishedAt: '2026-06-05T00:00:00Z',
-    updatedAt: '2026-06-05T00:00:00Z',
+    updatedAt: '2026-06-17T00:00:00Z',
     seo: {
-      metaTitle: 'Business Central Expense Agent in Australia: What to Test Before July 2026',
+      metaTitle: 'Business Central Expense Agent Australia: What Finance Teams Should Test',
       metaDescription:
-        'Australian guide to Business Central Expense Agent covering Microsoft\'s May 2026 preview, July 2026 Australia rollout, billing model, controls, and rollout checks.',
+        'Australian guide to Business Central Expense Agent covering Microsoft preview status, Copilot Credit billing, licensing, controls, and rollout checks.',
     },
     body: skimmableBlocks(
       [
-        'Microsoft has also turned this into a current buyer topic rather than a vague roadmap idea. Its release-plan article says Expense Agent entered public preview on 8 May 2026 and specifically lists Australia, New Zealand, and the UK as the next countries planned for July 2026 availability.',
-        'For Australian finance leaders, the key question is not whether receipt scanning looks good in a demo. It is whether the operating model, approval path, billing model, and support boundaries are strong enough before employees start sending real expenses into the system.',
+        'Microsoft now gives Business Central buyers enough official detail to plan a controlled Expense Agent pilot instead of treating AI expense processing as a vague roadmap idea. Its release-plan article says Expense Agent entered public preview on 8 May 2026, with public preview available in English and the US first, followed by Australia, New Zealand, and the UK in July 2026.',
+        'For Australian finance leaders, the key question is not whether receipt scanning looks good in a demo. It is whether the operating model, approval path, billing model, licensing assumptions, and support boundaries are strong enough before employees start sending real expenses into the system.',
       ],
       ['## What Microsoft has officially released'],
       [
         '• Microsoft\'s release-plan page describes Expense Agent as an AI-driven expense workflow that captures receipts, extracts key details, itemises where needed, groups expenses into reports, and supports approval before posting.',
-        '• Microsoft\'s current Business Central expense-management overview says the platform now supports expense management both with and without Expense Agent. Without the agent, users can still create reports, use per diem and mileage, and run approval workflows manually inside Business Central.',
+        '• Microsoft\'s current Business Central expense-management overview says the platform supports expense management both with and without Expense Agent. Without the agent, users can still create reports, use per diem and mileage, and run approval workflows manually inside Business Central.',
         '• Microsoft\'s Expense Agent overview says employees can submit expenses through a web app or by forwarding receipts to a shared mailbox, while Business Central keeps the financial data, audit trail, rules, and posting logic inside the ERP environment.',
+        '• Microsoft also describes Expense Agent as prerelease documentation and a production-ready preview feature, so buyers should design pilots with change tolerance rather than assume every behaviour is final.',
       ],
       ['## Why this matters in Australia now'],
       [
@@ -3515,30 +3516,30 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Setup and commercial facts to understand first'],
       [
-        '• Billing. Microsoft says Expense Agent uses 50 Copilot Credits for one receipt handling event, regardless of complexity. Finance teams should treat this as a recurring cost driver and estimate volume before rollout.',
-        '• Region and language. Microsoft\'s release-plan page says public preview started in the US in English on 8 May 2026, with Australia planned for July 2026. The product overview also says the Copilot experience is validated and supported in English only.',
+        '• Billing. Microsoft says Expense Agent uses 50 Copilot Credits for each uploaded receipt, regardless of how many lines the resulting expense has. Finance teams should treat this as a recurring cost driver and estimate volume before rollout.',
+        '• Region and language. Microsoft\'s release-plan page says public preview started in the US in English on 8 May 2026, with Australia planned for July 2026. The product overview says the Copilot experience is validated and supported in English only.',
         '• Prerequisites. Microsoft says the agent requires setup in Business Central plus Microsoft 365 Admin Center changes, including enabling Anthropic as a subprocessor for Microsoft Online Services.',
-        '• User access. Microsoft says employees working only through the web app or email do not need a Business Central licence, but users working inside Business Central for expense tasks need at least Team Member access.',
+        '• User access. Microsoft says employees working only through the web app or email do not need a Business Central licence, but users working inside Business Central for expense tasks need at least Team Member access. Posting and payment processing require stronger Business Central access.',
       ],
       ['## What to test before rollout'],
       [
         '• Mailbox and intake design. Microsoft recommends a dedicated shared mailbox. Test whether one finance inbox is enough or whether entity, branch, or policy boundaries require separate intake paths.',
         '• Category and policy quality. The agent depends on configured categories, subcategories, posting groups, and rules. If meal, travel, mileage, and project-billable logic are vague today, the AI layer will make that ambiguity more visible rather than remove it.',
         '• Review discipline. Microsoft\'s FAQ is explicit that Expense Agent creates drafts only and does not post transactions without human review and approval. Decide who validates extracted data, who approves reports, and how corrections are tracked before the pilot starts.',
-        '• Edge-case receipts. Test hotels, multi-line meals, foreign-currency receipts, itineraries for per diem, and mileage claims. Those cases will show whether categorisation and itemisation are saving time or creating new review effort.',
+        '• Edge-case receipts. Test hotels, multi-line meals, foreign-currency receipts, itineraries for per diem, mileage claims, and partial reimbursement cases. Those examples will show whether categorisation and itemisation are saving time or creating new review effort.',
         '• Role boundaries. Confirm whether posting, reimbursement, and payment processing stay with finance users inside Business Central, because Microsoft treats those post-approval steps as outside the agent itself.',
       ],
       ['## Limits and risks that should shape the pilot'],
       [
         '• Microsoft\'s Responsible AI FAQ says the current interface supports English only, one Expense Agent can be configured per Business Central company, and one expense user cannot be enabled across multiple Expense Agents.',
-        '• The same FAQ says complex conditional approval systems are not yet supported, on-behalf expense submission is not yet supported, and the agent may require human intervention when file or processing limits are exceeded.',
-        '• Microsoft also documents volume limits of up to 25 files per upload or email batch attachment set and up to 50 MB per batch. If your team handles bulky travel packs or large invoice-style receipts, test those cases deliberately.',
+        '• The same FAQ says complex conditional approval systems are not yet supported, on-behalf expense submission is not yet supported, and the agent may require human intervention when AI services, mailbox access, files, or processing limits interrupt the flow.',
+        '• Microsoft\'s troubleshooting guidance says receipt uploads should use JPEG, PNG, or PDF files of 10 MB or less. If your team handles bulky travel packs or large invoice-style receipts, test those cases deliberately.',
         '• The safest reading is that Expense Agent is strong enough for controlled pilots, but not something to drop into a messy policy environment and assume it will self-correct process gaps.',
       ],
       ['## A sensible first pilot for Australian teams'],
       [
         '• Start with one entity, one dedicated shared mailbox, and a small group of employees whose expense patterns are common but not trivial, such as travel, meals, and mileage.',
-        '• Keep human review visible at every step during the pilot month. The early goal is to measure draft quality, categorisation effort, approval friction, and Copilot Credit use per submitted report.',
+        '• Keep human review visible at every step during the pilot month. The early goal is to measure draft quality, categorisation effort, approval friction, exception rates, and Copilot Credit use per submitted report.',
         '• Use the pilot to answer four operating questions: how often do users need to correct extracted data, how often do rules block or reroute reports, how much finance effort remains after submission, and whether the monthly cost looks acceptable against the admin time saved.',
         '• Review the outcome with finance, ERP support, and Microsoft 365 administration together. This feature touches policy, AI governance, identity, mailbox access, and posting controls at the same time.',
       ],
@@ -3546,7 +3547,7 @@ export const mockPosts: PostDoc[] = [
       [
         '• Expense Agent is current enough to justify planning work now because Microsoft published the feature in public preview on 8 May 2026 and named Australia for the next availability step in July 2026.',
         '• The strongest early fit is a finance team with recurring employee expenses, reasonable policy discipline, and a willingness to pilot under review rather than chase full autonomy on day one.',
-        '• If your business still has weak expense categories, unclear approval ownership, or no appetite to manage Copilot Credit consumption, fix those fundamentals before treating Expense Agent as a fast win.',
+        '• If your business still has weak expense categories, unclear approval ownership, inconsistent reimbursement rules, or no appetite to manage Copilot Credit consumption, fix those fundamentals before treating Expense Agent as a fast win.',
       ],
       ['## FAQ'],
       [
@@ -3557,10 +3558,10 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## Sources used'],
       [
-        '• Microsoft Learn release-plan article "Manage expenses in Business Central using Expense Agent", updated 14 May 2026.',
-        '• Microsoft Learn product docs "Expense Management Overview", updated 11 May 2026.',
-        '• Microsoft Learn product docs "Expense Agent overview", updated 20 May 2026.',
-        '• Microsoft Learn "Responsible AI FAQ for Expense Agent (preview)", updated 8 May 2026.',
+        '• Microsoft Learn release-plan article: Manage expenses in Business Central using Expense Agent.',
+        '• Microsoft Learn product docs: Expense Management Overview and Expense Agent overview.',
+        '• Microsoft Learn administration docs: Manage consumption-based billing for agent capabilities.',
+        '• Microsoft Learn Responsible AI FAQ and troubleshooting docs for Expense Agent.',
       ],
     ),
   },
@@ -4196,7 +4197,7 @@ export const mockPosts: PostDoc[] = [
       ],
       ['## What readers should conclude now'],
       [
-        '• Microsoft\'s current documentation supports a two-part budgeting model for Business Central AI. Built-in Copilot is currently included, but autonomous agent scenarios can add a separate usage-based cost layer.',
+        '• Business Central AI budgeting now has two practical layers. Built-in Copilot is currently included, but autonomous agent scenarios can add a separate usage-based cost layer.',
         '• For Australian SMB and mid-market teams, the real risk is not that Microsoft\'s pricing is hidden. It is that organisations collapse licence cost, usage cost, and delivery effort into one “Copilot” assumption.',
         '• The safest approach is to budget Business Central AI in three parts: core licences, Copilot Credit consumption for agents, and the implementation-governance effort required to keep that consumption useful.',
       ],
@@ -5194,7 +5195,7 @@ export const mockPosts: PostDoc[] = [
       ['## The practical buyer conclusion'],
       [
         '• The Business Central MCP server is now mature enough to be a real 2026 evaluation topic for Australian SMB and mid-market teams exploring AI around ERP.',
-        '• Microsoft\'s documentation supports a sensible first move: one narrow, read-only pilot on Business Central online, using a clearly bounded tool set and explicit role-based access checks.',
+        '• A sensible first move is one narrow, read-only pilot on Business Central online, using a clearly bounded tool set and explicit role-based access checks.',
         '• The wrong move is to treat MCP as a shortcut to autonomous ERP automation. The better move is to treat it as a governed integration layer that can prove value safely before any broader rollout or write-capable workflow is considered.',
       ],
       ['## FAQ'],
@@ -5434,7 +5435,7 @@ export const mockPosts: PostDoc[] = [
       ['## Priority 2: the current bank-feeds change deserves immediate attention'],
       [
         '• Oracle\'s current banking documentation says the Australia and New Zealand Banking data source is discontinued and that customers who used the legacy source need to move to the Australia Bank Feeds SuiteApp.',
-        '• That is a genuinely current buyer issue because it changes the implementation discussion from "does NetSuite support bank feeds?" to "which bank-feed path are we actually using now, and what must be migrated or revalidated?"',
+        '• That matters for buyers because it changes the implementation discussion from "does NetSuite support bank feeds?" to "which bank-feed path are we actually using now, and what must be migrated or revalidated?"',
         '• If your finance team depends on imported bank transactions for reconciliations or cash visibility, do not leave this until late UAT. Ask for the exact bank-feed architecture, the supported banking path, and the migration steps for existing connections.',
         '• This is the kind of practical product-update detail that affects rollout quality far more than a broad feature list does.',
       ],

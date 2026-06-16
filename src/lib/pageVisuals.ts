@@ -323,6 +323,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Finance team reviewing invoices and AI-assisted payables workflow on laptops',
     caption: 'AP automation only creates value when mailbox flow, review controls, and finance ownership are designed properly.',
   },
+  'business-central-expense-agent-australia-what-to-test': {
+    src: pexels('6693655'),
+    alt: 'Finance team reviewing receipts, approvals, and AI-assisted expense workflow',
+    caption: 'Expense automation only works when policy rules, review ownership, and billing controls are tested before rollout.',
+  },
   'business-central-accounting-australia-gst-bas-eft-payroll-peppol-checks': {
     src: pexels('6693655'),
     alt: 'Australian finance team reviewing tax, banking, payroll, and eInvoicing setup in ERP',
