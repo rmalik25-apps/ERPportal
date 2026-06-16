@@ -1,5 +1,6 @@
 import type {AnyContentDoc, PortableTextBlock} from './types'
 import {blocksToRichContent} from './portableText'
+import {isInternalResearchLine, sanitizePublicMeta} from './publicCopy'
 
 const siteOrigin = (import.meta.env.PUBLIC_SITE_URL || 'http://localhost:4321').replace(/\/$/, '')
 
@@ -85,9 +86,10 @@ export function getListPageMeta(key: keyof typeof listPageMeta) {
 
 export function getDocMeta(doc: AnyContentDoc) {
   const override = overrideMap[doc.slug]
+  const metaDescription = sanitizePublicMeta(doc.seo?.metaDescription || override?.metaDescription || doc.excerpt)
   return {
     metaTitle: doc.seo?.metaTitle || override?.metaTitle || doc.title,
-    metaDescription: doc.seo?.metaDescription || override?.metaDescription || doc.excerpt,
+    metaDescription: metaDescription && !isInternalResearchLine(metaDescription) ? metaDescription : doc.excerpt,
   }
 }
 

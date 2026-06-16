@@ -160,6 +160,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'netsuite-warehouse-management-bins-vs-wms': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/blog/warehouse-management-system-australia-erp-vs-wms-shortlist/', label: 'Warehouse management system Australia guide'},
     {href: '/blog/netsuite-ai-australia-2026-1-what-buyers-should-check/', label: 'NetSuite AI in Australia'},
     {href: '/blog/netsuite-soap-removal-australia-what-to-fix-now/', label: 'NetSuite SOAP removal guide'},
     {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},

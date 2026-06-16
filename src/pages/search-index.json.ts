@@ -1,8 +1,15 @@
 import type {APIRoute} from 'astro'
 
 import {estimateReadTimeMinutes} from '../lib/contentMeta'
-import {blocksToPlainParagraphs} from '../lib/portableText'
+import {blocksToRichContent} from '../lib/portableText'
 import {getComparisons, getGuides, getPosts} from '../lib/sanity'
+
+function searchableBodyText(body: Parameters<typeof blocksToRichContent>[0]) {
+  return blocksToRichContent(body).flatMap((block) => {
+    if (block.type === 'list') return block.items
+    return block.text
+  })
+}
 
 export const GET: APIRoute = async () => {
   const [guides, comparisons, posts] = await Promise.all([getGuides(), getComparisons(), getPosts()])
@@ -16,7 +23,7 @@ export const GET: APIRoute = async () => {
       excerpt: guide.excerpt,
       publishedAt: guide.publishedAt,
       readTime: estimateReadTimeMinutes(guide),
-      searchableText: [guide.title, guide.excerpt, ...blocksToPlainParagraphs(guide.body)].join(' '),
+      searchableText: [guide.title, guide.excerpt, ...searchableBodyText(guide.body)].join(' '),
     })),
     ...comparisons.map((item) => ({
       title: item.title,
@@ -26,7 +33,7 @@ export const GET: APIRoute = async () => {
       excerpt: item.excerpt,
       publishedAt: item.publishedAt,
       readTime: estimateReadTimeMinutes(item),
-      searchableText: [item.title, item.excerpt, item.leftProduct, item.rightProduct, ...blocksToPlainParagraphs(item.body)].join(' '),
+      searchableText: [item.title, item.excerpt, item.leftProduct, item.rightProduct, ...searchableBodyText(item.body)].join(' '),
     })),
     ...posts.map((post) => ({
       title: post.title,
@@ -36,7 +43,7 @@ export const GET: APIRoute = async () => {
       excerpt: post.excerpt,
       publishedAt: post.publishedAt,
       readTime: estimateReadTimeMinutes(post),
-      searchableText: [post.title, post.excerpt, post.category, ...blocksToPlainParagraphs(post.body)].join(' '),
+      searchableText: [post.title, post.excerpt, post.category, ...searchableBodyText(post.body)].join(' '),
     })),
   ]
 

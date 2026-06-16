@@ -1,4 +1,5 @@
 import type {PortableTextBlock} from './types'
+import {isInternalResearchLine} from './publicCopy'
 
 export type RichContentBlock =
   | {type: 'heading'; text: string}
@@ -15,7 +16,7 @@ export function blocksToPlainParagraphs(blocks: PortableTextBlock[]): string[] {
 }
 
 export function blocksToRichContent(blocks: PortableTextBlock[]): RichContentBlock[] {
-  const lines = blocksToPlainParagraphs(blocks)
+  const lines = blocksToPlainParagraphs(blocks).filter((line) => !isInternalResearchLine(line))
   const content: RichContentBlock[] = []
   let currentList: string[] = []
 

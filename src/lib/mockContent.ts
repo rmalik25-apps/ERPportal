@@ -2129,22 +2129,23 @@ export const mockGuides: GuideDoc[] = [
   {
     _id: 'guide-netsuite-warehouse-management',
     _type: 'guide',
-    title: 'NetSuite warehouse management: when bins are enough and when WMS is worth it',
+    title: 'NetSuite warehouse management in Australia: bins, Ship Central, or WMS?',
     slug: 'netsuite-warehouse-management-bins-vs-wms',
     excerpt:
       'A practical Australian buyer guide to the point where NetSuite warehouse management with bin and inventory controls is enough, when NetSuite WMS adds real value, and which current product constraints should change the design discussion.',
     intent: 'Operations',
     publishedAt: '2026-05-13T00:00:00Z',
-    updatedAt: '2026-05-13T00:00:00Z',
+    updatedAt: '2026-06-17T00:00:00Z',
     seo: {
-      metaTitle: 'NetSuite Warehouse Management System: Bins vs WMS Guide',
+      metaTitle: 'NetSuite Warehouse Management System Australia: Bins vs WMS',
       metaDescription:
-        'Use this NetSuite warehouse management system guide to decide when standard bin and inventory controls are enough and when NetSuite WMS is worth the extra complexity.',
+        'Use this NetSuite warehouse management system guide to decide when standard bins, Ship Central, or NetSuite WMS best fit a growing warehouse operation.',
     },
     body: skimmableBlocks(
       [
-        'That is a commercially important question because Oracle gives buyers several layers to work with: standard bin and inventory controls, NetSuite WMS for mobile warehouse execution, and Ship Central for packing and shipping. The wrong choice is rarely “too little feature” in the abstract. It is choosing an architecture that does not match the actual floor complexity, labour model, and inventory-control pressure.',
-        'This guide uses current Oracle help and release material to separate what standard NetSuite already covers, what NetSuite WMS adds, and where current 2026.1 product constraints should change the warehouse design conversation for Australian distributors, importers, and multi-site operators.',
+        'NetSuite warehouse management decisions are rarely about whether the product has a WMS label. For Australian distributors, importers, ecommerce operators, and multi-site stock businesses, the harder question is whether the warehouse needs standard bin discipline, better packing and shipping control, full mobile WMS execution, or a separate specialist WMS.',
+        'Oracle gives buyers several layers to work with: standard bin and inventory controls, NetSuite WMS for mobile warehouse execution, and Ship Central for packing and shipping. The wrong choice is rarely “too little feature” in the abstract. It is choosing an architecture that does not match the actual floor complexity, labour model, fulfilment promises, and inventory-control pressure.',
+        'This refreshed guide uses current Oracle help and 2026.1 release material to separate what standard NetSuite already covers, what NetSuite WMS adds, where Ship Central fits, and which product constraints should change the warehouse design conversation before an Australian buyer approves scope.',
       ],
       ['## What standard NetSuite can already handle without WMS'],
       [
@@ -2160,6 +2161,13 @@ export const mockGuides: GuideDoc[] = [
         '• Oracle\'s inbound-processing and item-putaway documentation shows that WMS supports receiving, staging, putaway, and scanner-led warehouse tasks rather than relying only on back-office transaction entry.',
         '• Oracle\'s pick-task and recommended-bin documentation shows that WMS can apply filtered and sorted bin recommendations, zone-based pick strategies, preferred-bin logic, FEFO and LEFO behaviour for lot-numbered items, and sequencing rules for mobile picking.',
         '• Oracle\'s mobile-device transaction documentation adds another important signal: WMS creates open and closed task records and uses lock records to stop two operators processing the same task at the same time. That matters when warehouse control needs to become operationally visible rather than merely financially accurate after the fact.',
+      ],
+      ['## How to choose between bins, Ship Central, NetSuite WMS, and standalone WMS'],
+      [
+        '• Start with standard bins when the main issue is inventory visibility, location discipline, picking accuracy, and cleaner transaction control inside NetSuite.',
+        '• Test Ship Central when the pain is concentrated around packing, carton handling, shipping labels, weigh-scale support, and dispatch execution rather than deeper receiving or replenishment control.',
+        '• Move toward NetSuite WMS when floor teams need mobile receiving, putaway, picking, inventory processing, task visibility, and real-time updates without splitting the execution layer away from NetSuite.',
+        '• Consider a standalone WMS when automation, labour planning, wave complexity, carrier orchestration, robotics, 3PL-style client billing, or highly specialised warehouse workflows exceed what the native NetSuite operating model should carry.',
       ],
       ['## Where standard bins are usually enough'],
       [
@@ -2179,7 +2187,7 @@ export const mockGuides: GuideDoc[] = [
       [
         '• Oracle\'s current Consigned Inventory Management help says that consigned inventory cannot be used together with the Warehouse Management feature or NetSuite WMS SuiteApp.',
         '• That single limitation changes shortlist logic for distributors and importers who want both stronger warehouse mobility and vendor-owned stock control. It is not a minor footnote. It is an architecture choice.',
-        '• Oracle\'s 2026.1 release notes also say the release notes are updated weekly and that some features and SuiteApps may require extra purchase. So any WMS design should be validated against the current release state and account entitlements, not only against an old demo script.',
+        '• Oracle\'s 2026.1 release notes list Warehouse Management Enhancements, SCM Mobile Enhancements, and the new Consigned Inventory Management capability under inventory management, so warehouse design should be validated against the current release state and account entitlements, not only against an old demo script.',
         '• The practical lesson is that “NetSuite has this feature” is not yet a design answer. Buyers still need to ask which features can coexist cleanly in the same operating model.',
       ],
       ['## How Ship Central changes the conversation'],
@@ -2209,6 +2217,14 @@ export const mockGuides: GuideDoc[] = [
         '• What does NetSuite WMS add? Oracle positions WMS as a mobile warehouse execution layer for receiving, staging, putaway, picking, and shipping with recommended bins, pick strategies, and real-time task updates.',
         '• Can NetSuite WMS be used with consigned inventory? No. Oracle\'s current Consigned Inventory Management help says consigned inventory cannot be used together with the Warehouse Management feature or NetSuite WMS SuiteApp.',
         '• Should every distributor buy WMS? No. Many should first test whether standard bin controls, process redesign, and Ship Central solve the real problem more simply.',
+      ],
+      ['## Sources used'],
+      [
+        '• Oracle Help Center: NetSuite WMS Overview.',
+        '• Oracle Help Center: NetSuite WMS Setup.',
+        '• Oracle Help Center: Enabling Features for NetSuite WMS.',
+        '• Oracle Help Center: NetSuite 2026.1 Release Notes.',
+        '• Oracle NetSuite Warehouse Management System product page.',
       ],
     ),
   },
