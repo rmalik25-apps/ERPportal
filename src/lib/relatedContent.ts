@@ -6,6 +6,9 @@ type RelatedLink = {
 const guideLinks: Record<string, RelatedLink[]> = {
   'erp-selection-checklist-smb': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/erp-data-migration-playbook-clean-cutover/', label: 'ERP data migration playbook'},
+    {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+    {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
