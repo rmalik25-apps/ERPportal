@@ -55,7 +55,7 @@ const guideVisualsBySlug: Record<string, Visual> = {
   'erp-selection-checklist-smb': {
     src: pexels('8279300'),
     alt: 'Business team using sticky notes to shortlist options on a planning wall',
-    caption: 'Selection work is strongest when requirements, risks, and evaluation criteria are visible to the whole team.',
+    caption: 'ERP selection is stronger when business outcomes, evidence, risk, partner quality, and total cost use one agreed scorecard.',
   },
   'erp-comparison-criteria-checklist': {
     src: pexels('7681091'),
