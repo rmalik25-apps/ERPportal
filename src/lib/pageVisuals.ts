@@ -130,7 +130,7 @@ const guideVisualsBySlug: Record<string, Visual> = {
   'netsuite-pricing-australia-licensing-modules-budget': {
     src: pexels('4386371'),
     alt: 'Finance lead reviewing ERP licensing, contract notes, and budget assumptions',
-    caption: 'NetSuite budgeting works better when the quote is broken into platform, modules, services, and renewal exposure.',
+    caption: 'Compare NetSuite quotes across platform, users, modules, implementation, support, and three-year renewal exposure.',
   },
   'netsuite-warehouse-management-bins-vs-wms': {
     src: pexels('6169056'),

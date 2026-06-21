@@ -147,6 +147,8 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'netsuite-pricing-australia-licensing-modules-budget': [
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/blog/netsuite-accounting-australia-gst-bas-bank-feeds-payroll-einvoicing-checks/', label: 'NetSuite accounting in Australia'},
     {href: '/blog/netsuite-ai-connector-australia-what-to-test/', label: 'NetSuite AI Connector in Australia'},
