@@ -159,7 +159,6 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/netsuite-ai-australia-2026-1-what-buyers-should-check/', label: 'NetSuite AI in Australia'},
     {href: '/blog/netsuite-soap-removal-australia-what-to-fix-now/', label: 'NetSuite SOAP removal guide'},
     {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},
-    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'netsuite-warehouse-management-bins-vs-wms': [
