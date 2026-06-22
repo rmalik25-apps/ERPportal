@@ -365,7 +365,8 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'vendor-demo-script-erp-buyers-what-to-ask': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
-    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
   ],

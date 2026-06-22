@@ -401,7 +401,7 @@ const blogVisualsBySlug: Record<string, Visual> = {
   'vendor-demo-script-erp-buyers-what-to-ask': {
     src: pexels('1181406'),
     alt: 'Buyer team running a structured software demo with a vendor',
-    caption: 'Strong demo scripts focus vendors on your process risk instead of polished generic workflows.',
+    caption: 'A useful ERP demo proves real process scenarios, exceptions, controls, and implementation assumptions.',
   },
   'implementation-partner-due-diligence-ten-questions': {
     src: pexels('3182812'),
