@@ -28,12 +28,23 @@ const breadcrumbSchema = buildBreadcrumbSchema([
     <p class="editorial-toolbar">{items.length} published comparison{items.length === 1 ? '' : 's'}</p>
   </div>
   <h1 class="page-title">ERP Software Comparisons for SMBs</h1>
-  <p class="section-subtle">Compare ERP platforms by fit, complexity, costs, and implementation trade-offs for growing business buyers.</p>
+  <p class="section-subtle">Compare ERP platforms by fit, complexity, costs, implementation partner quality, and delivery risk for growing business buyers.</p>
   <PageVisual
     src={pageVisuals.comparisons.src}
     alt={pageVisuals.comparisons.alt}
     caption="Compare platforms by operational fit, timeline risk, and total ownership model."
   />
+  <section class="section">
+    <h2>Start with comparison criteria</h2>
+    <p>
+      ERP software comparisons are more reliable when every option is tested against the same scenarios,
+      commercial assumptions, Australian risk gates, and partner-delivery evidence. Use the criteria guide
+      before comparing individual products so the shortlist does not become a feature-count exercise.
+    </p>
+    <p>
+      <a href="/guides/erp-comparison-criteria-checklist/">Open the ERP software comparison criteria checklist</a>
+    </p>
+  </section>
   <div class="editorial-list section">
     {items.map((item) => (
       <article class="editorial-item">

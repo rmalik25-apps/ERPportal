@@ -66,7 +66,7 @@ const listPageMeta = {
   compare: {
     metaTitle: 'ERP Software Comparisons for SMBs: Business Central, Odoo, NetSuite, and More',
     metaDescription:
-      'Compare ERP software for SMBs across fit, implementation complexity, cost trade-offs, and industry suitability, including Business Central, Odoo, NetSuite, and more.',
+      'Compare ERP software for SMBs across fit, implementation complexity, partner quality, cost trade-offs, Australian risk gates, and industry suitability.',
   },
   blog: {
     metaTitle: 'ERP Blog for SMBs: Buyer Guidance, Release Notes, and Best Practices',

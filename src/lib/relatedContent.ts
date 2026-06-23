@@ -21,6 +21,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
     {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management system guide'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},

@@ -4243,7 +4243,7 @@ export const mockPosts: PostDoc[] = [
       ['## Why this matters for Australian ERP buyers now'],
       [
         '• Australian wholesale and import businesses usually feel ERP pain in stock movement, lead-time promises, and warehouse exceptions before they feel it in polished dashboards.',
-        '• That makes Odoo 19.2 worth covering now because the release adds operational detail buyers can use in selection and upgrade decisions instead of relying on broad partner claims.',
+        '• Odoo 19.2 adds operational detail buyers can use in selection and upgrade decisions instead of relying on broad partner claims.',
       ],
       ['## Priority 1: test inventory routing before assuming native WMS is enough'],
       [
