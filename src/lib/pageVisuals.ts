@@ -60,7 +60,7 @@ const guideVisualsBySlug: Record<string, Visual> = {
   'erp-comparison-criteria-checklist': {
     src: pexels('7681091'),
     alt: 'Business team comparing software options and scoring criteria in a workshop',
-    caption: 'ERP comparisons work best when product fit, partner quality, risk, and total cost are scored against the same criteria.',
+    caption: 'ERP comparisons work best when product fit, partner quality, compliance, risk, and total cost are scored against the same evidence.',
   },
   'navision-to-business-central-migration': {
     src: pexels('7947758'),
