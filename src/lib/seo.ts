@@ -41,9 +41,9 @@ const overrideMap: Record<string, {metaTitle: string; metaDescription: string}> 
       'Compare MYOB Acumatica vs Business Central for Australian SMBs across finance, inventory, implementation fit, support model, and growth requirements.',
   },
   'odoo-vs-business-central': {
-    metaTitle: 'Odoo vs Business Central: Which ERP Fits a Growing SMB?',
+    metaTitle: 'Odoo vs Business Central Comparison Australia 2026',
     metaDescription:
-      'Compare Odoo vs Business Central for growing SMBs across flexibility, control, implementation risk, support overhead, and long-term platform fit.',
+      'Compare Odoo vs Business Central in Australia using 2026 pricing, Odoo 19.3 changes, Business Central release direction, finance control, and implementation risk.',
   },
   'erp-for-meat-processing-generic-vs-specialist': {
     metaTitle: 'ERP for Meat Processing: Generic ERP vs Specialist Platforms',
