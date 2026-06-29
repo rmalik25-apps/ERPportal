@@ -563,7 +563,7 @@ const pillarGuideBlocks = (slug: string) => {
       ['Many ERP buyers spend far more time comparing software than comparing delivery partners. That is backwards. For most small and medium businesses, the ERP implementation partner or ERP consultant has as much influence on project success as the platform itself.', 'A strong partner brings structured governance, industry judgement, honest scope boundaries, and a team that can translate software into workable business design. A weak partner creates confidence in sales and ambiguity in delivery.', 'The right partner choice should reduce project risk, not just offer an acceptable day rate. If you are asking how to choose an ERP partner or how to choose an ERP consultant, the answer should include delivery evidence, official ecosystem standing, team fit, governance, commercials, and references.'],
       ['## Use official partner evidence, but do not stop there'],
       [
-        '• Microsoft publishes Dynamics 365 and Microsoft partner directories that buyers can use to check whether a proposed Business Central partner is visible in the Microsoft ecosystem.',
+        '• Microsoft publishes partner directories and a Solutions Partner for Business Applications designation. Microsoft says that designation measures performance, skilling, and customer success across Dynamics 365 and Power Platform, so it is useful evidence of broad capability rather than proof that the named project team fits your implementation.',
         '• Oracle NetSuite publishes a partner finder and separates partner models such as Alliance Partners and Solution Providers, so buyers should confirm whether licensing, implementation, and support sit with one party or several.',
         '• Odoo publishes an official partner directory and explains its Ready, Silver, and Gold partner ranking system. The ranking is useful context, but it is not a substitute for proving fit against your own scope.',
         '• Treat directory status as a starting filter. It can show a formal relationship with the vendor, but it does not prove the named delivery team, local availability, industry experience, or cutover discipline.',
@@ -605,6 +605,22 @@ const pillarGuideBlocks = (slug: string) => {
         '• A commercial model that separates software, services, support, third-party products, travel, change requests, and optional optimisation work.',
         '• A vendor-status check using the official Microsoft, NetSuite, or Odoo directory where that ecosystem applies.',
       ],
+      ['## Test supplier risk and security ownership'],
+      [
+        '• Ask the partner to name every subcontractor, offshore delivery location, managed-service provider, hosting party, and extension vendor that may access ERP data or production environments.',
+        '• Require a documented shared-responsibility model covering identity, privileged access, configuration, patching, backups, logging, incident response, data retention, and release testing. The Australian Cyber Security Centre specifically recommends documenting and sharing security responsibilities between suppliers and customers.',
+        '• Check the partner\'s own security track record, staff screening, access-removal process, breach-notification commitments, and evidence for controlling administrative access. A secure cloud product does not remove supplier and implementation risk.',
+        '• Make incident coordination practical: name who detects, contains, investigates, reports, communicates, and restores service when an integration, extension, administrator account, or data transfer is involved.',
+        '• Reassess supplier risk when the delivery model changes. A new subcontractor, support location, AI service, integration platform, or acquired partner can alter privacy, jurisdiction, governance, and security exposure after contract signature.',
+      ],
+      ['## Make the exit plan part of partner selection'],
+      [
+        '• Define what the business receives if the relationship ends: configuration documentation, source code or extension packages, integration specifications, data exports, test assets, decision logs, credentials, open defects, and support history.',
+        '• Set transition-assistance obligations, rates, timeframes, and knowledge-transfer expectations before the partner has leverage during a dispute or renewal.',
+        '• Confirm which assets are owned by the customer, licensed from the partner, licensed from third parties, or dependent on the partner\'s managed service.',
+        '• Test whether another qualified partner could operate the solution using the documentation and access model being proposed. If not, price that dependency explicitly.',
+        '• Include decommissioning, access revocation, data return or deletion, and evidence of completion. The Australian Cyber Security Centre treats supplier risk as a lifecycle issue through operation, maintenance, and decommissioning, not just a procurement check.',
+      ],
       ['## How to choose an ERP consultant'],
       [
         '• Treat the consultant as part of the decision system, not just a product expert. They should improve scope clarity, risk visibility, and business alignment.',
@@ -629,6 +645,8 @@ const pillarGuideBlocks = (slug: string) => {
       ],
       ['## Official sources to check'],
       [
+        '• Australian Cyber Security Centre, Guidelines for procurement and outsourcing, June 2026, for supplier lifecycle risk, transparency, security track record, and documented shared responsibility.',
+        '• Microsoft Learn, Solutions Partner for Business Applications, for the current performance, skilling, and customer-success criteria behind the designation.',
         '• Microsoft Dynamics 365 partner directory and Microsoft partner finder.',
         '• Oracle NetSuite partner finder, Alliance Partner Program, and partner-program pages.',
         '• Odoo official partner directory and Odoo partner programme guidance.',
@@ -1771,7 +1789,7 @@ export const mockGuides: GuideDoc[] = [
     excerpt: 'How to choose an ERP partner or consultant by checking official ecosystem status, delivery model, team quality, references, selection criteria, and commercial assumptions.',
     intent: 'Partner Selection',
     publishedAt,
-    updatedAt: '2026-06-15T00:00:00Z',
+    updatedAt: '2026-06-29T00:00:00Z',
     seo: {
       metaTitle: 'How to Choose an ERP Implementation Partner or Consultant',
       metaDescription:
