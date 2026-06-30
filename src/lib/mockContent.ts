@@ -2332,7 +2332,7 @@ export const mockGuides: GuideDoc[] = [
       'A practical Australian buyer guide to the point where NetSuite warehouse management with bin and inventory controls is enough, when NetSuite WMS adds real value, and which current product constraints should change the design discussion.',
     intent: 'Operations',
     publishedAt: '2026-05-13T00:00:00Z',
-    updatedAt: '2026-06-17T00:00:00Z',
+    updatedAt: '2026-07-01T00:00:00Z',
     seo: {
       metaTitle: 'NetSuite Warehouse Management System Australia: Bins vs WMS',
       metaDescription:
@@ -2342,7 +2342,7 @@ export const mockGuides: GuideDoc[] = [
       [
         'NetSuite warehouse management decisions are rarely about whether the product has a WMS label. For Australian distributors, importers, ecommerce operators, and multi-site stock businesses, the harder question is whether the warehouse needs standard bin discipline, better packing and shipping control, full mobile WMS execution, or a separate specialist WMS.',
         'Oracle gives buyers several layers to work with: standard bin and inventory controls, NetSuite WMS for mobile warehouse execution, and Ship Central for packing and shipping. The wrong choice is rarely “too little feature” in the abstract. It is choosing an architecture that does not match the actual floor complexity, labour model, fulfilment promises, and inventory-control pressure.',
-        'This refreshed guide uses current Oracle help and 2026.1 release material to separate what standard NetSuite already covers, what NetSuite WMS adds, where Ship Central fits, and which product constraints should change the warehouse design conversation before an Australian buyer approves scope.',
+        'The decision should separate what standard NetSuite already covers, what NetSuite WMS adds, where Ship Central fits, and which current product constraints should change the warehouse design before an Australian buyer approves scope.',
       ],
       ['## What standard NetSuite can already handle without WMS'],
       [
@@ -2380,12 +2380,20 @@ export const mockGuides: GuideDoc[] = [
         '• Multi-operator environments where concurrency, task locking, and real-time mobile updates matter because the cost of duplicate or conflicting warehouse actions is now material.',
         '• Businesses that already know warehouse execution is the operational bottleneck and want the ERP estate to carry more of that control natively instead of outsourcing it to spreadsheets and supervisor memory.',
       ],
-      ['## The current 2026.1 catch buyers should not miss'],
+      ['## What changed for warehouse teams in NetSuite 2026.1'],
       [
+        '• NetSuite 2026.1 adds estimated or actual landed-cost capture to supported WMS receiving flows. Oracle says the rule can apply to purchase orders, transfer orders, and inbound shipments, but only when transactions allocate landed cost per line.',
+        '• This matters for Australian importers because freight, duty, insurance, and other inbound costs can be captured closer to the receiving task instead of waiting for a separate back-office correction. The demonstration should still prove how estimated amounts are reconciled to actual supplier and freight invoices.',
+        '• Oracle\'s 2026.1 SCM Mobile notes add iOS browser support and configurable default table sorting. Treat both as usability improvements to test on the devices, screen sizes, Wi-Fi conditions, and task volumes the warehouse will actually use.',
         '• Oracle\'s current Consigned Inventory Management help says that consigned inventory cannot be used together with the Warehouse Management feature or NetSuite WMS SuiteApp.',
-        '• That single limitation changes shortlist logic for distributors and importers who want both stronger warehouse mobility and vendor-owned stock control. It is not a minor footnote. It is an architecture choice.',
-        '• Oracle\'s 2026.1 release notes list Warehouse Management Enhancements, SCM Mobile Enhancements, and the new Consigned Inventory Management capability under inventory management, so warehouse design should be validated against the current release state and account entitlements, not only against an old demo script.',
-        '• The practical lesson is that “NetSuite has this feature” is not yet a design answer. Buyers still need to ask which features can coexist cleanly in the same operating model.',
+        '• That limitation changes shortlist logic for distributors and importers that want both stronger warehouse mobility and vendor-owned stock control. Buyers need to establish which capabilities can coexist in the proposed account before treating a feature list as an architecture.',
+      ],
+      ['## The setup and operating effort behind the WMS label'],
+      [
+        '• Oracle requires SCM Mobile and Oracle NetSuite WMS SuiteApps to be installed in that order. Its prerequisite list also includes Multiple Units of Measure, Advanced Shipping, Pick, Pack and Ship, Multi-Location Inventory, Bin Management, Advanced Bin / Numbered Inventory Management, and Advanced Inventory Management, plus several SuiteCloud features.',
+        '• Those dependencies make entitlement, configuration, regression testing, and administrator ownership part of the business case. Ask the implementation partner to distinguish included NetSuite capability, separately provisioned features, SuiteApp setup, customisation, and ongoing support.',
+        '• NetSuite WMS can schedule wave releases by day, time window, frequency, order or line limits, picking type, and priority. That can support repeatable outbound flow, but the design needs realistic tests for backorders, committed stock, urgent orders, partial availability, and failed wave jobs.',
+        '• Oracle also supports cycle count plans that can generate and release counts to assigned employees for mobile processing. Buyers should test whether the count design works during live operations, how variances are approved, and whether supervisors can see unfinished or disputed work clearly.',
       ],
       ['## How Ship Central changes the conversation'],
       [
@@ -2418,9 +2426,11 @@ export const mockGuides: GuideDoc[] = [
       ['## Sources used'],
       [
         '• Oracle Help Center: NetSuite WMS Overview.',
-        '• Oracle Help Center: NetSuite WMS Setup.',
         '• Oracle Help Center: Enabling Features for NetSuite WMS.',
-        '• Oracle Help Center: NetSuite 2026.1 Release Notes.',
+        '• Oracle Help Center: NetSuite 2026.1 Inventory Management release notes.',
+        '• Oracle Help Center: NetSuite 2026.1 Order Management SuiteApps release notes.',
+        '• Oracle Help Center: Creating a Wave Release Schedule.',
+        '• Oracle Help Center: Generating and Releasing Inventory Counts.',
         '• Oracle NetSuite Warehouse Management System product page.',
       ],
     ),
