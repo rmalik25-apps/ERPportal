@@ -147,6 +147,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Cybersecurity concept with secure access and digital controls',
     caption: 'Access design should be built into the ERP programme early enough to survive real operating pressure.',
   },
+  'erp-backup-disaster-recovery-checklist-australia': {
+    src: pexels('1181345'),
+    alt: 'Business and technology team reviewing an ERP recovery plan around a table',
+    caption: 'Recovery confidence comes from testing the full business process, not only checking that backups exist.',
+  },
   'when-to-customise-erp-vs-keep-spreadsheets': {
     src: pexels('590022'),
     alt: 'Professional comparing dashboards and spreadsheet workflows side by side',

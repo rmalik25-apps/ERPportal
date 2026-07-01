@@ -8,6 +8,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/erp-data-migration-playbook-clean-cutover/', label: 'ERP data migration playbook'},
     {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+    {href: '/guides/erp-backup-disaster-recovery-checklist-australia/', label: 'ERP backup and disaster recovery checklist'},
     {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
@@ -31,6 +32,14 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/nav-technical-upgrade-vs-full-reimplementation/', label: 'NAV technical upgrade vs full reimplementation'},
     {href: '/guides/erp-data-migration-playbook-clean-cutover/', label: 'ERP data migration playbook for clean cutover'},
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
+  ],
+  'erp-backup-disaster-recovery-checklist-australia': [
+    {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+    {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
+    {href: '/guides/erp-data-migration-playbook-clean-cutover/', label: 'ERP data migration playbook'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'ERP integration architecture essentials'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
   ],
   'business-central-implementation-wholesale-distribution': [
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
