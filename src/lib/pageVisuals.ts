@@ -152,6 +152,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Business and technology team reviewing an ERP recovery plan around a table',
     caption: 'Recovery confidence comes from testing the full business process, not only checking that backups exist.',
   },
+  'erp-contract-negotiation-checklist-australia': {
+    src: pexels('6694543'),
+    alt: 'Business leaders reviewing ERP contract terms and commercial schedules across a table',
+    caption: 'ERP contracts work better when scope, acceptance, cost, security, and exit obligations are explicit before signature.',
+  },
   'when-to-customise-erp-vs-keep-spreadsheets': {
     src: pexels('590022'),
     alt: 'Professional comparing dashboards and spreadsheet workflows side by side',

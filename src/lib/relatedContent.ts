@@ -6,6 +6,7 @@ type RelatedLink = {
 const guideLinks: Record<string, RelatedLink[]> = {
   'erp-selection-checklist-smb': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
     {href: '/guides/erp-data-migration-playbook-clean-cutover/', label: 'ERP data migration playbook'},
     {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
     {href: '/guides/erp-backup-disaster-recovery-checklist-australia/', label: 'ERP backup and disaster recovery checklist'},
@@ -19,6 +20,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   ],
   'erp-comparison-criteria-checklist': [
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+    {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
@@ -40,6 +42,14 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'ERP integration architecture essentials'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+  ],
+  'erp-contract-negotiation-checklist-australia': [
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
+    {href: '/guides/erp-backup-disaster-recovery-checklist-australia/', label: 'ERP backup and disaster recovery checklist'},
   ],
   'business-central-implementation-wholesale-distribution': [
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
