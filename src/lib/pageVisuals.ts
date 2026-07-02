@@ -443,6 +443,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Beverage manufacturing team reviewing batch control and packaging requirements',
     caption: 'Beverage ERP selection should test packaging, batch status, planning, and reporting under real operating pressure.',
   },
+  'erp-total-cost-ownership-australia-three-year-comparison': {
+    src: pexels('4386371'),
+    alt: 'Finance and operations leaders comparing ERP proposals and three-year cost assumptions',
+    caption: 'A useful ERP cost comparison makes licences, delivery effort, internal work, support, and risk visible on the same basis.',
+  },
 }
 
 export function getGuideVisual(slug?: string) {

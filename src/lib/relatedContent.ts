@@ -707,6 +707,16 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
     {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
   ],
+  'erp-total-cost-ownership-australia-three-year-comparison': [
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
+  ],
 }
 
 export function getRelatedGuideLinks(slug?: string) {
