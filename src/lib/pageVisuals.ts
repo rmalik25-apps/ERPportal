@@ -182,6 +182,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Technical and business team reviewing system extensions and architecture decisions',
     caption: 'Customisation decisions need governance, ownership, and a clear support model after go-live.',
   },
+  'd365-xpp-development-guide-australia': {
+    src: pexels('577585'),
+    alt: 'Technical and business team reviewing Dynamics 365 extension architecture and code governance',
+    caption: 'X++ development should be governed as product engineering inside the ERP estate, not treated as a one-off tweak.',
+  },
   'managing-organisational-change-for-erp': {
     src: pexels('3184339'),
     alt: 'Team workshop focused on adoption planning, process change, and training',

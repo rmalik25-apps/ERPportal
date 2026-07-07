@@ -51,6 +51,14 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
     {href: '/guides/erp-backup-disaster-recovery-checklist-australia/', label: 'ERP backup and disaster recovery checklist'},
   ],
+  'd365-xpp-development-guide-australia': [
+    {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations governance guide'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
+    {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+    {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'ERP integration architecture essentials'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+  ],
   'business-central-implementation-wholesale-distribution': [
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
