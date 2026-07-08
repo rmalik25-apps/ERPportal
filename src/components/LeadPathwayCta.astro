@@ -1,0 +1,29 @@
+---
+interface Props {
+  eyebrow?: string
+  title?: string
+  body?: string
+  primaryLabel?: string
+  secondaryLabel?: string
+}
+
+const {
+  eyebrow = 'Next step',
+  title = 'Turn this ERP research into a practical shortlist',
+  body = 'Share your situation and we will help map the next evaluation steps, comparison areas, and partner-fit questions for your project.',
+  primaryLabel = 'Request ERP shortlist guidance',
+  secondaryLabel = 'See how guidance works',
+} = Astro.props
+---
+
+<section class="lead-pathway-cta" aria-labelledby="lead-pathway-cta-title">
+  <div>
+    <p class="eyebrow">{eyebrow}</p>
+    <h2 id="lead-pathway-cta-title">{title}</h2>
+    <p>{body}</p>
+  </div>
+  <div class="lead-pathway-actions">
+    <a class="btn btn-primary" href="/#get-guidance">{primaryLabel}</a>
+    <a class="link-arrow" href="/#get-guidance">{secondaryLabel} →</a>
+  </div>
+</section>

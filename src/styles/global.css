@@ -1745,6 +1745,43 @@ a {
   margin: 0.85rem 0 0;
 }
 
+.lead-pathway-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  margin-top: clamp(1.5rem, 3vw, 2.4rem);
+  padding: clamp(1rem, 2.4vw, 1.35rem);
+  border: 1px solid rgba(14, 90, 79, 0.22);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(14, 90, 79, 0.08), rgba(173, 101, 45, 0.08)),
+    rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow-soft);
+}
+
+.lead-pathway-cta h2 {
+  margin: 0 0 0.45rem;
+  max-width: 23ch;
+  font-family: "Fraunces", Georgia, serif;
+  line-height: 1.08;
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+}
+
+.lead-pathway-cta p {
+  margin: 0;
+  max-width: 66ch;
+  color: var(--muted);
+}
+
+.lead-pathway-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
 .search-page-shell {
   display: grid;
   gap: 1rem;
@@ -1964,6 +2001,19 @@ a {
 
   .doc-layout {
     grid-template-columns: 1fr;
+  }
+
+  .lead-pathway-cta {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .lead-pathway-actions {
+    justify-content: flex-start;
+  }
+
+  .lead-pathway-actions .btn {
+    width: 100%;
   }
 
   .doc-side .card {

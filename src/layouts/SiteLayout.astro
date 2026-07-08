@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import LeadPathwayCta from '../components/LeadPathwayCta.astro'
 
 interface Props {
   title: string
@@ -139,6 +140,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
     </header>
     <main class="container page">
       <slot />
+      <LeadPathwayCta />
     </main>
     <footer class="site-footer">
       <div class="container footer-row">
