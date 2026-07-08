@@ -1482,10 +1482,6 @@ a {
   line-height: 1.4;
 }
 
-.doc-main p + p {
-  max-width: 72ch;
-}
-
 .doc-main ul {
   margin: 0.4rem 0 0.9rem;
   padding-left: 1rem;
