@@ -192,6 +192,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Technical and business team reviewing NetSuite SuiteScript and SuiteCloud customisation architecture',
     caption: 'NetSuite development decisions need clear ownership, security review, testing, and release discipline.',
   },
+  'business-central-al-development-guide-australia': {
+    src: pexels('577585'),
+    alt: 'Technical and business team reviewing Business Central extension design and release governance',
+    caption: 'AL extensions should solve stable business gaps while keeping Business Central maintainable through future updates.',
+  },
   'managing-organisational-change-for-erp': {
     src: pexels('3184339'),
     alt: 'Team workshop focused on adoption planning, process change, and training',
