@@ -59,6 +59,14 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'ERP integration architecture essentials'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
   ],
+  'netsuite-suitescript-suitecloud-development-guide-australia': [
+    {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations governance guide'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite comparison'},
+    {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'ERP integration architecture essentials'},
+    {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+  ],
   'business-central-implementation-wholesale-distribution': [
     {href: '/blog/seven-erp-red-flags-distributors-before-contract-signing/', label: 'Seven ERP red flags for distributors'},
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
@@ -179,6 +187,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/guides/netsuite-suitescript-suitecloud-development-guide-australia/', label: 'NetSuite SuiteScript and SuiteCloud guide'},
     {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/blog/netsuite-accounting-australia-gst-bas-bank-feeds-payroll-einvoicing-checks/', label: 'NetSuite accounting in Australia'},
     {href: '/blog/netsuite-ai-connector-australia-what-to-test/', label: 'NetSuite AI Connector in Australia'},
@@ -287,6 +296,7 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
   'business-central-vs-netsuite-growing-businesses': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
+    {href: '/guides/netsuite-suitescript-suitecloud-development-guide-australia/', label: 'NetSuite SuiteScript and SuiteCloud guide'},
     {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},
