@@ -197,6 +197,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Technical and business team reviewing Business Central extension design and release governance',
     caption: 'AL extensions should solve stable business gaps while keeping Business Central maintainable through future updates.',
   },
+  'odoo-python-javascript-development-guide-australia': {
+    src: pexels('577585'),
+    alt: 'Technical and business team reviewing Odoo module and interface extension governance',
+    caption: 'Odoo development should stay narrow, documented, secure, and ready for future upgrades.',
+  },
   'managing-organisational-change-for-erp': {
     src: pexels('3184339'),
     alt: 'Team workshop focused on adoption planning, process change, and training',

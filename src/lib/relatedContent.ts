@@ -54,6 +54,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'd365-xpp-development-guide-australia': [
     {href: '/guides/business-central-al-development-guide-australia/', label: 'Business Central AL development guide'},
     {href: '/guides/netsuite-suitescript-suitecloud-development-guide-australia/', label: 'NetSuite SuiteScript and SuiteCloud guide'},
+    {href: '/guides/odoo-python-javascript-development-guide-australia/', label: 'Odoo Python and JavaScript development guide'},
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations governance guide'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
@@ -64,6 +65,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'netsuite-suitescript-suitecloud-development-guide-australia': [
     {href: '/guides/business-central-al-development-guide-australia/', label: 'Business Central AL development guide'},
     {href: '/guides/d365-xpp-development-guide-australia/', label: 'D365 X++ development guide'},
+    {href: '/guides/odoo-python-javascript-development-guide-australia/', label: 'Odoo Python and JavaScript development guide'},
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations governance guide'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
@@ -74,11 +76,22 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'business-central-al-development-guide-australia': [
     {href: '/guides/d365-xpp-development-guide-australia/', label: 'D365 X++ development guide'},
     {href: '/guides/netsuite-suitescript-suitecloud-development-guide-australia/', label: 'NetSuite SuiteScript and SuiteCloud guide'},
+    {href: '/guides/odoo-python-javascript-development-guide-australia/', label: 'Odoo Python and JavaScript development guide'},
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations governance guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
+    {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'ERP integration architecture essentials'},
+  ],
+  'odoo-python-javascript-development-guide-australia': [
+    {href: '/guides/d365-xpp-development-guide-australia/', label: 'D365 X++ development guide'},
+    {href: '/guides/netsuite-suitescript-suitecloud-development-guide-australia/', label: 'NetSuite SuiteScript and SuiteCloud guide'},
+    {href: '/guides/business-central-al-development-guide-australia/', label: 'Business Central AL development guide'},
+    {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations governance guide'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'ERP integration architecture essentials'},
   ],
   'business-central-implementation-wholesale-distribution': [
