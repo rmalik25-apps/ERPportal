@@ -202,6 +202,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Technical and business team reviewing Odoo module and interface extension governance',
     caption: 'Odoo development should stay narrow, documented, secure, and ready for future upgrades.',
   },
+  'sap-s4hana-abap-clean-core-development-guide-australia': {
+    src: pexels('577585'),
+    alt: 'Technical and business team reviewing SAP S/4HANA clean-core extension governance',
+    caption: 'SAP development decisions should keep the core cleaner, the extension narrower, and the support model clear.',
+  },
   'managing-organisational-change-for-erp': {
     src: pexels('3184339'),
     alt: 'Team workshop focused on adoption planning, process change, and training',
