@@ -182,6 +182,16 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Technical and business team reviewing system extensions and architecture decisions',
     caption: 'Customisation decisions need governance, ownership, and a clear support model after go-live.',
   },
+  'ai-agents-for-erp-automation-with-control': {
+    src: pexels('3861969'),
+    alt: 'Operations and finance team reviewing automation controls and ERP workflow status',
+    caption: 'ERP agents should remove repetitive handling while keeping approvals, audit evidence, and ownership visible.',
+  },
+  'top-10-erp-automations-save-time': {
+    src: pexels('3184292'),
+    alt: 'Finance and operations team prioritising automation opportunities on laptops',
+    caption: 'The best ERP automations save time by shifting users from data entry to review, exceptions, and decisions.',
+  },
   'd365-xpp-development-guide-australia': {
     src: pexels('577585'),
     alt: 'Technical and business team reviewing Dynamics 365 extension architecture and code governance',
