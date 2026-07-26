@@ -3997,6 +3997,103 @@ export const mockGuides: GuideDoc[] = [
       ],
     ),
   },
+  {
+    _id: 'guide-erp-ai-automation-roadmap-controls-australia',
+    _type: 'guide',
+    title: 'ERP AI automation roadmap: how to sequence agents, controls, and partner work',
+    slug: 'erp-ai-automation-roadmap-controls-australia',
+    excerpt:
+      'A practical ERP AI automation roadmap for Australian buyers covering use-case selection, controls, vendor examples, testing, partner roles, and rollout sequencing.',
+    intent: 'Architecture',
+    publishedAt: '2026-07-27T00:00:00Z',
+    updatedAt: '2026-07-27T00:00:00Z',
+    seo: {
+      metaTitle: 'ERP AI Automation Roadmap: Agents, Controls, and Partner Work',
+      metaDescription:
+        'Build a controlled ERP AI automation roadmap across order entry, AP, reporting, reconciliation, and master data with practical controls and partner checks.',
+    },
+    body: skimmableBlocks(
+      [
+        'ERP AI automation should start as an operating-design exercise, not as a tool trial. The useful question is not whether an agent can read an email, invoice, report, or record. It is whether the business can control what happens next.',
+        'For Australian finance, operations, wholesale, manufacturing, and services teams, the strongest roadmap is usually staged: start with narrow review-heavy automations, prove controls and ownership, then widen into higher-volume or higher-risk workflows once exception handling is mature.',
+      ],
+      ['## What current ERP products show'],
+      [
+        '• Microsoft Learn describes Business Central Sales Order Agent as using AI to analyse customer requests received by email, identify customers, clarify missing details, check inventory, and help create sales orders. Microsoft also describes Payables Agent as processing vendor invoice emails, creating inbound e-documents, extracting invoice information with Azure Document Intelligence, and involving an agent supervisor for review.',
+        '• Oracle documents the NetSuite AI Connector Service as an MCP-based service that lets supported AI clients access and interact with NetSuite data and functionality through tools governed by NetSuite roles, permissions, OAuth setup, tool scope, logging, and concurrency limits.',
+        '• SAP presents Joule Agents and Joule Assistants as business AI capabilities for coordinating context-aware actions across business processes, with Joule Studio available for building custom agents and skills in SAP Build.',
+        '• Odoo documentation for invoice digitisation says it uses OCR and AI technologies to read documents and create or fill record details, which makes AP capture a practical automation candidate rather than a theoretical agent use case.',
+      ],
+      ['## Start with a controlled use-case portfolio'],
+      [
+        '• Put candidate automations into four groups: document capture, transaction drafting, workflow follow-up, and analysis or reporting.',
+        '• Good first candidates are AP bill capture, sales-order draft creation from email, quote request triage, reporting-query assistance, supplier-statement checks, master-data enrichment suggestions, and month-end task follow-up.',
+        '• Avoid starting with autonomous posting, payment release, credit-limit changes, supplier bank-account changes, inventory write-offs, or customer price changes unless the control model is already strong.',
+        '• Score each use case by transaction volume, manual effort, error cost, approval sensitivity, data sensitivity, integration complexity, and reversibility. The best pilot is not always the loudest pain point.',
+      ],
+      ['## Design the control model before the demo'],
+      [
+        '• Human review should be explicit. Define who reviews agent output, which fields can be accepted in bulk, which fields require line-by-line review, and when the workflow must stop.',
+        '• Role permissions should follow least privilege. An agent or AI client should only inherit access needed for the approved scenario, and elevated administrator roles should not be used to make a demo look easy.',
+        '• Segregation of duties still applies. The same person or automation path should not create a supplier, change bank details, approve an invoice, and release payment without independent checks.',
+        '• Audit evidence must connect the source document, extracted values, suggested action, reviewer decision, ERP record, and any later correction.',
+        '• Exception queues need named owners. If confidence is low, data is missing, a duplicate appears, or an integration fails, the process should route to a queue rather than disappear into email or chat history.',
+      ],
+      ['## Build the roadmap in three waves'],
+      [
+        '• Wave 1 should prove review-heavy assistance. Examples include invoice capture for supervisor review, order or quote drafting from emails, report retrieval, document classification, and month-end checklist nudges.',
+        '• Wave 2 should connect automations to workflow. Examples include purchase-order and invoice matching, customer or supplier enrichment suggestions, returns triage, inventory replenishment suggestions, and CRM-to-ERP handoff checks.',
+        '• Wave 3 should handle higher-risk orchestration only after the business has measured accuracy, exception rates, approval discipline, support effort, and rollback paths. Examples include multi-step close support, controlled record updates, or agent-assisted fulfilment exceptions.',
+        '• Each wave should have a stop rule. If exception volume, data leakage risk, user override behaviour, or support load is unacceptable, the next wave should wait.',
+      ],
+      ['## What to ask implementation partners'],
+      [
+        '• Which native ERP features, vendor-backed agents, connector options, add-ons, middleware, and custom development paths would you consider for this workflow?',
+        '• How will you design roles, permissions, audit logs, approval gates, exception queues, monitoring, and rollback before production use?',
+        '• Who owns the mailbox, integration account, AI client, prompts, tool configuration, source documents, master data, and production support?',
+        '• What evidence will prove the pilot is working: accuracy, cycle time, reviewer effort, exception rate, rework rate, user adoption, and control exceptions?',
+        '• How will the solution survive ERP releases, vendor-agent changes, model updates, new document formats, staff turnover, and peak trading periods?',
+      ],
+      ['## Pilot checklist'],
+      [
+        '• 1. Choose one workflow with clear source documents, measurable effort, and a named business owner.',
+        '• 2. Document the current process, error patterns, approval path, master-data dependencies, and manual workarounds.',
+        '• 3. Define the permitted actions: read only, draft only, recommend only, update after approval, or post after approval.',
+        '• 4. Configure roles, test users, environments, logs, exception queues, and rollback steps before showing the first demo to business users.',
+        '• 5. Test good cases, missing data, duplicates, conflicting instructions, unauthorised requests, low-confidence extraction, integration failure, and user override.',
+        '• 6. Run a time-boxed pilot with production-like data, then decide whether to expand, redesign, pause, or retire the automation.',
+      ],
+      ['## Where ERP AI automation goes wrong'],
+      [
+        '• The team automates a broken process instead of deciding the future operating model first.',
+        '• The first pilot has too much write access, too many exception paths, and no clear review owner.',
+        '• Buyers compare product demos but do not compare support ownership, security model, integration monitoring, or release maintenance.',
+        '• The business counts time saved in data entry but ignores time added in review, correction, exception handling, and support.',
+        '• The roadmap depends on one enthusiastic developer or superuser rather than a repeatable governance model.',
+      ],
+      ['## What buyers should do next'],
+      [
+        '• Build a one-page automation register covering workflow, owner, system boundary, data touched, permitted action, control risk, estimated value, dependency, and rollout wave.',
+        '• Select one Wave 1 pilot that makes review easier without giving automation broad posting or payment authority.',
+        '• Ask shortlisted partners to explain the same use case across native ERP capability, add-on options, integration design, custom development, security, and managed support.',
+        '• Treat the first 90 days after rollout as controlled operations, not project closure. Monitor exceptions, user overrides, audit evidence, model or product changes, and support tickets.',
+      ],
+      ['## FAQ'],
+      [
+        '• What is the safest first ERP AI automation? Usually a draft-and-review workflow such as AP bill capture, sales-order draft creation from email, report retrieval, or month-end task follow-up.',
+        '• Can ERP agents replace manual data entry? They can reduce some manual handling, but buyers should still design review, approval, exception, audit, and rollback controls around the workflow.',
+        '• Should AI automation be native ERP, middleware, or custom development? It depends on the workflow, ERP product, data sensitivity, integration boundary, and support model. Ask partners to compare all realistic paths before committing.',
+        '• Who should own ERP AI automation after go-live? Business process owners should own outcomes and exceptions, while IT, the implementation partner, or managed-support provider owns technical monitoring, access, releases, and incident response.',
+      ],
+      ['## Sources used'],
+      [
+        '• Microsoft Learn pages for Business Central Sales Order Agent and Payables Agent.',
+        '• Oracle NetSuite Help pages for NetSuite AI Connector Service, MCP setup, permissions, risks, and concurrency governance.',
+        '• SAP pages for Joule Agents, Joule Assistants, and Joule Studio in SAP Build.',
+        '• Odoo 19 documentation for invoice digitisation using OCR and AI technologies.',
+      ],
+    ),
+  },
 ]
 
 export const mockComparisons: ComparisonDoc[] = [

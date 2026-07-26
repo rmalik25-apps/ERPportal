@@ -192,6 +192,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Finance and operations team prioritising automation opportunities on laptops',
     caption: 'The best ERP automations save time by shifting users from data entry to review, exceptions, and decisions.',
   },
+  'erp-ai-automation-roadmap-controls-australia': {
+    src: pexels('3183150'),
+    alt: 'ERP project team mapping AI automation controls and rollout waves',
+    caption: 'ERP AI automation works best when each workflow has a clear owner, permission model, exception path, and rollout gate.',
+  },
   'd365-xpp-development-guide-australia': {
     src: pexels('577585'),
     alt: 'Technical and business team reviewing Dynamics 365 extension architecture and code governance',

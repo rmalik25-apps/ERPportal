@@ -210,6 +210,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
   ],
   'ai-agents-for-erp-automation-with-control': [
+    {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
     {href: '/guides/top-10-erp-automations-save-time/', label: 'Top 10 ERP automations to save time'},
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/guides/business-central-ai-billing-australia-copilot-credits-agents/', label: 'Business Central AI billing guide'},
@@ -223,6 +224,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'top-10-erp-automations-save-time': [
+    {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
     {href: '/guides/ai-agents-for-erp-automation-with-control/', label: 'AI agents for ERP automation with control'},
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
@@ -379,6 +381,18 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
     {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
     {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
+  ],
+  'erp-ai-automation-roadmap-controls-australia': [
+    {href: '/guides/ai-agents-for-erp-automation-with-control/', label: 'AI agents for ERP automation with control'},
+    {href: '/guides/top-10-erp-automations-save-time/', label: 'Top 10 ERP automations to save time'},
+    {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
+    {href: '/blog/business-central-payables-agent-australia-what-to-test/', label: 'Business Central Payables Agent in Australia'},
+    {href: '/blog/netsuite-ai-connector-australia-what-to-test/', label: 'NetSuite AI Connector in Australia'},
+    {href: '/blog/odoo-19-ai-australian-erp-buyers-what-matters-now/', label: 'Odoo 19 AI for Australian buyers'},
+    {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
+    {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
 }
 
@@ -779,6 +793,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/month-end-close-new-erp-first-three-cycles-playbook/', label: 'Month-end close playbook'},
   ],
   'netsuite-ai-connector-australia-what-to-test': [
+    {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
     {href: '/blog/netsuite-ai-australia-2026-1-what-buyers-should-check/', label: 'NetSuite AI in Australia'},
     {href: '/blog/netsuite-accounting-australia-gst-bas-bank-feeds-payroll-einvoicing-checks/', label: 'NetSuite accounting in Australia'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
