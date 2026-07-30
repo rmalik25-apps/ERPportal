@@ -182,6 +182,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Technical and business team reviewing system extensions and architecture decisions',
     caption: 'Customisation decisions need governance, ownership, and a clear support model after go-live.',
   },
+  'custom-erp-vs-off-the-shelf-saas-build-or-buy': {
+    src: pexels('3184291'),
+    alt: 'Business and technology leaders comparing ERP build and buy options',
+    caption: 'Build-versus-buy decisions should separate standard ERP control from the workflows that genuinely make the business different.',
+  },
   'ai-agents-for-erp-automation-with-control': {
     src: pexels('3861969'),
     alt: 'Operations and finance team reviewing automation controls and ERP workflow status',

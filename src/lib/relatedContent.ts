@@ -6,6 +6,7 @@ type RelatedLink = {
 const guideLinks: Record<string, RelatedLink[]> = {
   'erp-selection-checklist-smb': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
     {href: '/guides/erp-data-migration-playbook-clean-cutover/', label: 'ERP data migration playbook'},
     {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
@@ -20,6 +21,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   ],
   'erp-comparison-criteria-checklist': [
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+    {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
@@ -210,6 +212,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
   ],
   'ai-agents-for-erp-automation-with-control': [
+    {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
     {href: '/guides/top-10-erp-automations-save-time/', label: 'Top 10 ERP automations to save time'},
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
@@ -224,6 +227,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'top-10-erp-automations-save-time': [
+    {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
     {href: '/guides/ai-agents-for-erp-automation-with-control/', label: 'AI agents for ERP automation with control'},
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
@@ -236,6 +240,19 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+  ],
+  'custom-erp-vs-off-the-shelf-saas-build-or-buy': [
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/ai-agents-for-erp-automation-with-control/', label: 'AI agents for ERP automation with control'},
+    {href: '/guides/top-10-erp-automations-save-time/', label: 'Top 10 ERP automations to save time'},
+    {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
+    {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations governance guide'},
+    {href: '/guides/when-to-customise-erp-vs-keep-spreadsheets/', label: 'When to customise ERP vs keep spreadsheets'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite comparison'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
   ],
   'odoo-pricing-australia-standard-vs-custom': [
     {href: '/blog/odoo-19-3-australia-buyers-upgrade-shortlist-checks/', label: 'Odoo 19.3 for Australian buyers'},
