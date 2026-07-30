@@ -113,6 +113,8 @@ const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [
                 <li>{entry}</li>
               ))}
             </ol>
+          ) : block.type === 'quote' ? (
+            <blockquote>{block.text}</blockquote>
           ) : (
             <p>{block.text}</p>
           ),

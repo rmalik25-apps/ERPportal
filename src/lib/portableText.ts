@@ -4,6 +4,7 @@ import {isInternalResearchLine} from './publicCopy'
 export type RichContentBlock =
   | {type: 'heading'; text: string}
   | {type: 'paragraph'; text: string}
+  | {type: 'quote'; text: string}
   | {type: 'list'; items: string[]}
   | {type: 'orderedList'; items: string[]}
 
@@ -43,6 +44,12 @@ export function blocksToRichContent(blocks: PortableTextBlock[]): RichContentBlo
     if (line.startsWith('## ')) {
       flushLists()
       content.push({type: 'heading', text: line.replace(/^##\s+/, '').trim()})
+      continue
+    }
+
+    if (line.startsWith('> ')) {
+      flushLists()
+      content.push({type: 'quote', text: line.replace(/^>\s+/, '').trim()})
       continue
     }
 

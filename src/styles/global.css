@@ -1482,13 +1482,25 @@ a {
   line-height: 1.4;
 }
 
-.doc-main ul {
+.doc-main ul,
+.doc-main ol {
   margin: 0.4rem 0 0.9rem;
   padding-left: 1rem;
 }
 
 .doc-main li + li {
   margin-top: 0.25rem;
+}
+
+.doc-main blockquote {
+  margin: 1rem 0 1.1rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  padding: 0.85rem 1rem;
+  font-size: 1.02rem;
+  line-height: 1.55;
 }
 
 .footer-row {
