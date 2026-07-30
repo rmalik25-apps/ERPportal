@@ -5,6 +5,7 @@ export type RichContentBlock =
   | {type: 'heading'; text: string}
   | {type: 'paragraph'; text: string}
   | {type: 'list'; items: string[]}
+  | {type: 'orderedList'; items: string[]}
 
 export function blockToPlainText(block: PortableTextBlock): string {
   if (!block?.children) return ''
@@ -19,6 +20,7 @@ export function blocksToRichContent(blocks: PortableTextBlock[]): RichContentBlo
   const lines = blocksToPlainParagraphs(blocks).filter((line) => !isInternalResearchLine(line))
   const content: RichContentBlock[] = []
   let currentList: string[] = []
+  let currentOrderedList: string[] = []
 
   const flushList = () => {
     if (!currentList.length) return
@@ -26,22 +28,41 @@ export function blocksToRichContent(blocks: PortableTextBlock[]): RichContentBlo
     currentList = []
   }
 
+  const flushOrderedList = () => {
+    if (!currentOrderedList.length) return
+    content.push({type: 'orderedList', items: currentOrderedList})
+    currentOrderedList = []
+  }
+
+  const flushLists = () => {
+    flushList()
+    flushOrderedList()
+  }
+
   for (const line of lines) {
     if (line.startsWith('## ')) {
-      flushList()
+      flushLists()
       content.push({type: 'heading', text: line.replace(/^##\s+/, '').trim()})
       continue
     }
 
     if (line.startsWith('• ')) {
-      currentList.push(line.replace(/^•\s+/, '').trim())
+      const item = line.replace(/^•\s+/, '').trim()
+      const orderedItem = item.match(/^\d+\.\s+(.+)$/)
+      if (orderedItem) {
+        flushList()
+        currentOrderedList.push(orderedItem[1].trim())
+      } else {
+        flushOrderedList()
+        currentList.push(item)
+      }
       continue
     }
 
-    flushList()
+    flushLists()
     content.push({type: 'paragraph', text: line})
   }
 
-  flushList()
+  flushLists()
   return content
 }

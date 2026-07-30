@@ -109,6 +109,12 @@ const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [
                 <li>{item}</li>
               ))}
             </ul>
+          ) : block.type === 'orderedList' ? (
+            <ol>
+              {block.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ol>
           ) : (
             <p>{block.text}</p>
           ),
