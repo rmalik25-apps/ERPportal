@@ -498,6 +498,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Finance team reviewing charts and ERP cost assumptions on a laptop',
     caption: 'A useful ERP cost comparison makes licences, delivery effort, internal work, support, and risk visible on the same basis.',
   },
+  'technologyone-2026a-plus-australia-councils-universities-checks': {
+    src: pexels('3184465'),
+    alt: 'Public sector and education ERP team reviewing AI workflow controls in a workshop',
+    caption: 'TechnologyOne 2026A and Plus should be tested against real permissions, data, service, and governance boundaries.',
+  },
 }
 
 export function getGuideVisual(slug?: string) {

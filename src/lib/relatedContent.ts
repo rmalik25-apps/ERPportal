@@ -870,6 +870,16 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
   ],
+  'technologyone-2026a-plus-australia-councils-universities-checks': [
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
+    {href: '/guides/ai-agents-for-erp-automation-with-control/', label: 'AI agents for ERP automation with control'},
+    {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
+    {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+    {href: '/blog/erp-total-cost-ownership-australia-three-year-comparison/', label: 'ERP total cost of ownership worksheet'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+  ],
 }
 
 export function getRelatedGuideLinks(slug?: string) {
