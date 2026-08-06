@@ -413,6 +413,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Warehouse and ecommerce team reviewing inventory, fulfilment, and B2B order flow',
     caption: 'Commerce integration works best when stock, pricing, and fulfilment ownership stay clear across ERP and storefront teams.',
   },
+  'netsuite-next-ask-oracle-australia-2026-2-buyer-checks': {
+    src: pexels('3861969'),
+    alt: 'Finance and operations team reviewing NetSuite AI workflow controls and reporting questions',
+    caption: 'NetSuite Next and Ask Oracle should be tested with real roles, source records, and Australian support responsibilities before rollout.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
