@@ -418,6 +418,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Finance and operations team reviewing NetSuite AI workflow controls and reporting questions',
     caption: 'NetSuite Next and Ask Oracle should be tested with real roles, source records, and Australian support responsibilities before rollout.',
   },
+  'outgrowing-xero-inventory-erp-australia': {
+    src: pexels('4483942'),
+    alt: 'Australian warehouse and finance team reviewing stock, orders, and ERP readiness',
+    caption: 'Outgrowing Xero for inventory is usually a signal to clarify stock ownership, finance impact, and shortlist options before software demos.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
