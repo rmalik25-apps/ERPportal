@@ -66,6 +66,13 @@ export function blocksToRichContent(blocks: PortableTextBlock[]): RichContentBlo
       continue
     }
 
+    const orderedLine = line.match(/^\d+\.\s+(.+)$/)
+    if (orderedLine) {
+      flushList()
+      currentOrderedList.push(orderedLine[1].trim())
+      continue
+    }
+
     flushLists()
     content.push({type: 'paragraph', text: line})
   }

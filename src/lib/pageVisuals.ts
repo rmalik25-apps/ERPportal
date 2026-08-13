@@ -508,6 +508,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Finance team reviewing charts and ERP cost assumptions on a laptop',
     caption: 'A useful ERP cost comparison makes licences, delivery effort, internal work, support, and risk visible on the same basis.',
   },
+  'erp-implementation-cost-australia-budget-worksheet': {
+    src: pexels('4386371'),
+    alt: 'Australian finance and operations team reviewing ERP implementation cost assumptions',
+    caption: 'ERP implementation budgets work better when scope, buyer effort, data, integrations, and support are visible before proposals arrive.',
+  },
   'technologyone-2026a-plus-australia-councils-universities-checks': {
     src: pexels('3184465'),
     alt: 'Public sector and education ERP team reviewing AI workflow controls in a workshop',

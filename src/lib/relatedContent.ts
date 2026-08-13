@@ -16,6 +16,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
     {href: '/blog/outgrowing-xero-inventory-erp-australia/', label: 'Outgrowing Xero inventory guide'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
@@ -27,6 +28,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing Australia guide'},
     {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management system guide'},
@@ -341,6 +343,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'how-to-choose-erp-implementation-partner': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
     {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
     {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
@@ -535,6 +538,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'vendor-demo-script-erp-buyers-what-to-ask': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
     {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
@@ -877,6 +881,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
   ],
   'why-generic-erp-demos-miss-food-manufacturing-reality': [
     {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
@@ -894,6 +899,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
   ],
   'erp-total-cost-ownership-australia-three-year-comparison': [
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
@@ -902,6 +908,18 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
+  ],
+  'erp-implementation-cost-australia-budget-worksheet': [
+    {href: '/blog/erp-total-cost-ownership-australia-three-year-comparison/', label: 'ERP total cost of ownership worksheet'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence questions'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
   ],
   'technologyone-2026a-plus-australia-councils-universities-checks': [
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
