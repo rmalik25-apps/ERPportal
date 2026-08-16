@@ -671,6 +671,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'business-central-sales-order-agent-australia-what-to-test': [
     {href: '/guides/business-central-ai-agents-australia-what-to-test/', label: 'Business Central AI agents in Australia'},
+    {href: '/blog/email-to-erp-order-automation-australia-controls-checklist/', label: 'Email-to-ERP order automation checklist'},
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},
     {href: '/blog/business-central-copilot-agent-pricing-australia-2026/', label: 'Business Central Copilot and agent pricing'},
     {href: '/blog/business-central-ai-agent-designer-australia-what-to-test/', label: 'Business Central AI agent designer in Australia'},
@@ -822,6 +823,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'netsuite-ai-connector-australia-what-to-test': [
     {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
+    {href: '/blog/email-to-erp-order-automation-australia-controls-checklist/', label: 'Email-to-ERP order automation checklist'},
     {href: '/blog/netsuite-next-ask-oracle-australia-2026-2-buyer-checks/', label: 'NetSuite Next and Ask Oracle in Australia'},
     {href: '/blog/netsuite-ai-australia-2026-1-what-buyers-should-check/', label: 'NetSuite AI in Australia'},
     {href: '/blog/netsuite-accounting-australia-gst-bas-bank-feeds-payroll-einvoicing-checks/', label: 'NetSuite accounting in Australia'},
@@ -850,6 +852,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/blog/shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks/', label: 'Shopify ERP integration in Australia'},
+    {href: '/blog/email-to-erp-order-automation-australia-controls-checklist/', label: 'Email-to-ERP order automation checklist'},
     {href: '/blog/warehouse-management-system-australia-erp-vs-wms-shortlist/', label: 'Warehouse management system Australia guide'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
     {href: '/guides/netsuite-warehouse-management-bins-vs-wms/', label: 'NetSuite warehouse management guide'},
@@ -861,6 +864,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': [
     {href: '/blog/business-central-shopify-australia-b2b-wholesale-what-to-test/', label: 'Business Central + Shopify in Australia'},
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
+    {href: '/blog/email-to-erp-order-automation-australia-controls-checklist/', label: 'Email-to-ERP order automation checklist'},
     {href: '/blog/outgrowing-xero-inventory-erp-australia/', label: 'Outgrowing Xero inventory guide'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
@@ -876,6 +880,19 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
     {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
+  ],
+  'email-to-erp-order-automation-australia-controls-checklist': [
+    {href: '/guides/ai-agents-for-erp-automation-with-control/', label: 'AI agents for ERP automation with control'},
+    {href: '/guides/top-10-erp-automations-save-time/', label: 'Top 10 ERP automations to save time'},
+    {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
+    {href: '/blog/business-central-sales-order-agent-australia-what-to-test/', label: 'Business Central Sales Order Agent in Australia'},
+    {href: '/blog/business-central-mcp-server-australia-what-to-test/', label: 'Business Central MCP server in Australia'},
+    {href: '/blog/netsuite-ai-connector-australia-what-to-test/', label: 'NetSuite AI Connector in Australia'},
+    {href: '/blog/shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks/', label: 'Shopify ERP integration in Australia'},
+    {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'Integration architecture essentials'},
+    {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'implementation-partner-due-diligence-ten-questions': [
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},

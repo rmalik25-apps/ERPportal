@@ -423,6 +423,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian warehouse and finance team reviewing stock, orders, and ERP readiness',
     caption: 'Outgrowing Xero for inventory is usually a signal to clarify stock ownership, finance impact, and shortlist options before software demos.',
   },
+  'email-to-erp-order-automation-australia-controls-checklist': {
+    src: pexels('6169659'),
+    alt: 'Sales operations and warehouse team reviewing customer order emails and ERP automation controls',
+    caption: 'Email-to-ERP automation works best when customer requests become reviewed, traceable drafts rather than uncontrolled order entry.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
