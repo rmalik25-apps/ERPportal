@@ -52,6 +52,11 @@ export const pageVisuals = {
 } as const
 
 const guideVisualsBySlug: Record<string, Visual> = {
+  'erp-requirements-audit-checklist-australia': {
+    src: pexels('3184465'),
+    alt: 'Australian leadership team reviewing ERP requirements, process scope, and shortlist evidence',
+    caption: 'A strong ERP Requirements Audit turns scattered pain points into comparable scope, evidence, and partner-fit decisions.',
+  },
   'erp-selection-checklist-smb': {
     src: pexels('8279300'),
     alt: 'Business team using sticky notes to shortlist options on a planning wall',

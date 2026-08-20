@@ -4,7 +4,19 @@ type RelatedLink = {
 }
 
 const guideLinks: Record<string, RelatedLink[]> = {
+  'erp-requirements-audit-checklist-australia': [
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
+    {href: '/blog/erp-total-cost-ownership-australia-three-year-comparison/', label: 'ERP total cost of ownership worksheet'},
+    {href: '/guides/ai-agents-for-erp-automation-with-control/', label: 'AI agents for ERP automation with control'},
+    {href: '/blog/ap-invoice-automation-erp-australia-controls-checklist/', label: 'AP invoice automation checklist'},
+  ],
   'erp-selection-checklist-smb': [
+    {href: '/guides/erp-requirements-audit-checklist-australia/', label: 'ERP Requirements Audit checklist'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
@@ -22,6 +34,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP consultant'},
   ],
   'erp-comparison-criteria-checklist': [
+    {href: '/guides/erp-requirements-audit-checklist-australia/', label: 'ERP Requirements Audit checklist'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
     {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
@@ -216,6 +229,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/review-business-central-release-notes-without-project-churn/', label: 'How to review Business Central release notes'},
   ],
   'ai-agents-for-erp-automation-with-control': [
+    {href: '/guides/erp-requirements-audit-checklist-australia/', label: 'ERP Requirements Audit checklist'},
     {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-ai-automation-roadmap-controls-australia/', label: 'ERP AI automation roadmap'},
     {href: '/guides/top-10-erp-automations-save-time/', label: 'Top 10 ERP automations to save time'},
