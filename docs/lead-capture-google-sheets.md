@@ -38,6 +38,7 @@ Use this script:
 const ASSESSMENT_TAB = 'AssessmentLeads';
 const NEWSLETTER_TAB = 'NewsletterLeads';
 const SHARED_SECRET = ''; // optional: set same value as LEAD_WEBHOOK_SHARED_SECRET in Cloudflare
+const NOTIFY_EMAIL = 'rahul@leadscaler.co';
 
 function doPost(e) {
   try {
@@ -62,6 +63,7 @@ function doPost(e) {
         payload.relayAt || '',
         payload.relayPath || '',
       ]);
+      sendAssessmentEmail(payload);
       return output({ok: true});
     }
 
@@ -75,6 +77,7 @@ function doPost(e) {
         payload.relayAt || '',
         payload.relayPath || '',
       ]);
+      sendNewsletterEmail(payload);
       return output({ok: true});
     }
 
@@ -86,6 +89,44 @@ function doPost(e) {
 
 function doGet() {
   return output({ok: true, service: 'lead-capture'});
+}
+
+function sendAssessmentEmail(payload) {
+  const subject = 'New ERP assessment lead';
+  const body = [
+    'A new assessment lead has been submitted.',
+    '',
+    'Email: ' + (payload.email || ''),
+    'Phone: ' + [payload.phoneCountryCode || '', payload.phoneNumber || ''].join(' ').trim(),
+    'Company size: ' + (payload.companySize || ''),
+    'Project type: ' + (payload.projectType || ''),
+    'Priorities: ' + (payload.priorities || ''),
+    'Page: ' + (payload.page || ''),
+    'Submitted at: ' + (payload.submittedAt || ''),
+  ].join('\n');
+
+  MailApp.sendEmail({
+    to: NOTIFY_EMAIL,
+    subject: subject,
+    body: body,
+  });
+}
+
+function sendNewsletterEmail(payload) {
+  const subject = 'New ERP newsletter signup';
+  const body = [
+    'A new newsletter signup has been submitted.',
+    '',
+    'Email: ' + (payload.email || ''),
+    'Page: ' + (payload.page || ''),
+    'Submitted at: ' + (payload.submittedAt || ''),
+  ].join('\n');
+
+  MailApp.sendEmail({
+    to: NOTIFY_EMAIL,
+    subject: subject,
+    body: body,
+  });
 }
 
 function output(body) {
@@ -102,6 +143,10 @@ Deploy:
 - Execute as: `Me`
 - Who has access: `Anyone`
 - Copy the `Web app URL`
+
+When prompted, authorise the script so it can use both:
+- `SpreadsheetApp`
+- `MailApp`
 
 ## 3) Configure Cloudflare environment variables
 
