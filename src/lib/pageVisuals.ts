@@ -428,6 +428,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Sales operations and warehouse team reviewing customer order emails and ERP automation controls',
     caption: 'Email-to-ERP automation works best when customer requests become reviewed, traceable drafts rather than uncontrolled order entry.',
   },
+  'ap-invoice-automation-erp-australia-controls-checklist': {
+    src: pexels('4386371'),
+    alt: 'Australian finance team reviewing supplier invoice automation controls and approvals',
+    caption: 'AP invoice automation should reduce re-keying while preserving matching, approval, audit, and payment controls.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
