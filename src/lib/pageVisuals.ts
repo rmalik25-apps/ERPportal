@@ -438,6 +438,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian finance team reviewing supplier invoice automation controls and approvals',
     caption: 'AP invoice automation should reduce re-keying while preserving matching, approval, audit, and payment controls.',
   },
+  'purchase-order-invoice-matching-automation-australia-controls': {
+    src: pexels('4386371'),
+    alt: 'Australian finance and purchasing team reviewing purchase order, receipt, and supplier invoice matching controls',
+    caption: 'PO invoice matching automation should speed up exception handling while preserving purchasing, receipt, approval, and payment controls.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
