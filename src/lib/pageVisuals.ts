@@ -443,6 +443,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian finance and purchasing team reviewing purchase order, receipt, and supplier invoice matching controls',
     caption: 'PO invoice matching automation should speed up exception handling while preserving purchasing, receipt, approval, and payment controls.',
   },
+  'returns-rma-automation-erp-australia-controls-checklist': {
+    src: pexels('6169056'),
+    alt: 'Australian warehouse and finance team reviewing customer returns, RMA status, and inventory controls',
+    caption: 'Returns automation should speed up customer service while protecting stock status, credits, refunds, and audit evidence.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
