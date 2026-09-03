@@ -448,6 +448,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian warehouse and finance team reviewing customer returns, RMA status, and inventory controls',
     caption: 'Returns automation should speed up customer service while protecting stock status, credits, refunds, and audit evidence.',
   },
+  'master-data-automation-erp-australia-controls-checklist': {
+    src: pexels('669615'),
+    alt: 'Australian operations and finance team reviewing customer and supplier master data controls',
+    caption: 'Master-data automation should improve record quality while protecting approvals, sensitive fields, duplicate handling, and audit evidence.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
