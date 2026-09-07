@@ -453,6 +453,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian operations and finance team reviewing customer and supplier master data controls',
     caption: 'Master-data automation should improve record quality while protecting approvals, sensitive fields, duplicate handling, and audit evidence.',
   },
+  'bank-reconciliation-automation-erp-australia-controls-checklist': {
+    src: pexels('6693655'),
+    alt: 'Australian finance team reviewing bank reconciliation, payment matching, and cash controls',
+    caption: 'Bank reconciliation automation should speed up matching while keeping exceptions, posting, and sign-off under finance control.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
