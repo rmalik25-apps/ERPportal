@@ -458,6 +458,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian finance team reviewing bank reconciliation, payment matching, and cash controls',
     caption: 'Bank reconciliation automation should speed up matching while keeping exceptions, posting, and sign-off under finance control.',
   },
+  'inventory-replenishment-automation-erp-australia-controls-checklist': {
+    src: pexels('6169056'),
+    alt: 'Australian warehouse and purchasing team reviewing replenishment, stock, and supplier order decisions',
+    caption: 'Replenishment automation should improve stock availability while keeping planner review, supplier constraints, and excess-stock risk visible.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
