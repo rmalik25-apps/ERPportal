@@ -463,6 +463,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian warehouse and purchasing team reviewing replenishment, stock, and supplier order decisions',
     caption: 'Replenishment automation should improve stock availability while keeping planner review, supplier constraints, and excess-stock risk visible.',
   },
+  'warehouse-receiving-picking-exception-automation-erp-australia': {
+    src: pexels('6169056'),
+    alt: 'Australian warehouse team reviewing barcode receiving, picking, and exception workflows',
+    caption: 'Warehouse automation should speed up scans and task flow while keeping exceptions, adjustments, and shipment risk visible.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
