@@ -468,6 +468,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Australian warehouse team reviewing barcode receiving, picking, and exception workflows',
     caption: 'Warehouse automation should speed up scans and task flow while keeping exceptions, adjustments, and shipment risk visible.',
   },
+  'support-ticket-to-erp-task-automation-australia-controls': {
+    src: pexels('3184465'),
+    alt: 'Australian service and operations team reviewing support tickets, ERP tasks, and customer workflow controls',
+    caption: 'Support-ticket automation should speed up customer response while keeping service, inventory, billing, and approval evidence visible.',
+  },
   'shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks': {
     src: pexels('6169659'),
     alt: 'Ecommerce, warehouse, and finance teams reviewing B2B orders and ERP integration flow',
