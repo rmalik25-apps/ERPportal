@@ -523,6 +523,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Procurement and delivery team conducting due diligence with a consulting partner',
     caption: 'Due diligence should test who will really deliver the work, not just who sold the proposal.',
   },
+  'strategic-erp-partner-vs-support-vendor': {
+    src: pexels('3184465'),
+    alt: 'Leadership team reviewing ERP partner performance and improvement roadmap in a workshop',
+    caption: 'A strategic ERP partner should help the business improve the system over time, not just respond when tickets arrive.',
+  },
   'data-quality-ownership-model-erp-programmes': {
     src: pexels('669615'),
     alt: 'Data stewards validating records and governance standards on screens',

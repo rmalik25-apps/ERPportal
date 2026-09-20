@@ -570,6 +570,7 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
     {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/blog/strategic-erp-partner-vs-support-vendor/', label: 'Strategic ERP partner vs support vendor'},
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
   ],
@@ -1064,9 +1065,18 @@ const blogLinks: Record<string, RelatedLink[]> = {
   ],
   'implementation-partner-due-diligence-ten-questions': [
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/blog/strategic-erp-partner-vs-support-vendor/', label: 'Strategic ERP partner vs support vendor'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/how-to-run-erp-rfp/', label: 'How to run an ERP RFP'},
     {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
+  ],
+  'strategic-erp-partner-vs-support-vendor': [
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence questions'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
+    {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'Post-go-live stabilisation plan'},
+    {href: '/blog/from-project-to-bau-setting-erp-improvement-roadmap/', label: 'ERP improvement roadmap after go-live'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'why-generic-erp-demos-miss-food-manufacturing-reality': [
     {href: '/guides/erp-for-food-and-drink-manufacturing/', label: 'ERP for food and drink manufacturing: what matters most'},
