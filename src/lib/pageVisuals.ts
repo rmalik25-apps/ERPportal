@@ -573,6 +573,11 @@ const blogVisualsBySlug: Record<string, Visual> = {
     alt: 'Public sector and education ERP team reviewing AI workflow controls in a workshop',
     caption: 'TechnologyOne 2026A and Plus should be tested against real permissions, data, service, and governance boundaries.',
   },
+  'erpnext-open-source-erp-australia-smbs': {
+    src: pexels('590022'),
+    alt: 'Australian SMB team reviewing open-source ERP costs, operations, and implementation choices',
+    caption: 'Open-source ERP freedom still needs a clear plan for hosting, support, upgrades, security, and ownership.',
+  },
 }
 
 export function getGuideVisual(slug?: string) {

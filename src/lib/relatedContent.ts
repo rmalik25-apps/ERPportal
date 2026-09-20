@@ -1126,6 +1126,16 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/erp-total-cost-ownership-australia-three-year-comparison/', label: 'ERP total cost of ownership worksheet'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
+  'erpnext-open-source-erp-australia-smbs': [
+    {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/blog/outgrowing-xero-inventory-erp-australia/', label: 'Outgrowing Xero for inventory'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/blog/erp-total-cost-ownership-australia-three-year-comparison/', label: 'ERP total cost of ownership'},
+    {href: '/guides/erp-security-access-controls-smb-organisations/', label: 'ERP security and access controls'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+  ],
 }
 
 export function getRelatedGuideLinks(slug?: string) {
