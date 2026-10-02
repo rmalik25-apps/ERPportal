@@ -1492,6 +1492,40 @@ a {
   margin-top: 0.25rem;
 }
 
+.doc-main .table-scroll {
+  overflow-x: auto;
+  margin: 0.6rem 0 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.doc-main table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.doc-main th,
+.doc-main td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.doc-main th {
+  color: var(--ink);
+  background: var(--paper);
+  font-weight: 700;
+}
+
+.doc-main tr:last-child td {
+  border-bottom: 0;
+}
+
 .doc-main blockquote {
   margin: 1rem 0 1.1rem;
   border-left: 4px solid var(--accent);

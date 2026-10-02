@@ -7,6 +7,7 @@ export type RichContentBlock =
   | {type: 'quote'; text: string}
   | {type: 'list'; items: string[]}
   | {type: 'orderedList'; items: string[]}
+  | {type: 'table'; headers: string[]; rows: string[][]}
 
 export function blockToPlainText(block: PortableTextBlock): string {
   if (!block?.children) return ''
@@ -40,7 +41,19 @@ export function blocksToRichContent(blocks: PortableTextBlock[]): RichContentBlo
     flushOrderedList()
   }
 
-  for (const line of lines) {
+  const parseTableCells = (line: string) =>
+    line
+      .trim()
+      .replace(/^\|/, '')
+      .replace(/\|$/, '')
+      .split('|')
+      .map((cell) => cell.trim())
+
+  const isTableDivider = (line: string) =>
+    parseTableCells(line).every((cell) => /^:?-{3,}:?$/.test(cell))
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i]
     if (line.startsWith('## ')) {
       flushLists()
       content.push({type: 'heading', text: line.replace(/^##\s+/, '').trim()})
@@ -71,6 +84,21 @@ export function blocksToRichContent(blocks: PortableTextBlock[]): RichContentBlo
       flushList()
       currentOrderedList.push(orderedLine[1].trim())
       continue
+    }
+
+    if (line.startsWith('|') && line.endsWith('|')) {
+      const nextLine = lines[i + 1]
+      const previousBlock = content[content.length - 1]
+      if (!isTableDivider(line) && nextLine?.startsWith('|') && isTableDivider(nextLine)) {
+        flushLists()
+        content.push({type: 'table', headers: parseTableCells(line), rows: []})
+        continue
+      }
+      if (isTableDivider(line)) continue
+      if (previousBlock?.type === 'table') {
+        previousBlock.rows.push(parseTableCells(line))
+        continue
+      }
     }
 
     flushLists()

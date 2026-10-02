@@ -17,6 +17,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   ],
   'erp-selection-checklist-smb': [
     {href: '/guides/erp-requirements-audit-checklist-australia/', label: 'ERP Requirements Audit checklist'},
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'ERP software in Australia market guide'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
@@ -36,6 +37,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
   'erp-comparison-criteria-checklist': [
     {href: '/guides/erp-requirements-audit-checklist-australia/', label: 'ERP Requirements Audit checklist'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'ERP software in Australia market guide'},
     {href: '/guides/custom-erp-vs-off-the-shelf-saas-build-or-buy/', label: 'Custom ERP vs off-the-shelf SaaS ERP'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
@@ -61,6 +63,20 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
     {href: '/blog/integration-architecture-essentials-smb-erp-landscapes/', label: 'ERP integration architecture essentials'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+  ],
+  'erp-software-australia-market-map-compliance-buyer-guide': [
+    {href: '/guides/erp-requirements-audit-checklist-australia/', label: 'ERP Requirements Audit checklist'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
+    {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/guides/wiise-pricing-australia-business-central-budget/', label: 'Wiise pricing in Australia'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'NetSuite vs Business Central comparison'},
+    {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
+    {href: '/blog/outgrowing-xero-inventory-erp-australia/', label: 'Outgrowing Xero for inventory'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
   ],
   'erp-contract-negotiation-checklist-australia': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},

@@ -113,6 +113,27 @@ const pageSchemas = faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [
                 <li>{entry}</li>
               ))}
             </ol>
+          ) : block.type === 'table' ? (
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    {block.headers.map((header) => (
+                      <th>{header}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row) => (
+                    <tr>
+                      {row.map((cell) => (
+                        <td>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           ) : block.type === 'quote' ? (
             <blockquote>{block.text}</blockquote>
           ) : (

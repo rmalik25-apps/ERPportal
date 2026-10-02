@@ -252,6 +252,11 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Leadership team building a first-time ERP shortlist and roadmap in a planning workshop',
     caption: 'First-time ERP buyers need a roadmap that keeps selection, partner choice, and change readiness in the right order.',
   },
+  'erp-software-australia-market-map-compliance-buyer-guide': {
+    src: pexels('3183153'),
+    alt: 'Australian business team mapping ERP software options, compliance checks, and operating requirements',
+    caption: 'Australian ERP shortlists work best when market layer, local compliance, partner fit, and operating evidence are tested together.',
+  },
   'erp-for-food-and-drink-manufacturing': {
     src: pexels('6169668'),
     alt: 'Food manufacturing leaders reviewing plant operations and traceability requirements',

@@ -7,6 +7,7 @@ import {getComparisons, getGuides, getPosts} from '../lib/sanity'
 function searchableBodyText(body: Parameters<typeof blocksToRichContent>[0]) {
   return blocksToRichContent(body).flatMap((block) => {
     if (block.type === 'list' || block.type === 'orderedList') return block.items
+    if (block.type === 'table') return [...block.headers, ...block.rows.flat()]
     return block.text
   })
 }
