@@ -336,6 +336,10 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
   ],
   'netsuite-pricing-australia-licensing-modules-budget': [
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software market guide'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
+    {href: '/blog/erp-total-cost-ownership-australia-three-year-comparison/', label: 'Three-year ERP cost comparison'},
+    {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
@@ -352,6 +356,12 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/netsuite-soap-removal-australia-what-to-fix-now/', label: 'NetSuite SOAP removal guide'},
     {href: '/blog/netsuite-2026-1-australian-distributors-pricing-warehouse-checks/', label: 'NetSuite 2026.1 for Australian distributors'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/#get-guidance', label: 'Discuss your ERP requirements and shortlist'},
+    {href: 'https://www.netsuite.com.au/portal/au/products/erp.shtml', label: 'Oracle source: Australian ERP pricing structure'},
+    {href: 'https://www.netsuite.com/portal/products/erp/financial-management/finance-accounting/general-ledger-software.shtml', label: 'Oracle source: general ledger entitlement'},
+    {href: 'https://www.netsuite.com/portal/resource/articles/erp/netsuite-modules.shtml', label: 'Oracle source: NetSuite modules guide'},
+    {href: 'https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/subsect_159162378384.html', label: 'Oracle source: NetSuite service tier structure'},
+    {href: 'https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_72152418635.html', label: 'Oracle source: NetSuite 2026.2 release notes'},
   ],
   'netsuite-warehouse-management-bins-vs-wms': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
