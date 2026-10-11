@@ -117,7 +117,10 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
         <a class="brand" href="/">
           <img class="wordmark" src="/logo-erp-navigator.svg" alt="ERP Search" />
         </a>
-        <nav class="nav" aria-label="Primary navigation">
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span>Menu</span>
+        </button>
+        <nav class="nav" id="primary-nav" aria-label="Primary navigation">
           <a class="nav-link" href="/">Home</a>
           <div class="nav-menu">
             <button class="nav-menu-trigger" type="button" aria-expanded="false">Find ERP</button>
@@ -258,8 +261,10 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
     <script is:inline>
         (() => {
           const desktopQuery = window.matchMedia('(min-width: 901px)');
+          const header = document.querySelector('.site-header');
+          const mobileToggle = document.querySelector('.mobile-nav-toggle');
           const menus = Array.from(document.querySelectorAll('.nav-menu'));
-          if (!menus.length) return;
+          if (!menus.length || !header) return;
           const closeTimers = new WeakMap();
 
           const clearCloseTimer = (menu) => {
@@ -321,10 +326,26 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
           });
 
           document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') closeMenus();
+            if (event.key === 'Escape') {
+              closeMenus();
+              header.classList.remove('is-mobile-open');
+              mobileToggle?.setAttribute('aria-expanded', 'false');
+            }
           });
 
-          desktopQuery.addEventListener?.('change', () => closeMenus());
+          mobileToggle?.addEventListener('click', () => {
+            if (desktopQuery.matches) return;
+            const willOpen = !header.classList.contains('is-mobile-open');
+            header.classList.toggle('is-mobile-open', willOpen);
+            mobileToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            if (!willOpen) closeMenus();
+          });
+
+          desktopQuery.addEventListener?.('change', () => {
+            closeMenus();
+            header.classList.remove('is-mobile-open');
+            mobileToggle?.setAttribute('aria-expanded', 'false');
+          });
           closeMenus();
         })();
     </script>
