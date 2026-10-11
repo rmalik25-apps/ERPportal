@@ -112,6 +112,21 @@ const guideVisualsBySlug: Record<string, Visual> = {
     alt: 'Warehouse staff checking picking and storage processes in an aisle',
     caption: 'Before go-live, warehouse process redesign should remove workarounds rather than automate them.',
   },
+  'inventory-warehouse-erp-control-australia': {
+    src: pexels('6169056'),
+    alt: 'Warehouse team reviewing inventory, bins, and picking controls in a distribution aisle',
+    caption: 'Inventory and warehouse control should be tested through real receiving, picking, counting, and exception scenarios.',
+  },
+  'erp-reporting-dashboards-bi-australia': {
+    src: pexels('590022'),
+    alt: 'Finance and operations team reviewing ERP dashboards and reporting on a laptop',
+    caption: 'ERP reporting works best when dashboards connect to trusted definitions, source data, and action owners.',
+  },
+  'construction-engineering-erp-australia': {
+    src: pexels('3184465'),
+    alt: 'Construction and engineering project team reviewing project cost and delivery controls',
+    caption: 'Construction and engineering ERP fit depends on project cost, procurement, field capture, WIP, and billing evidence.',
+  },
   'odoo-warehouse-management-built-in-vs-standalone-wms': {
     src: pexels('6169056'),
     alt: 'Warehouse team reviewing scanner-led picking, putaway flow, and storage decisions on the floor',
