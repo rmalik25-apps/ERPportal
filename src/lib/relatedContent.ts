@@ -590,6 +590,18 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
 }
 
 const blogLinks: Record<string, RelatedLink[]> = {
+  'odoo-too-good-to-be-true-australia-buyer-checks': [
+    {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
+    {href: '/guides/odoo-australia-bas-payroll-super-peppol-readiness/', label: 'Odoo Australia localisation guide'},
+    {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
+    {href: '/blog/odoo-accounting-australia-gst-bas-payroll-peppol-checks/', label: 'Odoo accounting in Australia'},
+    {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
+    {href: '/compare/odoo-vs-netsuite/', label: 'Odoo vs NetSuite'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP software demo script'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/blog/erpnext-open-source-erp-australia-smbs/', label: 'ERPNext and open-source ERP in Australia'},
+  ],
   'odoo-19-3-australia-buyers-upgrade-shortlist-checks': [
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},

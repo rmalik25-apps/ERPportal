@@ -373,6 +373,11 @@ const comparisonVisualsBySlug: Record<string, Visual> = {
 }
 
 const blogVisualsBySlug: Record<string, Visual> = {
+  'odoo-too-good-to-be-true-australia-buyer-checks': {
+    src: pexels('3184465'),
+    alt: 'Australian business team comparing ERP options and implementation notes',
+    caption: 'Odoo should be tested as an operating model, not just a broad list of apps.',
+  },
   'seven-erp-red-flags-distributors-before-contract-signing': {
     src: pexels('6169056'),
     alt: 'Warehouse and supply chain team reviewing fulfilment issues before a software decision',
