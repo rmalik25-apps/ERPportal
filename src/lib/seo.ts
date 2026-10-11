@@ -74,9 +74,9 @@ const listPageMeta = {
       'Read the ERP blog for SMB buyers covering implementation lessons, release updates, software comparisons, and practical ERP decision support.',
   },
   home: {
-    metaTitle: 'ERP Search: ERP Guidance and Shortlists for SMBs',
+    metaTitle: 'ERP Search Australia & NZ: ERP Guidance and Shortlists for SMBs',
     metaDescription:
-      'ERP Search helps finance, operations, and IT leaders make better ERP decisions with practical guidance on selection, implementation, upgrades, and improvement.',
+      'ERP Search helps finance, operations, and IT leaders in Australia and NZ make better ERP decisions with practical guidance on selection, implementation, upgrades, and improvement.',
   },
 } as const
 
