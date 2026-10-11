@@ -627,6 +627,8 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'vendor-demo-script-erp-buyers-what-to-ask': [
+    {href: '/downloads/erp-demo-script-scorecard-template.txt', label: 'ERP demo script and scorecard template (.txt)'},
+    {href: '/guides/erp-requirements-audit-checklist-australia/', label: 'ERP requirements audit checklist'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist'},
     {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
@@ -635,6 +637,12 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/strategic-erp-partner-vs-support-vendor/', label: 'Strategic ERP partner vs support vendor'},
     {href: '/blog/implementation-partner-due-diligence-ten-questions/', label: 'Implementation partner due diligence'},
     {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
+    {href: '/#get-guidance', label: 'Discuss your ERP requirements and shortlist'},
+    {href: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/about', label: 'Microsoft source: end-to-end business processes'},
+    {href: 'https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/success-by-design', label: 'Microsoft source: Success by Design'},
+    {href: 'https://www.cyber.gov.au/ism/2026-09/guidelines-for-procurement-and-outsourcing', label: 'ACSC source: procurement and outsourcing'},
+    {href: 'https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/handling-personal-information/guide-to-securing-personal-information', label: 'OAIC source: securing personal information'},
+    {href: 'https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-8-app-8-cross-border-disclosure-of-personal-information', label: 'OAIC source: overseas disclosure'},
   ],
   'review-business-central-release-notes-without-project-churn': [
     {href: '/blog/business-central-2026-release-wave-1-australia-priorities/', label: 'Business Central 2026 release wave 1 priorities'},

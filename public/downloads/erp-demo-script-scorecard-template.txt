@@ -1,0 +1,96 @@
+ERP SEARCH - ERP DEMO SCRIPT AND EVALUATION SCORECARD
+Reviewed: 12 October 2026
+Guide: https://erpsearch.com.au/blog/vendor-demo-script-erp-buyers-what-to-ask/
+
+Original buyer worksheet. Adapt to your requirements. This is not a vendor
+certification, legal opinion, or prescribed procurement standard.
+
+1. COMMON VENDOR BRIEF
+Business / evaluation date:
+Phase-one outcomes:
+Entities / warehouses / projects / sales channels:
+Required user roles / transaction volumes:
+Approved representative or de-identified sample data:
+Mandatory gates (separate from weighted preferences):
+Common preparation time / demo duration:
+Proposed product / version / environment / modules / add-ons:
+Implementation partner / presenter / evaluation participants:
+
+2. SCENARIO SCRIPT (REPEAT FOR EACH CRITICAL PROCESS)
+Scenario ID / name:
+Business owner:
+Outcome and measurable acceptance criteria:
+Starting records / user role / entity / integration boundaries:
+Normal transaction, from trigger to financial and operational result:
+Exception to introduce (e.g. partial receipt, return, rejected approval):
+Required approval / access restriction / audit trail / reporting evidence:
+Required recovery and reconciliation after the exception:
+Australian localisation or external service to demonstrate, if in scope:
+Expected role hand-offs and acceptable manual steps:
+
+Presenter prompts:
+- Show the full process and the exception in the proposed system.
+- Show the control, denied action, audit evidence, and resulting report.
+- Identify every manual step and integration boundary.
+- Label capability: standard / configured / add-on / custom / unproven.
+- Identify required licence, service, implementation work, and support owner.
+- Confirm which demonstrated items are included in the written proposal.
+
+3. EVIDENCE RECORD (REPEAT FOR EACH SCENARIO)
+Vendor / scenario / evaluator / date:
+Proof shown (record references or approved evidence location):
+Acceptance criteria met / not met / not shown:
+Mandatory gate passed / failed / unproven / not applicable, with reason:
+Manual steps / user feedback:
+Dependencies / assumptions / exclusions:
+Required entitlement and whether priced in the offer:
+Implementation and ongoing support owner:
+Remaining risk / confidence / follow-up action:
+
+4. EVALUATION SCORECARD (SCORE INDEPENDENTLY BEFORE DISCUSSION)
+Agree criterion weights before demos; use the same weights for each vendor.
+Weights must total 100. Put mandatory requirements in gates, not just weights.
+
+Evidence scale:
+0 = Not shown
+1 = Stated only
+2 = Partly demonstrated
+3 = Demonstrated with assumptions
+4 = Demonstrated end to end with required evidence
+
+For each criterion record weight / score / evidence / assumptions / confidence:
+Process fit:
+User effort:
+Controls and reporting:
+Integration recovery:
+Delivery and partner fit:
+Additional criterion, if required:
+
+Weighted result = sum of (criterion weight x score / 4).
+Example: weight 20 and score 3 contribute 15 points.
+A failed or unproven mandatory gate prevents approval regardless of the total.
+Compare the evidence and unresolved assumptions alongside the score.
+
+5. AUSTRALIAN WORKFLOW PROMPTS (ADAPT TO YOUR SCOPE)
+- GST-coded transactions, BAS reporting task, reconciliation, close correction.
+- Payroll and Peppol provider hand-offs, failed transfer, support ownership.
+- Partial receipt, backorder, return, warehouse and ecommerce reconciliation.
+- Intercompany or project-cost exception, approvals, reporting dimensions.
+- Australian support coverage, hosting, privacy, and data-export assumptions.
+These are acceptance-test prompts, not a guarantee of legal compliance.
+
+6. FOLLOW-UP REGISTER (REPEAT FOR EVERY GAP)
+Vendor / scenario / unresolved requirement:
+Required evidence or retest:
+Owner / due date:
+Price and scope implication:
+Decision status / approval authority:
+Closure evidence and date:
+
+7. BUYER DECISION
+Mandatory gates unresolved:
+Evidence-backed strengths and remaining gaps:
+Unpriced dependencies:
+Hands-on pilot or focused retest required:
+Statement-of-work and contract checks required:
+Decision / owner / date:
