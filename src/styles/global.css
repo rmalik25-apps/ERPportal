@@ -48,36 +48,6 @@ a {
   margin: 0 auto;
 }
 
-.compliance-strip {
-  background: #f0ece3;
-  border-bottom: 1px solid rgba(216, 209, 198, 0.85);
-  color: var(--muted);
-  font-size: 0.84rem;
-}
-
-.compliance-row {
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  padding: 0.3rem 0;
-}
-
-.compliance-row p {
-  margin: 0;
-}
-
-.compliance-row a {
-  color: var(--text);
-  text-decoration: none;
-}
-
-.compliance-row a:hover {
-  text-decoration: underline;
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -2309,10 +2279,6 @@ a {
   .page-kicker {
     align-items: start;
     flex-direction: column;
-  }
-
-  .compliance-row {
-    align-items: flex-start;
   }
 
   .home-actions .btn {
