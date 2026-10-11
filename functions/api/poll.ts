@@ -19,6 +19,7 @@ function json(body: Record<string, unknown>, status = 200) {
       'access-control-allow-origin': '*',
       'access-control-allow-methods': 'GET, POST, OPTIONS',
       'access-control-allow-headers': 'Content-Type',
+      'X-Robots-Tag': 'noindex, nofollow',
     },
   })
 }
@@ -68,6 +69,7 @@ export const onRequestOptions: PagesFunction<Env> = async () =>
       'access-control-allow-origin': '*',
       'access-control-allow-methods': 'GET, POST, OPTIONS',
       'access-control-allow-headers': 'Content-Type',
+      'X-Robots-Tag': 'noindex, nofollow',
     },
   })
 

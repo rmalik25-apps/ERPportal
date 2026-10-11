@@ -22,7 +22,7 @@ const {
   jsonLd,
 } = Astro.props
 
-const configuredSiteUrl = import.meta.env.PUBLIC_SITE_URL || Astro.site?.toString() || 'http://localhost:4321'
+const configuredSiteUrl = import.meta.env.PUBLIC_SITE_URL || Astro.site?.toString() || 'https://erpsearch.com.au'
 const siteOrigin = configuredSiteUrl.endsWith('/') ? configuredSiteUrl.slice(0, -1) : configuredSiteUrl
 const canonicalUrl = new URL(canonicalPath || Astro.url.pathname, `${siteOrigin}/`).toString()
 const ogImageUrl = ogImage ? new URL(ogImage, `${siteOrigin}/`).toString() : new URL('/hero-erp-brief.svg', `${siteOrigin}/`).toString()
@@ -117,12 +117,112 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
         <a class="brand" href="/">
           <img class="wordmark" src="/logo-erp-navigator.svg" alt="ERP Search" />
         </a>
-        <nav class="nav">
-          <a href="/">Home</a>
-          <a href="/guides/">Guides</a>
-          <a href="/compare/">Compare</a>
-          <a href="/blog/">Blog</a>
-          <a href="/about/">About</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/">Home</a>
+          <div class="nav-menu">
+            <button class="nav-menu-trigger" type="button" aria-expanded="false">Find ERP</button>
+            <div class="mega-menu find-erp-menu">
+              <div class="mega-menu-intro">
+                <p class="eyebrow">Buyer paths</p>
+                <h2>Find ERP by what you need to solve</h2>
+                <p>Start with the operating pressure, then move into product fit, cost, and partner questions.</p>
+                <a class="mega-menu-cta" href="/#get-guidance">Get shortlist guidance</a>
+              </div>
+              <div class="mega-menu-grid">
+                <section class="mega-menu-column" aria-labelledby="menu-needs">
+                  <h3 id="menu-needs">By Need</h3>
+                  <a href="/search/?q=inventory%20warehouse">Inventory and warehouse control</a>
+                  <a href="/guides/multi-entity-erp-setup-growing-business-groups/">Multi-entity consolidation</a>
+                  <a href="/guides/pricing-margin-control-framework-business-central/">Pricing and margin control</a>
+                  <a href="/search/?q=reporting%20dashboard%20BI">Reporting and dashboards</a>
+                  <a href="/guides/shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks/">Retail, ecommerce and B2B orders</a>
+                </section>
+                <section class="mega-menu-column" aria-labelledby="menu-current-system">
+                  <h3 id="menu-current-system">By Current System</h3>
+                  <a href="/guides/outgrowing-xero-inventory-erp-australia/">Outgrowing Xero inventory</a>
+                  <a href="/guides/navision-to-business-central-migration/">NAV / Navision upgrade</a>
+                  <a href="/compare/nav-technical-upgrade-vs-full-reimplementation/">Upgrade vs reimplementation</a>
+                  <a href="/search/?q=spreadsheets">Replacing spreadsheets</a>
+                  <a href="/search/?q=MYOB%20Acumatica%20Wiise">MYOB, Acumatica or Wiise path</a>
+                </section>
+                <section class="mega-menu-column" aria-labelledby="menu-products">
+                  <h3 id="menu-products">By Product</h3>
+                  <a href="/search/?q=Business%20Central">Business Central</a>
+                  <a href="/search/?q=NetSuite">NetSuite</a>
+                  <a href="/search/?q=Odoo">Odoo</a>
+                  <a href="/search/?q=Wiise">Wiise</a>
+                  <a href="/search/?q=SAP%20Business%20One">SAP Business One</a>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="nav-menu">
+            <button class="nav-menu-trigger" type="button" aria-expanded="false">Use Cases</button>
+            <div class="mega-menu compact-menu">
+              <section class="mega-menu-column" aria-labelledby="menu-use-cases">
+                <h3 id="menu-use-cases">Operational Use Cases</h3>
+                <a href="/guides/business-central-implementation-wholesale-distribution/">Wholesale distribution rollout</a>
+                <a href="/guides/business-central-manufacturing-mrp-shop-floor/">MRP and shop-floor control</a>
+                <a href="/guides/warehouse-management-system-australia-erp-vs-wms-shortlist/">ERP vs WMS shortlist</a>
+                <a href="/guides/erp-einvoicing-australia-business-central-netsuite-odoo-peppol-checklist/">E-invoicing and Peppol readiness</a>
+                <a href="/guides/payday-super-australia-erp-checklist-business-central-netsuite-odoo/">Payroll and payday super checks</a>
+              </section>
+              <section class="mega-menu-column" aria-labelledby="menu-decision-use-cases">
+                <h3 id="menu-decision-use-cases">Decision Use Cases</h3>
+                <a href="/guides/vendor-demo-script-erp-buyers-what-to-ask/">Vendor demo script</a>
+                <a href="/guides/how-to-run-erp-rfp/">ERP RFP process</a>
+                <a href="/guides/erp-requirements-audit-checklist-australia/">Requirements audit checklist</a>
+                <a href="/guides/implementation-partner-due-diligence-ten-questions/">Partner due diligence</a>
+                <a href="/guides/erp-total-cost-ownership-australia-three-year-comparison/">Three-year TCO comparison</a>
+              </section>
+            </div>
+          </div>
+          <div class="nav-menu">
+            <button class="nav-menu-trigger" type="button" aria-expanded="false">Industries</button>
+            <div class="mega-menu compact-menu">
+              <section class="mega-menu-column" aria-labelledby="menu-industries">
+                <h3 id="menu-industries">Industry Fit</h3>
+                <a href="/guides/business-central-implementation-wholesale-distribution/">Wholesale and distribution</a>
+                <a href="/guides/business-central-manufacturing-mrp-shop-floor/">Manufacturing</a>
+                <a href="/guides/erp-for-food-and-drink-manufacturing/">Food and beverage</a>
+                <a href="/guides/erp-priorities-professional-services-project-firms/">Professional services</a>
+                <a href="/search/?q=construction%20engineering%20ERP">Construction and engineering</a>
+                <a href="/search/?q=retail%20ecommerce%20ERP">Retail and ecommerce</a>
+              </section>
+              <section class="mega-menu-column" aria-labelledby="menu-industry-systems">
+                <h3 id="menu-industry-systems">Industry System Checks</h3>
+                <a href="/compare/business-central-food-addons-vs-justfood/">Food ERP add-ons vs vertical ERP</a>
+                <a href="/guides/netsuite-warehouse-management-bins-vs-wms/">NetSuite warehouse fit</a>
+                <a href="/guides/odoo-warehouse-management-built-in-vs-standalone-wms/">Odoo warehouse fit</a>
+                <a href="/guides/business-central-warehouse-management-standard-vs-standalone-wms/">Business Central warehouse fit</a>
+              </section>
+            </div>
+          </div>
+          <div class="nav-menu">
+            <button class="nav-menu-trigger" type="button" aria-expanded="false">Compare Systems</button>
+            <div class="mega-menu compact-menu">
+              <section class="mega-menu-column" aria-labelledby="menu-comparisons">
+                <h3 id="menu-comparisons">Product Comparisons</h3>
+                <a href="/compare/business-central-vs-netsuite-growing-businesses/">Business Central vs NetSuite</a>
+                <a href="/compare/odoo-vs-business-central/">Odoo vs Business Central</a>
+                <a href="/compare/wiise-vs-business-central-australian-smbs/">Wiise vs Business Central</a>
+                <a href="/compare/myob-acumatica-vs-business-central/">MYOB Acumatica vs Business Central</a>
+                <a href="/compare/business-central-vs-sap-business-one-fit-analysis/">Business Central vs SAP Business One</a>
+                <a href="/compare/">View all comparisons</a>
+              </section>
+              <section class="mega-menu-column" aria-labelledby="menu-pricing">
+                <h3 id="menu-pricing">Pricing and Cost</h3>
+                <a href="/guides/erp-implementation-cost-australia-budget-worksheet/">ERP implementation cost Australia</a>
+                <a href="/guides/netsuite-pricing-australia-licensing-modules-budget/">NetSuite pricing Australia</a>
+                <a href="/guides/business-central-pricing-australia-licences-budget/">Business Central pricing Australia</a>
+                <a href="/guides/odoo-pricing-australia-standard-vs-custom/">Odoo pricing Australia</a>
+                <a href="/guides/wiise-pricing-australia-business-central-budget/">Wiise pricing Australia</a>
+              </section>
+            </div>
+          </div>
+          <a class="nav-link" href="/guides/">Guides</a>
+          <a class="nav-link" href="/blog/">Blog</a>
+          <a class="nav-link" href="/about/">About</a>
         </nav>
         <div class="site-search" data-site-search>
           <label class="site-search-label" for="site-search-input">Search content</label>
@@ -155,6 +255,79 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID
         </p>
       </div>
     </footer>
+    <script is:inline>
+        (() => {
+          const desktopQuery = window.matchMedia('(min-width: 901px)');
+          const menus = Array.from(document.querySelectorAll('.nav-menu'));
+          if (!menus.length) return;
+          const closeTimers = new WeakMap();
+
+          const clearCloseTimer = (menu) => {
+            const timer = closeTimers.get(menu);
+            if (!timer) return;
+            window.clearTimeout(timer);
+            closeTimers.delete(menu);
+          };
+
+          const openMenu = (menu) => {
+            clearCloseTimer(menu);
+            closeMenus(menu);
+            menu.classList.add('is-open');
+            menu.querySelector('.nav-menu-trigger')?.setAttribute('aria-expanded', 'true');
+          };
+
+          const closeMenus = (except) => {
+            menus.forEach((menu) => {
+              if (menu === except) return;
+              clearCloseTimer(menu);
+              menu.classList.remove('is-open');
+              menu.querySelector('.nav-menu-trigger')?.setAttribute('aria-expanded', 'false');
+            });
+          };
+
+          menus.forEach((menu) => {
+            const trigger = menu.querySelector('.nav-menu-trigger');
+
+            trigger?.addEventListener('click', (event) => {
+              event.preventDefault();
+              if (desktopQuery.matches) {
+                closeMenus();
+                trigger.blur();
+                return;
+              }
+
+              const willOpen = !menu.classList.contains('is-open');
+              closeMenus(menu);
+              menu.classList.toggle('is-open', willOpen);
+              trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            });
+
+            menu.addEventListener('pointerenter', () => {
+              if (desktopQuery.matches) openMenu(menu);
+            });
+
+            menu.addEventListener('pointerleave', () => {
+              if (!desktopQuery.matches) return;
+              clearCloseTimer(menu);
+              closeTimers.set(
+                menu,
+                window.setTimeout(() => {
+                  menu.classList.remove('is-open');
+                  trigger?.setAttribute('aria-expanded', 'false');
+                  closeTimers.delete(menu);
+                }, 280)
+              );
+            });
+          });
+
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeMenus();
+          });
+
+          desktopQuery.addEventListener?.('change', () => closeMenus());
+          closeMenus();
+        })();
+    </script>
     <script is:inline>
         (() => {
           const root = document.querySelector('[data-site-search]');

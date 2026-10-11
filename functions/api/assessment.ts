@@ -22,9 +22,14 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
 function json(body: Record<string, unknown>, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
-    headers: {'content-type': 'application/json; charset=utf-8'},
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'X-Robots-Tag': 'noindex, nofollow',
+    },
   })
 }
+
+export const onRequestGet: PagesFunction = async () => json({ok: false, error: 'Not found'}, 404)
 
 function asText(value: unknown, max = 500) {
   return typeof value === 'string' ? value.trim().slice(0, max) : ''

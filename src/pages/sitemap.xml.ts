@@ -2,7 +2,7 @@ import type {APIRoute} from 'astro'
 import {getComparisons, getGuides, getPosts} from '../lib/sanity'
 
 function getSiteOrigin(url: URL) {
-  const configured = import.meta.env.PUBLIC_SITE_URL || 'http://localhost:4321'
+  const configured = import.meta.env.PUBLIC_SITE_URL || 'https://erpsearch.com.au'
   return configured.endsWith('/') ? configured.slice(0, -1) : new URL(configured, url).toString().replace(/\/$/, '')
 }
 

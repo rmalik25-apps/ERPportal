@@ -2,7 +2,7 @@ import type {AnyContentDoc, PortableTextBlock} from './types'
 import {blocksToRichContent} from './portableText'
 import {isInternalResearchLine, sanitizePublicMeta} from './publicCopy'
 
-const siteOrigin = (import.meta.env.PUBLIC_SITE_URL || 'http://localhost:4321').replace(/\/$/, '')
+const siteOrigin = (import.meta.env.PUBLIC_SITE_URL || 'https://erpsearch.com.au').replace(/\/$/, '')
 
 function toAbsoluteUrl(path: string) {
   if (/^https?:\/\//i.test(path)) return path
@@ -11,7 +11,7 @@ function toAbsoluteUrl(path: string) {
 
 const overrideMap: Record<string, {metaTitle: string; metaDescription: string}> = {
   'erp-selection-checklist-smb': {
-    metaTitle: 'ERP Selection Checklist for SMBs: How to Shortlist the Right System',
+    metaTitle: 'ERP Selection Checklist for Australian SMBs',
     metaDescription:
       'Use this ERP selection checklist for SMBs to compare vendors, run better demos, reduce implementation risk, and choose the right ERP with more confidence.',
   },
@@ -59,22 +59,22 @@ const overrideMap: Record<string, {metaTitle: string; metaDescription: string}> 
 
 const listPageMeta = {
   guides: {
-    metaTitle: 'ERP Guides for SMBs: Selection, Migration, and Implementation',
+    metaTitle: 'ERP Guides for SMBs: Selection and Migration',
     metaDescription:
       'Browse ERP guides for SMBs covering ERP selection, migration, implementation planning, partner choice, organisational change, and post-go-live improvement.',
   },
   compare: {
-    metaTitle: 'ERP Software Comparisons for SMBs: Business Central, Odoo, NetSuite, and More',
+    metaTitle: 'ERP Software Comparisons for SMBs',
     metaDescription:
       'Compare ERP software for SMBs across fit, implementation complexity, partner quality, cost trade-offs, Australian risk gates, and industry suitability.',
   },
   blog: {
-    metaTitle: 'ERP Blog for SMBs: Buyer Guidance, Release Notes, and Best Practices',
+    metaTitle: 'ERP Blog for SMBs: Buyer Guidance',
     metaDescription:
       'Read the ERP blog for SMB buyers covering implementation lessons, release updates, software comparisons, and practical ERP decision support.',
   },
   home: {
-    metaTitle: 'ERP Search: ERP Guidance, Comparisons, and Shortlist Support for SMBs',
+    metaTitle: 'ERP Search: ERP Guidance and Shortlists for SMBs',
     metaDescription:
       'ERP Search helps finance, operations, and IT leaders make better ERP decisions with practical guidance on selection, implementation, upgrades, and improvement.',
   },

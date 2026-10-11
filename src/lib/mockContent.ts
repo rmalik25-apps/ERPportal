@@ -1860,7 +1860,7 @@ export const mockGuides: GuideDoc[] = [
     publishedAt,
     updatedAt: '2026-06-19T00:00:00Z',
     seo: {
-      metaTitle: 'ERP Selection Criteria Checklist for Australian Businesses',
+      metaTitle: 'ERP Selection Checklist for Australian SMBs',
       metaDescription: 'Use this ERP selection checklist to compare software, partners, Australian requirements, security, privacy, AI, data, implementation risk, and total cost.',
     },
     body: pillarGuideBlocks('erp-selection-checklist-smb'),
