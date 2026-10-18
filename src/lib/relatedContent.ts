@@ -1187,6 +1187,8 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'Vendor demo script for ERP buyers'},
   ],
   'erp-implementation-cost-australia-budget-worksheet': [
+    {href: '/guides/first-time-erp-buyers-roadmap/', label: 'Australian ERP implementation plan and decision gates'},
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software market guide'},
     {href: '/blog/erp-total-cost-ownership-australia-three-year-comparison/', label: 'ERP total cost of ownership worksheet'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
@@ -1197,6 +1199,13 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/netsuite-pricing-australia-licensing-modules-budget/', label: 'NetSuite pricing in Australia'},
     {href: '/guides/odoo-pricing-australia-standard-vs-custom/', label: 'Odoo pricing in Australia'},
     {href: '/guides/erp-contract-negotiation-checklist-australia/', label: 'ERP contract negotiation checklist'},
+    {href: '/guides/erp-data-migration-playbook-clean-cutover/', label: 'ERP migration and reconciliation playbook'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
+    {href: '/#get-guidance', label: 'Discuss your ERP scope and partner shortlist'},
+    {href: 'https://www.microsoft.com/en-au/dynamics-365/products/business-central/pricing', label: 'Microsoft source: Australian Business Central pricing'},
+    {href: 'https://www.odoo.com/pricing-packs', label: 'Odoo source: implementation Success Packs'},
+    {href: 'https://www.netsuite.com.au/portal/au/products/erp.shtml', label: 'Oracle source: NetSuite licence and implementation structure'},
+    {href: 'https://www.cyber.gov.au/ism/2026-09/guidelines-for-procurement-and-outsourcing', label: 'ACSC source: procurement and outsourcing'},
   ],
   'technologyone-2026a-plus-australia-councils-universities-checks': [
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
