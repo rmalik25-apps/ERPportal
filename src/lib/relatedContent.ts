@@ -539,6 +539,9 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'wiise-vs-business-central-australian-smbs': [
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software market guide'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost and proposal worksheet'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP demo script and evaluation scorecard'},
     {href: '/guides/wiise-pricing-australia-business-central-budget/', label: 'Wiise pricing in Australia'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
     {href: '/compare/myob-acumatica-vs-business-central/', label: 'MYOB Acumatica vs Business Central'},
@@ -546,6 +549,11 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/#get-guidance', label: 'Discuss your ERP requirements and shortlist'},
+    {href: 'https://www.wiise.com/pricing', label: 'Wiise source: current pricing and optional add-ons'},
+    {href: 'https://www.wiise.com/payroll', label: 'Wiise source: payroll and Business Central foundation'},
+    {href: 'https://www.microsoft.com/en-au/dynamics-365/products/business-central/pricing', label: 'Microsoft source: Australian Business Central pricing'},
+    {href: 'https://www.myob.com/au/erp-software/products/myob-acumatica', label: 'MYOB source: Australian Acumatica product'},
   ],
   'wiise-pricing-australia-business-central-budget': [
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
