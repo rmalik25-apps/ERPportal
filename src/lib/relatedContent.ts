@@ -460,6 +460,11 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-implementation-wholesale-distribution/', label: 'Business Central implementation for wholesale distribution'},
   ],
   'inventory-warehouse-erp-control-australia': [
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software market guide'},
+    {href: '/guides/first-time-erp-buyers-roadmap/', label: 'ERP implementation plan and decision gates'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP demo script and evaluation scorecard'},
+    {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica for distribution'},
     {href: '/guides/warehouse-process-redesign-before-erp-go-live/', label: 'Warehouse process redesign before ERP go-live'},
     {href: '/blog/warehouse-management-system-australia-erp-vs-wms-shortlist/', label: 'ERP vs WMS shortlist guide'},
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
@@ -467,6 +472,9 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/odoo-warehouse-management-built-in-vs-standalone-wms/', label: 'Odoo warehouse management guide'},
     {href: '/blog/inventory-replenishment-automation-erp-australia-controls-checklist/', label: 'Inventory replenishment automation checklist'},
     {href: '/blog/outgrowing-xero-inventory-erp-australia/', label: 'Outgrowing Xero for inventory'},
+    {href: '/#get-guidance', label: 'Discuss your inventory and ERP requirements'},
+    {href: 'https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-warehouse-management', label: 'Microsoft source: warehouse configuration levels'},
+    {href: 'https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_156382517509.html', label: 'Oracle source: NetSuite WMS overview and prerequisites'},
   ],
   'erp-reporting-dashboards-bi-australia': [
     {href: '/guides/erp-finance-design-chart-accounts-dimensions/', label: 'Finance design guide'},
