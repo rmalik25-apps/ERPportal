@@ -649,10 +649,17 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-customisations-governance-guide/', label: 'ERP customisations guide'},
   ],
   'erp-priorities-professional-services-project-firms': [
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software market guide'},
+    {href: '/guides/first-time-erp-buyers-roadmap/', label: 'ERP implementation plan and decision gates'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost and proposal worksheet'},
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP demo script and evaluation scorecard'},
     {href: '/compare/business-central-vs-acumatica-distribution-project-services/', label: 'Business Central vs Acumatica'},
     {href: '/blog/business-central-subscription-billing-australia-what-to-test/', label: 'Business Central subscription billing in Australia'},
     {href: '/guides/d365-sales-business-central-integration-guide/', label: 'D365 Sales + Business Central integration guide'},
     {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/#get-guidance', label: 'Discuss your project and finance requirements'},
+    {href: 'https://learn.microsoft.com/en-us/dynamics365/business-central/projects-manage-projects', label: 'Microsoft source: Business Central project accounting'},
+    {href: 'https://learn.microsoft.com/en-us/dynamics365/project-operations/pro/project-operations-overview-lite', label: 'Microsoft source: Project Operations Core scope and finance boundaries'},
   ],
   'vendor-demo-script-erp-buyers-what-to-ask': [
     {href: '/downloads/erp-demo-script-scorecard-template.txt', label: 'ERP demo script and scorecard template (.txt)'},
