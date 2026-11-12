@@ -4,6 +4,22 @@ type RelatedLink = {
 }
 
 const guideLinks: Record<string, RelatedLink[]> = {
+  'wiise-pricing-australia-business-central-budget': [
+    {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
+    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software market guide'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation budget worksheet'},
+    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
+    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/#get-guidance', label: 'Get ERP guidance on your licence and implementation scope'},
+    {href: 'https://www.wiise.com/pricing', label: 'Wiise editions and headline pricing'},
+    {href: 'https://www.wiise.com/full-pricing', label: 'Wiise full price list and licence rights'},
+    {href: 'https://www.wiise.com/supply-iq', label: 'Wiise Supply IQ and OnTime inclusions'},
+    {href: 'https://www.wiise.com/wiise-ontime-terms', label: 'Wiise OnTime terms'},
+    {href: 'https://www.wiise.com/why-wiise', label: 'Wiise and the Business Central platform'},
+    {href: 'https://www.microsoft.com/en-au/dynamics-365/products/business-central/pricing', label: 'Microsoft Business Central Australian pricing'},
+  ],
   'erp-requirements-audit-checklist-australia': [
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
@@ -581,13 +597,6 @@ const comparisonLinks: Record<string, RelatedLink[]> = {
     {href: 'https://www.wiise.com/payroll', label: 'Wiise source: payroll and Business Central foundation'},
     {href: 'https://www.microsoft.com/en-au/dynamics-365/products/business-central/pricing', label: 'Microsoft source: Australian Business Central pricing'},
     {href: 'https://www.myob.com/au/erp-software/products/myob-acumatica', label: 'MYOB source: Australian Acumatica product'},
-  ],
-  'wiise-pricing-australia-business-central-budget': [
-    {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
-    {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
-    {href: '/blog/erp-licensing-and-support-cost-control-growing-organisations/', label: 'ERP licensing and support cost control'},
-    {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
-    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
   ],
   'odoo-vs-business-central': [
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
