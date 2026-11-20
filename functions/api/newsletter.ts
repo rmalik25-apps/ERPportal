@@ -1,4 +1,6 @@
 interface Env {
+  BREVO_API_KEY?: string
+  BREVO_LIST_ID?: string
   NEWSLETTER_WEBHOOK_URL?: string
   GOOGLE_APPS_SCRIPT_URL?: string
   LEAD_WEBHOOK_SHARED_SECRET?: string
@@ -52,7 +54,30 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   if (!EMAIL_RE.test(email)) return json({ok: false, error: 'Invalid email'}, 400)
 
   const upstream = context.env.NEWSLETTER_WEBHOOK_URL || context.env.GOOGLE_APPS_SCRIPT_URL
-  if (!upstream) return json({ok: false, error: 'Webhook not configured'}, 500)
+  const brevoKey = context.env.BREVO_API_KEY
+  const listId = Number(context.env.BREVO_LIST_ID)
+  if (brevoKey && (!Number.isSafeInteger(listId) || listId <= 0)) {
+    return json({ok: false, error: 'Newsletter list not configured'}, 500)
+  }
+  if (!brevoKey && !upstream) return json({ok: false, error: 'Newsletter not configured'}, 500)
+
+  if (brevoKey) {
+    try {
+      const response = await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: {'api-key': brevoKey, 'Content-Type': 'application/json'},
+        // Do not reset blacklist flags: a repeat signup must not undo an unsubscribe.
+        body: JSON.stringify({email, listIds: [listId], updateEnabled: true}),
+        signal: AbortSignal.timeout(10000),
+      })
+      if (!response.ok) {
+        console.error('Newsletter contact sync failed', response.status)
+        return json({ok: false, error: 'Subscription unavailable. Please try again shortly.'}, 502)
+      }
+    } catch {
+      return json({ok: false, error: 'Subscription unavailable. Please try again shortly.'}, 502)
+    }
+  }
 
   const relayPayload: Record<string, string> = {
     type: 'newsletter',
@@ -67,11 +92,14 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     relayPayload.relaySecret = context.env.LEAD_WEBHOOK_SHARED_SECRET
   }
 
-  try {
+  if (!upstream) return json({ok: true})
+
+  const relay = async () => {
     const response = await fetch(upstream, {
       method: 'POST',
       headers: {'Content-Type': 'text/plain;charset=utf-8'},
       body: JSON.stringify(relayPayload),
+      signal: AbortSignal.timeout(10000),
     })
 
     let upstreamBody: Record<string, unknown> | null = null
@@ -87,6 +115,19 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
 
     return json({ok: true})
+  }
+
+  if (brevoKey) {
+    // Brevo is the subscription record; a backup notification failure must not
+    // tell a successfully subscribed visitor to submit again.
+    context.waitUntil(relay().then((response) => {
+      if (!response.ok) console.error('Newsletter backup relay failed', response.status)
+    }).catch(() => console.error('Newsletter backup relay unavailable')))
+    return json({ok: true})
+  }
+
+  try {
+    return await relay()
   } catch {
     return json({ok: false, error: 'Webhook request failed'}, 502)
   }

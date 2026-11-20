@@ -1,5 +1,30 @@
 # Lead Capture Setup (Cloudflare Pages Functions -> Google Apps Script -> Google Sheet)
 
+## Brevo newsletter integration
+
+Production newsletter signup now uses Brevo when these server-side Cloudflare
+Pages variables are set:
+
+- `BREVO_API_KEY`: encrypted secret, Contacts access only.
+- `BREVO_LIST_ID`: `3` (ERP Search Newsletter).
+
+The endpoint creates or updates the contact and adds it to the list without
+clearing any existing unsubscribe/blocklist status. Existing Google Sheet and
+notification delivery continues as a best-effort backup after Brevo succeeds.
+Without Brevo configuration, the original webhook-only flow remains available.
+Redeploy after changing production variables. Never use a `PUBLIC_` prefix for
+the API key.
+
+This connects list capture only. It does not send a confirmation, welcome email,
+or newsletter. Configure and test those separately in Brevo. This initial
+integration is single opt-in; double opt-in requires a separate confirmation flow.
+Existing Google Sheet subscribers are not automatically imported.
+
+To verify production, submit a controlled test address through the website and
+confirm that it appears in list 3 and the backup Google Sheet. Do not use a real
+subscriber's address for testing. API keys expire; renew before their configured
+expiry and check Brevo's inactivity expiry rules if signup volume is low.
+
 This project now uses the architecture:
 
 `Website -> /api/* (Cloudflare Pages Functions) -> Google Apps Script Web App -> Google Sheet`
