@@ -3,12 +3,12 @@ import SiteLayout from '../../layouts/SiteLayout.astro'
 import EditorialMarker from '../../components/EditorialMarker.astro'
 import PageVisual from '../../components/PageVisual.astro'
 import {pageVisuals} from '../../lib/pageVisuals'
-import {estimateReadTimeMinutes, formatPublishDate, sortByPublishedDateDesc} from '../../lib/contentMeta'
+import {estimateReadTimeMinutes, formatContentDate, sortByContentDateDesc} from '../../lib/contentMeta'
 import {editorialTeamName} from '../../lib/editorial'
 import {buildBreadcrumbSchema, getListPageMeta} from '../../lib/seo'
 import {getPosts} from '../../lib/sanity'
 
-const posts = sortByPublishedDateDesc(await getPosts())
+const posts = sortByContentDateDesc(await getPosts())
 const meta = getListPageMeta('blog')
 const breadcrumbSchema = buildBreadcrumbSchema([
   {name: 'Home', path: '/'},
@@ -39,7 +39,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
         </div>
         <h2><a href={`/blog/${post.slug}/`}>{post.title}</a></h2>
         <div class="meta-row">
-          <p class="meta">Published {formatPublishDate(post.publishedAt)}</p>
+          <p class="meta">{formatContentDate(post)}</p>
           <span class="meta-pill">{estimateReadTimeMinutes(post)} min read</span>
           <span class="meta-pill">Reviewed by {editorialTeamName}</span>
         </div>

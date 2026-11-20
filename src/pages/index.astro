@@ -1,15 +1,15 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro'
-import {estimateReadTimeMinutes, formatPublishDate, sortByPublishedDateDesc} from '../lib/contentMeta'
+import {estimateReadTimeMinutes, formatContentDate, sortByContentDateDesc} from '../lib/contentMeta'
 import {getComparisons, getGuides, getPosts, sanityConfigured} from '../lib/sanity'
 import {getListPageMeta} from '../lib/seo'
 
 const [guides, comparisons, posts] = await Promise.all([getGuides(), getComparisons(), getPosts()])
-const latestGuides = sortByPublishedDateDesc(guides).slice(0, 2)
-const latestComparisons = sortByPublishedDateDesc(comparisons).slice(0, 2)
-const latestPosts = sortByPublishedDateDesc(posts).slice(0, 2)
-const featuredGuides = sortByPublishedDateDesc(guides).slice(0, 2)
-const featuredPosts = sortByPublishedDateDesc(posts).slice(0, 4)
+const latestGuides = sortByContentDateDesc(guides).slice(0, 2)
+const latestComparisons = sortByContentDateDesc(comparisons).slice(0, 2)
+const latestPosts = sortByContentDateDesc(posts).slice(0, 2)
+const featuredGuides = sortByContentDateDesc(guides).slice(0, 2)
+const featuredPosts = sortByContentDateDesc(posts).slice(0, 4)
 const featuredComparison = comparisons[0]
 const navGuide = guides.find((guide) => guide.slug.includes('nav'))
 const partnerGuide = guides.find((guide) => guide.slug.includes('partner'))
@@ -174,7 +174,7 @@ const homeMeta = getListPageMeta('home')
           {latestGuides[0] && (
             <>
               <div class="meta-row">
-                <p class="meta">Published {formatPublishDate(latestGuides[0].publishedAt)}</p>
+                <p class="meta">{formatContentDate(latestGuides[0])}</p>
                 <span class="meta-pill">{estimateReadTimeMinutes(latestGuides[0])} min read</span>
               </div>
               <p>{latestGuides[0].excerpt}</p>
@@ -195,7 +195,7 @@ const homeMeta = getListPageMeta('home')
           {latestComparisons[0] && (
             <>
               <div class="meta-row">
-                <p class="meta">Published {formatPublishDate(latestComparisons[0].publishedAt)}</p>
+                <p class="meta">{formatContentDate(latestComparisons[0])}</p>
                 <span class="meta-pill">{estimateReadTimeMinutes(latestComparisons[0])} min read</span>
               </div>
               <p>{latestComparisons[0].excerpt}</p>
@@ -216,7 +216,7 @@ const homeMeta = getListPageMeta('home')
           {latestPosts[0] && (
             <>
               <div class="meta-row">
-                <p class="meta">Published {formatPublishDate(latestPosts[0].publishedAt)}</p>
+                <p class="meta">{formatContentDate(latestPosts[0])}</p>
                 <span class="meta-pill">{estimateReadTimeMinutes(latestPosts[0])} min read</span>
               </div>
               <p>{latestPosts[0].excerpt}</p>
@@ -483,7 +483,7 @@ const homeMeta = getListPageMeta('home')
           <p class="eyebrow">{'category' in post ? post.category : 'Post'}</p>
           <h3><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
           <div class="meta-row">
-            <p class="meta">Published {'publishedAt' in post && post.publishedAt ? formatPublishDate(post.publishedAt) : 'Recent'}</p>
+            <p class="meta">{'publishedAt' in post && post.publishedAt ? formatContentDate(post) : 'Recent'}</p>
             <span class="meta-pill">{'body' in post ? estimateReadTimeMinutes(post) : 5} min read</span>
           </div>
           <p>{post.excerpt}</p>
@@ -494,7 +494,7 @@ const homeMeta = getListPageMeta('home')
           <p class="eyebrow">{guide.intent || 'Guide'}</p>
           <h3><a href={`/guides/${guide.slug}/`}>{guide.title}</a></h3>
           <div class="meta-row">
-            <p class="meta">Published {formatPublishDate(guide.publishedAt)}</p>
+            <p class="meta">{formatContentDate(guide)}</p>
             <span class="meta-pill">{estimateReadTimeMinutes(guide)} min read</span>
           </div>
           <p>{guide.excerpt}</p>

@@ -13,13 +13,30 @@ export function formatPublishDate(value: string) {
     day: '2-digit',
     month: 'short',
     year: 'numeric',
+    timeZone: 'Australia/Sydney',
   }).replace(/\s/g, '-')
 }
 
-export function sortByPublishedDateDesc<T extends {publishedAt: string}>(items: T[]) {
+type ContentDates = Pick<BaseDoc, 'publishedAt' | 'updatedAt'>
+
+export function getContentDate(doc: ContentDates) {
+  const published = Date.parse(doc.publishedAt)
+  const updated = Date.parse(doc.updatedAt || '')
+  return Number.isFinite(updated) && (!Number.isFinite(published) || updated > published)
+    ? doc.updatedAt!
+    : doc.publishedAt
+}
+
+export function formatContentDate(doc: ContentDates) {
+  const date = getContentDate(doc)
+  const label = date === doc.publishedAt ? 'Published' : 'Updated'
+  return `${label} ${formatPublishDate(date)}`
+}
+
+export function sortByContentDateDesc<T extends ContentDates>(items: T[]) {
   return [...items].sort((a, b) => {
-    const aTime = new Date(a.publishedAt).getTime()
-    const bTime = new Date(b.publishedAt).getTime()
+    const aTime = Date.parse(getContentDate(a))
+    const bTime = Date.parse(getContentDate(b))
     return bTime - aTime
   })
 }
