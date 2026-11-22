@@ -1045,6 +1045,12 @@ const blogLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
   ],
   'outgrowing-xero-inventory-erp-australia': [
+    {href: '/blog/vendor-demo-script-erp-buyers-what-to-ask/', label: 'ERP demo script and scorecard'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation budget worksheet'},
+    {href: '/#get-guidance', label: 'Get guidance on your ERP shortlist'},
+    {href: 'https://central.xero.com/0/article/Track-your-inventory', label: 'Xero Central: tracked inventory suitability'},
+    {href: 'https://central.xero.com/0/article/About-Xero-Inventory-Plus', label: 'Xero Central: Inventory Plus eligibility'},
+    {href: 'https://developer.xero.com/documentation/guides/how-to-guides/inventory-integration-options', label: 'Xero Developer: inventory integration choices'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
     {href: '/blog/shopify-erp-integration-australia-business-central-netsuite-odoo-b2b-checks/', label: 'Shopify ERP integration in Australia'},
