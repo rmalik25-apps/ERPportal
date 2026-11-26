@@ -4,6 +4,19 @@ type RelatedLink = {
 }
 
 const guideLinks: Record<string, RelatedLink[]> = {
+  'managing-organisational-change-for-erp': [
+    {href: '/guides/first-time-erp-buyers-roadmap/', label: 'Australian ERP implementation plan and decision gates'},
+    {href: '/guides/erp-governance-owner-led-family-businesses/', label: 'ERP governance for owner-led and family businesses'},
+    {href: '/blog/change-management-that-works-smb-erp-programmes/', label: 'Practical change-management routines for SMB ERP teams'},
+    {href: '/guides/post-go-live-stabilisation-plan-first-90-days/', label: 'ERP stabilisation and support handover'},
+    {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software buyer guide'},
+    {href: '/guides/how-to-choose-erp-implementation-partner/', label: 'How to choose an ERP implementation partner'},
+    {href: '/compare/business-central-vs-netsuite-growing-businesses/', label: 'Business Central vs NetSuite'},
+    {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation budget worksheet'},
+    {href: '/#get-guidance', label: 'Discuss ERP scope, readiness, and partner selection'},
+    {href: 'https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/change-management-checklist', label: 'Microsoft source: change-management checklist'},
+    {href: 'https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/training-strategy-process-and-best-practices', label: 'Microsoft source: ongoing training and adoption'},
+  ],
   'wiise-pricing-australia-business-central-budget': [
     {href: '/compare/wiise-vs-business-central-australian-smbs/', label: 'Wiise vs Business Central'},
     {href: '/guides/business-central-pricing-australia-licences-budget/', label: 'Business Central pricing in Australia'},
@@ -91,6 +104,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
   ],
   'erp-software-australia-market-map-compliance-buyer-guide': [
+    {href: '/blog/technologyone-2026a-plus-australia-councils-universities-checks/', label: 'TechnologyOne buyer checks for Australian councils and universities'},
     {href: '/guides/erp-requirements-audit-checklist-australia/', label: 'ERP Requirements Audit checklist'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection criteria checklist'},
     {href: '/guides/erp-comparison-criteria-checklist/', label: 'ERP comparison criteria checklist'},
@@ -386,6 +400,7 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/guides/business-central-warehouse-management-standard-vs-standalone-wms/', label: 'Business Central warehouse management guide'},
   ],
   'netsuite-pricing-australia-licensing-modules-budget': [
+    {href: '/compare/netsuite-vs-sage-intacct-finance-first-teams/', label: 'NetSuite vs Sage Intacct for finance-first teams'},
     {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software market guide'},
     {href: '/blog/erp-implementation-cost-australia-budget-worksheet/', label: 'ERP implementation cost worksheet'},
     {href: '/blog/erp-total-cost-ownership-australia-three-year-comparison/', label: 'Three-year ERP cost comparison'},
@@ -474,6 +489,9 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/odoo-vs-business-central/', label: 'Odoo vs Business Central'},
   ],
   'first-time-erp-buyers-roadmap': [
+    {href: '/guides/managing-organisational-change-for-erp/', label: 'ERP change-management roles, training, and readiness'},
+    {href: '/guides/erp-governance-owner-led-family-businesses/', label: 'ERP governance for lean leadership teams'},
+    {href: '/blog/change-management-that-works-smb-erp-programmes/', label: 'Practical ERP change-management routines'},
     {href: '/guides/erp-software-australia-market-map-compliance-buyer-guide/', label: 'Australian ERP software market guide'},
     {href: '/guides/what-is-an-erp-guide/', label: 'What is an ERP?'},
     {href: '/guides/erp-selection-checklist-smb/', label: 'ERP selection checklist for SMBs'},
@@ -496,6 +514,10 @@ const guideLinks: Record<string, RelatedLink[]> = {
     {href: '/compare/business-central-food-addons-vs-justfood/', label: 'Business Central food add-ons vs JustFood'},
   ],
   'erp-for-food-and-drink-manufacturing': [
+    {href: '/blog/erp-checklist-for-beverage-manufacturers/', label: 'ERP selection checks for beverage manufacturers'},
+    {href: '/blog/food-erp-projects-scope-warehouse-quality-and-production-together/', label: 'Scope warehouse, quality, and production together'},
+    {href: '/blog/why-generic-erp-demos-miss-food-manufacturing-reality/', label: 'Food-manufacturing scenarios for ERP demos'},
+    {href: '/compare/odoo-manufacturing-smb-fit-analysis/', label: 'Odoo manufacturing fit and limitations for SMBs'},
     {href: '/guides/food-traceability-quality-and-recall-controls-in-erp/', label: 'Food ERP guide: traceability, quality, and recall controls'},
     {href: '/guides/formulation-yield-and-batch-production-in-food-erp/', label: 'Formulation, yield, and batch production in food ERP'},
     {href: '/compare/generic-erp-vs-vertical-erp-food-manufacturers/', label: 'Generic ERP vs vertical ERP for food manufacturers'},
